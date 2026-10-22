@@ -2,10 +2,10 @@
 .All 16 participants and sensor indexes are ready.
 Downloading 146 MB data release: https://github.com/LunaISaFISH/live-demo/releases/download/data-2026-10-22/FitCoach-2026-10-22-with-data.zip
 .usage: restore_data.py [-h] [--archive ARCHIVE]
-restore_data.py: error: Archive does not exist: /var/folders/p3/_ff2p4ds1vb8t5tp5b4tp8l00000gn/T/tmpiyct37ft/missing.zip
+restore_data.py: error: Archive does not exist: /var/folders/p3/_ff2p4ds1vb8t5tp5b4tp8l00000gn/T/tmplpenjds5/missing.zip
 .......
 ----------------------------------------------------------------------
-Ran 13 tests in 0.343s
+Ran 13 tests in 0.350s
 
 OK
 PMData is ready at /Users/luyu/Documents/Codex/2026-10-22/ban/outputs/FitCoach/data/pmdata

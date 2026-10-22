@@ -27,7 +27,8 @@ def make_steps(rows):
     steps = []
     for index, row in enumerate(rows):
         steps.append(dict(title=TITLES[index], note=NOTES[index],
-                          input=row['input'], reply=row['output'],
+                          input=row['input'].split('\n\n', 1)[0] if row['input_kind'] == 'monitor'
+                                else row['input'], reply=row['output'],
                           timestamp=row['timestamp'], status=row['stop'] or row['status'],
                           decision=row['human_decision'], actions=row['action'],
                           sources=[s for s in row['source'] if not s.startswith('shell ')],

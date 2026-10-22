@@ -14,7 +14,10 @@ Timezone: Asia/Singapore. Machine: this Mac (Apple Silicon).
 - Original monitoring Replay: Next review reached recorded sensor review 1 of 66 for p16, with the recorded date and model displayed.
 - Full workflow replay: all 12 navigation entries rendered correctly; the seven-day draft, revision, actual recorded saved plan, monitoring review and audit were checked. See `full-replay.png`.
 - The standalone `Offline Demo.html` contains its CSS, JavaScript and recorded data; no external assets, fetch calls or model dependencies. Its bytes match `/full-replay`. Browser interaction was tested over local HTTP; direct `file:` navigation is blocked by the in-app browser's policy, so opening the file by double-click was not automated.
-- The launcher was exercised against the prepared environment; it checks dependencies/data, starts the localhost server and opens the browser. The demo listens only on 127.0.0.1.
+- With the application server stopped and port 8765 closed, the already-open complete replay still switched to the monitoring step and displayed the recorded result without error.
+- The launcher was exercised against the prepared environment; it checks dependencies/data, starts the localhost server and opens the browser. Control+C released the port; a subsequent cold start succeeded. The demo listens only on 127.0.0.1.
+
+- Fresh public GitHub clone downloaded the release asset successfully, verified its SHA-256, restored all 16 participants and sensor indexes, and passed data readiness. A new Python 3.13 virtual environment was then installed by `run.py --check`; dependencies, data and imports all passed from that fresh clone. GitHub reports the same SHA-256 for the uploaded 152,701,133-byte asset.
 
 ## Scope and interpretation
 
