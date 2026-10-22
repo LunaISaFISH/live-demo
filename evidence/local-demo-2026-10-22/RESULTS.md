@@ -28,3 +28,29 @@ E2E checks cover clarification, memory, planning, natural-language revision, hum
 These are successful runs under the tested account, model and environment, not a guarantee of future network availability, model access, quota or identical wording. Keep the standalone HTML open as the presentation fallback.
 
 The browser rehearsal participant was reset after evidence capture, so the live demo can start cleanly. Interactive state and credentials are ignored by Git.
+
+## Same-frontend replay correction
+
+The earlier standalone presentation layout has been replaced. `Offline Demo.html`
+now embeds `prototype/web/index.html`, `style.css` and the exact unmodified
+`app.js`. A local adapter serves the public HTTP responses and SSE events in
+`ui-recording.json`, captured from a new successful isolated live run.
+
+Verified in the browser: six conversation turns (clarification, preference,
+planning, draft and revision), original Save as my plan button (version 1),
+original Advance to next review button (Alert), safety response, and the original
+Evidence audit view (9 entries, recorded hash-chain verification intact).
+Screenshot: `same-ui-replay.png`. Earlier `full-replay.png` documents the superseded layout.
+
+Loaded the standalone document through a static localhost server, stopped that
+server, then successfully jumped to the save checkpoint, saved, played monitoring
+and viewed the final audit. The browser automation surface does not permit
+file:// navigation, so direct Finder opening was not automated. Static inspection
+confirms all scripts, styles and fixture data are embedded; every fetch and
+EventSource is handled locally. No model account or application server is required.
+
+Validation: 13 Python packaging/data tests passed; the Node adapter test replayed
+all nine steps, checked exact event equality and saved state, and confirmed
+unsupported inputs/requests return an error. No browser console errors on the
+full workflow. PDF pages 5–6 were regenerated and visually checked; desktop HTML,
+PDF and guide copies were byte-checked against the updated deliverables.

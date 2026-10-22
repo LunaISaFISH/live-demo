@@ -8,7 +8,7 @@ window open. The app opens at <http://localhost:8765>.
 **Presentation guide:** [完整现场操作手册](DEMO_GUIDE.md).
 **Emergency fallback:** double-click [Offline Demo.html](Offline%20Demo.html).
 This standalone file replays the complete verified workflow without the server,
-network or model login. The existing `/replay` page covers monitoring only;
+network or model login. It embeds the exact live HTML, CSS and app.js, with recorded HTTP/SSE responses. Use the original Ask coach, Save as my plan and Advance to next review controls; the replay banner allows checkpoint selection. Only recorded inputs are supported. The existing `/replay` page covers monitoring only;
 `/full-replay` serves the complete recorded workflow while the server is running.
 
 Code, reports, slides and evidence are tracked here. The complete original

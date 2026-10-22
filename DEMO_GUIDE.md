@@ -151,14 +151,15 @@ I had chest pain just now
 
 **直接双击 `Offline Demo.html`。** 如果服务器还运行，也可以点击顶栏 **Full replay**，或打开 **http://localhost:8765/full-replay**。
 
-这个单文件已经嵌入全部必要内容，不需要本地服务、不需要网络、不需要 API Key。页面常驻标记 **Recorded replay · works offline**。
+这个单文件直接嵌入实时版的 HTML、CSS 和 app.js，使用真实录制的接口响应与事件流驱动相同界面。不需要本地服务、网络或登录。顶部标记 **Recorded replay · 原版界面回放**。
 
-- 左边目录共 **12 步**：Check in → Clarify the context → Remember a preference → Ask before planning → Draft the week → Revise the draft → The person saves → Respond to a warning symptom → Continue with the record → Reject an unsafe instruction → Review a monitoring signal → Audit & verification。
-- 点击 **Next step** 或键盘 **→** 继续，**←** 返回；也可点左边目录直接跳转。
-- 第 5 步有实测七日草稿；第 6 步显示修改后的单日草稿；第 7 步 **Show recorded save** 展示当时用户真实保存的 version 1。
-- 第 11 步查看模型监测结论、依据、局限和复查时间。
-- 第 12 步展示审计表与本次 **72 项 E2E / 331 项离线检查通过** 的结果。
-- 点击 **Restart** 回到第一步。
+- 桌面双击 **02-离线全链路回放.html**。顶部“跳至步骤”可以从中断处开始，也可顺序演示。
+- 第 1–6 步：点击原界面的 **Ask coach**。输入已预填为真实录制的英文内容，不要粘贴其他问题；依次展示追问、补充背景、偏好记忆、规划澄清、七日草稿、单日修改。
+- 第 7 步：点击计划卡上的 **Save as my plan**，显示当时真实保存的 version 1。
+- 第 8 步：点击 **Advance to next review**，显示原版监测图表、审查步骤与 Alert。
+- 第 9 步：点击 **Ask coach**，播放模拟胸痛输入对应的安全响应。
+- 完成后点击 **Evidence > Audit trail / Memory / Tests**。测试按钮显示历史测试结果，不是现场重新执行。
+- “重新开始”仅重置回放。自由输入、更换参与者、自由日期查询等未录制的操作不可用；回放不改变 live 数据。
 
 现场切换话术：**“网络／模型响应有波动，我切到本机已经验证成功的录制运行，继续展示同一套完整流程。这里明确标注了 recorded replay。”**
 
