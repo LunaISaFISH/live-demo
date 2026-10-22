@@ -1,0 +1,9 @@
+{"id": "p16-55", "should_alert": false, "confidence": "high", "reason": "Rise immediately follows a logged 17-minute walk with over 1400 steps; explained by recent exercise."}
+{"id": "p16-56", "should_alert": false, "confidence": "low", "reason": "Resting heart rate +2.8 bpm for one day, modest and below the +6.6 already alerted; sleep has recovered."}
+{"id": "p16-57", "should_alert": false, "confidence": "high", "reason": "Elevated reading directly follows about 30 minutes of walking-level steps; explained by movement."}
+{"id": "p16-58", "should_alert": false, "confidence": "high", "reason": "Single reading right after a logged 19-minute walk, with sparse heart data; explained and thin."}
+{"id": "p16-59", "should_alert": false, "confidence": "high", "reason": "Activity median 9 min/week unchanged for weeks and above the 0 at last alert; repeat would be noise."}
+{"id": "p16-60", "should_alert": false, "confidence": "high", "reason": "Follows light walking; 99 bpm, +31, matches the previously alerted pattern; near-repeat, not worse."}
+{"id": "p16-61", "should_alert": false, "confidence": "high", "reason": "Falling heart rate after intermittent movement, +32 identical to the last alert; near-repeat with patchy data."}
+{"id": "p16-62", "should_alert": false, "confidence": "high", "reason": "Rise immediately follows about 30 minutes of walking (over 1300 steps) and is already falling; explained by movement."}
+{"id": "p16-63", "should_alert": false, "confidence": "high", "reason": "Activity median improved from 9 to 22 min/week since last review; still low but not worse."}

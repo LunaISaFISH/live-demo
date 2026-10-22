@@ -1,0 +1,13 @@
+{"id": "p05-14", "should_alert": false, "confidence": "high", "reason": "Heart rate 92 follows steps at 06:10-06:50, mild elevation after movement; explained and a near-repeat of the January alert."}
+{"id": "p05-15", "should_alert": false, "confidence": "high", "reason": "Rise follows heavy steps at 11:10-11:20 and earlier logged cycling; explained by movement, no worse than before."}
+{"id": "p05-16", "should_alert": false, "confidence": "high", "reason": "Heart rate peaked 104 with steps at 15:50-16:20, then eased to 94; explained by recent movement."}
+{"id": "p05-17", "should_alert": false, "confidence": "low", "reason": "Very heavy walking 07:00-07:50, then slowly decaying 89-93 bpm; likely recovery. Near-repeat of earlier alert."}
+{"id": "p05-18", "should_alert": false, "confidence": "high", "reason": "Strength and cycling sessions logged 05:30-06:25, peak 130 bpm; 92 bpm an hour later is post-exercise recovery."}
+{"id": "p05-19", "should_alert": false, "confidence": "high", "reason": "Steps up to 08:30 immediately precede mild 90 bpm reading; explained by movement and no worse than earlier alert."}
+{"id": "p05-20", "should_alert": false, "confidence": "high", "reason": "Cycling logged at 15:56 and steady steps through 17:00; 95 bpm is post-activity elevation, explained."}
+{"id": "p05-21", "should_alert": true, "confidence": "low", "reason": "Quiet 30 minutes at about 72 bpm, then jump to 93-95 with no steps or exercise; unexplained, though similar to the earlier alert."}
+{"id": "p05-22", "should_alert": false, "confidence": "high", "reason": "Heavy walking 17:40-17:50 immediately before; 97 bpm after movement is explained and no worse than previous alert."}
+{"id": "p05-23", "should_alert": false, "confidence": "low", "reason": "Heavy walking at 08:20-08:30 peaked 106 bpm, now recovering to 94; explained by movement."}
+{"id": "p05-24", "should_alert": true, "confidence": "low", "reason": "Heart rate 93-98 sustained for 90 minutes around midnight with almost no steps and no exercise; more persistent than earlier one-off events."}
+{"id": "p05-25", "should_alert": true, "confidence": "high", "reason": "Resting heart rate 68.7, +8.3 over baseline and highest in 20 days, first alert of this kind, adequate data, no explaining context."}
+{"id": "p05-26", "should_alert": true, "confidence": "low", "reason": "Resting heart rate rose further to 70.6 (+10.2) on a second day with new injury; worse than yesterday, though only about 2 bpm."}

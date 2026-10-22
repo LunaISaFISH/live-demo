@@ -1,0 +1,13 @@
+{"id": "p16-16", "should_alert": false, "confidence": "high", "reason": "Activity median 56 vs 61 min at last Alert is only a few minutes' change; already alerted repeatedly, near-repeat noise."}
+{"id": "p16-17", "should_alert": false, "confidence": "low", "reason": "HR 96 bpm at rest, +32, but lower than the earlier alerted 115 bpm; resting HR normal; near-repeat, gradual afternoon rise."}
+{"id": "p16-18", "should_alert": false, "confidence": "low", "reason": "HR 96 bpm, +31, milder than the earlier alerted event; resting HR normal, no worsening, near-repeat of prior heart-rate Alert."}
+{"id": "p16-19", "should_alert": false, "confidence": "high", "reason": "Four-week median unchanged at 56 min; already alerted several times, no new worsening."}
+{"id": "p16-20", "should_alert": false, "confidence": "high", "reason": "HR 100 bpm follows a logged 16-minute walk ending minutes earlier; explained by exercise, and below earlier alerted level."}
+{"id": "p16-21", "should_alert": false, "confidence": "high", "reason": "HR 105 bpm is recovery after a logged 24-minute walk, with elevated HR throughout the preceding hour; explained by exercise."}
+{"id": "p16-22", "should_alert": true, "confidence": "low", "reason": "Resting HR 70.4, +4 bpm, highest in 28 days, no recorded explanation; first alert of this kind, modest but notable."}
+{"id": "p16-23", "should_alert": true, "confidence": "high", "reason": "HR about 100-105 bpm for over an hour at 02:30 with almost no movement, while resting HR is at a 28-day high; worse than before."}
+{"id": "p16-24", "should_alert": true, "confidence": "high", "reason": "Resting HR 73, +6.6 bpm and rising over three days, now clearly higher than at the last Alert, with low readiness reported."}
+{"id": "p16-25", "should_alert": true, "confidence": "high", "reason": "Sleep 5.9 h short over 7 nights, a substantial new shortfall, alongside recent unexplained heart-rate rises and low readiness; never alerted."}
+{"id": "p16-26", "should_alert": false, "confidence": "high", "reason": "Activity median unchanged at 56 min, repeatedly reviewed with no alert since the last Alert; sleep debt is a separate signal."}
+{"id": "p16-27", "should_alert": true, "confidence": "high", "reason": "Sleep shortfall persists and grew to 6.1 h over 7 nights, held 4 days with low readiness; no Alert on this has been sent."}
+{"id": "p16-28", "should_alert": false, "confidence": "low", "reason": "Median 51 vs 56 min at the last review is a small change; long-running shortfall already alerted several times, so another is noise."}

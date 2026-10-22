@@ -1,0 +1,13 @@
+{"id": "p16-13", "should_alert": true, "confidence": "high", "reason": "Abrupt jump from low 80s to 106 bpm sustained with zero steps, no prior activity or logged exercise."}
+{"id": "p16-14", "should_alert": false, "confidence": "low", "reason": "Third weekly drop in a row already alerted twice; another near-identical activity alert risks fatigue."}
+{"id": "p16-15", "should_alert": false, "confidence": "high", "reason": "Follows long logged walk and steady stepping; smaller than the previously alerted rise."}
+{"id": "p16-16", "should_alert": false, "confidence": "low", "reason": "Modest +32 rise after midday stepping; smaller near-repeat of an already alerted heart-rate pattern."}
+{"id": "p16-17", "should_alert": false, "confidence": "high", "reason": "Only 5 minutes lower than last week's alerted figure; not a clear worsening."}
+{"id": "p16-18", "should_alert": false, "confidence": "low", "reason": "Unexplained but modest +32 rise, smaller than the already alerted event; near-repeat."}
+{"id": "p16-19", "should_alert": false, "confidence": "low", "reason": "Brief +31 rise after rest, smaller than the earlier alerted event; near-repeat, not clearly worse."}
+{"id": "p16-20", "should_alert": false, "confidence": "high", "reason": "Activity unchanged at 56 min/week since last review; already alerted repeatedly, no new worsening."}
+{"id": "p16-21", "should_alert": false, "confidence": "high", "reason": "Immediately follows logged walk with heavy stepping in prior buckets; explained by recent activity."}
+{"id": "p16-22", "should_alert": false, "confidence": "low", "reason": "Follows logged walk with ongoing light stepping; smaller near-repeat of already alerted pattern."}
+{"id": "p16-23", "should_alert": false, "confidence": "low", "reason": "One-day resting heart rate +4 bpm is modest; no symptoms or other markers yet."}
+{"id": "p16-24", "should_alert": true, "confidence": "low", "reason": "Resting heart rate +4.3 bpm, 28-day high for second day running; worth a gentle check-in."}
+{"id": "p16-25", "should_alert": true, "confidence": "low", "reason": "Over 80 minutes above 100 bpm at 2am with almost no steps, alongside two days of raised resting rate."}

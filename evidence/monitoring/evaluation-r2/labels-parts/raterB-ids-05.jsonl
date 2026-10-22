@@ -1,0 +1,13 @@
+{"id": "p16-03", "should_alert": false, "confidence": "high", "reason": "Resting HR only 2.3 bpm above median; trivial change, no other concerning signs."}
+{"id": "p16-04", "should_alert": false, "confidence": "low", "reason": "First look at a mild shortfall (115 vs 150 min), low severity; can wait for persistence or worsening."}
+{"id": "p16-05", "should_alert": true, "confidence": "high", "reason": "Shortfall persisted over a week and worsened to 94 min; never alerted about it, so a first Alert is warranted."}
+{"id": "p16-06", "should_alert": true, "confidence": "low", "reason": "HR 97 bpm, +31 over resting with almost no steps, 40+ minutes after a short walk; first such event, not clearly explained."}
+{"id": "p16-07", "should_alert": true, "confidence": "high", "reason": "HR 115 bpm at rest, +48, no exercise logged; clearly worse than the earlier 97 bpm Alert."}
+{"id": "p16-08", "should_alert": true, "confidence": "low", "reason": "Weekly MVPA fell again from 94 to 77 min, about 18 percent below the level at the last Alert; borderline worsening."}
+{"id": "p16-09", "should_alert": false, "confidence": "low", "reason": "Resting HR only 2.1 bpm above median despite being the 28-day high; small magnitude, and recent resting HR events already alerted."}
+{"id": "p16-10", "should_alert": false, "confidence": "low", "reason": "Sleep debt 3.4 h over 7 nights (about 30 min per night) is mild; readiness steady, low severity."}
+{"id": "p16-11", "should_alert": false, "confidence": "low", "reason": "114 bpm at rest, but near-repeat of the 115 bpm Alert five days ago; not clearly worse."}
+{"id": "p16-12", "should_alert": false, "confidence": "low", "reason": "108 bpm, lower than the 115 bpm already alerted; resting HR normal, near-repeat of earlier Alert."}
+{"id": "p16-13", "should_alert": true, "confidence": "low", "reason": "MVPA median fell again from 77 to 61 min, continuing steady decline well below WHO floor; borderline repeat."}
+{"id": "p16-14", "should_alert": false, "confidence": "high", "reason": "HR 96 bpm shortly after a 46-minute walk and with prior steps; smaller than the earlier alerted event, partly explained."}
+{"id": "p16-15", "should_alert": false, "confidence": "high", "reason": "HR 97 bpm, +32, milder than the earlier 115 bpm Alert; resting HR low, no worsening, near-repeat."}

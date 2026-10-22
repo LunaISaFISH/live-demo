@@ -1,0 +1,13 @@
+{"id": "p16-39", "should_alert": false, "confidence": "high", "reason": "Activity unchanged at 32 min/week, above last alerted 29; repeat would be noise."}
+{"id": "p16-40", "should_alert": false, "confidence": "low", "reason": "Follows some walking at 21:40-21:50; similar magnitude to earlier alerted events, not clearly worse."}
+{"id": "p16-41", "should_alert": false, "confidence": "high", "reason": "Activity 36 min/week, improved versus last alerted 29; no worsening."}
+{"id": "p16-42", "should_alert": false, "confidence": "high", "reason": "About 1,000 steps of walking just before; post-walk HR of 99 bpm is explained."}
+{"id": "p16-43", "should_alert": true, "confidence": "high", "reason": "Activity dropped clearly from last alerted 29 to 15 min/week; meaningful worsening of long shortfall."}
+{"id": "p16-44", "should_alert": false, "confidence": "high", "reason": "Light activity and patchy HR data before; magnitude matches earlier episodes, not clearly worse; near-repeat."}
+{"id": "p16-45", "should_alert": false, "confidence": "low", "reason": "Late-night elevation decaying after activity at 22:50; resembles alerted New Year episode, not clearly worse."}
+{"id": "p16-46", "should_alert": true, "confidence": "low", "reason": "Activity fell from 15 to essentially zero min/week a week after alert; borderline but clearly worse in substance."}
+{"id": "p16-47", "should_alert": false, "confidence": "high", "reason": "One-day resting HR +1.7 bpm is small; not meaningful on its own."}
+{"id": "p16-48", "should_alert": false, "confidence": "low", "reason": "Walking and activity in prior hour; 104 bpm afterwards similar to earlier alerted events, not clearly worse."}
+{"id": "p16-49", "should_alert": false, "confidence": "high", "reason": "One-day resting HR +1.4 bpm is small and within normal variation."}
+{"id": "p16-50", "should_alert": false, "confidence": "high", "reason": "Activity 9 min/week, slightly above last week's alerted 0; no worsening."}
+{"id": "p16-51", "should_alert": false, "confidence": "high", "reason": "One-day resting HR +1.4 bpm is small and within normal variation."}

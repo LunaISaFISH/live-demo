@@ -1,0 +1,2 @@
+{"id": "p16-65", "should_alert": false, "confidence": "high", "reason": "About 1400 steps walked over the prior 50 minutes; HR falling from 116 to 105 is post-walk recovery."}
+{"id": "p16-66", "should_alert": false, "confidence": "high", "reason": "Activity median improved from 9 to 22 minutes; still below guideline but not worse than prior alerts."}

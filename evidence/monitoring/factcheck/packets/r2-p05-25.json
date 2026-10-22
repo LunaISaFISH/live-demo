@@ -1,0 +1,472 @@
+{
+ "id": "p05-25",
+ "kind": "resting_hr",
+ "at": "2020-03-06 23:59:59",
+ "monitor_facts": "- severity 1.0 on this detector's own 0-1 scale\n- record coverage that day: sufficient\n- a continuing condition, not a one-off event: it started on 2020-03-06 and has held for 1 day(s)\n- when it started: resting heart rate 68.7 bpm, +8.3 bpm from your median of 60.4; higher than on any other day in your own last 20 days\n- now: resting heart rate 68.7 bpm, +8.3 bpm from your median of 60.4; higher than on any other day in your own last 20 days\n- you have not reviewed it before in this run\n- the person has not been alerted about this kind of signal in this run, so there is no earlier Alert to repeat; now it is 68.7 bpm, +8.3 from the median\nNo other condition is holding.\nAlerts already raised in this monitoring run:\n- 2019-12-26 23:59:59: you have reported low or very low readiness to train on 3 reports running (Three consecutive very-low readiness reports warrant attention now because the record does not account for them.)\n- 2019-12-29 23:59:59: you have reported low or very low readiness to train on 6 reports running (This is a clear worsening since the alert three days ago, from three to six consecutive very-low readiness reports, without an explanation in the record.)\n- 2020-01-01 23:59:59: you have reported low or very low readiness to train on 10 reports running (The already-alerted readiness concern has clearly worsened again, from six to ten consecutive very-low reports, and remains unexplained in the record.)\n- 2020-01-09 16:40:00: heart rate averaged 95 bpm for 10 minutes from 16:30, with 0 recorded steps and no overlapping logged exercise; daily resting reference 64 bpm (A heart-rate rise without recorded movement or overlapping exercise is unexplained at the event time and warrants attention now.)",
+ "statements": {
+  "observations": [
+   "Resting heart rate was 68.7 bpm versus a 20-day baseline median of 60.4 bpm, with a personal quantile of 1.0.",
+   "Only two sleep nights were recorded in the last seven days, with a 3.35-hour median; five nights have no sleep record.",
+   "Recovery reports were moderate readiness and normal energy on all six reports in the last seven days."
+  ],
+  "verdict": "unclear",
+  "note": "Resting heart rate was 68.7 bpm, 8.3 bpm above the 20-day median and higher than every other recorded day in that period. Two sleep nights in the last week had a 3.35-hour median, but the other nights are unrecorded, so this does not account for the timing of the rise.",
+  "alert_reason": "Your resting heart rate is newly the highest in your last 20 days, and the record does not establish an explanation for the rise.",
+  "message_to_person": "Your resting heart rate was 68.7 bpm—8.3 bpm above your 20-day median and the highest recorded in that period. [25dea193-context] Two recent sleep records were short, but five nights are missing, so the record cannot show whether sleep or anything else accounts for this change. [25dea193-e2] Keep exercise easy today. [25dea193-e7]"
+ },
+ "tool_calls": [
+  {
+   "call": "read_record 7d as of 2020-03-06",
+   "output": {
+    "person": "p05",
+    "window": {
+     "start": "2020-02-29",
+     "end": "2020-03-06"
+    },
+    "previous_window": {
+     "start": "2020-02-22",
+     "end": "2020-02-28"
+    },
+    "findings": [
+     "Resting heart rate 69 bpm is higher than on any other day in the last 20 days.",
+     "Body weight is trending up at 0.54 kg/week (+2.0 kg over the window).",
+     "Last injury 6 days ago (left foot); in the last 14 days: Ankle 6 days ago; 7 reports in the whole record so far."
+    ],
+    "domains": {
+     "training": {
+      "this_window": {
+       "days_with_records": 0,
+       "calendar_days": 7,
+       "sessions": 0,
+       "per_week": 0.0,
+       "load": 0,
+       "unrated_device_minutes": 0,
+       "self_reported": 0,
+       "device_only": 0,
+       "matched": 0
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 7,
+       "sessions": 0,
+       "per_week": 0.0,
+       "load": 0,
+       "unrated_device_minutes": 0,
+       "self_reported": 0,
+       "device_only": 0,
+       "matched": 0
+      },
+      "units": {
+       "sessions": "count",
+       "per_week": "sessions/week",
+       "load": "sRPE",
+       "self_reported": "count",
+       "device_only": "count",
+       "matched": "count"
+      }
+     },
+     "sleep": {
+      "this_window": {
+       "days_with_records": 2,
+       "calendar_days": 7,
+       "nights": 2,
+       "median_hours": 3.35,
+       "median_efficiency": 89.5,
+       "median_deep_min": 14.5,
+       "median_rem_min": 7.5,
+       "scored": 1
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 7,
+       "nights": 0
+      },
+      "units": {
+       "nights": "count",
+       "median_hours": "hours",
+       "median_efficiency": "percent",
+       "median_deep_min": "minutes",
+       "median_rem_min": "minutes",
+       "scored": "count"
+      }
+     },
+     "recovery": {
+      "this_window": {
+       "days_with_records": 6,
+       "calendar_days": 7,
+       "days": 6,
+       "readiness": "moderate readiness to train 6 (of 6 reports); latest: moderate readiness to train",
+       "fatigue": "normal energy 6 (of 6 reports); latest: normal energy",
+       "soreness": "normal soreness 6 (of 6 reports); latest: normal soreness",
+       "stress": "normal stress 5, more stressed than normal 1 (of 6 reports); latest: normal stress",
+       "mood": "normal mood 3, worse mood than normal 2, better mood than normal 1 (of 6 reports); latest: normal mood",
+       "sleep_quality": "normal sleep quality 5, worse sleep than normal 1 (of 6 reports); latest: normal sleep quality",
+       "low_readiness_reports": 0,
+       "soreness_area_days": 0
+      },
+      "previous_window": {
+       "days_with_records": 5,
+       "calendar_days": 7,
+       "days": 5,
+       "readiness": "moderate readiness to train 5 (of 5 reports); latest: moderate readiness to train",
+       "fatigue": "normal energy 3, fresher than normal 1, more tired than normal 1 (of 5 reports); latest: normal energy",
+       "soreness": "less sore than normal 3, normal soreness 2 (of 5 reports); latest: less sore than normal",
+       "stress": "more relaxed than normal 3, more stressed than normal 1, normal stress 1 (of 5 reports); latest: normal stress",
+       "mood": "better mood than normal 3, normal mood 2 (of 5 reports); latest: normal mood",
+       "sleep_quality": "normal sleep quality 4, better sleep than normal 1 (of 5 reports); latest: normal sleep quality",
+       "low_readiness_reports": 0,
+       "soreness_area_days": 0
+      },
+      "units": {
+       "days": "count",
+       "readiness": "answers, in words",
+       "fatigue": "answers, in words",
+       "soreness": "answers, in words",
+       "stress": "answers, in words",
+       "mood": "answers, in words",
+       "sleep_quality": "answers, in words",
+       "low_readiness_reports": "count",
+       "soreness_area_days": "count"
+      },
+      "change": {
+       "days": 1,
+       "low_readiness_reports": 0,
+       "soreness_area_days": 0
+      }
+     },
+     "physiology": {
+      "this_window": {
+       "days_with_records": 7,
+       "calendar_days": 7,
+       "resting_hr_days": 7,
+       "median_resting_hr": 61.0,
+       "worn_days": 7,
+       "median_sedentary_min": 1064,
+       "median_active_min": 363,
+       "zone_days": 7,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 7,
+       "median_intraday_mean_hr": 67.0,
+       "median_intraday_p95_hr": 91,
+       "median_heart_covered_min": 845,
+       "intraday_step_days": 7,
+       "median_daily_steps": 11468,
+       "total_distance_km": 45.62,
+       "total_calories": 25128.2
+      },
+      "previous_window": {
+       "days_with_records": 1,
+       "calendar_days": 7,
+       "resting_hr_days": 1,
+       "median_resting_hr": 63.2,
+       "worn_days": 1,
+       "median_sedentary_min": 1412,
+       "median_active_min": 28,
+       "zone_days": 1,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 1,
+       "median_intraday_mean_hr": 70.2,
+       "median_intraday_p95_hr": 82,
+       "median_heart_covered_min": 160,
+       "intraday_step_days": 1,
+       "median_daily_steps": 1046,
+       "total_distance_km": 0.76,
+       "total_calories": 13656.5
+      },
+      "units": {
+       "resting_hr_days": "count",
+       "median_resting_hr": "bpm",
+       "worn_days": "count",
+       "median_sedentary_min": "minutes",
+       "median_active_min": "minutes",
+       "zone_days": "count",
+       "median_cardio_peak_min": "minutes",
+       "intraday_heart_days": "days",
+       "median_intraday_mean_hr": "bpm",
+       "median_intraday_p95_hr": "bpm",
+       "median_heart_covered_min": "minutes/day",
+       "intraday_step_days": "days",
+       "median_daily_steps": "steps/day",
+       "total_distance_km": "km",
+       "total_calories": "kcal"
+      },
+      "change": {
+       "resting_hr_days": 6,
+       "median_resting_hr": -2.2,
+       "worn_days": 6,
+       "median_sedentary_min": -348,
+       "median_active_min": 335,
+       "zone_days": 6,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 6,
+       "median_intraday_mean_hr": -3.2,
+       "median_intraday_p95_hr": 9,
+       "median_heart_covered_min": 685,
+       "intraday_step_days": 6,
+       "median_daily_steps": 10422,
+       "total_distance_km": 44.86,
+       "total_calories": 11471.7
+      }
+     },
+     "lifestyle": {
+      "this_window": {
+       "days_with_records": 6,
+       "calendar_days": 7,
+       "days": 7,
+       "weight_days": 1,
+       "latest_weight_kg": 103.0,
+       "median_glasses": 10,
+       "alcohol_days": 0,
+       "median_meals": 3
+      },
+      "previous_window": {
+       "days_with_records": 5,
+       "calendar_days": 7,
+       "days": 5,
+       "weight_days": 5,
+       "weight_change_kg": 1.0,
+       "latest_weight_kg": 103.0,
+       "median_glasses": 9,
+       "alcohol_days": 2,
+       "median_meals": 3
+      },
+      "units": {
+       "days": "count",
+       "weight_days": "count",
+       "latest_weight_kg": "kg",
+       "median_glasses": "glasses",
+       "alcohol_days": "count",
+       "median_meals": "count",
+       "weight_change_kg": "kg"
+      },
+      "change": {
+       "days": 2,
+       "weight_days": -4,
+       "latest_weight_kg": 0.0,
+       "median_glasses": 1,
+       "alcohol_days": -2,
+       "median_meals": 0
+      }
+     },
+     "injury": {
+      "this_window": {
+       "days_with_records": 1,
+       "calendar_days": 7,
+       "count": 1,
+       "by_joint": {
+        "Ankle": 1
+       },
+       "severities": {
+        "minor": 1
+       },
+       "reports": [
+        {
+         "date": "2020-02-29",
+         "location": "left_foot",
+         "joint": "Ankle",
+         "severity": "minor"
+        }
+       ]
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 7,
+       "count": 0
+      },
+      "units": {
+       "count": "count"
+      }
+     }
+    },
+    "state_at_window_end": {
+     "as_of": "2020-03-06",
+     "capacity_today": {
+      "ceiling": "easy",
+      "reasons": [
+       "resting heart rate is higher than on any other day in your own last 20 days"
+      ],
+      "cautions": [
+       "your recent training is too light for a load ratio to say anything, so it was not applied",
+       "you reported an injury (left foot) 6 days ago",
+       "weight is trending up at 0.5 kg/week"
+      ],
+      "applies_to": "today and tomorrow; it does not cap later days, which depend on how the person recovers"
+     },
+     "habits": {
+      "Walking": {
+       "label": "walking",
+       "sessions": 62,
+       "share": 0.47,
+       "typical_gap_days": 2.0,
+       "typical_minutes": 23,
+       "last_done": 16,
+       "recovery_hours": 0,
+       "loads_joints": [
+        "Ankle",
+        "Hip"
+       ],
+       "spares_joints": []
+      },
+      "Cycling": {
+       "label": "cycling",
+       "sessions": 55,
+       "share": 0.417,
+       "typical_gap_days": 2.0,
+       "typical_minutes": 19,
+       "last_done": 15,
+       "recovery_hours": 12,
+       "loads_joints": [
+        "Knee"
+       ],
+       "spares_joints": [
+        "Ankle"
+       ]
+      },
+      "Running": {
+       "label": "running",
+       "sessions": 9,
+       "share": 0.068,
+       "typical_gap_days": 10.5,
+       "typical_minutes": 40,
+       "last_done": 41,
+       "recovery_hours": 24,
+       "loads_joints": [
+        "Ankle",
+        "Hip",
+        "Knee"
+       ],
+       "spares_joints": []
+      },
+      "CrossTraining": {
+       "label": "cross-training",
+       "sessions": 3,
+       "share": 0.023,
+       "typical_gap_days": 13,
+       "typical_minutes": 30,
+       "last_done": 51,
+       "recovery_hours": 24,
+       "loads_joints": [
+        "Hip",
+        "Knee"
+       ],
+       "spares_joints": []
+      },
+      "Strength": {
+       "label": "resistance training",
+       "sessions": 3,
+       "share": 0.023,
+       "typical_gap_days": 18,
+       "typical_minutes": 30,
+       "last_done": 22,
+       "recovery_hours": 48,
+       "loads_joints": [
+        "Hip",
+        "Knee",
+        "LumbarSpine",
+        "Shoulder"
+       ],
+       "spares_joints": []
+      }
+     },
+     "weekday_rhythm": {
+      "Mon": 17,
+      "Tue": 16,
+      "Wed": 25,
+      "Thu": 27,
+      "Fri": 20,
+      "Sat": 15,
+      "Sun": 12
+     },
+     "training_load": {
+      "units": {
+       "acute_7d": "sRPE",
+       "chronic_28d_per_week": "sRPE/week",
+       "acwr": "ratio",
+       "sessions_7d": "sessions",
+       "rated_sessions_7d": "sessions",
+       "unrated_device_minutes_7d": "minutes"
+      },
+      "load_is": "the person's own effort rating x minutes; device-detected sessions have no rating and carry no load",
+      "rated_sessions_7d": 0,
+      "unrated_device_minutes_7d": 0,
+      "acute_7d": 0,
+      "chronic_28d_per_week": 37.5,
+      "acwr": null,
+      "sessions_7d": 0,
+      "acwr_withheld": "28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything"
+     },
+     "sleep_debt_7d": null,
+     "resting_hr": {
+      "value": 68.72824573516846,
+      "quantile": 1.0,
+      "baseline_median": 60.4,
+      "baseline_days": 20
+     },
+     "readiness_trend": {
+      "record_count": 11,
+      "recorded_days": 11,
+      "calendar_days": 14,
+      "window": {
+       "start": "2020-02-22",
+       "end": "2020-03-06"
+      },
+      "answers": "moderate readiness to train 11 (of 11 reports); latest: moderate readiness to train",
+      "latest": "moderate readiness to train",
+      "direction": "flat"
+     },
+     "activity_vs_who": {
+      "weeks_scored": 3,
+      "median_mvpa_minutes": 678,
+      "weeks_meeting_floor": 3,
+      "floor": 150,
+      "upper": 300,
+      "verdict": "exceeds",
+      "guideline": "Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity, or an equivalent combination.",
+      "source": "WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour"
+     },
+     "ambient_activity": {
+      "window": {
+       "start": "2020-02-08",
+       "end": "2020-03-06"
+      },
+      "heart_days": 22,
+      "median_heart_covered_minutes": 1138,
+      "median_daily_steps": 11345,
+      "total_distance_km": 140.07,
+      "limitations": [
+       "distance and calories are device estimates",
+       "missing samples are not treated as zero"
+      ]
+     },
+     "recent_injuries": {
+      "joints_from_log": [
+       "Ankle"
+      ],
+      "count": 7,
+      "by_joint": {
+       "Ankle": 6
+      },
+      "days_since_last": 6,
+      "last_location": "left foot",
+      "days_since_by_joint": {
+       "Ankle": 6
+      }
+     }
+    },
+    "data_quality": {
+     "summary": "97% of the last 28 days carry a record.",
+     "status": "within_baseline",
+     "coverage": 0.97,
+     "days_since_last_record": 0
+    },
+    "limitations": [
+     "Values describe recorded data only: a day without a record is unknown, not zero or normal.",
+     "Record counts are not calendar days, and per-session values (training medians) are not daily totals.",
+     "A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.",
+     "Self-reported answers are words relative to the person's own normal.",
+     "Device distance and calories are estimates."
+    ]
+   }
+  }
+ ]
+}

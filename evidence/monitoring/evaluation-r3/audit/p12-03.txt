@@ -1,0 +1,408 @@
+AUDIT p12-03: raters split
+
+=== WHAT THE RATERS SAW ===
+CASE p12-03  participant p12  detector load_spike  why reviewed: new  at 2019-11-27 23:59:59  SIGNAL   your last 7 days carry 1.53x your 28-day average  MONITOR
+    FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)   - severity 0.51 on this detector's own 0-1 scale   - record coverage that
+    day: sufficient   - a continuing condition, not a one-off event: it started on 2019-11-27 and has held for 1 day(s)   - when it started: your last 7 days
+    carry 1.53x your 28-day average   - now: your last 7 days carry 1.53x your 28-day average   - you have not reviewed it before in this run   - the person has
+    not been alerted about this kind of signal in this run, so there is no earlier Alert to repeat; now it is 1.53x the 28-day average     (1490 sRPE in 7 days)
+    No other condition is holding.   No Alert has been raised in this monitoring run yet.  EVIDENCE: the record read by code over the 14 days before (sealed, no
+    later data) Findings:   - Last 7 days carry 1.53x the 28-day average, past the 1.5 tripwire.   - Mostly below normal: soreness, stress. fatigue: normal
+    energy 6, more tired than normal 3, fresher than normal 2 (of 11 reports); latest: normal     energy; soreness: more sore than normal 6, normal soreness 5
+    (of 11 reports); latest: more sore than normal; stress: more stressed than normal 6,     normal stress 4, more relaxed than normal 1 (of 11 reports);
+    latest: normal stress; sleep quality: better sleep than normal 6, normal sleep     quality 5 (of 11 reports); latest: normal sleep quality.   - Body weight
+    is trending down at 0.96 kg/week (-1.9 kg over the window).   - Last injury 0 days ago (right knee); in the last 14 days: Knee 0 days ago, Shoulder 7 days
+    ago, Ankle 0 days ago; 25 reports in the whole record     so far. State at the window end:   as_of: 2019-11-27   capacity_today.ceiling: easy
+    capacity_today.reasons: ["today's report: more sore than normal", 'your 7-day load is 1.53x your 28-day average, past the 1.5 tripwire']
+    capacity_today.cautions: ['you reported an injury (right knee) 0 days ago', 'weight is trending down at 1.0 kg/week']   capacity_today.applies_to: today and
+    tomorrow; it does not cap later days, which depend on how the person recovers   habits.Walking.label: walking   habits.Walking.sessions: 6
+    habits.Walking.share: 0.316   habits.Walking.typical_gap_days: 1.5   habits.Walking.typical_minutes: 24   habits.Walking.last_done: 2
+    habits.Walking.recovery_hours: 0   habits.Walking.loads_joints: ['Ankle', 'Hip']   habits.Walking.spares_joints: []   habits.Strength.label: resistance
+    training   habits.Strength.sessions: 5   habits.Strength.share: 0.263   habits.Strength.typical_gap_days: 2.5   habits.Strength.typical_minutes: 50
+    habits.Strength.last_done: 0   habits.Strength.recovery_hours: 48   habits.Strength.loads_joints: ['Hip', 'Knee', 'LumbarSpine', 'Shoulder']
+    habits.Strength.spares_joints: []   habits.CrossTraining.label: cross-training   habits.CrossTraining.sessions: 4   habits.CrossTraining.share: 0.211
+    habits.CrossTraining.typical_gap_days: 5   habits.CrossTraining.typical_minutes: 18   habits.CrossTraining.last_done: 0
+    habits.CrossTraining.recovery_hours: 24   habits.CrossTraining.loads_joints: ['Hip', 'Knee']   habits.CrossTraining.spares_joints: []
+    habits.Running.label: running   habits.Running.sessions: 4   habits.Running.share: 0.211   habits.Running.typical_gap_days: 7
+    habits.Running.typical_minutes: 32   habits.Running.last_done: 0   habits.Running.recovery_hours: 24   habits.Running.loads_joints: ['Ankle', 'Hip', 'Knee']
+    habits.Running.spares_joints: []   weekday_rhythm.Mon: 3   weekday_rhythm.Tue: 1   weekday_rhythm.Wed: 3   weekday_rhythm.Thu: 1   weekday_rhythm.Fri: 4
+    weekday_rhythm.Sat: 3   weekday_rhythm.Sun: 4   training_load.units.acute_7d: sRPE   training_load.units.chronic_28d_per_week: sRPE/week
+    training_load.units.acwr: ratio   training_load.units.sessions_7d: sessions   training_load.units.rated_sessions_7d: sessions
+    training_load.units.unrated_device_minutes_7d: minutes   training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no
+    rating and carry no load   training_load.rated_sessions_7d: 4   training_load.unrated_device_minutes_7d: 128   training_load.acute_7d: 1490.0
+    training_load.chronic_28d_per_week: 976.7   training_load.acwr: 1.53   training_load.sessions_7d: 10   sleep_debt_7d: None   resting_hr: None
+    readiness_trend.record_count: 11   readiness_trend.recorded_days: 11   readiness_trend.calendar_days: 14   readiness_trend.window.start: 2019-11-14
+    readiness_trend.window.end: 2019-11-27   readiness_trend.answers: moderate readiness to train 8, high readiness to train 2, low readiness to train 1 (of 11
+    reports); latest: moderate     readiness to train   readiness_trend.latest: moderate readiness to train   readiness_trend.direction: rising
+    activity_vs_who.weeks_scored: 3   activity_vs_who.median_mvpa_minutes: 456   activity_vs_who.weeks_meeting_floor: 3   activity_vs_who.floor: 150
+    activity_vs_who.upper: 300   activity_vs_who.verdict: exceeds   activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic
+    activity per week, or 75-150 minutes of vigorous-intensity     activity, or an equivalent combination.   activity_vs_who.source: WHO (2020), Guidelines on
+    Physical Activity and Sedentary Behaviour   ambient_activity.window.start: 2019-11-07   ambient_activity.window.end: 2019-11-27
+    ambient_activity.heart_days: 21   ambient_activity.median_heart_covered_minutes: 636   ambient_activity.median_daily_steps: 9503
+    ambient_activity.total_distance_km: 156.13   ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated
+    as zero']   recent_injuries.joints_from_log: ['Ankle', 'Knee', 'Shoulder']   recent_injuries.count: 25   recent_injuries.by_joint.Knee: 20
+    recent_injuries.by_joint.Shoulder: 3   recent_injuries.by_joint.Ankle: 2   recent_injuries.days_since_last: 0   recent_injuries.last_location: right knee
+    recent_injuries.days_since_by_joint.Ankle: 0   recent_injuries.days_since_by_joint.Knee: 0   recent_injuries.days_since_by_joint.Shoulder: 7 Data quality:
+    summary: 83% of the last 28 days carry a record.   status: within_baseline   coverage: 0.83   days_since_last_record: 0 Limitations:   - Values describe
+    recorded data only: a day without a record is unknown, not zero or normal.   - Record counts are not calendar days, and per-session values (training
+    medians) are not daily totals.   - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a
+    representative baseline.   - Self-reported answers are words relative to the person's own normal.   - Device distance and calories are estimates.
+=== RATER LABELS ===
+rater A: should_alert=True (low): Load above 1.5x alongside accumulating knee and new ankle injury reports and soreness; no prior Alert on load.
+rater B: should_alert=False (low): Load only barely past the 1.5 tripwire, near-repeat of the recent spike; injury and soreness context is ongoing rather than
+    new.
+
+=== THE COACH'S REVIEW ===
+decision: no Alert; verdict: explained; recheck_in_days: 7
+alert_reason: No alert now: the new brief elevation in recorded load is accounted for by several rated, mostly very-hard sessions, though the concurrent
+    soreness and injury reports remain important context.
+note: The higher 7-day recorded load is consistent with four rated sessions, including very-hard-effort reports, and does not appear as an unexplained
+    measurement change. More soreness than normal and multiple minor knee and ankle reports line up with the higher-load period, but the record does not
+    establish any relationship between them.
+observations:
+  - The current 7-day recorded load was 1,490 sRPE, 1.53 times the 28-day weekly reference, with 4 rated sessions and 10 sessions total; 128 device-only minutes
+    were unrated.
+  - Six of the seven available effort reports across the history were “very hard effort,” including the latest report.
+  - More soreness than normal was reported on 6 of 11 recorded recovery days, including the latest; readiness was latest reported as moderate.
+  - Twenty-five minor injury reports were recorded across 10 days, including right knee and both ankles on 2019-11-27.
+limitations:
+  - The 28-day reference contains 21 days of history, and 83% of days carry a record; unrecorded sessions, effort ratings, and symptoms remain unknown.
+  - Device-detected sessions without an effort rating do not contribute to the sRPE load measure.
+  - No resting-heart-rate data or 7-day sleep-debt estimate is available.
+message to the person: The higher recorded load is consistent with four rated sessions, including a latest very-hard-effort report.  You also reported more
+    soreness than normal today and logged minor right-knee and both ankle issues.   The record cannot show how these observations relate, and unrated sessions
+    do not contribute to the load measure.
+tools it called: ['read_record 28d as of 2019-11-27']
+
+=== OUTPUTS OF THE COACH'S TOOL CALLS (regenerated from the record) ===
+--- read_record 28d as of 2019-11-27: findings, state, data quality ---
+  - Last 7 days carry 1.53x the 28-day average, past the 1.5 tripwire.
+  - Mostly below normal: soreness, stress. fatigue: normal energy 6, more tired than normal 3, fresher than normal 2 (of 11 reports); latest: normal energy;
+    soreness: more sore than normal 6, normal soreness 5 (of 11 reports); latest: more sore than normal; stress: more stressed than normal 6, normal stress 4,
+    more relaxed than normal 1 (of 11 reports); latest: normal stress; sleep quality: better sleep than normal 6, normal sleep quality 5 (of 11 reports);
+    latest: normal sleep quality.
+  - Body weight is trending down at 0.96 kg/week (-1.9 kg over the window).
+  - Last injury 0 days ago (right knee); in the last 14 days: Knee 0 days ago, Shoulder 7 days ago, Ankle 0 days ago; 25 reports in the whole record so far.
+  as_of: 2019-11-27
+  capacity_today.ceiling: easy
+  capacity_today.reasons: ["today's report: more sore than normal", 'your 7-day load is 1.53x your 28-day average, past the 1.5 tripwire']
+  capacity_today.cautions: ['you reported an injury (right knee) 0 days ago', 'weight is trending down at 1.0 kg/week']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 6
+  habits.Walking.share: 0.316
+  habits.Walking.typical_gap_days: 1.5
+  habits.Walking.typical_minutes: 24
+  habits.Walking.last_done: 2
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  habits.Strength.label: resistance training
+  habits.Strength.sessions: 5
+  habits.Strength.share: 0.263
+  habits.Strength.typical_gap_days: 2.5
+  habits.Strength.typical_minutes: 50
+  habits.Strength.last_done: 0
+  habits.Strength.recovery_hours: 48
+  habits.Strength.loads_joints: ['Hip', 'Knee', 'LumbarSpine', 'Shoulder']
+  habits.Strength.spares_joints: []
+  habits.CrossTraining.label: cross-training
+  habits.CrossTraining.sessions: 4
+  habits.CrossTraining.share: 0.211
+  habits.CrossTraining.typical_gap_days: 5
+  habits.CrossTraining.typical_minutes: 18
+  habits.CrossTraining.last_done: 0
+  habits.CrossTraining.recovery_hours: 24
+  habits.CrossTraining.loads_joints: ['Hip', 'Knee']
+  habits.CrossTraining.spares_joints: []
+  habits.Running.label: running
+  habits.Running.sessions: 4
+  habits.Running.share: 0.211
+  habits.Running.typical_gap_days: 7
+  habits.Running.typical_minutes: 32
+  habits.Running.last_done: 0
+  habits.Running.recovery_hours: 24
+  habits.Running.loads_joints: ['Ankle', 'Hip', 'Knee']
+  habits.Running.spares_joints: []
+  weekday_rhythm.Mon: 3
+  weekday_rhythm.Tue: 1
+  weekday_rhythm.Wed: 3
+  weekday_rhythm.Thu: 1
+  weekday_rhythm.Fri: 4
+  weekday_rhythm.Sat: 3
+  weekday_rhythm.Sun: 4
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 4
+  training_load.unrated_device_minutes_7d: 128
+  training_load.acute_7d: 1490.0
+  training_load.chronic_28d_per_week: 976.7
+  training_load.acwr: 1.53
+  training_load.sessions_7d: 10
+  sleep_debt_7d: None
+  resting_hr: None
+  readiness_trend.record_count: 11
+  readiness_trend.recorded_days: 11
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2019-11-14
+  readiness_trend.window.end: 2019-11-27
+  readiness_trend.answers: moderate readiness to train 8, high readiness to train 2, low readiness to train 1 (of 11 reports); latest: moderate readiness to
+    train
+  readiness_trend.latest: moderate readiness to train
+  readiness_trend.direction: rising
+  activity_vs_who.weeks_scored: 3
+  activity_vs_who.median_mvpa_minutes: 456
+  activity_vs_who.weeks_meeting_floor: 3
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: exceeds
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity,
+    or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2019-11-07
+  ambient_activity.window.end: 2019-11-27
+  ambient_activity.heart_days: 21
+  ambient_activity.median_heart_covered_minutes: 636
+  ambient_activity.median_daily_steps: 9503
+  ambient_activity.total_distance_km: 156.13
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: ['Ankle', 'Knee', 'Shoulder']
+  recent_injuries.count: 25
+  recent_injuries.by_joint.Knee: 20
+  recent_injuries.by_joint.Shoulder: 3
+  recent_injuries.by_joint.Ankle: 2
+  recent_injuries.days_since_last: 0
+  recent_injuries.last_location: right knee
+  recent_injuries.days_since_by_joint.Ankle: 0
+  recent_injuries.days_since_by_joint.Knee: 0
+  recent_injuries.days_since_by_joint.Shoulder: 7
+  training.this_window.days_with_records: 11
+  training.this_window.calendar_days: 21
+  training.this_window.sessions: 19
+  training.this_window.per_week: 6.3
+  training.this_window.load: 2930.0
+  training.this_window.unrated_device_minutes: 320
+  training.this_window.median_minutes: 25
+  training.this_window.effort: very hard effort 6, hard effort 1 (of 7 reports); latest: very hard effort
+  training.this_window.self_reported: 7
+  training.this_window.device_only: 12
+  training.this_window.matched: 2
+  training.this_window.median_avg_hr: 110
+  training.this_window.median_steps: 1799
+  training.this_window.median_calories: 173
+  training.this_window.modalities.walking: 6
+  training.this_window.modalities.resistance training: 5
+  training.this_window.modalities.cross-training: 4
+  training.this_window.modalities.running: 4
+  training.previous_window: None
+  training.units.sessions: count
+  training.units.per_week: sessions/week
+  training.units.load: sRPE
+  training.units.median_minutes: minutes/session
+  training.units.effort: answers, in words
+  training.units.self_reported: count
+  training.units.device_only: count
+  training.units.matched: count
+  training.units.median_avg_hr: bpm (session average)
+  training.units.median_steps: steps/session
+  training.units.median_calories: kcal/session
+  sleep.this_window.days_with_records: 5
+  sleep.this_window.calendar_days: 21
+  sleep.this_window.nights: 5
+  sleep.this_window.median_hours: 3.72
+  sleep.this_window.median_efficiency: 99
+  sleep.this_window.median_deep_min: 0
+  sleep.this_window.median_rem_min: 0
+  sleep.this_window.scored: 0
+  sleep.previous_window: None
+  sleep.units.nights: count
+  sleep.units.median_hours: hours
+  sleep.units.median_efficiency: percent
+  sleep.units.median_deep_min: minutes
+  sleep.units.median_rem_min: minutes
+  sleep.units.scored: count
+  recovery.this_window.days_with_records: 11
+  recovery.this_window.calendar_days: 21
+  recovery.this_window.days: 11
+  recovery.this_window.readiness: moderate readiness to train 8, high readiness to train 2, low readiness to train 1 (of 11 reports); latest: moderate readiness
+    to train
+  recovery.this_window.fatigue: normal energy 6, more tired than normal 3, fresher than normal 2 (of 11 reports); latest: normal energy
+  recovery.this_window.soreness: more sore than normal 6, normal soreness 5 (of 11 reports); latest: more sore than normal
+  recovery.this_window.stress: more stressed than normal 6, normal stress 4, more relaxed than normal 1 (of 11 reports); latest: normal stress
+  recovery.this_window.mood: normal mood 8, better mood than normal 3 (of 11 reports); latest: normal mood
+  recovery.this_window.sleep_quality: better sleep than normal 6, normal sleep quality 5 (of 11 reports); latest: normal sleep quality
+  recovery.this_window.low_readiness_reports: 1
+  recovery.this_window.soreness_area_days: 6
+  recovery.this_window.soreness_area_codes: ['12921003', '22943007', '32696007', '368208006', '48979004', '69536005']
+  recovery.previous_window: None
+  recovery.units.days: count
+  recovery.units.readiness: answers, in words
+  recovery.units.fatigue: answers, in words
+  recovery.units.soreness: answers, in words
+  recovery.units.stress: answers, in words
+  recovery.units.mood: answers, in words
+  recovery.units.sleep_quality: answers, in words
+  recovery.units.low_readiness_reports: count
+  recovery.units.soreness_area_days: count
+  physiology.this_window.days_with_records: 21
+  physiology.this_window.calendar_days: 21
+  physiology.this_window.resting_hr_days: 0
+  physiology.this_window.worn_days: 18
+  physiology.this_window.median_sedentary_min: 1143
+  physiology.this_window.median_active_min: 42
+  physiology.this_window.zone_days: 21
+  physiology.this_window.median_cardio_peak_min: 2
+  physiology.this_window.intraday_heart_days: 21
+  physiology.this_window.median_intraday_mean_hr: 78.4
+  physiology.this_window.median_intraday_p95_hr: 100
+  physiology.this_window.median_heart_covered_min: 636
+  physiology.this_window.intraday_step_days: 21
+  physiology.this_window.median_daily_steps: 9503
+  physiology.this_window.total_distance_km: 156.13
+  physiology.this_window.total_calories: 58706.3
+  physiology.previous_window: None
+  physiology.units.resting_hr_days: count
+  physiology.units.worn_days: count
+  physiology.units.median_sedentary_min: minutes
+  physiology.units.median_active_min: minutes
+  physiology.units.zone_days: count
+  physiology.units.median_cardio_peak_min: minutes
+  physiology.units.intraday_heart_days: days
+  physiology.units.median_intraday_mean_hr: bpm
+  physiology.units.median_intraday_p95_hr: bpm
+  physiology.units.median_heart_covered_min: minutes/day
+  physiology.units.intraday_step_days: days
+  physiology.units.median_daily_steps: steps/day
+  physiology.units.total_distance_km: km
+  physiology.units.total_calories: kcal
+  lifestyle.this_window.days_with_records: 13
+  lifestyle.this_window.calendar_days: 21
+  lifestyle.this_window.days: 13
+  lifestyle.this_window.weight_days: 13
+  lifestyle.this_window.weight_change_kg: -1.9
+  lifestyle.this_window.latest_weight_kg: 67.1
+  lifestyle.this_window.median_glasses: 15
+  lifestyle.this_window.alcohol_days: 0
+  lifestyle.this_window.median_meals: 4
+  lifestyle.previous_window: None
+  lifestyle.units.days: count
+  lifestyle.units.weight_days: count
+  lifestyle.units.weight_change_kg: kg
+  lifestyle.units.latest_weight_kg: kg
+  lifestyle.units.median_glasses: glasses
+  lifestyle.units.alcohol_days: count
+  lifestyle.units.median_meals: count
+  injury.this_window.days_with_records: 10
+  injury.this_window.calendar_days: 21
+  injury.this_window.count: 25
+  injury.this_window.by_joint.Knee: 20
+  injury.this_window.by_joint.Shoulder: 3
+  injury.this_window.by_joint.Ankle: 2
+  injury.this_window.severities.minor: 25
+  injury.this_window.reports[0].date: 2019-11-15
+  injury.this_window.reports[0].location: right_knee
+  injury.this_window.reports[0].joint: Knee
+  injury.this_window.reports[0].severity: minor
+  injury.this_window.reports[1].date: 2019-11-18
+  injury.this_window.reports[1].location: right_knee
+  injury.this_window.reports[1].joint: Knee
+  injury.this_window.reports[1].severity: minor
+  injury.this_window.reports[2].date: 2019-11-18
+  injury.this_window.reports[2].location: right_knee
+  injury.this_window.reports[2].joint: Knee
+  injury.this_window.reports[2].severity: minor
+  injury.this_window.reports[3].date: 2019-11-18
+  injury.this_window.reports[3].location: left_shoulder
+  injury.this_window.reports[3].joint: Shoulder
+  injury.this_window.reports[3].severity: minor
+  injury.this_window.reports[4].date: 2019-11-19
+  injury.this_window.reports[4].location: left_leg
+  injury.this_window.reports[4].joint: Knee
+  injury.this_window.reports[4].severity: minor
+  injury.this_window.reports[5].date: 2019-11-19
+  injury.this_window.reports[5].location: left_shoulder
+  injury.this_window.reports[5].joint: Shoulder
+  injury.this_window.reports[5].severity: minor
+  injury.this_window.reports[6].date: 2019-11-19
+  injury.this_window.reports[6].location: right_knee
+  injury.this_window.reports[6].joint: Knee
+  injury.this_window.reports[6].severity: minor
+  injury.this_window.reports[7].date: 2019-11-20
+  injury.this_window.reports[7].location: left_leg
+  injury.this_window.reports[7].joint: Knee
+  injury.this_window.reports[7].severity: minor
+  injury.this_window.reports[8].date: 2019-11-20
+  injury.this_window.reports[8].location: left_shoulder
+  injury.this_window.reports[8].joint: Shoulder
+  injury.this_window.reports[8].severity: minor
+  injury.this_window.reports[9].date: 2019-11-20
+  injury.this_window.reports[9].location: right_knee
+  injury.this_window.reports[9].joint: Knee
+  injury.this_window.reports[9].severity: minor
+  injury.this_window.reports[10].date: 2019-11-20
+  injury.this_window.reports[10].location: left_leg
+  injury.this_window.reports[10].joint: Knee
+  injury.this_window.reports[10].severity: minor
+  injury.this_window.reports[11].date: 2019-11-20
+  injury.this_window.reports[11].location: right_knee
+  injury.this_window.reports[11].joint: Knee
+  injury.this_window.reports[11].severity: minor
+  injury.this_window.reports[12].date: 2019-11-21
+  injury.this_window.reports[12].location: left_leg
+  injury.this_window.reports[12].joint: Knee
+  injury.this_window.reports[12].severity: minor
+  injury.this_window.reports[13].date: 2019-11-21
+  injury.this_window.reports[13].location: right_knee
+  injury.this_window.reports[13].joint: Knee
+  injury.this_window.reports[13].severity: minor
+  injury.this_window.reports[14].date: 2019-11-22
+  injury.this_window.reports[14].location: left_leg
+  injury.this_window.reports[14].joint: Knee
+  injury.this_window.reports[14].severity: minor
+  injury.this_window.reports[15].date: 2019-11-22
+  injury.this_window.reports[15].location: right_knee
+  injury.this_window.reports[15].joint: Knee
+  injury.this_window.reports[15].severity: minor
+  injury.this_window.reports[16].date: 2019-11-24
+  injury.this_window.reports[16].location: right_knee
+  injury.this_window.reports[16].joint: Knee
+  injury.this_window.reports[16].severity: minor
+  injury.this_window.reports[17].date: 2019-11-25
+  injury.this_window.reports[17].location: right_knee
+  injury.this_window.reports[17].joint: Knee
+  injury.this_window.reports[17].severity: minor
+  injury.this_window.reports[18].date: 2019-11-25
+  injury.this_window.reports[18].location: right_thigh
+  injury.this_window.reports[18].joint: Knee
+  injury.this_window.reports[18].severity: minor
+  injury.this_window.reports[19].date: 2019-11-26
+  injury.this_window.reports[19].location: left_knee
+  injury.this_window.reports[19].joint: Knee
+  injury.this_window.reports[19].severity: minor
+  injury.this_window.reports[20].date: 2019-11-26
+  injury.this_window.reports[20].location: right_knee
+  injury.this_window.reports[20].joint: Knee
+  injury.this_window.reports[20].severity: minor
+  injury.this_window.reports[21].date: 2019-11-27
+  injury.this_window.reports[21].location: left_foot
+  injury.this_window.reports[21].joint: Ankle
+  injury.this_window.reports[21].severity: minor
+  injury.this_window.reports[22].date: 2019-11-27
+  injury.this_window.reports[22].location: left_knee
+  injury.this_window.reports[22].joint: Knee
+  injury.this_window.reports[22].severity: minor
+  injury.this_window.reports[23].date: 2019-11-27
+  injury.this_window.reports[23].location: right_foot
+  injury.this_window.reports[23].joint: Ankle
+  injury.this_window.reports[23].severity: minor
+  injury.this_window.reports[24].date: 2019-11-27
+  injury.this_window.reports[24].location: right_knee
+  injury.this_window.reports[24].joint: Knee
+  injury.this_window.reports[24].severity: minor
+  injury.previous_window: None
+  injury.units.count: count

@@ -1,0 +1,111 @@
+CASE p05-01  participant p05  detector sleep_debt  why reviewed: new  at 2019-12-06 23:59:59
+
+SIGNAL
+  you are 3.7h short of your own usual sleep over 7 nights
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.46 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a continuing condition, not a one-off event: it started on 2019-12-06 and has held for 1 day(s)
+  - when it started: you are 3.7h short of your own usual sleep over 7 nights
+  - now: you are 3.7h short of your own usual sleep over 7 nights
+  - you have not reviewed it before in this run
+  - the person has not been alerted about this kind of signal in this run, so there is no earlier Alert to repeat; now it is 3.7 h short over 7 nights
+  No other condition is holding.
+  No Alert has been raised in this monitoring run yet.
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - Mostly below normal: fatigue, stress, sleep quality. fatigue: more tired than normal 6, much more tired than normal 5, normal energy 2 (of 13
+    reports); latest: more tired than normal; soreness: normal soreness 12, more sore than normal 1 (of 13 reports); latest: normal soreness; stress:
+    more stressed than normal 6, much more stressed than normal 6, normal stress 1 (of 13 reports); latest: normal stress; sleep quality: worse sleep
+    than normal 11, normal sleep quality 2 (of 13 reports); latest: normal sleep quality.
+  - Recorded sleep total is 3.7 hours below the rolling baseline expectation across 7 sleep records.
+  - Reported and measured sleep disagree by over an hour on 88% of nights; you under-report by 1.9h at the median.
+  - Body weight is trending up at 0.31 kg/week (+1.0 kg over the window).
+  - Meals are irregular or alcohol is frequent.
+State at the window end:
+  as_of: 2019-12-06
+  capacity_today.ceiling: moderate
+  capacity_today.reasons: ['you are 3.7h short of your own usual sleep over the last 7 nights']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied', 'you have had breakfast on
+    only 29% of the last 14 recorded days', 'alcohol on 36% of recorded days; this does not establish an effect on your sleep']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 16
+  habits.Walking.share: 0.552
+  habits.Walking.typical_gap_days: 2
+  habits.Walking.typical_minutes: 23
+  habits.Walking.last_done: 0
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  habits.Cycling.label: cycling
+  habits.Cycling.sessions: 12
+  habits.Cycling.share: 0.414
+  habits.Cycling.typical_gap_days: 6.0
+  habits.Cycling.typical_minutes: 18
+  habits.Cycling.last_done: 2
+  habits.Cycling.recovery_hours: 12
+  habits.Cycling.loads_joints: ['Knee']
+  habits.Cycling.spares_joints: ['Ankle']
+  weekday_rhythm.Mon: 0
+  weekday_rhythm.Tue: 1
+  weekday_rhythm.Wed: 9
+  weekday_rhythm.Thu: 6
+  weekday_rhythm.Fri: 6
+  weekday_rhythm.Sat: 4
+  weekday_rhythm.Sun: 3
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 301
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 0.0
+  training_load.acwr: None
+  training_load.sessions_7d: 9
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d.nights: 7
+  sleep_debt_7d.actual_hours: 40.2
+  sleep_debt_7d.expected_hours: 43.9
+  sleep_debt_7d.debt_hours: 3.7
+  resting_hr: None
+  readiness_trend: None
+  activity_vs_who.weeks_scored: 4
+  activity_vs_who.median_mvpa_minutes: 678
+  activity_vs_who.weeks_meeting_floor: 4
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: exceeds
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2019-11-09
+  ambient_activity.window.end: 2019-12-06
+  ambient_activity.heart_days: 27
+  ambient_activity.median_heart_covered_minutes: 1204
+  ambient_activity.median_daily_steps: 11928
+  ambient_activity.total_distance_km: 223.5
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 2
+  recent_injuries.by_joint.Ankle: 1
+  recent_injuries.days_since_last: 29
+  recent_injuries.last_location: head neck
+  recent_injuries.days_since_by_joint.Ankle: 35
+Data quality:
+  summary: 100% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 1.0
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.

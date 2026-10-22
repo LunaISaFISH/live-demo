@@ -1,0 +1,112 @@
+CASE p16-07  participant p16  detector intraday_hr  why reviewed: event  at 2019-12-02 16:55:00
+
+SIGNAL
+  heart rate averaged 97 bpm for 10 minutes from 16:45, with 5 recorded steps and no overlapping logged exercise; daily resting reference 66 bpm
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.51 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a one-off event at its own timestamp
+  - the person has not been alerted about this kind of signal in this run, so there is no earlier Alert to repeat; now it is 97 bpm for 10 min, +31
+    over the resting reference, 5 steps
+  Other conditions holding as of 2019-12-01:
+  - over 4 weeks your middle week had 98 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (since
+    2019-11-22)
+  Alerts already raised in this monitoring run:
+  - 2019-11-29 23:59:59: over 4 weeks your middle week had 94 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Your four-week activity summary remains below general guidance and is lower than the prior reviewed summary, so it merits your
+    attention even though the record cannot show your circumstances.)
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - About 98 min/week of moderate-to-vigorous activity against the 150 the WHO recommends - below.
+  - Body weight is trending up at 0.56 kg/week (+1.0 kg over the window).
+  - Meals are irregular or alcohol is frequent.
+State at the window end:
+  as_of: 2019-12-01
+  capacity_today.ceiling: hard
+  capacity_today.reasons: ['no encoded recovery rule lowered the intensity ceiling; this does not establish that all recovery markers are normal']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied', 'you have had breakfast on
+    only 21% of the last 14 recorded days', 'a median of 2 meals a day is low if you are training regularly', 'weight is trending up at 0.6 kg/week']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  weekday_rhythm.Mon: 0
+  weekday_rhythm.Tue: 1
+  weekday_rhythm.Wed: 0
+  weekday_rhythm.Thu: 0
+  weekday_rhythm.Fri: 0
+  weekday_rhythm.Sat: 0
+  weekday_rhythm.Sun: 0
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 0
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 0.0
+  training_load.acwr: None
+  training_load.sessions_7d: 0
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d.nights: 7
+  sleep_debt_7d.actual_hours: 48.3
+  sleep_debt_7d.expected_hours: 48.2
+  sleep_debt_7d.debt_hours: -0.1
+  resting_hr.value: 66.12990474700928
+  resting_hr.quantile: 0.286
+  resting_hr.baseline_median: 67.4
+  resting_hr.baseline_days: 28
+  readiness_trend.record_count: 14
+  readiness_trend.recorded_days: 14
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2019-11-18
+  readiness_trend.window.end: 2019-12-01
+  readiness_trend.answers: moderate readiness to train 13, low readiness to train 1 (of 14 reports); latest: moderate readiness to train
+  readiness_trend.latest: moderate readiness to train
+  readiness_trend.direction: flat
+  activity_vs_who.weeks_scored: 4
+  activity_vs_who.median_mvpa_minutes: 98
+  activity_vs_who.weeks_meeting_floor: 0
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: below
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2019-11-04
+  ambient_activity.window.end: 2019-12-01
+  ambient_activity.heart_days: 28
+  ambient_activity.median_heart_covered_minutes: 1156
+  ambient_activity.median_daily_steps: 2030
+  ambient_activity.total_distance_km: 52.96
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 0
+  recent_injuries.days_since_last: None
+  recent_injuries.last_location: None
+Data quality:
+  summary: 100% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 1.0
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.
+Sensor, 90 minutes before the event (10-minute buckets: time, heart bpm, steps, km):
+  15:20  66.7  9  0.0067
+  15:30  65.0  0  0.0
+  15:40  72.6  0  0.0
+  15:50  77.3  278  0.2097
+  16:00  104.0  488  0.3681
+  16:10  84.3  317  0.2391
+  16:20  89.3  71  0.0534
+  16:30  102.1  108  0.0814
+  16:40  99.0  12  0.0089
+  16:50  97  0  0.0
+Exercise logged that day up to the event:
+  {"start": "2019-12-02 15:58:42", "activity": "Walking", "minutes": 15}

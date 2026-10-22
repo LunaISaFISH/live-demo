@@ -1,0 +1,133 @@
+CASE p05-06  participant p05  detector intraday_hr  why reviewed: event  at 2020-01-09 16:40:00
+
+SIGNAL
+  heart rate averaged 95 bpm for 10 minutes from 16:30, with 0 recorded steps and no overlapping logged exercise; daily resting reference 64 bpm
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.53 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a one-off event at its own timestamp
+  - the person has not been alerted about this kind of signal in this run, so there is no earlier Alert to repeat; now it is 95 bpm for 10 min, +32
+    over the resting reference, 0 steps
+  No other condition is holding.
+  Alerts already raised in this monitoring run:
+  - 2020-01-02 23:59:59: you have reported low or very low readiness to train on 10 reports running (Your very-low readiness reports have continued
+    and increased from three to ten in eight days, so this deserves your attention now even though the record does not identify a reason.)
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - Reported and measured sleep disagree by over an hour on 61% of nights; you under-report by 1.1h at the median.
+  - Body weight is trending up at 0.43 kg/week (+0.0 kg over the window).
+State at the window end:
+  as_of: 2020-01-08
+  capacity_today.ceiling: hard
+  capacity_today.reasons: ['no encoded recovery rule lowered the intensity ceiling; this does not establish that all recovery markers are normal']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 39
+  habits.Walking.share: 0.527
+  habits.Walking.typical_gap_days: 2.0
+  habits.Walking.typical_minutes: 23
+  habits.Walking.last_done: 1
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  habits.Cycling.label: cycling
+  habits.Cycling.sessions: 25
+  habits.Cycling.share: 0.338
+  habits.Cycling.typical_gap_days: 3
+  habits.Cycling.typical_minutes: 19
+  habits.Cycling.last_done: 0
+  habits.Cycling.recovery_hours: 12
+  habits.Cycling.loads_joints: ['Knee']
+  habits.Cycling.spares_joints: ['Ankle']
+  habits.Running.label: running
+  habits.Running.sessions: 8
+  habits.Running.share: 0.108
+  habits.Running.typical_gap_days: 10
+  habits.Running.typical_minutes: 37
+  habits.Running.last_done: 1
+  habits.Running.recovery_hours: 24
+  habits.Running.loads_joints: ['Ankle', 'Hip', 'Knee']
+  habits.Running.spares_joints: []
+  weekday_rhythm.Mon: 8
+  weekday_rhythm.Tue: 8
+  weekday_rhythm.Wed: 16
+  weekday_rhythm.Thu: 16
+  weekday_rhythm.Fri: 11
+  weekday_rhythm.Sat: 9
+  weekday_rhythm.Sun: 6
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 3
+  training_load.unrated_device_minutes_7d: 557
+  training_load.acute_7d: 500.0
+  training_load.chronic_28d_per_week: 255.0
+  training_load.acwr: None
+  training_load.sessions_7d: 16
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d.nights: 6
+  sleep_debt_7d.actual_hours: 35.9
+  sleep_debt_7d.expected_hours: 36.4
+  sleep_debt_7d.debt_hours: 0.5
+  resting_hr: None
+  readiness_trend.record_count: 14
+  readiness_trend.recorded_days: 13
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2019-12-26
+  readiness_trend.window.end: 2020-01-08
+  readiness_trend.answers: very low readiness to train 10, moderate readiness to train 4 (of 14 reports); latest: moderate readiness to train
+  readiness_trend.latest: moderate readiness to train
+  readiness_trend.direction: rising
+  activity_vs_who.weeks_scored: 4
+  activity_vs_who.median_mvpa_minutes: 676
+  activity_vs_who.weeks_meeting_floor: 4
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: exceeds
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2019-12-12
+  ambient_activity.window.end: 2020-01-08
+  ambient_activity.heart_days: 28
+  ambient_activity.median_heart_covered_minutes: 1238
+  ambient_activity.median_daily_steps: 12164
+  ambient_activity.total_distance_km: 254.38
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 2
+  recent_injuries.by_joint.Ankle: 1
+  recent_injuries.days_since_last: 62
+  recent_injuries.last_location: head neck
+  recent_injuries.days_since_by_joint.Ankle: 68
+Data quality:
+  summary: 100% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 1.0
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.
+Sensor, 90 minutes before the event (10-minute buckets: time, heart bpm, steps, km):
+  15:10  80.2  6  0.0043
+  15:20  86.0  40  0.0291
+  15:30  87.3  203  0.1479
+  15:40  87.4  107  0.0778
+  15:50  89.9  22  0.0159
+  16:00  86.5  105  0.0764
+  16:10  94.6  31  0.0225
+  16:20  97.8  182  0.1324
+  16:30  95.3  0  0.0
+  16:40  None  0  0.0
+Exercise logged that day up to the event:
+  {"start": "2020-01-09 13:43:51", "activity": "Walking", "minutes": 56}

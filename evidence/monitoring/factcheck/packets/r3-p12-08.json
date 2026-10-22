@@ -1,0 +1,700 @@
+{
+ "id": "p12-08",
+ "kind": "load_spike",
+ "at": "2020-02-05 23:59:59",
+ "monitor_facts": "- severity 0.63 on this detector's own 0-1 scale\n- record coverage that day: sufficient\n- a continuing condition, not a one-off event: it started on 2020-02-02 and has held for 4 day(s)\n- when it started: your last 7 days carry 1.72x your 28-day average\n- now: your last 7 days carry 1.88x your 28-day average\n- your earlier reviews of it in this run:\n  - 2020-02-02: your last 7 days carry 1.72x your 28-day average; Alert (Alert now: the higher recorded load occurs alongside a new major right-knee injury report, which needs attention even though the latest recovery self-reports were positive.)\n- the person was last alerted about this kind of signal on 2020-02-02, when it was 1.72x the 28-day average (1430 sRPE in 7 days); now it is 1.88x the 28-day average (1950 sRPE in 7 days)\nNo other condition is holding.\nAlerts already raised in this monitoring run:\n- 2020-01-15 23:59:59: your last 7 days carry 2.68x your 28-day average (Alert now: the higher recorded load has continued for eight days and increased markedly since the last review, alongside current reports of tiredness, soreness and worse sleep quality and a recent injury report.)\n- 2020-02-02 23:59:59: your last 7 days carry 1.72x your 28-day average (Alert now: the higher recorded load occurs alongside a new major right-knee injury report, which needs attention even though the latest recovery self-reports were positive.)",
+ "statements": {
+  "observations": [
+   "The current 7-day recorded load was 1,950 sRPE, 1.88 times the 28-day weekly reference, from 4 rated sessions and 14 total sessions; 281 device-only minutes were unrated.",
+   "The current 7-day ratio and load are higher than the 1.72 ratio and 1,430 sRPE at the alert on 2020-02-02.",
+   "The current 28-day window has 54 sessions and 4,140 sRPE, compared with 12 sessions and 1,860 sRPE in the preceding window.",
+   "A major right-knee injury was reported four days ago; minor left-shoulder and right-shoulder injuries were reported yesterday and today.",
+   "The latest recovery reports were high readiness, normal soreness, normal stress and normal sleep quality, but more tired than normal."
+  ],
+  "verdict": "explained",
+  "note": "The increased 7-day sRPE load is consistent with four rated sessions and 14 sessions overall. Since the alert three days ago, the ratio has risen from 1.72 to 1.88 and sRPE from 1,430 to 1,950; a major right-knee entry remains recent and new minor shoulder reports were logged yesterday and today. The latest recovery reports include high readiness and normal soreness but also more tired than normal, which does not establish a relationship to the load or injury reports.",
+  "alert_reason": "Alert now: the recorded load has risen again since the recent alert, while a recent major knee report and new shoulder reports are also recorded.",
+  "message_to_person": "Your recorded 7-day load has risen again since the alert three days ago, to 1,950 sRPE and 1.88 times your 28-day reference. [b4767929-e10] A major right-knee issue was logged four days ago, and minor left- and right-shoulder issues were logged yesterday and today. [b4767929-e6] You last reported high readiness and normal soreness, but also more tired than normal. [b4767929-e3] The records cannot show how these observations are related."
+ },
+ "tool_calls": [
+  {
+   "call": "read_record 28d as of 2020-02-05",
+   "output": {
+    "person": "p12",
+    "window": {
+     "start": "2020-01-09",
+     "end": "2020-02-05"
+    },
+    "previous_window": {
+     "start": "2019-12-12",
+     "end": "2020-01-08"
+    },
+    "findings": [
+     "Last 7 days carry 1.88x the 28-day average, past the 1.5 tripwire.",
+     "Last injury 0 days ago (right shoulder); in the last 14 days: Ankle 9 days ago, Knee 4 days ago, Shoulder 0 days ago; 68 reports in the whole record so far."
+    ],
+    "domains": {
+     "training": {
+      "this_window": {
+       "days_with_records": 21,
+       "calendar_days": 28,
+       "sessions": 54,
+       "per_week": 13.5,
+       "load": 4140.0,
+       "unrated_device_minutes": 1515,
+       "median_minutes": 31,
+       "effort": "very hard effort 6, hard effort 3 (of 9 reports); latest: very hard effort",
+       "self_reported": 9,
+       "device_only": 45,
+       "matched": 0,
+       "median_avg_hr": 105,
+       "median_steps": 2116,
+       "median_calories": 192,
+       "modalities": {
+        "walking": 39,
+        "resistance training": 7,
+        "field or court sport": 3,
+        "running": 2,
+        "cross-training": 2,
+        "cycling": 1
+       }
+      },
+      "previous_window": {
+       "days_with_records": 8,
+       "calendar_days": 28,
+       "sessions": 12,
+       "per_week": 3.0,
+       "load": 1860.0,
+       "unrated_device_minutes": 221,
+       "median_minutes": 28,
+       "effort": "very hard effort 2, hard effort 2 (of 4 reports); latest: hard effort",
+       "self_reported": 4,
+       "device_only": 8,
+       "matched": 0,
+       "median_avg_hr": 99,
+       "median_steps": 1408,
+       "median_calories": 140,
+       "modalities": {
+        "walking": 7,
+        "resistance training": 4,
+        "running": 1
+       }
+      },
+      "units": {
+       "sessions": "count",
+       "per_week": "sessions/week",
+       "load": "sRPE",
+       "median_minutes": "minutes/session",
+       "effort": "answers, in words",
+       "self_reported": "count",
+       "device_only": "count",
+       "matched": "count",
+       "median_avg_hr": "bpm (session average)",
+       "median_steps": "steps/session",
+       "median_calories": "kcal/session"
+      },
+      "change": {
+       "sessions": 42,
+       "per_week": 10.5,
+       "load": 2280.0,
+       "unrated_device_minutes": 1294,
+       "median_minutes": 3,
+       "self_reported": 5,
+       "device_only": 37,
+       "matched": 0,
+       "median_avg_hr": 6,
+       "median_steps": 708,
+       "median_calories": 52
+      }
+     },
+     "sleep": {
+      "this_window": {
+       "days_with_records": 1,
+       "calendar_days": 28,
+       "nights": 1,
+       "median_hours": 1.13,
+       "median_efficiency": 97,
+       "median_deep_min": 0,
+       "median_rem_min": 0,
+       "scored": 0
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 28,
+       "nights": 0
+      },
+      "units": {
+       "nights": "count",
+       "median_hours": "hours",
+       "median_efficiency": "percent",
+       "median_deep_min": "minutes",
+       "median_rem_min": "minutes",
+       "scored": "count"
+      }
+     },
+     "recovery": {
+      "this_window": {
+       "days_with_records": 22,
+       "calendar_days": 28,
+       "days": 22,
+       "readiness": "moderate readiness to train 15, high readiness to train 6, low readiness to train 1 (of 22 reports); latest: high readiness to train",
+       "fatigue": "normal energy 12, fresher than normal 5, more tired than normal 5 (of 22 reports); latest: more tired than normal",
+       "soreness": "normal soreness 18, more sore than normal 3, less sore than normal 1 (of 22 reports); latest: normal soreness",
+       "stress": "normal stress 20, more relaxed than normal 1, more stressed than normal 1 (of 22 reports); latest: normal stress",
+       "mood": "normal mood 21, better mood than normal 1 (of 22 reports); latest: normal mood",
+       "sleep_quality": "normal sleep quality 12, worse sleep than normal 6, better sleep than normal 4 (of 22 reports); latest: normal sleep quality",
+       "low_readiness_reports": 1,
+       "soreness_area_days": 3,
+       "soreness_area_codes": [
+        "12921003",
+        "32696007",
+        "48979004",
+        "69536005"
+       ]
+      },
+      "previous_window": {
+       "days_with_records": 16,
+       "calendar_days": 28,
+       "days": 16,
+       "readiness": "moderate readiness to train 12, low readiness to train 2, high readiness to train 1, very low readiness to train 1 (of 16 reports); latest: moderate readiness to train",
+       "fatigue": "normal energy 10, more tired than normal 5, fresher than normal 1 (of 16 reports); latest: fresher than normal",
+       "soreness": "normal soreness 8, more sore than normal 7, less sore than normal 1 (of 16 reports); latest: more sore than normal",
+       "stress": "normal stress 12, more relaxed than normal 4 (of 16 reports); latest: normal stress",
+       "mood": "normal mood 15, better mood than normal 1 (of 16 reports); latest: normal mood",
+       "sleep_quality": "normal sleep quality 8, worse sleep than normal 6, better sleep than normal 2 (of 16 reports); latest: normal sleep quality",
+       "low_readiness_reports": 3,
+       "soreness_area_days": 7,
+       "soreness_area_codes": [
+        "12921003",
+        "22943007",
+        "32696007",
+        "368208006",
+        "368209003",
+        "48979004",
+        "69536005"
+       ]
+      },
+      "units": {
+       "days": "count",
+       "readiness": "answers, in words",
+       "fatigue": "answers, in words",
+       "soreness": "answers, in words",
+       "stress": "answers, in words",
+       "mood": "answers, in words",
+       "sleep_quality": "answers, in words",
+       "low_readiness_reports": "count",
+       "soreness_area_days": "count"
+      },
+      "change": {
+       "days": 6,
+       "low_readiness_reports": -2,
+       "soreness_area_days": -4
+      }
+     },
+     "physiology": {
+      "this_window": {
+       "days_with_records": 28,
+       "calendar_days": 28,
+       "resting_hr_days": 0,
+       "worn_days": 28,
+       "median_sedentary_min": 1137,
+       "median_active_min": 55,
+       "zone_days": 28,
+       "median_cardio_peak_min": 1,
+       "intraday_heart_days": 28,
+       "median_intraday_mean_hr": 78.3,
+       "median_intraday_p95_hr": 104.0,
+       "median_heart_covered_min": 644,
+       "intraday_step_days": 28,
+       "median_daily_steps": 11421,
+       "total_distance_km": 262.94,
+       "total_calories": 82766.1
+      },
+      "previous_window": {
+       "days_with_records": 23,
+       "calendar_days": 28,
+       "resting_hr_days": 0,
+       "worn_days": 15,
+       "median_sedentary_min": 1212,
+       "median_active_min": 45,
+       "zone_days": 23,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 23,
+       "median_intraday_mean_hr": 76.0,
+       "median_intraday_p95_hr": 107,
+       "median_heart_covered_min": 676,
+       "intraday_step_days": 19,
+       "median_daily_steps": 8090,
+       "total_distance_km": 128.81,
+       "total_calories": 64871.8
+      },
+      "units": {
+       "resting_hr_days": "count",
+       "worn_days": "count",
+       "median_sedentary_min": "minutes",
+       "median_active_min": "minutes",
+       "zone_days": "count",
+       "median_cardio_peak_min": "minutes",
+       "intraday_heart_days": "days",
+       "median_intraday_mean_hr": "bpm",
+       "median_intraday_p95_hr": "bpm",
+       "median_heart_covered_min": "minutes/day",
+       "intraday_step_days": "days",
+       "median_daily_steps": "steps/day",
+       "total_distance_km": "km",
+       "total_calories": "kcal"
+      },
+      "change": {
+       "resting_hr_days": 0,
+       "worn_days": 13,
+       "median_sedentary_min": -75,
+       "median_active_min": 10,
+       "zone_days": 5,
+       "median_cardio_peak_min": 1,
+       "intraday_heart_days": 5,
+       "median_intraday_mean_hr": 2.3,
+       "median_intraday_p95_hr": -3.0,
+       "median_heart_covered_min": -32,
+       "intraday_step_days": 9,
+       "median_daily_steps": 3331,
+       "total_distance_km": 134.13,
+       "total_calories": 17894.3
+      }
+     },
+     "lifestyle": {
+      "this_window": {
+       "days_with_records": 16,
+       "calendar_days": 28,
+       "days": 17,
+       "weight_days": 17,
+       "weight_change_kg": -1.0,
+       "latest_weight_kg": 67.7,
+       "median_glasses": 12,
+       "alcohol_days": 2,
+       "median_meals": 4
+      },
+      "previous_window": {
+       "days_with_records": 20,
+       "calendar_days": 28,
+       "days": 20,
+       "weight_days": 20,
+       "weight_change_kg": 0.7,
+       "latest_weight_kg": 68.9,
+       "median_glasses": 13.0,
+       "alcohol_days": 4,
+       "median_meals": 4.0
+      },
+      "units": {
+       "days": "count",
+       "weight_days": "count",
+       "weight_change_kg": "kg",
+       "latest_weight_kg": "kg",
+       "median_glasses": "glasses",
+       "alcohol_days": "count",
+       "median_meals": "count"
+      },
+      "change": {
+       "days": -3,
+       "weight_days": -3,
+       "weight_change_kg": -1.7,
+       "latest_weight_kg": -1.2,
+       "median_glasses": -1.0,
+       "alcohol_days": -2,
+       "median_meals": 0.0
+      }
+     },
+     "injury": {
+      "this_window": {
+       "days_with_records": 8,
+       "calendar_days": 28,
+       "count": 10,
+       "by_joint": {
+        "Knee": 6,
+        "Wrist": 1,
+        "Ankle": 1,
+        "Shoulder": 2
+       },
+       "severities": {
+        "minor": 9,
+        "major": 1
+       },
+       "reports": [
+        {
+         "date": "2020-01-11",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-14",
+         "location": "left_hand",
+         "joint": "Wrist",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-27",
+         "location": "left_foot",
+         "joint": "Ankle",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-27",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-28",
+         "location": "left_leg",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-28",
+         "location": "right_leg",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-29",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-02-01",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "major"
+        },
+        {
+         "date": "2020-02-04",
+         "location": "left_shoulder",
+         "joint": "Shoulder",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-02-05",
+         "location": "right_shoulder",
+         "joint": "Shoulder",
+         "severity": "minor"
+        }
+       ]
+      },
+      "previous_window": {
+       "days_with_records": 10,
+       "calendar_days": 28,
+       "count": 17,
+       "by_joint": {
+        "Ankle": 4,
+        "Knee": 10,
+        "Wrist": 2
+       },
+       "severities": {
+        "minor": 17
+       },
+       "reports": [
+        {
+         "date": "2019-12-12",
+         "location": "right_foot",
+         "joint": "Ankle",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-12",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-15",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-17",
+         "location": "left_foot",
+         "joint": "Ankle",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-17",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-17",
+         "location": "left_foot",
+         "joint": "Ankle",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-17",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-18",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-23",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-26",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2019-12-28",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-04",
+         "location": "chest",
+         "joint": null,
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-04",
+         "location": "right_foot",
+         "joint": "Ankle",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-04",
+         "location": "right_hand",
+         "joint": "Wrist",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-06",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-08",
+         "location": "right_hand",
+         "joint": "Wrist",
+         "severity": "minor"
+        },
+        {
+         "date": "2020-01-08",
+         "location": "right_knee",
+         "joint": "Knee",
+         "severity": "minor"
+        }
+       ]
+      },
+      "units": {
+       "count": "count"
+      },
+      "change": {
+       "count": -7
+      }
+     }
+    },
+    "state_at_window_end": {
+     "as_of": "2020-02-05",
+     "capacity_today": {
+      "ceiling": "moderate",
+      "reasons": [
+       "your 7-day load is 1.88x your 28-day average, past the 1.5 tripwire"
+      ],
+      "cautions": [
+       "you reported an injury (right shoulder) 0 days ago"
+      ],
+      "applies_to": "today and tomorrow; it does not cap later days, which depend on how the person recovers"
+     },
+     "habits": {
+      "Walking": {
+       "label": "walking",
+       "sessions": 61,
+       "share": 0.61,
+       "typical_gap_days": 1,
+       "typical_minutes": 26,
+       "last_done": 0,
+       "recovery_hours": 0,
+       "loads_joints": [
+        "Ankle",
+        "Hip"
+       ],
+       "spares_joints": []
+      },
+      "Strength": {
+       "label": "resistance training",
+       "sessions": 18,
+       "share": 0.18,
+       "typical_gap_days": 3.0,
+       "typical_minutes": 50,
+       "last_done": 0,
+       "recovery_hours": 48,
+       "loads_joints": [
+        "Hip",
+        "Knee",
+        "LumbarSpine",
+        "Shoulder"
+       ],
+       "spares_joints": []
+      },
+      "Running": {
+       "label": "running",
+       "sessions": 11,
+       "share": 0.11,
+       "typical_gap_days": 4,
+       "typical_minutes": 30,
+       "last_done": 23,
+       "recovery_hours": 24,
+       "loads_joints": [
+        "Ankle",
+        "Hip",
+        "Knee"
+       ],
+       "spares_joints": []
+      },
+      "CrossTraining": {
+       "label": "cross-training",
+       "sessions": 6,
+       "share": 0.06,
+       "typical_gap_days": 5,
+       "typical_minutes": 31,
+       "last_done": 3,
+       "recovery_hours": 24,
+       "loads_joints": [
+        "Hip",
+        "Knee"
+       ],
+       "spares_joints": []
+      },
+      "Sport": {
+       "label": "field or court sport",
+       "sessions": 3,
+       "share": 0.03,
+       "typical_gap_days": 1,
+       "typical_minutes": 23,
+       "last_done": 3,
+       "recovery_hours": 48,
+       "loads_joints": [
+        "Ankle",
+        "Hip",
+        "Knee"
+       ],
+       "spares_joints": []
+      }
+     },
+     "weekday_rhythm": {
+      "Mon": 13,
+      "Tue": 7,
+      "Wed": 15,
+      "Thu": 5,
+      "Fri": 19,
+      "Sat": 21,
+      "Sun": 20
+     },
+     "training_load": {
+      "units": {
+       "acute_7d": "sRPE",
+       "chronic_28d_per_week": "sRPE/week",
+       "acwr": "ratio",
+       "sessions_7d": "sessions",
+       "rated_sessions_7d": "sessions",
+       "unrated_device_minutes_7d": "minutes"
+      },
+      "load_is": "the person's own effort rating x minutes; device-detected sessions have no rating and carry no load",
+      "rated_sessions_7d": 4,
+      "unrated_device_minutes_7d": 281,
+      "acute_7d": 1950.0,
+      "chronic_28d_per_week": 1035.0,
+      "acwr": 1.88,
+      "sessions_7d": 14
+     },
+     "sleep_debt_7d": null,
+     "resting_hr": null,
+     "readiness_trend": {
+      "record_count": 9,
+      "recorded_days": 9,
+      "calendar_days": 14,
+      "window": {
+       "start": "2020-01-23",
+       "end": "2020-02-05"
+      },
+      "answers": "moderate readiness to train 5, high readiness to train 3, low readiness to train 1 (of 9 reports); latest: high readiness to train",
+      "latest": "high readiness to train",
+      "direction": "rising"
+     },
+     "activity_vs_who": {
+      "weeks_scored": 4,
+      "median_mvpa_minutes": 738,
+      "weeks_meeting_floor": 4,
+      "floor": 150,
+      "upper": 300,
+      "verdict": "exceeds",
+      "guideline": "Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity, or an equivalent combination.",
+      "source": "WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour"
+     },
+     "ambient_activity": {
+      "window": {
+       "start": "2020-01-09",
+       "end": "2020-02-05"
+      },
+      "heart_days": 28,
+      "median_heart_covered_minutes": 644,
+      "median_daily_steps": 11421,
+      "total_distance_km": 262.94,
+      "limitations": [
+       "distance and calories are device estimates",
+       "missing samples are not treated as zero"
+      ]
+     },
+     "recent_injuries": {
+      "joints_from_log": [
+       "Ankle",
+       "Knee",
+       "Shoulder"
+      ],
+      "count": 68,
+      "by_joint": {
+       "Knee": 45,
+       "Shoulder": 5,
+       "Ankle": 10,
+       "Wrist": 7
+      },
+      "days_since_last": 0,
+      "last_location": "right shoulder",
+      "days_since_by_joint": {
+       "Ankle": 9,
+       "Knee": 4,
+       "Shoulder": 0,
+       "Wrist": 22
+      }
+     }
+    },
+    "data_quality": {
+     "summary": "100% of the last 28 days carry a record.",
+     "status": "within_baseline",
+     "coverage": 1.0,
+     "days_since_last_record": 0
+    },
+    "limitations": [
+     "Values describe recorded data only: a day without a record is unknown, not zero or normal.",
+     "Record counts are not calendar days, and per-session values (training medians) are not daily totals.",
+     "A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.",
+     "Self-reported answers are words relative to the person's own normal.",
+     "Device distance and calories are estimates."
+    ]
+   }
+  }
+ ]
+}

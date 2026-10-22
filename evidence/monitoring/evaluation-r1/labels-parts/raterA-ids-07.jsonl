@@ -1,0 +1,13 @@
+{"id": "p16-26", "should_alert": true, "confidence": "high", "reason": "Resting HR elevated three days, now +6.6 bpm and clearly rising, unexplained, never alerted on this signal."}
+{"id": "p16-27", "should_alert": false, "confidence": "high", "reason": "Resting HR 71.3 is lower than yesterday's alerted 73.0; near-repeat, not worse."}
+{"id": "p16-28", "should_alert": false, "confidence": "low", "reason": "New sleep shortfall about 50 min/night; moderate, first day flagged, not urgent; watch whether it persists."}
+{"id": "p16-29", "should_alert": false, "confidence": "high", "reason": "Activity 56 min/week, unchanged and only slightly below last alerted 61; no clear worsening."}
+{"id": "p16-30", "should_alert": true, "confidence": "low", "reason": "Sleep shortfall persisting and slightly growing (6.1h/week), never alerted; worth telling the person once."}
+{"id": "p16-31", "should_alert": false, "confidence": "low", "reason": "51 vs last alerted 61 min/week is a gradual drift, not a clear worsening worth a repeat alert."}
+{"id": "p16-32", "should_alert": false, "confidence": "low", "reason": "Rise follows activity around 17:00-17:20; magnitude similar to earlier alerted episodes, not clearly worse."}
+{"id": "p16-33", "should_alert": true, "confidence": "high", "reason": "Activity fell clearly from last alerted 61 to 29 min/week; a clear worsening of long-running shortfall."}
+{"id": "p16-34", "should_alert": false, "confidence": "high", "reason": "Walking with rising HR in the hour before; 100 bpm right after is explained and not worse than prior alerts."}
+{"id": "p16-35", "should_alert": false, "confidence": "high", "reason": "Activity 34 min/week, slightly better than last week's alerted 29; no new concern."}
+{"id": "p16-36", "should_alert": false, "confidence": "low", "reason": "Walking 16:00-16:20 immediately precedes the rise; likely post-activity recovery, though magnitude slightly higher than before."}
+{"id": "p16-37", "should_alert": false, "confidence": "high", "reason": "Activity 32 min/week, above last alerted 29; not worse."}
+{"id": "p16-38", "should_alert": false, "confidence": "high", "reason": "One-day resting HR +1.8 bpm is small and within normal variation."}

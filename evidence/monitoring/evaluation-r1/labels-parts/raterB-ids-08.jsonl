@@ -1,0 +1,13 @@
+{"id": "p16-39", "should_alert": false, "confidence": "high", "reason": "Activity median 32 min, unchanged from prior reviews and above the 29 min already alerted; no clear worsening, repeat is noise."}
+{"id": "p16-40", "should_alert": false, "confidence": "high", "reason": "HR 101 follows a burst of steps at 21:40-21:50 and a logged cycling session that day; recovery tail, explained, near-repeat of earlier alert."}
+{"id": "p16-41", "should_alert": false, "confidence": "high", "reason": "Activity median rose to 36 from 29 at last alert; not worse, nothing new to say."}
+{"id": "p16-42", "should_alert": false, "confidence": "high", "reason": "HR 99 follows 1000+ steps of walking at 20:40-20:59; explained by recorded activity, resting HR normal."}
+{"id": "p16-43", "should_alert": true, "confidence": "high", "reason": "Activity median fell to 15 min/week from 29 at last alert (36 recently); clearly worse long-running shortfall, newly worsened."}
+{"id": "p16-44", "should_alert": false, "confidence": "low", "reason": "HR 100 shortly after a walking spell (130 bpm at 17:20, steps to 18:00); resting HR normal, similar to earlier alerted event."}
+{"id": "p16-45", "should_alert": false, "confidence": "low", "reason": "HR 100 is the tail of a gradual decline from 129 after activity at 22:40-23:00; explained, resting HR normal, near-repeat."}
+{"id": "p16-46", "should_alert": true, "confidence": "high", "reason": "Activity median fell from 15 (last alert) to 0 min/week; clearly worse, with fatigue reports and slightly raised resting HR."}
+{"id": "p16-47", "should_alert": false, "confidence": "high", "reason": "Resting HR only +1.7 bpm over median, one day, no symptoms; trivial and not worse than earlier non-alerted levels."}
+{"id": "p16-48", "should_alert": false, "confidence": "high", "reason": "HR 104 follows sustained walking with HR 124-127 until 18:30; explained by recorded steps, resting HR normal."}
+{"id": "p16-49", "should_alert": false, "confidence": "high", "reason": "Resting HR +1.4 bpm over median, one day; trivial."}
+{"id": "p16-50", "should_alert": false, "confidence": "high", "reason": "Activity median improved to 9 from 0 at last alert; not worse, repeat would be noise."}
+{"id": "p16-51", "should_alert": false, "confidence": "high", "reason": "Resting HR +1.4 bpm over median, one day; trivial."}

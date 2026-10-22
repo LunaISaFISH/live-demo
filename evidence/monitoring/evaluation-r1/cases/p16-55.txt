@@ -1,0 +1,142 @@
+CASE p16-55  participant p16  detector resting_hr  why reviewed: recheck  at 2020-03-11 23:59:59
+
+SIGNAL
+  resting heart rate 69.8 bpm, +3.1 bpm from your median of 66.7; in the top 4% of your own last 28 days
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.96 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a continuing condition, not a one-off event: it started on 2020-03-09 and has held for 3 day(s)
+  - when it started: resting heart rate 68.7 bpm, +2.1 bpm from your median of 66.6; higher than on any other day in your own last 28 days
+  - now: resting heart rate 69.8 bpm, +3.1 bpm from your median of 66.7; in the top 4% of your own last 28 days
+  - your earlier reviews of it in this run:
+    - 2020-03-09: resting heart rate 68.7 bpm, +2.1 bpm from your median of 66.6; higher than on any other day in your own last 28 days; no Alert (No
+    alert now: this one-day resting-heart-rate elevation lines up with a recorded 4.3-hour sleep shortfall over the preceding 6 nights, and it remains
+    substantially lower than the prior alerted elevation.)
+  - the person was last alerted about this kind of signal on 2020-01-01, when it was 73.0 bpm, +6.6 from the median; 6 review(s) since then did not
+    alert them; now it is 69.8 bpm, +3.1 from the median
+  Other conditions holding as of 2020-03-11:
+  - you are 7.8h short of your own usual sleep over 7 nights (since 2020-03-09)
+  - over 4 weeks your middle week had 9 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (since
+    2019-11-22)
+  Alerts already raised in this monitoring run:
+  - 2019-11-29 23:59:59: over 4 weeks your middle week had 94 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Your four-week activity summary remains below general guidance and is lower than the prior reviewed summary, so it merits your
+    attention even though the record cannot show your circumstances.)
+  - 2019-12-06 23:59:59: over 4 weeks your middle week had 77 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Your four-week activity summary remains below general guidance and is lower than the activity summary in last week’s alert, so this
+    worsening pattern merits attention.)
+  - 2019-12-11 18:05:00: heart rate averaged 108 bpm for 10 minutes from 17:55, with 0 recorded steps and no overlapping logged exercise; daily
+    resting reference 67 bpm (A sustained heart-rate rise was recorded without clear immediate activity context, so it merits attention now despite
+    the limits of the recording.)
+  - 2019-12-13 23:59:59: over 4 weeks your middle week had 61 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Your four-week activity summary remains below general guidance and is lower than the activity summary in last week’s alert, so this
+    worsening pattern merits attention.)
+  - 2020-01-01 02:40:00: heart rate averaged 105 bpm for 10 minutes from 02:30, with 4 recorded steps and no overlapping logged exercise; daily
+    resting reference 73 bpm (Heart rate stayed elevated for hours without clear recorded exercise context, a longer pattern than the earlier alerted
+    ten-minute event, so it merits attention now.)
+  - 2020-01-01 23:59:59: resting heart rate 73.0 bpm, +6.6 bpm from your median of 66.4; higher than on any other day in your own last 28 days
+    (Resting heart rate has stayed elevated for three days and is now clearly higher than on the prior two days, without enough recorded context to
+    account for it.)
+  - 2020-01-17 23:59:59: over 4 weeks your middle week had 29 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Your four-week activity median has fallen clearly from 51 to 29 minutes per week and remains below general guidance, so it merits
+    attention despite the record not showing your circumstances.)
+  - 2020-02-21 23:59:59: over 4 weeks your middle week had 15 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Your four-week activity median has fallen clearly to 15 minutes per week, below the prior 36-minute summary and the 29-minute most
+    recently alerted summary, so it merits attention despite the record not showing your circumstances.)
+  - 2020-02-28 23:59:59: over 4 weeks your middle week had 0 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Your four-week activity median has fallen from 15 to 0 minutes per week, so it merits attention despite the record not showing your
+    circumstances.)
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - About 9 min/week of moderate-to-vigorous activity against the 150 the WHO recommends - below.
+  - Resting heart rate 70 bpm is in the top 4% of the last 28 days.
+  - Mostly below normal: stress, sleep quality. fatigue: normal energy 4, more tired than normal 2 (of 6 reports); latest: more tired than normal;
+    soreness: normal soreness 6 (of 6 reports); latest: normal soreness; stress: more stressed than normal 3, normal stress 3 (of 6 reports); latest:
+    more stressed than normal; sleep quality: normal sleep quality 3, worse sleep than normal 3 (of 6 reports); latest: worse sleep than normal.
+  - Recorded sleep total is 7.8 hours below the rolling baseline expectation across 7 sleep records.
+State at the window end:
+  as_of: 2020-03-11
+  capacity_today.ceiling: easy
+  capacity_today.reasons: ['you are 7.8h short of your own usual sleep over the last 7 nights', 'resting heart rate is in the top 4% of your own last
+    28 days']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 13
+  habits.Walking.share: 0.812
+  habits.Walking.typical_gap_days: 8
+  habits.Walking.typical_minutes: 16
+  habits.Walking.last_done: 2
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  weekday_rhythm.Mon: 4
+  weekday_rhythm.Tue: 2
+  weekday_rhythm.Wed: 1
+  weekday_rhythm.Thu: 0
+  weekday_rhythm.Fri: 5
+  weekday_rhythm.Sat: 4
+  weekday_rhythm.Sun: 0
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 15
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 0.0
+  training_load.acwr: None
+  training_load.sessions_7d: 1
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d.nights: 7
+  sleep_debt_7d.actual_hours: 38.4
+  sleep_debt_7d.expected_hours: 46.1
+  sleep_debt_7d.debt_hours: 7.8
+  resting_hr.value: 69.75253868103027
+  resting_hr.quantile: 0.964
+  resting_hr.baseline_median: 66.7
+  resting_hr.baseline_days: 28
+  readiness_trend.record_count: 6
+  readiness_trend.recorded_days: 6
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2020-02-27
+  readiness_trend.window.end: 2020-03-11
+  readiness_trend.answers: moderate readiness to train 6 (of 6 reports); latest: moderate readiness to train
+  readiness_trend.latest: moderate readiness to train
+  readiness_trend.direction: not_assessed
+  activity_vs_who.weeks_scored: 4
+  activity_vs_who.median_mvpa_minutes: 9
+  activity_vs_who.weeks_meeting_floor: 1
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: below
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2020-02-13
+  ambient_activity.window.end: 2020-03-11
+  ambient_activity.heart_days: 28
+  ambient_activity.median_heart_covered_minutes: 908
+  ambient_activity.median_daily_steps: 1052
+  ambient_activity.total_distance_km: 31.17
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 0
+  recent_injuries.days_since_last: None
+  recent_injuries.last_location: None
+Data quality:
+  summary: 100% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 1.0
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.

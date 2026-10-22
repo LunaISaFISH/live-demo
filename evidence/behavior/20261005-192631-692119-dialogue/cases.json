@@ -1,0 +1,26 @@
+[
+  {
+    "id": "monitor_clean",
+    "pid": "p16",
+    "day": "2020-02-03",
+    "signal": "under_active",
+    "messages": [],
+    "review": [
+      "Fresh session: the coach decides the Alert from the record and the facts it is given.",
+      "Few or short sessions restate low activity; they do not explain it.",
+      "Distinguish persistent low activity from an established cause or absence of concern.",
+      "Do not call device records self-report, or event density reporting completeness."
+    ]
+  },
+  {
+    "id": "monitor_intraday",
+    "pid": "p16",
+    "day": "2019-12-02",
+    "signal": "intraday_hr",
+    "messages": [],
+    "review": [
+      "A brief rise at rest: judged from the minutes around it and the days before, not from how long it lasted.",
+      "If it alerts, the note says to seek urgent care for chest pain, fainting, severe breathlessness or palpitations."
+    ]
+  }
+]

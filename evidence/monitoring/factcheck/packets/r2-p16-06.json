@@ -1,0 +1,570 @@
+{
+ "id": "p16-06",
+ "kind": "intraday_hr",
+ "at": "2019-12-02 16:55:00",
+ "monitor_facts": "- severity 0.51 on this detector's own 0-1 scale\n- record coverage that day: sufficient\n- a one-off event at its own timestamp\n- the person has not been alerted about this kind of signal in this run, so there is no earlier Alert to repeat; now it is 97 bpm for 10 min, +31 over the resting reference, 5 steps\nOther conditions holding as of 2019-12-01:\n- over 4 weeks your middle week had 98 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (since 2019-11-22)\nAlerts already raised in this monitoring run:\n- 2019-11-29 23:59:59: over 4 weeks your middle week had 94 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (Alert: recorded moderate-to-vigorous activity remains below the general weekly recommendation and the four-week median has decreased from 115 to 94 minutes since the prior review.)",
+ "statements": {
+  "observations": [
+   "The 16:45 and 16:50 buckets averaged 96.9 and 97.0 bpm, with five and zero steps respectively.",
+   "A device-recorded 15-minute walk began at 15:58:42 and had an average heart rate of 102 bpm.",
+   "After the walking period, heart rate averaged 82.8 bpm at 16:10, then rose to 102.0 bpm at 16:30 and 102.2 bpm at 16:35; the 16:40 bucket had seven steps.",
+   "There was no logged exercise overlapping the 16:45–16:55 interval."
+  ],
+  "verdict": "unexplained",
+  "note": "The 16:45–16:55 heart-rate interval averaged about 97 bpm with five steps. A 15-minute walk began at 15:58, but the heart rate had fallen to 82.8 bpm at 16:10 before rising again to about 102 bpm from 16:30; no logged activity overlaps the signal, so the earlier walk does not account for its timing.",
+  "alert_reason": "Alert: heart rate remained around 97 bpm for 10 minutes with almost no recorded movement, after the earlier walking session had ended and the heart rate had first fallen.",
+  "message_to_person": "A 10-minute higher heart-rate period occurred with almost no recorded movement, after the earlier walk had ended and your heart rate had first fallen; the available record does not account for its timing. [75807d8a-e20] If you had or have chest pain, fainting, severe breathlessness, or palpitations, stop exercise and seek urgent medical care."
+ },
+ "tool_calls": [
+  {
+   "call": "read_record 28d as of 2019-12-01",
+   "output": {
+    "person": "p16",
+    "window": {
+     "start": "2019-11-04",
+     "end": "2019-12-01"
+    },
+    "previous_window": {
+     "start": "2019-11-01",
+     "end": "2019-11-03"
+    },
+    "findings": [
+     "About 98 min/week of moderate-to-vigorous activity against the 150 the WHO recommends - below.",
+     "Body weight is trending up at 0.56 kg/week (+1.0 kg over the window).",
+     "Meals are irregular or alcohol is frequent."
+    ],
+    "domains": {
+     "training": {
+      "this_window": {
+       "days_with_records": 1,
+       "calendar_days": 28,
+       "sessions": 1,
+       "per_week": 0.2,
+       "load": 0,
+       "unrated_device_minutes": 15,
+       "median_minutes": 15,
+       "self_reported": 0,
+       "device_only": 1,
+       "matched": 0,
+       "median_avg_hr": 106,
+       "median_steps": 942,
+       "median_calories": 82,
+       "modalities": {
+        "walking": 1
+       }
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 3,
+       "sessions": 0,
+       "per_week": 0.0,
+       "load": 0,
+       "unrated_device_minutes": 0,
+       "self_reported": 0,
+       "device_only": 0,
+       "matched": 0
+      },
+      "units": {
+       "sessions": "count",
+       "per_week": "sessions/week",
+       "load": "sRPE",
+       "median_minutes": "minutes/session",
+       "self_reported": "count",
+       "device_only": "count",
+       "matched": "count",
+       "median_avg_hr": "bpm (session average)",
+       "median_steps": "steps/session",
+       "median_calories": "kcal/session"
+      }
+     },
+     "sleep": {
+      "this_window": {
+       "days_with_records": 28,
+       "calendar_days": 28,
+       "nights": 28,
+       "median_hours": 6.88,
+       "median_efficiency": 92.0,
+       "median_deep_min": 107.0,
+       "median_rem_min": 65.0,
+       "scored": 28
+      },
+      "previous_window": {
+       "days_with_records": 3,
+       "calendar_days": 3,
+       "nights": 3,
+       "median_hours": 6.38,
+       "median_efficiency": 92,
+       "median_deep_min": 75,
+       "median_rem_min": 62,
+       "scored": 3
+      },
+      "units": {
+       "nights": "count",
+       "median_hours": "hours",
+       "median_efficiency": "percent",
+       "median_deep_min": "minutes",
+       "median_rem_min": "minutes",
+       "scored": "count"
+      },
+      "change": {
+       "nights": 25,
+       "median_hours": 0.5,
+       "median_efficiency": 0.0,
+       "median_deep_min": 32.0,
+       "median_rem_min": 3.0,
+       "scored": 25
+      },
+      "balance_against_own_usual": {
+       "nights": 28,
+       "actual_hours": 199.2,
+       "expected_hours": 192.6,
+       "debt_hours": -6.5
+      }
+     },
+     "recovery": {
+      "this_window": {
+       "days_with_records": 17,
+       "calendar_days": 28,
+       "days": 17,
+       "readiness": "moderate readiness to train 16, low readiness to train 1 (of 17 reports); latest: moderate readiness to train",
+       "fatigue": "normal energy 12, more tired than normal 4, fresher than normal 1 (of 17 reports); latest: normal energy",
+       "soreness": "normal soreness 15, less sore than normal 1, more sore than normal 1 (of 17 reports); latest: normal soreness",
+       "stress": "normal stress 14, more relaxed than normal 3 (of 17 reports); latest: normal stress",
+       "mood": "normal mood 9, better mood than normal 7, worse mood than normal 1 (of 17 reports); latest: better mood than normal",
+       "sleep_quality": "normal sleep quality 13, worse sleep than normal 3, better sleep than normal 1 (of 17 reports); latest: normal sleep quality",
+       "low_readiness_reports": 1,
+       "soreness_area_days": 1,
+       "soreness_area_codes": [
+        "69536005"
+       ]
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 3,
+       "days": 0,
+       "low_readiness_reports": 0,
+       "soreness_area_days": 0
+      },
+      "units": {
+       "days": "count",
+       "readiness": "answers, in words",
+       "fatigue": "answers, in words",
+       "soreness": "answers, in words",
+       "stress": "answers, in words",
+       "mood": "answers, in words",
+       "sleep_quality": "answers, in words",
+       "low_readiness_reports": "count",
+       "soreness_area_days": "count"
+      }
+     },
+     "physiology": {
+      "this_window": {
+       "days_with_records": 28,
+       "calendar_days": 28,
+       "resting_hr_days": 28,
+       "median_resting_hr": 67.3,
+       "worn_days": 28,
+       "median_sedentary_min": 869,
+       "median_active_min": 90,
+       "zone_days": 28,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 28,
+       "median_intraday_mean_hr": 69.2,
+       "median_intraday_p95_hr": 84.0,
+       "median_heart_covered_min": 1156,
+       "intraday_step_days": 28,
+       "median_daily_steps": 2030,
+       "total_distance_km": 52.96,
+       "total_calories": 56401.1
+      },
+      "previous_window": {
+       "days_with_records": 3,
+       "calendar_days": 3,
+       "resting_hr_days": 3,
+       "median_resting_hr": 66.2,
+       "worn_days": 3,
+       "median_sedentary_min": 907,
+       "median_active_min": 94,
+       "zone_days": 3,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 3,
+       "median_intraday_mean_hr": 69.2,
+       "median_intraday_p95_hr": 84,
+       "median_heart_covered_min": 1156,
+       "intraday_step_days": 3,
+       "median_daily_steps": 1472,
+       "total_distance_km": 3.81,
+       "total_calories": 5960.2
+      },
+      "units": {
+       "resting_hr_days": "count",
+       "median_resting_hr": "bpm",
+       "worn_days": "count",
+       "median_sedentary_min": "minutes",
+       "median_active_min": "minutes",
+       "zone_days": "count",
+       "median_cardio_peak_min": "minutes",
+       "intraday_heart_days": "days",
+       "median_intraday_mean_hr": "bpm",
+       "median_intraday_p95_hr": "bpm",
+       "median_heart_covered_min": "minutes/day",
+       "intraday_step_days": "days",
+       "median_daily_steps": "steps/day",
+       "total_distance_km": "km",
+       "total_calories": "kcal"
+      },
+      "change": {
+       "resting_hr_days": 25,
+       "median_resting_hr": 1.1,
+       "worn_days": 25,
+       "median_sedentary_min": -38,
+       "median_active_min": -4,
+       "zone_days": 25,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 25,
+       "median_intraday_mean_hr": 0.0,
+       "median_intraday_p95_hr": 0.0,
+       "median_heart_covered_min": 0,
+       "intraday_step_days": 25,
+       "median_daily_steps": 558,
+       "total_distance_km": 49.15,
+       "total_calories": 50440.9
+      }
+     },
+     "lifestyle": {
+      "this_window": {
+       "days_with_records": 17,
+       "calendar_days": 28,
+       "days": 18,
+       "weight_days": 18,
+       "weight_change_kg": 1.0,
+       "latest_weight_kg": 64.0,
+       "median_glasses": 5.0,
+       "alcohol_days": 0,
+       "median_meals": 2.0
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 3,
+       "days": 0,
+       "weight_days": 0,
+       "alcohol_days": 0
+      },
+      "units": {
+       "days": "count",
+       "weight_days": "count",
+       "weight_change_kg": "kg",
+       "latest_weight_kg": "kg",
+       "median_glasses": "glasses",
+       "alcohol_days": "count",
+       "median_meals": "count"
+      }
+     },
+     "injury": {
+      "this_window": {
+       "days_with_records": 0,
+       "calendar_days": 28,
+       "count": 0
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 3,
+       "count": 0
+      },
+      "units": {
+       "count": "count"
+      }
+     }
+    },
+    "state_at_window_end": {
+     "as_of": "2019-12-01",
+     "capacity_today": {
+      "ceiling": "hard",
+      "reasons": [
+       "no encoded recovery rule lowered the intensity ceiling; this does not establish that all recovery markers are normal"
+      ],
+      "cautions": [
+       "your recent training is too light for a load ratio to say anything, so it was not applied",
+       "you have had breakfast on only 21% of the last 14 recorded days",
+       "a median of 2 meals a day is low if you are training regularly",
+       "weight is trending up at 0.6 kg/week"
+      ],
+      "applies_to": "today and tomorrow; it does not cap later days, which depend on how the person recovers"
+     },
+     "habits": {},
+     "weekday_rhythm": {
+      "Mon": 0,
+      "Tue": 1,
+      "Wed": 0,
+      "Thu": 0,
+      "Fri": 0,
+      "Sat": 0,
+      "Sun": 0
+     },
+     "training_load": {
+      "units": {
+       "acute_7d": "sRPE",
+       "chronic_28d_per_week": "sRPE/week",
+       "acwr": "ratio",
+       "sessions_7d": "sessions",
+       "rated_sessions_7d": "sessions",
+       "unrated_device_minutes_7d": "minutes"
+      },
+      "load_is": "the person's own effort rating x minutes; device-detected sessions have no rating and carry no load",
+      "rated_sessions_7d": 0,
+      "unrated_device_minutes_7d": 0,
+      "acute_7d": 0,
+      "chronic_28d_per_week": 0.0,
+      "acwr": null,
+      "sessions_7d": 0,
+      "acwr_withheld": "28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything"
+     },
+     "sleep_debt_7d": {
+      "nights": 7,
+      "actual_hours": 48.3,
+      "expected_hours": 48.2,
+      "debt_hours": -0.1
+     },
+     "resting_hr": {
+      "value": 66.12990474700928,
+      "quantile": 0.286,
+      "baseline_median": 67.4,
+      "baseline_days": 28
+     },
+     "readiness_trend": {
+      "record_count": 14,
+      "recorded_days": 14,
+      "calendar_days": 14,
+      "window": {
+       "start": "2019-11-18",
+       "end": "2019-12-01"
+      },
+      "answers": "moderate readiness to train 13, low readiness to train 1 (of 14 reports); latest: moderate readiness to train",
+      "latest": "moderate readiness to train",
+      "direction": "flat"
+     },
+     "activity_vs_who": {
+      "weeks_scored": 4,
+      "median_mvpa_minutes": 98,
+      "weeks_meeting_floor": 0,
+      "floor": 150,
+      "upper": 300,
+      "verdict": "below",
+      "guideline": "Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity, or an equivalent combination.",
+      "source": "WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour"
+     },
+     "ambient_activity": {
+      "window": {
+       "start": "2019-11-04",
+       "end": "2019-12-01"
+      },
+      "heart_days": 28,
+      "median_heart_covered_minutes": 1156,
+      "median_daily_steps": 2030,
+      "total_distance_km": 52.96,
+      "limitations": [
+       "distance and calories are device estimates",
+       "missing samples are not treated as zero"
+      ]
+     },
+     "recent_injuries": {
+      "joints_from_log": [],
+      "count": 0,
+      "by_joint": {},
+      "days_since_last": null,
+      "last_location": null,
+      "days_since_by_joint": {}
+     }
+    },
+    "data_quality": {
+     "summary": "100% of the last 28 days carry a record.",
+     "status": "within_baseline",
+     "coverage": 1.0,
+     "days_since_last_record": 0
+    },
+    "limitations": [
+     "Values describe recorded data only: a day without a record is unknown, not zero or normal.",
+     "Record counts are not calendar days, and per-session values (training medians) are not daily totals.",
+     "A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.",
+     "Self-reported answers are words relative to the person's own normal.",
+     "Device distance and calories are estimates."
+    ]
+   }
+  },
+  {
+   "call": "inspect_sensor_window 2019-12-02 16:00:00 to 2019-12-02 16:55:00",
+   "output": {
+    "5_minute_buckets": {
+     "person": "p16",
+     "window": {
+      "start": "2019-12-02 16:00:00",
+      "end": "2019-12-02 16:55:00"
+     },
+     "bucket_minutes": 5,
+     "bucket_at": "each point's `at` is the start of its bucket, which covers `at` up to 5 minutes later",
+     "points": [
+      {
+       "at": "2019-12-02 16:00:00",
+       "heart_bpm": 107.4,
+       "heart_min": 94,
+       "heart_max": 122,
+       "heart_samples": 23,
+       "mean_confidence": 2,
+       "steps": 296,
+       "calories": 7.59,
+       "distance_km": 0.2233
+      },
+      {
+       "at": "2019-12-02 16:05:00",
+       "heart_bpm": 100.2,
+       "heart_min": 93,
+       "heart_max": 108,
+       "heart_samples": 20,
+       "mean_confidence": 2,
+       "steps": 192,
+       "calories": 5.96,
+       "distance_km": 0.1448
+      },
+      {
+       "at": "2019-12-02 16:10:00",
+       "heart_bpm": 82.8,
+       "heart_min": 75,
+       "heart_max": 105,
+       "heart_samples": 15,
+       "mean_confidence": 2,
+       "steps": 278,
+       "calories": 6.18,
+       "distance_km": 0.2097
+      },
+      {
+       "at": "2019-12-02 16:15:00",
+       "heart_bpm": 85.2,
+       "heart_min": 76,
+       "heart_max": 99,
+       "heart_samples": 23,
+       "mean_confidence": 2,
+       "steps": 39,
+       "calories": 5.96,
+       "distance_km": 0.0294
+      },
+      {
+       "at": "2019-12-02 16:20:00",
+       "heart_bpm": 88.4,
+       "heart_min": 86,
+       "heart_max": 93,
+       "heart_samples": 8,
+       "mean_confidence": 2,
+       "steps": 36,
+       "calories": 6.29,
+       "distance_km": 0.027
+      },
+      {
+       "at": "2019-12-02 16:25:00",
+       "heart_bpm": 89.5,
+       "heart_min": 85,
+       "heart_max": 104,
+       "heart_samples": 26,
+       "mean_confidence": 2.04,
+       "steps": 35,
+       "calories": 7.59,
+       "distance_km": 0.0264
+      },
+      {
+       "at": "2019-12-02 16:30:00",
+       "heart_bpm": 102,
+       "heart_min": 97,
+       "heart_max": 111,
+       "heart_samples": 11,
+       "mean_confidence": 2,
+       "steps": 21,
+       "calories": 5.96,
+       "distance_km": 0.0158
+      },
+      {
+       "at": "2019-12-02 16:35:00",
+       "heart_bpm": 102.2,
+       "heart_min": 95,
+       "heart_max": 112,
+       "heart_samples": 34,
+       "mean_confidence": 2,
+       "steps": 87,
+       "calories": 5.85,
+       "distance_km": 0.0656
+      },
+      {
+       "at": "2019-12-02 16:40:00",
+       "heart_bpm": 101.1,
+       "heart_min": 92,
+       "heart_max": 108,
+       "heart_samples": 34,
+       "mean_confidence": 2,
+       "steps": 7,
+       "calories": 6.86,
+       "distance_km": 0.0052
+      },
+      {
+       "at": "2019-12-02 16:45:00",
+       "heart_bpm": 96.9,
+       "heart_min": 90,
+       "heart_max": 104,
+       "heart_samples": 33,
+       "mean_confidence": 2.09,
+       "steps": 5,
+       "calories": 6.07,
+       "distance_km": 0.0037
+      },
+      {
+       "at": "2019-12-02 16:50:00",
+       "heart_bpm": 97,
+       "heart_min": 91,
+       "heart_max": 103,
+       "heart_samples": 43,
+       "mean_confidence": 2.07,
+       "steps": 0,
+       "calories": 5.96,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2019-12-02 16:55:00",
+       "heart_bpm": null,
+       "heart_min": null,
+       "heart_max": null,
+       "heart_samples": 0,
+       "mean_confidence": null,
+       "steps": 0,
+       "calories": 1.28,
+       "distance_km": 0.0
+      }
+     ],
+     "summary": {
+      "buckets": 12,
+      "heart_buckets": 11,
+      "mean_hr_bpm": 95.7,
+      "max_hr_bpm": 107.4,
+      "steps": 996,
+      "distance_km": 0.751,
+      "calories": 71.5,
+      "implausible_calorie_buckets": 0
+     },
+     "provenance": [
+      "fitbit/heart_rate.json",
+      "fitbit/steps.json",
+      "fitbit/calories.json",
+      "fitbit/distance.json"
+     ],
+     "limitations": [
+      "heart-rate samples with confidence below 2 were excluded",
+      "zero steps does not prove the person was physiologically at rest"
+     ]
+    },
+    "logged_sessions_nearby": [
+     {
+      "start": "2019-12-02 15:58:42",
+      "minutes": 15,
+      "avg_hr": 102
+     }
+    ]
+   }
+  }
+ ]
+}

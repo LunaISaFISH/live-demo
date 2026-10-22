@@ -1,0 +1,13 @@
+{"id": "p16-13", "should_alert": true, "confidence": "high", "reason": "Heart rate jumps from about 82 to 107 bpm for 20 minutes with no steps and no exercise; unexplained, good data, first of its kind."}
+{"id": "p16-14", "should_alert": true, "confidence": "low", "reason": "Median MVPA fell again from 77 to 61 min, under half the guideline; clear worsening since last alert, though weekly repeats risk fatigue."}
+{"id": "p16-15", "should_alert": false, "confidence": "high", "reason": "Heart rate 96 follows a logged 46-minute walk and steady steps; explained, and similar to an earlier alert."}
+{"id": "p16-16", "should_alert": false, "confidence": "high", "reason": "Modest +32 bpm, follows a walking burst, and near-repeat of the 12-11 alert; resting HR and readiness normal."}
+{"id": "p16-17", "should_alert": false, "confidence": "high", "reason": "56 vs 61 min is a five-minute change from the alerted figure; not a clear worsening."}
+{"id": "p16-18", "should_alert": false, "confidence": "high", "reason": "Gradual drift to 96 bpm after a logged cross-training session earlier; modest, near-repeat of the earlier alert."}
+{"id": "p16-19", "should_alert": false, "confidence": "low", "reason": "Rise to 96 bpm is modest and short with sleep, resting HR normal; near-repeat of earlier alert. Weight data looks like an artefact."}
+{"id": "p16-20", "should_alert": false, "confidence": "high", "reason": "Unchanged 56 min median; already alerted and last review judged no clear worsening. Repeat would be noise."}
+{"id": "p16-21", "should_alert": false, "confidence": "high", "reason": "Heart rate 100 bpm right after a logged 16-minute walk with steps in preceding buckets. Explained by exercise."}
+{"id": "p16-22", "should_alert": false, "confidence": "high", "reason": "Heart rate about 105 follows a logged 24-minute walk and ongoing light steps. Explained by recorded activity."}
+{"id": "p16-23", "should_alert": false, "confidence": "low", "reason": "Resting HR +4 bpm for one day, readiness moderate, sleep fine, no symptoms. Small and unconfirmed; wait to see if it persists."}
+{"id": "p16-24", "should_alert": false, "confidence": "low", "reason": "Second day at +4.3 bpm resting HR, a small drift with normal readiness and sleep. Borderline; not yet substantial."}
+{"id": "p16-25", "should_alert": true, "confidence": "low", "reason": "Heart rate 100-108 for 80+ minutes at 2am with almost no steps, on top of two days of raised resting HR; unexplained."}

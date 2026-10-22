@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv*/
+__pycache__/
+*.py[cod]
+.DS_Store
+/data/
+/prototype/.sessions/
+/prototype/.workspace/
+/prototype/.watch/
+/prototype/.audit/
+*.log
+.coverage
+htmlcov/

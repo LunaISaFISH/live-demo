@@ -1,0 +1,159 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FitCoach 现场演示操作手册</title><style>body{font:17px/1.8 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#182f43;max-width:1050px;margin:40px auto;padding:0 24px;background:#f7f9fb}h1,h2,h3{line-height:1.3}h2{margin-top:48px;border-bottom:1px solid #d6e1e8;padding-bottom:10px}pre{background:#eaf1f7;padding:20px;white-space:pre-wrap;overflow-wrap:anywhere;border-radius:8px}code{font-size:14px}table{border-collapse:collapse;width:100%;background:white}td,th{border:1px solid #d6e1e8;padding:12px;text-align:left}a{color:#1763a6}li{margin:9px 0}@media print{body{font-size:12px;background:white;margin:0}h2{break-after:avoid}pre,table{break-inside:avoid}}</style><body><h1 id="fitcoach">FitCoach 现场演示操作手册</h1>
+<p>本机验证日期：2026-10-22（新加坡时间）。现场主地址：http://localhost:8765。</p>
+<h2 id="1">1. 现场怎样打开</h2>
+<ol>
+<li>在 Finder 找到本项目的 <strong>FitCoach</strong> 文件夹。</li>
+<li>双击 <strong>Start Demo.command</strong>。它会检查环境、启动服务并自动打开浏览器。</li>
+<li>保持弹出的 Terminal 窗口开着；浏览器可以关掉后重新打开。</li>
+<li>如果浏览器没有自动出现，手动打开 <strong>http://localhost:8765</strong>。</li>
+<li>演示结束后，在启动的 Terminal 窗口按 <strong>Control+C</strong> 停止服务。</li>
+</ol>
+<p>本机已安装 Python 3.13，依赖和完整数据已准备好。首次在其他机器运行仍需安装 Python 3.11+、下载依赖和数据。不要只复制启动脚本：整个 FitCoach 文件夹要保留在一起。</p>
+<p>终端备用启动方式（先进入 FitCoach 文件夹）：</p>
+<pre><code class="language-bash">.venv/bin/python run.py
+</code></pre>
+<p>如果 macOS 把 <code>.command</code> 当文本打开，在 Finder 右键 → 打开方式 → Terminal；或打开 Terminal，输入 <code>bash</code>，把 <code>Start Demo.command</code> 拖入窗口后回车。</p>
+<p><strong>只打开网址不会自动启动服务。机器重启后，先双击启动脚本。</strong></p>
+<h2 id="2-10">2. 演示前 10 分钟准备</h2>
+<ul>
+<li>接电源，确认网络可用，保持当前 Codex 账号登录。实时对话需要外部模型服务。</li>
+<li>双击 <code>Start Demo.command</code>，确认看到 FitCoach 和真实数据。</li>
+<li>同时双击 <strong>Offline Demo.html</strong>，把这个独立备用页面也打开在浏览器标签页里。它不需要网络、登录、Python 或服务器。</li>
+<li>选择 Athlete <strong>p16 · mostly inactive</strong>。</li>
+<li>为从头演示，打开右上角 <strong>More → Reset this athlete → 确认</strong>。这会清空这个演示用户的对话、记忆、计划和监测状态，旧审计会归档。</li>
+<li>确认 <strong>Simulation date = 2020-03-01</strong>。若日期不同，重置后改到这一天；不要点 Latest。</li>
+<li>可以先排练一次下面的短链路，然后再次 Reset，回到 <code>2020-03-01</code>。</li>
+<li>正式演示时每次只发送一条，等右侧状态完成或提示需要回答后再继续。常见等待约 15–60 秒，单轮最多 300 秒；不要重复点击。</li>
+</ul>
+<p><code>New chat</code> 只清对话，保留记忆和计划；要从零展示请用 <code>Reset this athlete</code>。不要在发请求过程中刷新、重置或切换用户。</p>
+<h2 id="3-58">3. 5–8 分钟主链路（推荐现场使用）</h2>
+<h3 id="a">A. 展示数据与时间边界</h3>
+<p>选 <strong>p16</strong>，日期 <strong>2020-03-01</strong>。指出页面上的训练、睡眠、自报记录数量，展开 <strong>Readiness, evidence and data quality</strong>。</p>
+<p>讲解提示：系统只读取模拟日期之前的数据；缺失的数据不自动等于“正常”。这是对历史数据的时间模拟，不是今天的实时可穿戴数据。</p>
+<h3 id="b">B. 缺少信息时先追问</h3>
+<p>点击 <strong>Plan</strong>，输入：</p>
+<pre><code class="language-text">plan my next month
+</code></pre>
+<p>点 <strong>Ask coach</strong>。应看到模型询问目标、可训练时间、装备或身体状况；此时应没有可保存的新计划。</p>
+<p>讲解提示：不直接套用模板，先收集个人约束。</p>
+<h3 id="c">C. 给出完整约束，生成草稿</h3>
+<p>输入：</p>
+<pre><code class="language-text">My goal is to rebuild endurance. I have no current pain. I can train Monday, Wednesday and Friday for up to 45 minutes, have walking and running shoes, and dislike swimming. I've felt fine lately and nothing has changed. Plan my next week.
+</code></pre>
+<p>观察右侧 <strong>How the answer is built</strong>：读取技能、读取记录、检索指引、生成草稿、完成。下方出现 <strong>Draft from your coach</strong> 和计划表。</p>
+<p>模型结果不保证逐字一致；这次实测是周一、周三各 20 分钟轻松步行、周五 25 分钟，其他日休息。关键是有数据依据、尊重限制、形成未保存的草稿。如果它继续追问，就按同一场景说明“无当前疼痛，状态正常，只能周一三五，每次最多 45 分钟”。</p>
+<h3 id="d">D. 用自然语言修改</h3>
+<p>在保存前输入：</p>
+<pre><code class="language-text">Replace the current plan with exactly one training day: Friday, 10 minutes of easy Walking, with no other day entries.
+</code></pre>
+<p>应看到草稿变为只有 <strong>2020-03-06 / walking / 10 / easy</strong>，原有日期被标为删除或变更。</p>
+<h3 id="e">E. 人工确认保存</h3>
+<p>点击计划面板中的 <strong>Save as my plan</strong>。</p>
+<p>应看到 <strong>Your plan</strong>、<strong>Version 1</strong> 和保存成功消息。说明：模型只能起草，用户的点击才使它成为正式计划。</p>
+<h3 id="f">F. 监测与审查</h3>
+<p>点击 <strong>Monitor</strong>，再点日期区域的 <strong>Advance to next review</strong>。</p>
+<p>p16 在这个日期已有活动不足的条件，因此第一次可能显示 <strong>Advanced 0 days</strong>，这是正常的。观察 <strong>Weekly activity</strong> 条件、记录图表、模型审查和 Alert/不提醒的决定。判定会受上下文影响，不必要求每次相同；重点是有依据、有局限、没有擅自改掉已保存的计划。</p>
+<h3 id="g">G. 证据、记忆和审计</h3>
+<p>点击顶栏 <strong>Evidence</strong>：</p>
+<ul>
+<li><strong>Audit trail</strong>：展示输入、来源、动作、输出、时间、人工决定，定位计划保存事件。</li>
+<li><strong>Memory</strong>：展示目标、周一三五的时间限制、不喜欢游泳等信息。</li>
+<li><strong>Tests</strong>：展示随项目附带的历史评估；本次验证结果另见 <code>evidence/local-demo-2026-10-22/</code>，不要把历史日期当作刚刚测试的结果。</li>
+<li>可点击 <strong>Run all offline suites</strong> 现场验证本地检查；正式演示时间紧时不必运行。</li>
+</ul>
+<p>完成后告诉观众：记录读取 → 个人约束 → 草稿 → 修改 → 人工保存 → 监测 → 审计，链路闭合。</p>
+<h2 id="4">4. 时间充裕时的扩展示例</h2>
+<h3 id="check-in">追问与个体背景（Check in）</h3>
+<pre><code class="language-text">I'm exhausted and have had no energy lately. Am I training too much?
+</code></pre>
+<p>模型追问后，输入：</p>
+<pre><code class="language-text">It started when I moved house last weekend and carried a lot of heavy things that weren't recorded. I sleep about as long as usual but still wake up with no energy, and have no pain or other discomfort.
+</code></pre>
+<p>展示它如何把设备记录和未被设备捕捉的身体活动分开解释。</p>
+<h3 id="_1">明确记忆偏好</h3>
+<pre><code class="language-text">I hate swimming, never suggest it
+</code></pre>
+<p>之后在 Evidence → Memory 查看记录。</p>
+<h3 id="_2">安全响应（建议最后展示）</h3>
+<p>先对观众说明这是测试输入，然后输入：</p>
+<pre><code class="language-text">I had chest pain just now
+</code></pre>
+<p>应收到停止运动并建议及时就医的安全回复，不生成新计划。放在流程最后，避免这段安全上下文影响前面的规划展示。</p>
+<h2 id="5-replay">5. 两层 Replay 托底</h2>
+<h3 id="_3">一级：原有监测回放（服务正常，网络或模型不可用）</h3>
+<p>点击顶栏 <strong>Replay</strong>，或打开 <strong>http://localhost:8765/replay</strong>。</p>
+<ol>
+<li>选 p16；点击 <strong>Next review</strong> 直接跳到已记录的审查。</li>
+<li>点击 <strong>Play</strong> 展示时间推进，选择 <strong>2× / 4×</strong> 调整速度。</li>
+<li>点击时间线上的点，展示当时信号、来源、审查和 Alert 决策。</li>
+<li>点击 <strong>Back to the coach</strong> 返回。</li>
+</ol>
+<p>这里播放项目原有的历史监测记录，不调用模型；<strong>它只覆盖监测，不覆盖完整对话和计划保存链路</strong>。</p>
+<h3 id="_4">二级：完整链路独立回放（任何服务故障时都用它）</h3>
+<p><strong>直接双击 <code>Offline Demo.html</code>。</strong> 如果服务器还运行，也可以点击顶栏 <strong>Full replay</strong>，或打开 <strong>http://localhost:8765/full-replay</strong>。</p>
+<p>这个单文件已经嵌入全部必要内容，不需要本地服务、不需要网络、不需要 API Key。页面常驻标记 <strong>Recorded replay · works offline</strong>。</p>
+<ul>
+<li>左边目录共 <strong>12 步</strong>：Check in → Clarify the context → Remember a preference → Ask before planning → Draft the week → Revise the draft → The person saves → Respond to a warning symptom → Continue with the record → Reject an unsafe instruction → Review a monitoring signal → Audit &amp; verification。</li>
+<li>点击 <strong>Next step</strong> 或键盘 <strong>→</strong> 继续，<strong>←</strong> 返回；也可点左边目录直接跳转。</li>
+<li>第 5 步有实测七日草稿；第 6 步显示修改后的单日草稿；第 7 步 <strong>Show recorded save</strong> 展示当时用户真实保存的 version 1。</li>
+<li>第 11 步查看模型监测结论、依据、局限和复查时间。</li>
+<li>第 12 步展示审计表与本次 <strong>72 项 E2E / 331 项离线检查通过</strong> 的结果。</li>
+<li>点击 <strong>Restart</strong> 回到第一步。</li>
+</ul>
+<p>现场切换话术：<strong>“网络／模型响应有波动，我切到本机已经验证成功的录制运行，继续展示同一套完整流程。这里明确标注了 recorded replay。”</strong></p>
+<p>回放不是实时模型交互；按钮只切换已记录的步骤，不会生成新回答，也不会改变 live 的计划。</p>
+<h2 id="6">6. 故障时怎么做</h2>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>现场操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浏览器提示无法连接 localhost</td>
+<td>先双击 Start Demo.command；若仍不通，直接双击 Offline Demo.html</td>
+</tr>
+<tr>
+<td>页面打开，但对话报登录过期／额度／网络错误</td>
+<td>立刻切到已打开的 Offline Demo.html；演示后再检查 Codex 登录或 <code>.env</code> 的服务配置</td>
+</tr>
+<tr>
+<td>请求持续转圈</td>
+<td>不连续提交。讲解已有数据与右侧步骤；约 60 秒仍无进展就切完整回放，不等满 300 秒</td>
+</tr>
+<tr>
+<td>一上来已经有计划、记忆或旧对话</td>
+<td>More → Reset this athlete，日期回到 2020-03-01</td>
+</tr>
+<tr>
+<td>无法向前改回演示日期</td>
+<td>先 Reset；New chat 会保留计划，不适合完全重来</td>
+</tr>
+<tr>
+<td>不小心关闭了浏览器</td>
+<td>Terminal 还开着时重新打开 http://localhost:8765</td>
+</tr>
+<tr>
+<td>关闭 Terminal 或机器重启了</td>
+<td>重新双击 Start Demo.command</td>
+</tr>
+<tr>
+<td>需要移动项目</td>
+<td>移动后删除／重建虚拟环境可能有必要；演示前不要临时移动文件夹。独立 Offline Demo.html 可以单独复制到 U 盘</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-github">7. GitHub 和验证材料</h2>
+<ul>
+<li>仓库：https://github.com/LunaISaFISH/live-demo</li>
+<li>完整原始压缩包（含数据）：仓库 Releases 的 <code>data-2026-10-22</code>。</li>
+<li>新克隆仓库：安装 Python 3.11+，运行 <code>python3.13 run.py</code>；首次自动恢复经过 SHA-256 校验的数据包。</li>
+<li>已有本地 ZIP 可运行 <code>python3.13 restore_data.py --archive /path/to/FitCoach-2026-10-22-with-data.zip</code>，避免重复下载。</li>
+<li>原始数据 333 个文件已逐一与分发清单做 SHA-256 比对。</li>
+<li>本次 72 项真实模型端到端测试全部通过；8 套离线测试共 331 项通过。</li>
+<li>数据恢复、独立回放和分发入口有额外回归测试；详见 <code>evidence/local-demo-2026-10-22/RESULTS.md</code>。</li>
+<li><code>MANIFEST.txt</code> 是原始 ZIP 的清单，新增或修改后的仓库文件以 Git 提交为准。</li>
+</ul>
+<p>当前验证能确认这台机器上的成功运行；未来现场的网络、登录状态和外部模型额度仍可能变化，因此务必预先打开完整独立回放。</p></body></html>

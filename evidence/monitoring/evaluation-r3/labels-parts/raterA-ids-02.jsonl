@@ -1,0 +1,13 @@
+{"id": "p05-14", "should_alert": false, "confidence": "low", "reason": "Brisk walking just before; HR 96 similar to earlier alerted event, not clearly worse; near-repeat."}
+{"id": "p05-15", "should_alert": false, "confidence": "low", "reason": "HR elevated during preceding light activity, event right after; same size as earlier alert; near-repeat."}
+{"id": "p05-16", "should_alert": false, "confidence": "low", "reason": "Long active spell until 08:00, mild residual elevation; magnitude like earlier alert, not clearly worse."}
+{"id": "p05-17", "should_alert": false, "confidence": "low", "reason": "Logged strength and cycling earlier that morning with light walking after; mild repeat of earlier alert."}
+{"id": "p05-18", "should_alert": false, "confidence": "high", "reason": "Walking steps right up to event; 90 bpm modest; explained and a near-repeat."}
+{"id": "p05-19", "should_alert": false, "confidence": "high", "reason": "Logged cycling then walking until minutes before; explained post-activity elevation; near-repeat."}
+{"id": "p05-20", "should_alert": false, "confidence": "low", "reason": "Rise at rest is unexplained, but identical size to earlier alerted event; not clearly worse, so repeat."}
+{"id": "p05-21", "should_alert": false, "confidence": "high", "reason": "Several hundred steps per bucket just before; explained post-walking elevation; near-repeat."}
+{"id": "p05-22", "should_alert": false, "confidence": "high", "reason": "Walking right before with HR 105 then falling; explained recovery; near-repeat of earlier alert."}
+{"id": "p05-23", "should_alert": true, "confidence": "low", "reason": "HR about 95 sustained 90 minutes near midnight with almost no movement; longer, newly concerning versus prior brief events."}
+{"id": "p05-24", "should_alert": true, "confidence": "high", "reason": "Resting HR +8.3 bpm, highest in 20 days, no training to explain; first such signal."}
+{"id": "p05-25", "should_alert": false, "confidence": "high", "reason": "Alerted two days ago; now +8.7 versus +8.3, essentially unchanged; a repeat would be noise."}
+{"id": "p05-26", "should_alert": false, "confidence": "low", "reason": "Light walking through the hour before; +31 like earlier alert, resting HR rise already flagged; near-repeat."}

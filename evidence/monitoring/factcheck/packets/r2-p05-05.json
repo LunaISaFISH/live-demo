@@ -1,0 +1,962 @@
+{
+ "id": "p05-05",
+ "kind": "readiness",
+ "at": "2020-01-01 23:59:59",
+ "monitor_facts": "- severity 1.0 on this detector's own 0-1 scale\n- record coverage that day: sufficient\n- a continuing condition, not a one-off event: it started on 2019-12-26 and has held for 7 day(s)\n- when it started: you have reported low or very low readiness to train on 3 reports running\n- now: you have reported low or very low readiness to train on 10 reports running\n- your earlier reviews of it in this run:\n  - 2019-12-26: you have reported low or very low readiness to train on 3 reports running; Alert (Three consecutive very-low readiness reports warrant attention now because the record does not account for them.)\n  - 2019-12-29: you have reported low or very low readiness to train on 6 reports running; Alert (This is a clear worsening since the alert three days ago, from three to six consecutive very-low readiness reports, without an explanation in the record.)\n- the person was last alerted about this kind of signal on 2019-12-29, when it was latest answer 'very low readiness to train', lowest in the run 'very low readiness to train', 6 low answers running; now it is latest answer 'very low readiness to train', lowest in the run 'very low readiness to train', 10 low answers running\nNo other condition is holding.\nAlerts already raised in this monitoring run:\n- 2019-12-26 23:59:59: you have reported low or very low readiness to train on 3 reports running (Three consecutive very-low readiness reports warrant attention now because the record does not account for them.)\n- 2019-12-29 23:59:59: you have reported low or very low readiness to train on 6 reports running (This is a clear worsening since the alert three days ago, from three to six consecutive very-low readiness reports, without an explanation in the record.)",
+ "statements": {
+  "observations": [
+   "The 14-day readiness record contains 10 very-low and one moderate report; the latest is very low and the trend is falling. This has increased from six consecutive low reports at the prior review to 10. [3649166c-e12] [3649166c-context]",
+   "Seven sleep nights total 45.3 hours versus 42.2 expected (3.1 hours above expected); the latest fatigue, soreness, stress, mood, and sleep-quality reports were normal. [3649166c-e2] [3649166c-e3]",
+   "Only three device-detected walking sessions were recorded this week, down from 10 sessions including one maximal-effort session in the prior week. This change does not establish an explanation for the readiness reports. [3649166c-e1]",
+   "No injury was recorded, while record coverage was 100% over the past 28 days. [3649166c-e6] [3649166c-e16]",
+   "Alcohol was recorded on three days, but the record cannot establish whether it accounts for the readiness pattern. [3649166c-e5]"
+  ],
+  "verdict": "unexplained",
+  "note": "The readiness pattern has worsened again, from six to ten consecutive very-low reports. Recent sleep was above the person's usual expectation, and latest reports of fatigue, soreness, stress, mood, and sleep quality were normal; reduced training and activity coincide with the pattern but do not account for it.",
+  "alert_reason": "The already-alerted readiness concern has clearly worsened again, from six to ten consecutive very-low reports, and remains unexplained in the record.",
+  "message_to_person": "Your readiness reports have worsened again, from six to ten consecutive very-low reports. Your recent sleep was above your usual expectation, and your latest fatigue, soreness, stress, mood, and sleep-quality reports were normal, so the record still does not explain the pattern. [3649166c-e2] [3649166c-e3] [3649166c-e12]"
+ },
+ "tool_calls": [
+  {
+   "call": "read_record 7d as of 2020-01-01",
+   "output": {
+    "person": "p05",
+    "window": {
+     "start": "2019-12-26",
+     "end": "2020-01-01"
+    },
+    "previous_window": {
+     "start": "2019-12-19",
+     "end": "2019-12-25"
+    },
+    "findings": [
+     "Self-rated readiness to train: very low readiness to train 10, moderate readiness to train 1 (of 11 reports); latest: very low readiness to train. Over the window it is falling.",
+     "Reported and measured sleep disagree by over an hour on 65% of nights; you under-report by 1.3h at the median.",
+     "Body weight is trending up at 0.62 kg/week (+2.0 kg over the window).",
+     "Meals are irregular or alcohol is frequent."
+    ],
+    "domains": {
+     "training": {
+      "this_window": {
+       "days_with_records": 3,
+       "calendar_days": 7,
+       "sessions": 3,
+       "per_week": 3.0,
+       "load": 0,
+       "unrated_device_minutes": 146,
+       "median_minutes": 23,
+       "self_reported": 0,
+       "device_only": 3,
+       "matched": 0,
+       "median_avg_hr": 97,
+       "median_steps": 1536,
+       "median_calories": 163,
+       "modalities": {
+        "walking": 3
+       }
+      },
+      "previous_window": {
+       "days_with_records": 6,
+       "calendar_days": 7,
+       "sessions": 10,
+       "per_week": 10.0,
+       "load": 270.0,
+       "unrated_device_minutes": 205,
+       "median_minutes": 20,
+       "effort": "maximal effort 1 (of 1 reports); latest: maximal effort",
+       "self_reported": 1,
+       "device_only": 9,
+       "matched": 0,
+       "median_avg_hr": 104,
+       "median_steps": 1609,
+       "median_calories": 170,
+       "modalities": {
+        "walking": 7,
+        "cycling": 2,
+        "running": 1
+       }
+      },
+      "units": {
+       "sessions": "count",
+       "per_week": "sessions/week",
+       "load": "sRPE",
+       "median_minutes": "minutes/session",
+       "self_reported": "count",
+       "device_only": "count",
+       "matched": "count",
+       "median_avg_hr": "bpm (session average)",
+       "median_steps": "steps/session",
+       "median_calories": "kcal/session",
+       "effort": "answers, in words"
+      },
+      "change": {
+       "sessions": -7,
+       "per_week": -7.0,
+       "load": -270.0,
+       "unrated_device_minutes": -59,
+       "median_minutes": 3,
+       "self_reported": -1,
+       "device_only": -6,
+       "matched": 0,
+       "median_avg_hr": -7,
+       "median_steps": -73,
+       "median_calories": -7
+      }
+     },
+     "sleep": {
+      "this_window": {
+       "days_with_records": 7,
+       "calendar_days": 7,
+       "nights": 7,
+       "median_hours": 6.47,
+       "median_efficiency": 93,
+       "median_deep_min": 74,
+       "median_rem_min": 93,
+       "scored": 7
+      },
+      "previous_window": {
+       "days_with_records": 6,
+       "calendar_days": 7,
+       "nights": 6,
+       "median_hours": 5.98,
+       "median_efficiency": 96.5,
+       "median_deep_min": 72.0,
+       "median_rem_min": 91.0,
+       "scored": 6
+      },
+      "units": {
+       "nights": "count",
+       "median_hours": "hours",
+       "median_efficiency": "percent",
+       "median_deep_min": "minutes",
+       "median_rem_min": "minutes",
+       "scored": "count"
+      },
+      "change": {
+       "nights": 1,
+       "median_hours": 0.49,
+       "median_efficiency": -3.5,
+       "median_deep_min": 2.0,
+       "median_rem_min": 2.0,
+       "scored": 1
+      },
+      "balance_against_own_usual": {
+       "nights": 7,
+       "actual_hours": 45.3,
+       "expected_hours": 42.2,
+       "debt_hours": -3.1
+      }
+     },
+     "recovery": {
+      "this_window": {
+       "days_with_records": 7,
+       "calendar_days": 7,
+       "days": 8,
+       "readiness": "very low readiness to train 8 (of 8 reports); latest: very low readiness to train",
+       "fatigue": "normal energy 7, much more tired than normal 1 (of 8 reports); latest: normal energy",
+       "soreness": "normal soreness 8 (of 8 reports); latest: normal soreness",
+       "stress": "normal stress 8 (of 8 reports); latest: normal stress",
+       "mood": "normal mood 7, worse mood than normal 1 (of 8 reports); latest: normal mood",
+       "sleep_quality": "normal sleep quality 8 (of 8 reports); latest: normal sleep quality",
+       "low_readiness_reports": 8,
+       "soreness_area_days": 0
+      },
+      "previous_window": {
+       "days_with_records": 7,
+       "calendar_days": 7,
+       "days": 8,
+       "readiness": "very low readiness to train 2, moderate readiness to train 1 (of 3 reports); latest: very low readiness to train",
+       "fatigue": "normal energy 7, much more tired than normal 1 (of 8 reports); latest: normal energy",
+       "soreness": "normal soreness 7, much more sore than normal 1 (of 8 reports); latest: normal soreness",
+       "stress": "normal stress 5, much more stressed than normal 2, more stressed than normal 1 (of 8 reports); latest: normal stress",
+       "mood": "normal mood 6, worse mood than normal 1, much worse mood than normal 1 (of 8 reports); latest: normal mood",
+       "sleep_quality": "normal sleep quality 7, much worse sleep than normal 1 (of 8 reports); latest: normal sleep quality",
+       "low_readiness_reports": 2,
+       "soreness_area_days": 0
+      },
+      "units": {
+       "days": "count",
+       "readiness": "answers, in words",
+       "fatigue": "answers, in words",
+       "soreness": "answers, in words",
+       "stress": "answers, in words",
+       "mood": "answers, in words",
+       "sleep_quality": "answers, in words",
+       "low_readiness_reports": "count",
+       "soreness_area_days": "count"
+      },
+      "change": {
+       "days": 0,
+       "low_readiness_reports": 6,
+       "soreness_area_days": 0
+      }
+     },
+     "physiology": {
+      "this_window": {
+       "days_with_records": 7,
+       "calendar_days": 7,
+       "resting_hr_days": 5,
+       "median_resting_hr": 66.5,
+       "worn_days": 7,
+       "median_sedentary_min": 692,
+       "median_active_min": 304,
+       "zone_days": 7,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 7,
+       "median_intraday_mean_hr": 72.1,
+       "median_intraday_p95_hr": 94,
+       "median_heart_covered_min": 1297,
+       "intraday_step_days": 7,
+       "median_daily_steps": 8598,
+       "total_distance_km": 48.09,
+       "total_calories": 22904.7
+      },
+      "previous_window": {
+       "days_with_records": 7,
+       "calendar_days": 7,
+       "resting_hr_days": 0,
+       "worn_days": 7,
+       "median_sedentary_min": 722,
+       "median_active_min": 327,
+       "zone_days": 7,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 7,
+       "median_intraday_mean_hr": 69.2,
+       "median_intraday_p95_hr": 89,
+       "median_heart_covered_min": 1146,
+       "intraday_step_days": 7,
+       "median_daily_steps": 11961,
+       "total_distance_km": 61.11,
+       "total_calories": 24143.3
+      },
+      "units": {
+       "resting_hr_days": "count",
+       "median_resting_hr": "bpm",
+       "worn_days": "count",
+       "median_sedentary_min": "minutes",
+       "median_active_min": "minutes",
+       "zone_days": "count",
+       "median_cardio_peak_min": "minutes",
+       "intraday_heart_days": "days",
+       "median_intraday_mean_hr": "bpm",
+       "median_intraday_p95_hr": "bpm",
+       "median_heart_covered_min": "minutes/day",
+       "intraday_step_days": "days",
+       "median_daily_steps": "steps/day",
+       "total_distance_km": "km",
+       "total_calories": "kcal"
+      },
+      "change": {
+       "resting_hr_days": 5,
+       "worn_days": 0,
+       "median_sedentary_min": -30,
+       "median_active_min": -23,
+       "zone_days": 0,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 0,
+       "median_intraday_mean_hr": 2.9,
+       "median_intraday_p95_hr": 5,
+       "median_heart_covered_min": 151,
+       "intraday_step_days": 0,
+       "median_daily_steps": -3363,
+       "total_distance_km": -13.02,
+       "total_calories": -1238.6
+      }
+     },
+     "lifestyle": {
+      "this_window": {
+       "days_with_records": 7,
+       "calendar_days": 7,
+       "days": 7,
+       "weight_days": 7,
+       "weight_change_kg": 0.0,
+       "latest_weight_kg": 102.0,
+       "median_glasses": 8,
+       "alcohol_days": 3,
+       "median_meals": 4
+      },
+      "previous_window": {
+       "days_with_records": 7,
+       "calendar_days": 7,
+       "days": 7,
+       "weight_days": 7,
+       "weight_change_kg": 1.0,
+       "latest_weight_kg": 102.0,
+       "median_glasses": 6,
+       "alcohol_days": 3,
+       "median_meals": 4
+      },
+      "units": {
+       "days": "count",
+       "weight_days": "count",
+       "weight_change_kg": "kg",
+       "latest_weight_kg": "kg",
+       "median_glasses": "glasses",
+       "alcohol_days": "count",
+       "median_meals": "count"
+      },
+      "change": {
+       "days": 0,
+       "weight_days": 0,
+       "weight_change_kg": -1.0,
+       "latest_weight_kg": 0.0,
+       "median_glasses": 2,
+       "alcohol_days": 0,
+       "median_meals": 0
+      }
+     },
+     "injury": {
+      "this_window": {
+       "days_with_records": 0,
+       "calendar_days": 7,
+       "count": 0
+      },
+      "previous_window": {
+       "days_with_records": 0,
+       "calendar_days": 7,
+       "count": 0
+      },
+      "units": {
+       "count": "count"
+      }
+     }
+    },
+    "state_at_window_end": {
+     "as_of": "2020-01-01",
+     "capacity_today": {
+      "ceiling": "rest",
+      "reasons": [
+       "low or very low readiness to train on 10 reports running"
+      ],
+      "cautions": [
+       "your recent training is too light for a load ratio to say anything, so it was not applied",
+       "alcohol on 43% of recorded days; this does not establish an effect on your sleep",
+       "weight is trending up at 0.6 kg/week"
+      ],
+      "applies_to": "today and tomorrow; it does not cap later days, which depend on how the person recovers"
+     },
+     "habits": {
+      "Walking": {
+       "label": "walking",
+       "sessions": 31,
+       "share": 0.534,
+       "typical_gap_days": 2.0,
+       "typical_minutes": 23,
+       "last_done": 0,
+       "recovery_hours": 0,
+       "loads_joints": [
+        "Ankle",
+        "Hip"
+       ],
+       "spares_joints": []
+      },
+      "Cycling": {
+       "label": "cycling",
+       "sessions": 23,
+       "share": 0.397,
+       "typical_gap_days": 3.0,
+       "typical_minutes": 19,
+       "last_done": 12,
+       "recovery_hours": 12,
+       "loads_joints": [
+        "Knee"
+       ],
+       "spares_joints": [
+        "Ankle"
+       ]
+      },
+      "Running": {
+       "label": "running",
+       "sessions": 4,
+       "share": 0.069,
+       "typical_gap_days": 23.0,
+       "typical_minutes": 37,
+       "last_done": 9,
+       "recovery_hours": 24,
+       "loads_joints": [
+        "Ankle",
+        "Hip",
+        "Knee"
+       ],
+       "spares_joints": []
+      }
+     },
+     "weekday_rhythm": {
+      "Mon": 5,
+      "Tue": 5,
+      "Wed": 14,
+      "Thu": 12,
+      "Fri": 10,
+      "Sat": 7,
+      "Sun": 5
+     },
+     "training_load": {
+      "units": {
+       "acute_7d": "sRPE",
+       "chronic_28d_per_week": "sRPE/week",
+       "acwr": "ratio",
+       "sessions_7d": "sessions",
+       "rated_sessions_7d": "sessions",
+       "unrated_device_minutes_7d": "minutes"
+      },
+      "load_is": "the person's own effort rating x minutes; device-detected sessions have no rating and carry no load",
+      "rated_sessions_7d": 0,
+      "unrated_device_minutes_7d": 146,
+      "acute_7d": 0,
+      "chronic_28d_per_week": 130.0,
+      "acwr": null,
+      "sessions_7d": 3,
+      "acwr_withheld": "28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything"
+     },
+     "sleep_debt_7d": {
+      "nights": 7,
+      "actual_hours": 45.3,
+      "expected_hours": 42.2,
+      "debt_hours": -3.1
+     },
+     "resting_hr": null,
+     "readiness_trend": {
+      "record_count": 11,
+      "recorded_days": 10,
+      "calendar_days": 14,
+      "window": {
+       "start": "2019-12-19",
+       "end": "2020-01-01"
+      },
+      "answers": "very low readiness to train 10, moderate readiness to train 1 (of 11 reports); latest: very low readiness to train",
+      "latest": "very low readiness to train",
+      "direction": "falling"
+     },
+     "activity_vs_who": {
+      "weeks_scored": 4,
+      "median_mvpa_minutes": 688,
+      "weeks_meeting_floor": 4,
+      "floor": 150,
+      "upper": 300,
+      "verdict": "exceeds",
+      "guideline": "Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity, or an equivalent combination.",
+      "source": "WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour"
+     },
+     "ambient_activity": {
+      "window": {
+       "start": "2019-12-05",
+       "end": "2020-01-01"
+      },
+      "heart_days": 28,
+      "median_heart_covered_minutes": 1218,
+      "median_daily_steps": 11105,
+      "total_distance_km": 230.92,
+      "limitations": [
+       "distance and calories are device estimates",
+       "missing samples are not treated as zero"
+      ]
+     },
+     "recent_injuries": {
+      "joints_from_log": [],
+      "count": 2,
+      "by_joint": {
+       "Ankle": 1
+      },
+      "days_since_last": 55,
+      "last_location": "head neck",
+      "days_since_by_joint": {
+       "Ankle": 61
+      }
+     }
+    },
+    "data_quality": {
+     "summary": "100% of the last 28 days carry a record.",
+     "status": "within_baseline",
+     "coverage": 1.0,
+     "days_since_last_record": 0
+    },
+    "limitations": [
+     "Values describe recorded data only: a day without a record is unknown, not zero or normal.",
+     "Record counts are not calendar days, and per-session values (training medians) are not daily totals.",
+     "A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.",
+     "Self-reported answers are words relative to the person's own normal.",
+     "Device distance and calories are estimates."
+    ]
+   }
+  },
+  {
+   "call": "read_record 28d as of 2020-01-01",
+   "output": {
+    "person": "p05",
+    "window": {
+     "start": "2019-12-05",
+     "end": "2020-01-01"
+    },
+    "previous_window": {
+     "start": "2019-11-07",
+     "end": "2019-12-04"
+    },
+    "findings": [
+     "Self-rated readiness to train: very low readiness to train 10, moderate readiness to train 1 (of 11 reports); latest: very low readiness to train. Over the window it is falling.",
+     "Reported and measured sleep disagree by over an hour on 65% of nights; you under-report by 1.3h at the median.",
+     "Body weight is trending up at 0.62 kg/week (+2.0 kg over the window).",
+     "Meals are irregular or alcohol is frequent."
+    ],
+    "domains": {
+     "training": {
+      "this_window": {
+       "days_with_records": 19,
+       "calendar_days": 28,
+       "sessions": 32,
+       "per_week": 8.0,
+       "load": 520.0,
+       "unrated_device_minutes": 808,
+       "median_minutes": 21,
+       "effort": "hard effort 1, maximal effort 1 (of 2 reports); latest: maximal effort",
+       "self_reported": 2,
+       "device_only": 30,
+       "matched": 0,
+       "median_avg_hr": 104,
+       "median_steps": 1669,
+       "median_calories": 169,
+       "modalities": {
+        "walking": 18,
+        "cycling": 11,
+        "running": 3
+       }
+      },
+      "previous_window": {
+       "days_with_records": 14,
+       "calendar_days": 28,
+       "sessions": 23,
+       "per_week": 5.8,
+       "load": 90.0,
+       "unrated_device_minutes": 633,
+       "median_minutes": 21,
+       "effort": "moderate effort 1 (of 1 reports); latest: moderate effort",
+       "self_reported": 1,
+       "device_only": 22,
+       "matched": 1,
+       "median_avg_hr": 106,
+       "median_steps": 2072,
+       "median_calories": 187,
+       "modalities": {
+        "cycling": 11,
+        "walking": 11,
+        "running": 1
+       }
+      },
+      "units": {
+       "sessions": "count",
+       "per_week": "sessions/week",
+       "load": "sRPE",
+       "median_minutes": "minutes/session",
+       "effort": "answers, in words",
+       "self_reported": "count",
+       "device_only": "count",
+       "matched": "count",
+       "median_avg_hr": "bpm (session average)",
+       "median_steps": "steps/session",
+       "median_calories": "kcal/session"
+      },
+      "change": {
+       "sessions": 9,
+       "per_week": 2.2,
+       "load": 430.0,
+       "unrated_device_minutes": 175,
+       "median_minutes": 0,
+       "self_reported": 1,
+       "device_only": 8,
+       "matched": -1,
+       "median_avg_hr": -2,
+       "median_steps": -403,
+       "median_calories": -18
+      }
+     },
+     "sleep": {
+      "this_window": {
+       "days_with_records": 26,
+       "calendar_days": 28,
+       "nights": 26,
+       "median_hours": 6.03,
+       "median_efficiency": 95.0,
+       "median_deep_min": 74.0,
+       "median_rem_min": 89.0,
+       "scored": 26
+      },
+      "previous_window": {
+       "days_with_records": 25,
+       "calendar_days": 28,
+       "nights": 25,
+       "median_hours": 6.08,
+       "median_efficiency": 94,
+       "median_deep_min": 73,
+       "median_rem_min": 86,
+       "scored": 25
+      },
+      "units": {
+       "nights": "count",
+       "median_hours": "hours",
+       "median_efficiency": "percent",
+       "median_deep_min": "minutes",
+       "median_rem_min": "minutes",
+       "scored": "count"
+      },
+      "change": {
+       "nights": 1,
+       "median_hours": -0.05,
+       "median_efficiency": 1.0,
+       "median_deep_min": 1.0,
+       "median_rem_min": 3.0,
+       "scored": 1
+      },
+      "balance_against_own_usual": {
+       "nights": 26,
+       "actual_hours": 163.5,
+       "expected_hours": 156.8,
+       "debt_hours": -6.7
+      }
+     },
+     "recovery": {
+      "this_window": {
+       "days_with_records": 27,
+       "calendar_days": 28,
+       "days": 30,
+       "readiness": "very low readiness to train 10, moderate readiness to train 1 (of 11 reports); latest: very low readiness to train",
+       "fatigue": "normal energy 23, much more tired than normal 4, more tired than normal 3 (of 30 reports); latest: normal energy",
+       "soreness": "normal soreness 28, much more sore than normal 2 (of 30 reports); latest: normal soreness",
+       "stress": "normal stress 21, much more stressed than normal 6, more stressed than normal 3 (of 30 reports); latest: normal stress",
+       "mood": "normal mood 18, much worse mood than normal 7, worse mood than normal 4, better mood than normal 1 (of 30 reports); latest: normal mood",
+       "sleep_quality": "normal sleep quality 22, worse sleep than normal 6, much worse sleep than normal 2 (of 30 reports); latest: normal sleep quality",
+       "low_readiness_reports": 10,
+       "soreness_area_days": 0
+      },
+      "previous_window": {
+       "days_with_records": 25,
+       "calendar_days": 28,
+       "days": 25,
+       "fatigue": "more tired than normal 11, much more tired than normal 7, normal energy 7 (of 25 reports); latest: more tired than normal",
+       "soreness": "normal soreness 24, more sore than normal 1 (of 25 reports); latest: normal soreness",
+       "stress": "more stressed than normal 13, much more stressed than normal 10, normal stress 2 (of 25 reports); latest: much more stressed than normal",
+       "mood": "worse mood than normal 12, normal mood 8, much worse mood than normal 5 (of 25 reports); latest: worse mood than normal",
+       "sleep_quality": "worse sleep than normal 19, normal sleep quality 5, much worse sleep than normal 1 (of 25 reports); latest: worse sleep than normal",
+       "low_readiness_reports": 0,
+       "soreness_area_days": 1,
+       "soreness_area_codes": [
+        "12921003",
+        "22943007"
+       ]
+      },
+      "units": {
+       "days": "count",
+       "readiness": "answers, in words",
+       "fatigue": "answers, in words",
+       "soreness": "answers, in words",
+       "stress": "answers, in words",
+       "mood": "answers, in words",
+       "sleep_quality": "answers, in words",
+       "low_readiness_reports": "count",
+       "soreness_area_days": "count"
+      },
+      "change": {
+       "days": 5,
+       "low_readiness_reports": 10,
+       "soreness_area_days": -1
+      }
+     },
+     "physiology": {
+      "this_window": {
+       "days_with_records": 28,
+       "calendar_days": 28,
+       "resting_hr_days": 5,
+       "median_resting_hr": 66.5,
+       "worn_days": 28,
+       "median_sedentary_min": 715,
+       "median_active_min": 319,
+       "zone_days": 28,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 28,
+       "median_intraday_mean_hr": 71.2,
+       "median_intraday_p95_hr": 93.5,
+       "median_heart_covered_min": 1218,
+       "intraday_step_days": 28,
+       "median_daily_steps": 11105,
+       "total_distance_km": 230.92,
+       "total_calories": 96209.0
+      },
+      "previous_window": {
+       "days_with_records": 27,
+       "calendar_days": 28,
+       "resting_hr_days": 0,
+       "worn_days": 27,
+       "median_sedentary_min": 713,
+       "median_active_min": 306,
+       "zone_days": 27,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 27,
+       "median_intraday_mean_hr": 68.8,
+       "median_intraday_p95_hr": 88,
+       "median_heart_covered_min": 1200,
+       "intraday_step_days": 27,
+       "median_daily_steps": 12376,
+       "total_distance_km": 226.96,
+       "total_calories": 94959.8
+      },
+      "units": {
+       "resting_hr_days": "count",
+       "median_resting_hr": "bpm",
+       "worn_days": "count",
+       "median_sedentary_min": "minutes",
+       "median_active_min": "minutes",
+       "zone_days": "count",
+       "median_cardio_peak_min": "minutes",
+       "intraday_heart_days": "days",
+       "median_intraday_mean_hr": "bpm",
+       "median_intraday_p95_hr": "bpm",
+       "median_heart_covered_min": "minutes/day",
+       "intraday_step_days": "days",
+       "median_daily_steps": "steps/day",
+       "total_distance_km": "km",
+       "total_calories": "kcal"
+      },
+      "change": {
+       "resting_hr_days": 5,
+       "worn_days": 1,
+       "median_sedentary_min": 2,
+       "median_active_min": 13,
+       "zone_days": 1,
+       "median_cardio_peak_min": 0,
+       "intraday_heart_days": 1,
+       "median_intraday_mean_hr": 2.4,
+       "median_intraday_p95_hr": 5.5,
+       "median_heart_covered_min": 18,
+       "intraday_step_days": 1,
+       "median_daily_steps": -1271,
+       "total_distance_km": 3.96,
+       "total_calories": 1249.2
+      }
+     },
+     "lifestyle": {
+      "this_window": {
+       "days_with_records": 28,
+       "calendar_days": 28,
+       "days": 28,
+       "weight_days": 28,
+       "weight_change_kg": 2.0,
+       "latest_weight_kg": 102.0,
+       "median_glasses": 8.0,
+       "alcohol_days": 10,
+       "median_meals": 3.0
+      },
+      "previous_window": {
+       "days_with_records": 19,
+       "calendar_days": 28,
+       "days": 20,
+       "weight_days": 20,
+       "weight_change_kg": 1.0,
+       "latest_weight_kg": 100.0,
+       "median_glasses": 5.0,
+       "alcohol_days": 3,
+       "median_meals": 3.0
+      },
+      "units": {
+       "days": "count",
+       "weight_days": "count",
+       "weight_change_kg": "kg",
+       "latest_weight_kg": "kg",
+       "median_glasses": "glasses",
+       "alcohol_days": "count",
+       "median_meals": "count"
+      },
+      "change": {
+       "days": 8,
+       "weight_days": 8,
+       "weight_change_kg": 1.0,
+       "latest_weight_kg": 2.0,
+       "median_glasses": 3.0,
+       "alcohol_days": 7,
+       "median_meals": 0.0
+      }
+     },
+     "injury": {
+      "this_window": {
+       "days_with_records": 0,
+       "calendar_days": 28,
+       "count": 0
+      },
+      "previous_window": {
+       "days_with_records": 1,
+       "calendar_days": 28,
+       "count": 1,
+       "severities": {
+        "minor": 1
+       },
+       "reports": [
+        {
+         "date": "2019-11-07",
+         "location": "head_neck",
+         "joint": null,
+         "severity": "minor"
+        }
+       ]
+      },
+      "units": {
+       "count": "count"
+      }
+     }
+    },
+    "state_at_window_end": {
+     "as_of": "2020-01-01",
+     "capacity_today": {
+      "ceiling": "rest",
+      "reasons": [
+       "low or very low readiness to train on 10 reports running"
+      ],
+      "cautions": [
+       "your recent training is too light for a load ratio to say anything, so it was not applied",
+       "alcohol on 43% of recorded days; this does not establish an effect on your sleep",
+       "weight is trending up at 0.6 kg/week"
+      ],
+      "applies_to": "today and tomorrow; it does not cap later days, which depend on how the person recovers"
+     },
+     "habits": {
+      "Walking": {
+       "label": "walking",
+       "sessions": 31,
+       "share": 0.534,
+       "typical_gap_days": 2.0,
+       "typical_minutes": 23,
+       "last_done": 0,
+       "recovery_hours": 0,
+       "loads_joints": [
+        "Ankle",
+        "Hip"
+       ],
+       "spares_joints": []
+      },
+      "Cycling": {
+       "label": "cycling",
+       "sessions": 23,
+       "share": 0.397,
+       "typical_gap_days": 3.0,
+       "typical_minutes": 19,
+       "last_done": 12,
+       "recovery_hours": 12,
+       "loads_joints": [
+        "Knee"
+       ],
+       "spares_joints": [
+        "Ankle"
+       ]
+      },
+      "Running": {
+       "label": "running",
+       "sessions": 4,
+       "share": 0.069,
+       "typical_gap_days": 23.0,
+       "typical_minutes": 37,
+       "last_done": 9,
+       "recovery_hours": 24,
+       "loads_joints": [
+        "Ankle",
+        "Hip",
+        "Knee"
+       ],
+       "spares_joints": []
+      }
+     },
+     "weekday_rhythm": {
+      "Mon": 5,
+      "Tue": 5,
+      "Wed": 14,
+      "Thu": 12,
+      "Fri": 10,
+      "Sat": 7,
+      "Sun": 5
+     },
+     "training_load": {
+      "units": {
+       "acute_7d": "sRPE",
+       "chronic_28d_per_week": "sRPE/week",
+       "acwr": "ratio",
+       "sessions_7d": "sessions",
+       "rated_sessions_7d": "sessions",
+       "unrated_device_minutes_7d": "minutes"
+      },
+      "load_is": "the person's own effort rating x minutes; device-detected sessions have no rating and carry no load",
+      "rated_sessions_7d": 0,
+      "unrated_device_minutes_7d": 146,
+      "acute_7d": 0,
+      "chronic_28d_per_week": 130.0,
+      "acwr": null,
+      "sessions_7d": 3,
+      "acwr_withheld": "28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything"
+     },
+     "sleep_debt_7d": {
+      "nights": 7,
+      "actual_hours": 45.3,
+      "expected_hours": 42.2,
+      "debt_hours": -3.1
+     },
+     "resting_hr": null,
+     "readiness_trend": {
+      "record_count": 11,
+      "recorded_days": 10,
+      "calendar_days": 14,
+      "window": {
+       "start": "2019-12-19",
+       "end": "2020-01-01"
+      },
+      "answers": "very low readiness to train 10, moderate readiness to train 1 (of 11 reports); latest: very low readiness to train",
+      "latest": "very low readiness to train",
+      "direction": "falling"
+     },
+     "activity_vs_who": {
+      "weeks_scored": 4,
+      "median_mvpa_minutes": 688,
+      "weeks_meeting_floor": 4,
+      "floor": 150,
+      "upper": 300,
+      "verdict": "exceeds",
+      "guideline": "Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity, or an equivalent combination.",
+      "source": "WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour"
+     },
+     "ambient_activity": {
+      "window": {
+       "start": "2019-12-05",
+       "end": "2020-01-01"
+      },
+      "heart_days": 28,
+      "median_heart_covered_minutes": 1218,
+      "median_daily_steps": 11105,
+      "total_distance_km": 230.92,
+      "limitations": [
+       "distance and calories are device estimates",
+       "missing samples are not treated as zero"
+      ]
+     },
+     "recent_injuries": {
+      "joints_from_log": [],
+      "count": 2,
+      "by_joint": {
+       "Ankle": 1
+      },
+      "days_since_last": 55,
+      "last_location": "head neck",
+      "days_since_by_joint": {
+       "Ankle": 61
+      }
+     }
+    },
+    "data_quality": {
+     "summary": "100% of the last 28 days carry a record.",
+     "status": "within_baseline",
+     "coverage": 1.0,
+     "days_since_last_record": 0
+    },
+    "limitations": [
+     "Values describe recorded data only: a day without a record is unknown, not zero or normal.",
+     "Record counts are not calendar days, and per-session values (training medians) are not daily totals.",
+     "A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.",
+     "Self-reported answers are words relative to the person's own normal.",
+     "Device distance and calories are estimates."
+    ]
+   }
+  }
+ ]
+}

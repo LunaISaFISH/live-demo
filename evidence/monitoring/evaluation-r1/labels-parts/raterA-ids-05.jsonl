@@ -1,0 +1,13 @@
+{"id": "p12-23", "should_alert": false, "confidence": "high", "reason": "Same five-report low readiness already alerted yesterday; no new injury or clear worsening since."}
+{"id": "p16-01", "should_alert": false, "confidence": "low", "reason": "Rise follows brisk walking in prior bucket at similar heart rate; record coverage insufficient to trust."}
+{"id": "p16-02", "should_alert": false, "confidence": "high", "reason": "Resting heart rate only +2.9 bpm for one day; small change, no symptoms or other concern."}
+{"id": "p16-03", "should_alert": false, "confidence": "high", "reason": "One-day resting heart rate rise of +2.3 bpm is small and within normal day-to-day variation."}
+{"id": "p16-04", "should_alert": true, "confidence": "low", "reason": "Three weeks below WHO floor, no week meeting it, very low steps; first notice of a sustained shortfall."}
+{"id": "p16-05", "should_alert": false, "confidence": "high", "reason": "Resting heart rate still only +2.3 bpm, essentially unchanged from yesterday's non-alert review."}
+{"id": "p16-06", "should_alert": true, "confidence": "high", "reason": "Activity shortfall now four weeks and worsened from 115 to 94 min/week; person not yet told."}
+{"id": "p16-07", "should_alert": false, "confidence": "high", "reason": "Moderate rise follows logged walk and ongoing stepping in preceding buckets; explained by recent activity."}
+{"id": "p16-08", "should_alert": true, "confidence": "low", "reason": "Heart rate climbed to about 120 bpm after steps stopped, +48 over resting, no logged exercise; first such event."}
+{"id": "p16-09", "should_alert": true, "confidence": "low", "reason": "Weekly activity clearly worse, 94 to 77 min, about half the WHO floor; a week since last alert."}
+{"id": "p16-10", "should_alert": false, "confidence": "high", "reason": "Resting heart rate only +2.1 bpm, one day, plausibly linked to modest short sleep."}
+{"id": "p16-11", "should_alert": false, "confidence": "high", "reason": "3.4 hours short over seven nights is about 30 minutes a night; mild and newly started."}
+{"id": "p16-12", "should_alert": false, "confidence": "low", "reason": "Heart rate elevated around 100 for over an hour with stepping; zero-step bucket continues an active period."}

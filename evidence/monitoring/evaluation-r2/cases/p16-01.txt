@@ -1,0 +1,82 @@
+CASE p16-01  participant p16  detector intraday_hr  why reviewed: event  at 2019-11-08 10:20:00
+
+SIGNAL
+  heart rate averaged 109 bpm for 10 minutes from 10:10, with 0 recorded steps and no overlapping logged exercise; daily resting reference 66 bpm
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.72 on this detector's own 0-1 scale
+  - record coverage that day: insufficient
+  - a one-off event at its own timestamp
+  - the person has not been alerted about this kind of signal in this run, so there is no earlier Alert to repeat; now it is 109 bpm for 10 min, +44
+    over the resting reference, 0 steps
+  No other condition is holding.
+  No Alert has been raised in this monitoring run yet.
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+State at the window end:
+  as_of: 2019-11-07
+  capacity_today.ceiling: hard
+  capacity_today.reasons: ['no encoded recovery rule lowered the intensity ceiling; this does not establish that all recovery markers are normal']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  weekday_rhythm.Mon: 0
+  weekday_rhythm.Tue: 0
+  weekday_rhythm.Wed: 0
+  weekday_rhythm.Thu: 0
+  weekday_rhythm.Fri: 0
+  weekday_rhythm.Sat: 0
+  weekday_rhythm.Sun: 0
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 0
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 0.0
+  training_load.acwr: None
+  training_load.sessions_7d: 0
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d: None
+  resting_hr: None
+  readiness_trend: None
+  activity_vs_who: None
+  ambient_activity.window.start: 2019-11-01
+  ambient_activity.window.end: 2019-11-07
+  ambient_activity.heart_days: 7
+  ambient_activity.median_heart_covered_minutes: 1156
+  ambient_activity.median_daily_steps: 1690
+  ambient_activity.total_distance_km: 10.59
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 0
+  recent_injuries.days_since_last: None
+  recent_injuries.last_location: None
+Data quality:
+  summary: Only 24% of the last 28 days carry any record.
+  status: insufficient
+  coverage: 0.24
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.
+Sensor, 90 minutes before the event (10-minute buckets: time, heart bpm, steps, km):
+  08:50  64.2  None  None
+  09:00  65.4  38  0.0286
+  09:10  85.5  128  0.0964
+  09:20  85.7  63  0.0474
+  09:30  116.6  486  0.3904
+  09:40  83.7  0  0.0
+  09:50  77.2  206  0.1554
+  10:00  111.2  935  0.7053
+  10:10  109.4  0  0.0
+  10:20  None  0  0.0
+Exercise logged that day up to the event:
+  none

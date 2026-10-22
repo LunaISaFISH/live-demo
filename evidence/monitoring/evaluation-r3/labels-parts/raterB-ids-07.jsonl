@@ -1,0 +1,13 @@
+{"id": "p16-39", "should_alert": true, "confidence": "low", "reason": "Weekly MVPA median fell from 15 to 0 min since the last alert a week earlier; clearly worse, long-running shortfall."}
+{"id": "p16-40", "should_alert": false, "confidence": "high", "reason": "Resting HR only 1.7 bpm above median; small, first day, far below the earlier alerted 73 bpm."}
+{"id": "p16-41", "should_alert": false, "confidence": "low", "reason": "HR 104 follows an unlogged walk with HR 124-127; post-exertion recovery, near-repeat of earlier similar alert."}
+{"id": "p16-42", "should_alert": false, "confidence": "high", "reason": "Resting HR +1.4 bpm, trivial deviation, no sleep or symptom context."}
+{"id": "p16-43", "should_alert": false, "confidence": "high", "reason": "Activity median improved from 0 to 9 min; already alerted at 0, near-repeat shortfall."}
+{"id": "p16-44", "should_alert": false, "confidence": "high", "reason": "Resting HR +1.4 bpm only; small and unremarkable."}
+{"id": "p16-45", "should_alert": false, "confidence": "low", "reason": "HR 101 late evening, about 2 hours after logged walk, mild elevation with 4 steps; near-repeat of earlier alert."}
+{"id": "p16-46", "should_alert": false, "confidence": "low", "reason": "Resting HR 68.7 is highest in 28 days but only +2.1 bpm, first day; modest, sleep debt shown separately."}
+{"id": "p16-47", "should_alert": false, "confidence": "low", "reason": "4.3h sleep debt over 6 nights is smaller than the 5.9h previously alerted; not clearly worse."}
+{"id": "p16-48", "should_alert": true, "confidence": "high", "reason": "Resting HR 70.9, +4.2 bpm, second day rising with 7.3h sleep shortfall, no explanation; clearly worse than yesterday."}
+{"id": "p16-49", "should_alert": false, "confidence": "high", "reason": "Resting HR 69.8 is lower than yesterday's alerted 70.9; near-repeat, no new concern."}
+{"id": "p16-50", "should_alert": true, "confidence": "high", "reason": "Sleep shortfall 9.6h over 7 nights, much larger than the 5.9h earlier alert, with elevated resting HR."}
+{"id": "p16-51", "should_alert": false, "confidence": "high", "reason": "Resting HR 70.0 below the alerted 70.9; sleep alert for the same context is sent this day."}

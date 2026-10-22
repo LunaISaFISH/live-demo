@@ -1,0 +1,13 @@
+{"id": "p16-03", "should_alert": false, "confidence": "high", "reason": "Resting HR only +2.3 bpm above median on a single day; small change within normal day-to-day variation."}
+{"id": "p16-04", "should_alert": false, "confidence": "low", "reason": "First look at a modest WHO shortfall (115 min/week); worth raising if it persists or worsens."}
+{"id": "p16-05", "should_alert": true, "confidence": "high", "reason": "Shortfall now four weeks, median fell 115 to 94 min, no week met 150; never alerted yet."}
+{"id": "p16-06", "should_alert": false, "confidence": "low", "reason": "97 bpm follows a logged walk and ongoing movement minutes earlier; plausibly post-activity recovery, modest rise."}
+{"id": "p16-07", "should_alert": true, "confidence": "low", "reason": "HR rose to 122 bpm after steps stopped, +48 over resting, no logged exercise; clearly larger than prior event."}
+{"id": "p16-08", "should_alert": false, "confidence": "low", "reason": "Alerted on activity shortfall a week ago; 94 to 77 continues same trend, repeat soon after adds noise."}
+{"id": "p16-09", "should_alert": false, "confidence": "low", "reason": "Resting HR +2.1 bpm is small despite being a 28-day high; single day, mild sleep shortfall context."}
+{"id": "p16-10", "should_alert": false, "confidence": "low", "reason": "3.4 h short over 7 nights is about 30 min/night; modest, newly appeared, not yet sustained."}
+{"id": "p16-11", "should_alert": false, "confidence": "high", "reason": "114 bpm is a near-repeat of the 115 bpm event alerted five days ago, following an hour of movement."}
+{"id": "p16-12", "should_alert": false, "confidence": "low", "reason": "108 bpm with no steps is lower than the already-alerted 115 bpm event; same recurring evening pattern."}
+{"id": "p16-13", "should_alert": false, "confidence": "low", "reason": "Third weekly activity Alert would be a near-repeat; 77 to 61 continues the already-flagged decline."}
+{"id": "p16-14", "should_alert": false, "confidence": "high", "reason": "Follows a 46-minute logged walk and continued stepping until 16:50; HR is falling, explained by recent activity."}
+{"id": "p16-15", "should_alert": false, "confidence": "low", "reason": "96 bpm with no steps after earlier movement; smaller than prior alerted events, repeat of known pattern."}

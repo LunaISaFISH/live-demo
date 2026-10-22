@@ -1,0 +1,160 @@
+CASE p12-19  participant p12  detector readiness  why reviewed: recheck  at 2020-03-23 23:59:59
+
+SIGNAL
+  you have reported low or very low readiness to train on 4 reports running
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.57 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a continuing condition, not a one-off event: it started on 2020-03-21 and has held for 3 day(s)
+  - when it started: you have reported low or very low readiness to train on 3 reports running
+  - now: you have reported low or very low readiness to train on 4 reports running
+  - your earlier reviews of it in this run:
+    - 2020-03-21: you have reported low or very low readiness to train on 3 reports running; Alert (You have reported very low readiness on three
+    reports running, together with more tiredness and soreness than normal and recent head/neck injury reports, so this needs attention now.)
+  - the person was last alerted about this kind of signal on 2020-03-21, when it was latest answer 'very low readiness to train', lowest in the run
+    'very low readiness to train', 3 low answers running; now it is latest answer 'very low readiness to train', lowest in the run 'very low readiness
+    to train', 4 low answers running
+  No other condition is holding.
+  Alerts already raised in this monitoring run:
+  - 2019-11-20 23:59:59: your last 7 days carry 2.0x your 28-day average (Your recorded weekly load has increased from 1.57 to 2.0 times your 28-day
+    average while today’s reports include low readiness, more soreness than normal, and current minor knee and shoulder reports, so this warrants
+    attention now.)
+  - 2019-11-22 23:59:59: your last 7 days carry 2.29x your 28-day average (Your recorded weekly load has risen again since the alert two days ago,
+    from 1,440 to 1,650 sRPE and from 2.0 to 2.29 times your 28-day average, while soreness and current knee reports remain recorded.)
+  - 2020-01-11 23:59:59: your last 7 days carry 2.06x your 28-day average (Your recorded weekly load has increased from 790 to 1,140 sRPE and from 1.7
+    to 2.06 times the 28-day average since the last review, while soreness and a current minor right-knee report are recorded.)
+  - 2020-01-13 23:59:59: your last 7 days carry 2.38x your 28-day average (Your recorded weekly load has risen again since the alert two days ago,
+    from 1,140 to 1,600 sRPE and from 2.06 to 2.38 times the 28-day average.)
+  - 2020-01-15 23:59:59: your last 7 days carry 2.68x your 28-day average (Your recorded weekly load remains 1,600 sRPE but has risen from 2.38 to
+    2.68 times the 28-day average since the alert two days ago, while the latest reports include more tiredness, more soreness, and worse sleep
+    quality.)
+  - 2020-02-02 23:59:59: your last 7 days carry 1.72x your 28-day average (Your recorded weekly load is 1,430 sRPE (1.72 times the 28-day average)
+    across 17 sessions, and a major right-knee report was logged yesterday, so this needs attention now.)
+  - 2020-02-07 23:59:59: your last 7 days carry 2.28x your 28-day average (Your recorded weekly load has risen sharply since the alert five days ago,
+    from 1,430 to 2,430 sRPE and from 1.72 to 2.28 times the 28-day average; recent shoulder reports are also recorded.)
+  - 2020-03-21 23:59:59: you have reported low or very low readiness to train on 3 reports running (You have reported very low readiness on three
+    reports running, together with more tiredness and soreness than normal and recent head/neck injury reports, so this needs attention now.)
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - Mostly below normal: fatigue, soreness. fatigue: more tired than normal 4, normal energy 1 (of 5 reports); latest: more tired than normal;
+    soreness: more sore than normal 4, normal soreness 1 (of 5 reports); latest: more sore than normal; stress: normal stress 5 (of 5 reports);
+    latest: normal stress; sleep quality: normal sleep quality 3, worse sleep than normal 1, better sleep than normal 1 (of 5 reports); latest: normal
+    sleep quality.
+  - Last injury 4 days ago (head neck); in the last 14 days: Knee 14 days ago; 76 reports in the whole record so far.
+State at the window end:
+  as_of: 2020-03-23
+  capacity_today.ceiling: rest
+  capacity_today.reasons: ['low or very low readiness to train on 4 reports running']
+  capacity_today.cautions: ['you reported an injury (head neck) 4 days ago']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 75
+  habits.Walking.share: 0.591
+  habits.Walking.typical_gap_days: 1
+  habits.Walking.typical_minutes: 27
+  habits.Walking.last_done: 27
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  habits.Strength.label: resistance training
+  habits.Strength.sessions: 31
+  habits.Strength.share: 0.244
+  habits.Strength.typical_gap_days: 2
+  habits.Strength.typical_minutes: 60
+  habits.Strength.last_done: 14
+  habits.Strength.recovery_hours: 48
+  habits.Strength.loads_joints: ['Hip', 'Knee', 'LumbarSpine', 'Shoulder']
+  habits.Strength.spares_joints: []
+  habits.Running.label: running
+  habits.Running.sessions: 11
+  habits.Running.share: 0.087
+  habits.Running.typical_gap_days: 4
+  habits.Running.typical_minutes: 30
+  habits.Running.last_done: 70
+  habits.Running.recovery_hours: 24
+  habits.Running.loads_joints: ['Ankle', 'Hip', 'Knee']
+  habits.Running.spares_joints: []
+  habits.CrossTraining.label: cross-training
+  habits.CrossTraining.sessions: 6
+  habits.CrossTraining.share: 0.047
+  habits.CrossTraining.typical_gap_days: 5
+  habits.CrossTraining.typical_minutes: 31
+  habits.CrossTraining.last_done: 50
+  habits.CrossTraining.recovery_hours: 24
+  habits.CrossTraining.loads_joints: ['Hip', 'Knee']
+  habits.CrossTraining.spares_joints: []
+  habits.Sport.label: field or court sport
+  habits.Sport.sessions: 3
+  habits.Sport.share: 0.024
+  habits.Sport.typical_gap_days: 1
+  habits.Sport.typical_minutes: 23
+  habits.Sport.last_done: 50
+  habits.Sport.recovery_hours: 48
+  habits.Sport.loads_joints: ['Ankle', 'Hip', 'Knee']
+  habits.Sport.spares_joints: []
+  weekday_rhythm.Mon: 18
+  weekday_rhythm.Tue: 12
+  weekday_rhythm.Wed: 20
+  weekday_rhythm.Thu: 6
+  weekday_rhythm.Fri: 24
+  weekday_rhythm.Sat: 23
+  weekday_rhythm.Sun: 24
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 0
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 402.5
+  training_load.acwr: 0.0
+  training_load.sessions_7d: 0
+  sleep_debt_7d: None
+  resting_hr: None
+  readiness_trend: None
+  activity_vs_who.weeks_scored: 2
+  activity_vs_who.median_mvpa_minutes: 326
+  activity_vs_who.weeks_meeting_floor: 2
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: exceeds
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2020-02-25
+  ambient_activity.window.end: 2020-03-23
+  ambient_activity.heart_days: 23
+  ambient_activity.median_heart_covered_minutes: 612
+  ambient_activity.median_daily_steps: 5715
+  ambient_activity.total_distance_km: 105.15
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: ['Knee']
+  recent_injuries.count: 76
+  recent_injuries.by_joint.Knee: 47
+  recent_injuries.by_joint.Shoulder: 5
+  recent_injuries.by_joint.Ankle: 11
+  recent_injuries.by_joint.Wrist: 7
+  recent_injuries.by_joint.Elbow: 1
+  recent_injuries.days_since_last: 4
+  recent_injuries.last_location: head neck
+  recent_injuries.days_since_by_joint.Ankle: 31
+  recent_injuries.days_since_by_joint.Elbow: 43
+  recent_injuries.days_since_by_joint.Knee: 14
+  recent_injuries.days_since_by_joint.Shoulder: 47
+  recent_injuries.days_since_by_joint.Wrist: 69
+Data quality:
+  summary: 76% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 0.76
+  days_since_last_record: 1
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.

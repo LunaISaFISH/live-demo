@@ -1,0 +1,145 @@
+CASE p16-31  participant p16  detector intraday_hr  why reviewed: event  at 2020-01-18 18:50:00
+
+SIGNAL
+  heart rate averaged 100 bpm for 10 minutes from 18:40, with 0 recorded steps and no overlapping logged exercise; daily resting reference 65 bpm
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.58 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a one-off event at its own timestamp
+  - the person was last alerted about this kind of signal on 2020-01-01, when it was 105 bpm for 10 min, +32 over the resting reference, 4 steps; 1
+    review(s) since then did not alert them; now it is 100 bpm for 10 min, +35 over the resting reference, 0 steps
+  Other conditions holding as of 2020-01-17:
+  - over 4 weeks your middle week had 29 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (since
+    2019-11-22)
+  Alerts already raised in this monitoring run:
+  - 2019-11-29 23:59:59: over 4 weeks your middle week had 94 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Alert: recorded moderate-to-vigorous activity remains below the general weekly recommendation and the four-week median has decreased
+    from 115 to 94 minutes since the prior review.)
+  - 2019-12-02 16:55:00: heart rate averaged 97 bpm for 10 minutes from 16:45, with 5 recorded steps and no overlapping logged exercise; daily resting
+    reference 66 bpm (Alert: heart rate remained around 97 bpm for 10 minutes with almost no recorded movement, after the earlier walking session had
+    ended and the heart rate had first fallen.)
+  - 2019-12-05 17:55:00: heart rate averaged 115 bpm for 10 minutes from 17:45, with 0 recorded steps and no overlapping logged exercise; daily
+    resting reference 67 bpm (Alert: this higher heart-rate event was greater than the one alerted three days ago and occurred with no recorded
+    movement after the heart rate had fallen following earlier walking.)
+  - 2019-12-06 23:59:59: over 4 weeks your middle week had 77 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Alert: recorded activity remains below the general weekly recommendation and the four-week median has decreased again, from 94 to 77
+    minutes per week since the prior alert.)
+  - 2019-12-13 23:59:59: over 4 weeks your middle week had 61 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Alert: recorded activity remains below the general weekly recommendation and the four-week median has decreased again, from 77 to 61
+    minutes per week since the prior alert.)
+  - 2019-12-30 23:59:59: resting heart rate 70.4 bpm, +4.0 bpm from your median of 66.4; higher than on any other day in your own last 28 days (Alert:
+    resting heart rate was higher than any other recorded day in the last 28 days, and the record does not show a clear context that accounts for this
+    one-day change.)
+  - 2020-01-01 02:40:00: heart rate averaged 105 bpm for 10 minutes from 02:30, with 4 recorded steps and no overlapping logged exercise; daily
+    resting reference 73 bpm (Alert: heart rate stayed elevated for at least 70 minutes with very little recorded movement, a longer episode than the
+    prior heart-rate alert.)
+  - 2020-01-01 23:59:59: resting heart rate 73.0 bpm, +6.6 bpm from your median of 66.4; higher than on any other day in your own last 28 days (Alert:
+    resting heart rate has remained elevated for three days and is now higher than at the prior alert, with no clear recorded context accounting for
+    the change.)
+  - 2020-01-17 23:59:59: over 4 weeks your middle week had 29 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (Alert: recorded activity remains below the general weekly recommendation and the four-week median has decreased clearly, from 51 to 29
+    minutes per week.)
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - About 29 min/week of moderate-to-vigorous activity against the 150 the WHO recommends - below.
+  - Body weight is trending down at 1.43 kg/week (+0.0 kg over the window).
+  - Meals are irregular or alcohol is frequent.
+State at the window end:
+  as_of: 2020-01-17
+  capacity_today.ceiling: hard
+  capacity_today.reasons: ['no encoded recovery rule lowered the intensity ceiling; this does not establish that all recovery markers are normal']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied', 'a median of 2 meals a day is
+    low if you are training regularly', 'weight is trending down at 1.4 kg/week']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 9
+  habits.Walking.share: 0.818
+  habits.Walking.typical_gap_days: 7.5
+  habits.Walking.typical_minutes: 16
+  habits.Walking.last_done: 0
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  weekday_rhythm.Mon: 2
+  weekday_rhythm.Tue: 2
+  weekday_rhythm.Wed: 1
+  weekday_rhythm.Thu: 0
+  weekday_rhythm.Fri: 4
+  weekday_rhythm.Sat: 2
+  weekday_rhythm.Sun: 0
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 15
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 0.0
+  training_load.acwr: None
+  training_load.sessions_7d: 1
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d.nights: 7
+  sleep_debt_7d.actual_hours: 46.1
+  sleep_debt_7d.expected_hours: 46.3
+  sleep_debt_7d.debt_hours: 0.2
+  resting_hr.value: 65.17023658752441
+  resting_hr.quantile: 0.143
+  resting_hr.baseline_median: 66.1
+  resting_hr.baseline_days: 28
+  readiness_trend.record_count: 11
+  readiness_trend.recorded_days: 11
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2020-01-04
+  readiness_trend.window.end: 2020-01-17
+  readiness_trend.answers: moderate readiness to train 9, low readiness to train 2 (of 11 reports); latest: moderate readiness to train
+  readiness_trend.latest: moderate readiness to train
+  readiness_trend.direction: flat
+  activity_vs_who.weeks_scored: 4
+  activity_vs_who.median_mvpa_minutes: 29
+  activity_vs_who.weeks_meeting_floor: 0
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: below
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2019-12-21
+  ambient_activity.window.end: 2020-01-17
+  ambient_activity.heart_days: 28
+  ambient_activity.median_heart_covered_minutes: 1202
+  ambient_activity.median_daily_steps: 1236
+  ambient_activity.total_distance_km: 41.06
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 0
+  recent_injuries.days_since_last: None
+  recent_injuries.last_location: None
+Data quality:
+  summary: 100% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 1.0
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.
+Sensor, 90 minutes before the event (10-minute buckets: time, heart bpm, steps, km):
+  17:20  81.8  247  0.1862
+  17:30  88.9  261  0.1968
+  17:40  87.8  501  0.3781
+  17:50  96.9  343  0.2269
+  18:00  103.9  577  0.4352
+  18:10  94.3  69  0.0519
+  18:20  108.6  79  0.0593
+  18:30  99  65  0.0489
+  18:40  100.0  0  0.0
+  18:50  None  0  0.0
+Exercise logged that day up to the event:
+  none

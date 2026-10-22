@@ -1,0 +1,13 @@
+{"id": "p12-23", "should_alert": false, "confidence": "high", "reason": "Same five-report low readiness run was alerted yesterday; no new injury, load or readiness change. Near-repeat."}
+{"id": "p16-01", "should_alert": false, "confidence": "high", "reason": "Only 24% coverage, and heart rate follows a walking burst (935 steps) in the prior 10 minutes. Explained and thin data."}
+{"id": "p16-02", "should_alert": false, "confidence": "high", "reason": "Resting HR only 2.9 bpm above median, sleep fine, readiness not low. Trivial change."}
+{"id": "p16-03", "should_alert": false, "confidence": "high", "reason": "Resting HR +2.3 bpm for one day, readiness moderate, no symptoms. Too small to interrupt the person."}
+{"id": "p16-04", "should_alert": false, "confidence": "low", "reason": "First sighting of a mild shortfall (115 vs 150 min) with thin training data; can wait until it persists or worsens."}
+{"id": "p16-05", "should_alert": false, "confidence": "high", "reason": "Resting HR +2.3 bpm, one day earlier reviewed without alert; readiness moderate. Still minor."}
+{"id": "p16-06", "should_alert": true, "confidence": "high", "reason": "Four weeks below WHO and falling to 94 min median, about 60% of guideline; first alert on this long-running shortfall is due."}
+{"id": "p16-07", "should_alert": false, "confidence": "high", "reason": "Heart rate 97 follows a logged 15-minute walk and steps just before. Explained by recorded exercise."}
+{"id": "p16-08", "should_alert": false, "confidence": "low", "reason": "Rise to about 115-122 follows walking-pace buckets at 102 bpm; resting HR normal, readiness fine. Likely unlogged activity, borderline."}
+{"id": "p16-09", "should_alert": true, "confidence": "low", "reason": "Median MVPA fell from 94 to 77 min since last alert, about half the guideline; a clear worsening of a long shortfall."}
+{"id": "p16-10", "should_alert": false, "confidence": "low", "reason": "Resting HR +2.1 bpm with 3.4h sleep debt over a week; modest, readiness still moderate. Borderline but small."}
+{"id": "p16-11", "should_alert": false, "confidence": "high", "reason": "Sleep shortfall of 3.4h over 7 nights is under 30 min per night; modest and readiness is moderate."}
+{"id": "p16-12", "should_alert": false, "confidence": "low", "reason": "Heart rate already about 100 for over an hour with steps and walking before; explained by activity, not clean rest."}

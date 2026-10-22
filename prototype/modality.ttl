@@ -1,0 +1,112 @@
+@prefix fc:   <http://ca6117.example/fitcoach#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# =====================================================================
+# Training modalities - the reasoning core.
+#
+# An earlier version of this ontology reasoned over individual exercises
+# and the joints their muscles cross. That model was abandoned because
+# the data cannot support it: PMData records that a session was
+# "strength", never which exercises were performed, for how many sets,
+# at what load. Fitbit's finest granularity is 21 activity names -
+# Walk, Run, Treadmill, Weights - with duration, heart rate and
+# calories. The question "should this person squat or hinge?" is not
+# askable of this data; the question "should this person run tomorrow,
+# or has their knee had enough?" is.
+#
+# So modalities are the entities. Every property below is either
+# observable in the data or a stable physiological fact about the
+# modality itself.
+# =====================================================================
+
+fc:Modality a owl:Class .
+
+fc:impact        a owl:DatatypeProperty ; rdfs:domain fc:Modality .   # high | moderate | low | none
+fc:demand        a owl:DatatypeProperty ; rdfs:domain fc:Modality .   # aerobic | neuromuscular | mixed | restorative
+fc:weightBearing a owl:DatatypeProperty ; rdfs:domain fc:Modality ; rdfs:range xsd:boolean .
+fc:recoveryHours a owl:DatatypeProperty ; rdfs:domain fc:Modality ; rdfs:range xsd:integer .
+# These are conservative project scheduling guardrails, not clinical
+# prescriptions. The 48-hour strength value is informed by ACSM consumer
+# recovery material but is not established as a universal Position Stand rule.
+fc:loadsJoint    a owl:ObjectProperty   ; rdfs:domain fc:Modality ; rdfs:range fc:Joint .
+fc:sparesJoint   a owl:ObjectProperty   ; rdfs:domain fc:Modality ; rdfs:range fc:Joint .
+
+# Raw labels as they appear in the sources, so the mapping from data to
+# ontology is itself inspectable rather than buried in a Python dict.
+fc:rawName a owl:DatatypeProperty ; rdfs:domain fc:Modality .
+
+# ---------------------------------------------------------------------
+# Impact-bearing locomotion
+# ---------------------------------------------------------------------
+fc:Running a fc:Modality ; rdfs:label "running" ;
+  fc:rawName "Run", "Treadmill", "running" ;
+  fc:impact "high" ; fc:demand "aerobic" ; fc:weightBearing true ;
+  fc:recoveryHours 24 ;
+  fc:loadsJoint fc:Knee, fc:Ankle, fc:Hip .
+
+fc:Walking a fc:Modality ; rdfs:label "walking" ;
+  fc:rawName "Walk", "Hike" ;
+  fc:impact "low" ; fc:demand "aerobic" ; fc:weightBearing true ;
+  fc:recoveryHours 0 ;
+  fc:loadsJoint fc:Ankle, fc:Hip .
+
+fc:Sport a fc:Modality ; rdfs:label "field or court sport" ;
+  fc:rawName "Sport", "Hockey", "Tennis", "soccer" ;
+  fc:impact "high" ; fc:demand "mixed" ; fc:weightBearing true ;
+  fc:recoveryHours 48 ;
+  fc:loadsJoint fc:Knee, fc:Ankle, fc:Hip .
+
+# ---------------------------------------------------------------------
+# Low-impact aerobic
+# ---------------------------------------------------------------------
+fc:Cycling a fc:Modality ; rdfs:label "cycling" ;
+  fc:rawName "Outdoor Bike", "Bike", "Spinning" ;
+  fc:impact "low" ; fc:demand "aerobic" ; fc:weightBearing false ;
+  fc:recoveryHours 12 ;
+  fc:loadsJoint fc:Knee ;
+  fc:sparesJoint fc:Ankle .
+
+fc:Swimming a fc:Modality ; rdfs:label "swimming" ;
+  fc:rawName "Swim" ;
+  fc:impact "none" ; fc:demand "aerobic" ; fc:weightBearing false ;
+  fc:recoveryHours 12 ;
+  fc:loadsJoint fc:Shoulder ;
+  fc:sparesJoint fc:Knee, fc:Ankle, fc:Hip .
+
+fc:CrossTraining a fc:Modality ; rdfs:label "cross-training" ;
+  fc:rawName "Elliptical", "Aerobic Workout", "Workout", "Interval Workout",
+             "Cross Country Skiing", "endurance" ;
+  fc:impact "moderate" ; fc:demand "aerobic" ; fc:weightBearing true ;
+  fc:recoveryHours 24 ;
+  fc:loadsJoint fc:Knee, fc:Hip .
+
+# ---------------------------------------------------------------------
+# Resistance and restorative
+# ---------------------------------------------------------------------
+fc:Strength a fc:Modality ; rdfs:label "resistance training" ;
+  fc:rawName "Weights", "Circuit Training", "strength" ;
+  fc:impact "moderate" ; fc:demand "neuromuscular" ; fc:weightBearing true ;
+  fc:recoveryHours 48 ;
+  fc:loadsJoint fc:Knee, fc:Hip, fc:LumbarSpine, fc:Shoulder .
+
+fc:Mobility a fc:Modality ; rdfs:label "mobility and flexibility" ;
+  fc:rawName "Yoga", "Dancing" ;
+  fc:impact "low" ; fc:demand "restorative" ; fc:weightBearing true ;
+  fc:recoveryHours 0 .
+
+fc:Rest a fc:Modality ; rdfs:label "rest" ;
+  fc:impact "none" ; fc:demand "restorative" ; fc:weightBearing false ;
+  fc:recoveryHours 0 .
+
+# =====================================================================
+# Intensity levels. Bounded by readiness, never chosen by a model.
+# =====================================================================
+fc:Intensity a owl:Class .
+fc:intensityRank a owl:DatatypeProperty ; rdfs:domain fc:Intensity ; rdfs:range xsd:integer .
+
+fc:Off      a fc:Intensity ; rdfs:label "rest"      ; fc:intensityRank 0 .
+fc:Easy     a fc:Intensity ; rdfs:label "easy"      ; fc:intensityRank 1 .
+fc:Moderate a fc:Intensity ; rdfs:label "moderate"  ; fc:intensityRank 2 .
+fc:Hard     a fc:Intensity ; rdfs:label "hard"      ; fc:intensityRank 3 .

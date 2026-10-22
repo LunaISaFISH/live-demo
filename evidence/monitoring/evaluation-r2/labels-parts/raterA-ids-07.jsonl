@@ -1,0 +1,13 @@
+{"id": "p16-29", "should_alert": false, "confidence": "low", "reason": "Brief 10-min rise after light walking, similar to earlier alerted events; near-repeat, not clearly worse than the last heart-rate alert."}
+{"id": "p16-30", "should_alert": true, "confidence": "high", "reason": "Long-running activity shortfall has clearly worsened, 61 to 29 min/week since last alert; worth telling again."}
+{"id": "p16-31", "should_alert": false, "confidence": "high", "reason": "Heart rate rise follows an hour of walking-level steps; largely explained by movement and a near-repeat of earlier alerts."}
+{"id": "p16-32", "should_alert": false, "confidence": "high", "reason": "Activity median improved slightly from 29 to 34 min since last week's alert; no new information."}
+{"id": "p16-33", "should_alert": false, "confidence": "low", "reason": "Elevated reading directly follows walking bursts up to 728 steps; likely post-walk recovery, no fall-then-rise pattern."}
+{"id": "p16-34", "should_alert": false, "confidence": "high", "reason": "Activity at 32 min/week, essentially unchanged from 29 at last alert; repeat would be noise."}
+{"id": "p16-35", "should_alert": false, "confidence": "high", "reason": "Resting heart rate only +1.8 bpm for one day, far smaller than the +6.6 already alerted; minor fluctuation."}
+{"id": "p16-36", "should_alert": false, "confidence": "high", "reason": "Activity median 32 min/week unchanged from recent reviews and not worse than the last alert."}
+{"id": "p16-37", "should_alert": false, "confidence": "low", "reason": "About 30 min near 105 bpm with little movement late evening, but magnitude matches earlier alerted episodes; near-repeat."}
+{"id": "p16-38", "should_alert": false, "confidence": "high", "reason": "Activity median 36 min/week, slightly better than 29 at last alert; no change worth an alert."}
+{"id": "p16-39", "should_alert": false, "confidence": "high", "reason": "Heart rate rise immediately follows about 20 minutes of walking (over 1000 steps); explained by movement."}
+{"id": "p16-40", "should_alert": true, "confidence": "high", "reason": "Activity shortfall clearly worsened, median halved from 29 to 15 min/week since last alert a month ago."}
+{"id": "p16-41", "should_alert": false, "confidence": "low", "reason": "Gappy heart data after intermittent movement; 100 bpm for 10 min is similar in size to earlier alerts, not clearly worse."}

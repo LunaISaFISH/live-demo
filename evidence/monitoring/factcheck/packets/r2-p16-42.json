@@ -1,0 +1,184 @@
+{
+ "id": "p16-42",
+ "kind": "intraday_hr",
+ "at": "2020-02-23 00:10:00",
+ "monitor_facts": "- severity 0.54 on this detector's own 0-1 scale\n- record coverage that day: sufficient\n- a one-off event at its own timestamp\n- the person was last alerted about this kind of signal on 2020-01-01, when it was 105 bpm for 10 min, +32 over the resting reference, 4 steps; 6 review(s) since then did not alert them; now it is 100 bpm for 10 min, +32 over the resting reference, 0 steps\nOther conditions holding as of 2020-02-22:\n- over 4 weeks your middle week had 18 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (since 2019-11-22)\nAlerts already raised in this monitoring run:\n- 2019-11-29 23:59:59: over 4 weeks your middle week had 94 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (Alert: recorded moderate-to-vigorous activity remains below the general weekly recommendation and the four-week median has decreased from 115 to 94 minutes since the prior review.)\n- 2019-12-02 16:55:00: heart rate averaged 97 bpm for 10 minutes from 16:45, with 5 recorded steps and no overlapping logged exercise; daily resting reference 66 bpm (Alert: heart rate remained around 97 bpm for 10 minutes with almost no recorded movement, after the earlier walking session had ended and the heart rate had first fallen.)\n- 2019-12-05 17:55:00: heart rate averaged 115 bpm for 10 minutes from 17:45, with 0 recorded steps and no overlapping logged exercise; daily resting reference 67 bpm (Alert: this higher heart-rate event was greater than the one alerted three days ago and occurred with no recorded movement after the heart rate had fallen following earlier walking.)\n- 2019-12-06 23:59:59: over 4 weeks your middle week had 77 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (Alert: recorded activity remains below the general weekly recommendation and the four-week median has decreased again, from 94 to 77 minutes per week since the prior alert.)\n- 2019-12-13 23:59:59: over 4 weeks your middle week had 61 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (Alert: recorded activity remains below the general weekly recommendation and the four-week median has decreased again, from 77 to 61 minutes per week since the prior alert.)\n- 2019-12-30 23:59:59: resting heart rate 70.4 bpm, +4.0 bpm from your median of 66.4; higher than on any other day in your own last 28 days (Alert: resting heart rate was higher than any other recorded day in the last 28 days, and the record does not show a clear context that accounts for this one-day change.)\n- 2020-01-01 02:40:00: heart rate averaged 105 bpm for 10 minutes from 02:30, with 4 recorded steps and no overlapping logged exercise; daily resting reference 73 bpm (Alert: heart rate stayed elevated for at least 70 minutes with very little recorded movement, a longer episode than the prior heart-rate alert.)\n- 2020-01-01 23:59:59: resting heart rate 73.0 bpm, +6.6 bpm from your median of 66.4; higher than on any other day in your own last 28 days (Alert: resting heart rate has remained elevated for three days and is now higher than at the prior alert, with no clear recorded context accounting for the change.)\n- 2020-01-17 23:59:59: over 4 weeks your middle week had 29 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (Alert: recorded activity remains below the general weekly recommendation and the four-week median has decreased clearly, from 51 to 29 minutes per week.)\n- 2020-02-21 23:59:59: over 4 weeks your middle week had 15 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends (Recorded moderate-to-vigorous activity remains below the general weekly recommendation and the four-week median has decreased clearly from 29 to 15 minutes per week since the prior alert.)",
+ "statements": {
+  "observations": [
+   "From 23:20 through 00:10, heart rate averaged 102.8 bpm, ranged up to 109.0 bpm in the bucket averages, and had 22 recorded steps.",
+   "Heart rate remained 98.6 to 107.6 bpm from 23:40 through 00:00 with zero recorded steps in each bucket.",
+   "A 23-minute device-recorded walking session averaged 118 bpm and ended 52 minutes before the sensor window.",
+   "There was no overlapping logged exercise."
+  ],
+  "verdict": "unexplained",
+  "note": "From 23:20 through 00:10, heart rate averaged 102.8 bpm with 22 recorded steps and stayed elevated for at least 50 minutes. A device-recorded walking session had ended 52 minutes before this window, so it does not account for the timing of the sustained elevation.",
+  "alert_reason": "Heart rate remained around 99 to 109 bpm for at least 50 minutes with almost no recorded movement, and the earlier walking session had ended well before this window.",
+  "message_to_person": "Your heart rate remained around 99–109 bpm for at least 50 minutes with almost no recorded movement; the earlier walk had ended well before this window. [6bd1f2c8-e1] If you had or have chest pain, fainting, severe breathlessness, or palpitations, stop exercise and seek urgent medical care."
+ },
+ "tool_calls": [
+  {
+   "call": "inspect_sensor_window 2020-02-22 23:20:00 to 2020-02-23 00:10:00",
+   "output": {
+    "5_minute_buckets": {
+     "person": "p16",
+     "window": {
+      "start": "2020-02-22 23:20:00",
+      "end": "2020-02-23 00:10:00"
+     },
+     "bucket_minutes": 5,
+     "bucket_at": "each point's `at` is the start of its bucket, which covers `at` up to 5 minutes later",
+     "points": [
+      {
+       "at": "2020-02-22 23:20:00",
+       "heart_bpm": 109.0,
+       "heart_min": 106,
+       "heart_max": 119,
+       "heart_samples": 34,
+       "mean_confidence": 2.24,
+       "steps": 9,
+       "calories": 40.34,
+       "distance_km": 0.0067
+      },
+      {
+       "at": "2020-02-22 23:25:00",
+       "heart_bpm": 105.7,
+       "heart_min": 100,
+       "heart_max": 112,
+       "heart_samples": 30,
+       "mean_confidence": 2.57,
+       "steps": 0,
+       "calories": 40.81,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2020-02-22 23:30:00",
+       "heart_bpm": 105.7,
+       "heart_min": 100,
+       "heart_max": 113,
+       "heart_samples": 23,
+       "mean_confidence": 2.83,
+       "steps": 13,
+       "calories": 32.99,
+       "distance_km": 0.0098
+      },
+      {
+       "at": "2020-02-22 23:35:00",
+       "heart_bpm": 101.6,
+       "heart_min": 99,
+       "heart_max": 108,
+       "heart_samples": 19,
+       "mean_confidence": 2.95,
+       "steps": 0,
+       "calories": 25.77,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2020-02-22 23:40:00",
+       "heart_bpm": 99.6,
+       "heart_min": 94,
+       "heart_max": 106,
+       "heart_samples": 36,
+       "mean_confidence": 2.75,
+       "steps": 0,
+       "calories": 35.09,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2020-02-22 23:45:00",
+       "heart_bpm": 100.6,
+       "heart_min": 97,
+       "heart_max": 107,
+       "heart_samples": 40,
+       "mean_confidence": 2.5,
+       "steps": 0,
+       "calories": 34.03,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2020-02-22 23:50:00",
+       "heart_bpm": 98.6,
+       "heart_min": 95,
+       "heart_max": 106,
+       "heart_samples": 36,
+       "mean_confidence": 2.86,
+       "steps": 0,
+       "calories": 24.25,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2020-02-22 23:55:00",
+       "heart_bpm": 107.6,
+       "heart_min": 100,
+       "heart_max": 117,
+       "heart_samples": 21,
+       "mean_confidence": 2.14,
+       "steps": 0,
+       "calories": 39.63,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2020-02-23 00:00:00",
+       "heart_bpm": 100.6,
+       "heart_min": 89,
+       "heart_max": 109,
+       "heart_samples": 36,
+       "mean_confidence": 2.64,
+       "steps": 0,
+       "calories": 27.87,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2020-02-23 00:05:00",
+       "heart_bpm": 99.5,
+       "heart_min": 92,
+       "heart_max": 105,
+       "heart_samples": 42,
+       "mean_confidence": 2.76,
+       "steps": 0,
+       "calories": 27.17,
+       "distance_km": 0.0
+      },
+      {
+       "at": "2020-02-23 00:10:00",
+       "heart_bpm": null,
+       "heart_min": null,
+       "heart_max": null,
+       "heart_samples": 0,
+       "mean_confidence": null,
+       "steps": 0,
+       "calories": 5.48,
+       "distance_km": 0.0
+      }
+     ],
+     "summary": {
+      "buckets": 11,
+      "heart_buckets": 10,
+      "mean_hr_bpm": 102.8,
+      "max_hr_bpm": 109.0,
+      "steps": 22,
+      "distance_km": 0.017,
+      "calories": 333.4,
+      "implausible_calorie_buckets": 0
+     },
+     "provenance": [
+      "fitbit/heart_rate.json",
+      "fitbit/steps.json",
+      "fitbit/calories.json",
+      "fitbit/distance.json"
+     ],
+     "limitations": [
+      "heart-rate samples with confidence below 2 were excluded",
+      "zero steps does not prove the person was physiologically at rest"
+     ]
+    },
+    "logged_sessions_nearby": [
+     {
+      "start": "2020-02-22 22:04:48",
+      "minutes": 23,
+      "avg_hr": 118
+     }
+    ]
+   }
+  }
+ ]
+}

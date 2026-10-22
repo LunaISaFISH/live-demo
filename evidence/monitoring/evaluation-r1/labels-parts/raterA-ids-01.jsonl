@@ -1,0 +1,13 @@
+{"id": "p05-01", "should_alert": true, "confidence": "low", "reason": "First sleep shortfall, about 30 min/night for a week, alongside mostly worse fatigue, stress and sleep-quality reports; modest but worth flagging."}
+{"id": "p05-02", "should_alert": true, "confidence": "low", "reason": "First sleep shortfall in run, about 30 min/night, combined with very low readiness today; reasonable to flag gently."}
+{"id": "p05-03", "should_alert": true, "confidence": "low", "reason": "New readiness condition: three very-low reports despite sleep recovering; earlier alert was about sleep, so not a pure repeat."}
+{"id": "p05-04", "should_alert": false, "confidence": "low", "reason": "Same very-low readiness already alerted three days ago; longer run but same level, a near-repeat rather than newly concerning."}
+{"id": "p05-05", "should_alert": false, "confidence": "low", "reason": "Readiness already alerted twice in six days at the same very-low level; persistence alone makes another alert mostly noise."}
+{"id": "p05-06", "should_alert": false, "confidence": "high", "reason": "Identical 3.1h sleep shortfall to the alert already sent 24 Dec; not worse, a near-repeat."}
+{"id": "p05-07", "should_alert": false, "confidence": "low", "reason": "HR elevated through an hour of intermittent walking, 182 steps just before; 10-min zero-step bucket looks like post-movement recovery."}
+{"id": "p05-08", "should_alert": false, "confidence": "high", "reason": "Logged cycling 07:14-07:32 ended minutes before; HR rise is post-exercise recovery."}
+{"id": "p05-09", "should_alert": false, "confidence": "high", "reason": "Walking steps up to 12:40 just before; modest rise matches earlier alerted level, explained by movement."}
+{"id": "p05-10", "should_alert": false, "confidence": "high", "reason": "Logged 30-min cycling ended about 10:13; elevated HR at 10:25 is post-exercise recovery."}
+{"id": "p05-11", "should_alert": false, "confidence": "high", "reason": "Heavy step activity through 07:30 right before; rise similar to earlier alert, explained by recent movement."}
+{"id": "p05-12", "should_alert": false, "confidence": "high", "reason": "Logged cycling 07:04-07:23 with HR 128; 07:30 reading is post-exercise recovery."}
+{"id": "p05-13", "should_alert": false, "confidence": "low", "reason": "Brisk walking up to 06:50 immediately before; likely recovery or unlogged commute; not clearly worse than prior alert."}

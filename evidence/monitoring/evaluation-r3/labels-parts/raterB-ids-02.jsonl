@@ -1,0 +1,13 @@
+{"id": "p05-14", "should_alert": false, "confidence": "high", "reason": "Large step counts at 11:10-11:20 just before; rise explained by walking; earlier similar alert."}
+{"id": "p05-15", "should_alert": false, "confidence": "high", "reason": "Steps and HR 104 in the preceding 40 minutes; rise explained by walking. Near-repeat of earlier alert."}
+{"id": "p05-16", "should_alert": false, "confidence": "high", "reason": "Heavy walking 07:00-07:50 before event; HR decaying afterward. Explained by activity."}
+{"id": "p05-17", "should_alert": false, "confidence": "low", "reason": "Strength and cycling logged 05:30-06:30; HR still elevated an hour later but recovering and activity-explained."}
+{"id": "p05-18", "should_alert": false, "confidence": "high", "reason": "Steady walking in the preceding hour with HR 90; explained by activity and a near-repeat of an earlier alert."}
+{"id": "p05-19", "should_alert": false, "confidence": "high", "reason": "Cycling logged 15:56 and steps until 17:00; HR 95 is post-exercise. Explained."}
+{"id": "p05-20", "should_alert": false, "confidence": "low", "reason": "Unexplained sedentary rise to 95 but the same size as an earlier alert, resting HR normal; near-repeat, not clearly worse."}
+{"id": "p05-21", "should_alert": false, "confidence": "high", "reason": "Walking steps 17:20-17:50 just before; HR 94-97 afterward. Explained by activity."}
+{"id": "p05-22", "should_alert": false, "confidence": "high", "reason": "Heavy walking 08:20-08:30 before; HR 95 is recovery from steps. Explained."}
+{"id": "p05-23", "should_alert": false, "confidence": "low", "reason": "Late-evening HR about 95 for 90 minutes with little movement; unexplained but resting HR normal and same size as earlier alert."}
+{"id": "p05-24", "should_alert": true, "confidence": "high", "reason": "Resting HR 68.7, +8.3 over baseline, highest in 20 days, no explanation, first alert for this signal."}
+{"id": "p05-25", "should_alert": false, "confidence": "high", "reason": "Resting HR 69.3 versus 68.7 already alerted two days ago; essentially unchanged near-repeat."}
+{"id": "p05-26", "should_alert": false, "confidence": "high", "reason": "Light walking steps in the preceding hour explain the rise; resting HR elevated already alerted."}

@@ -1,0 +1,136 @@
+CASE p05-05  participant p05  detector readiness  why reviewed: recheck  at 2020-01-01 23:59:59
+
+SIGNAL
+  you have reported low or very low readiness to train on 10 reports running
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 1.0 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a continuing condition, not a one-off event: it started on 2019-12-26 and has held for 7 day(s)
+  - when it started: you have reported low or very low readiness to train on 3 reports running
+  - now: you have reported low or very low readiness to train on 10 reports running
+  - your earlier reviews of it in this run:
+    - 2019-12-26: you have reported low or very low readiness to train on 3 reports running; Alert (Three very-low readiness reports in a row is a
+    worsening pattern since the alert two days ago, even though the current sleep balance is no longer below your usual.)
+    - 2019-12-29: you have reported low or very low readiness to train on 6 reports running; Alert (Your very-low readiness reports have doubled from
+    three to six in three days, so this is clearly worse than the alert you already received.)
+  - the person was last alerted about this kind of signal on 2019-12-29, when it was latest answer 'very low readiness to train', lowest in the run
+    'very low readiness to train', 6 low answers running; now it is latest answer 'very low readiness to train', lowest in the run 'very low readiness
+    to train', 10 low answers running
+  No other condition is holding.
+  Alerts already raised in this monitoring run:
+  - 2019-12-24 23:59:59: you are 3.1h short of your own usual sleep over 6 nights (Your recent recorded sleep is below your usual over six nights and
+    today's readiness report was very low, so this deserves your attention now.)
+  - 2019-12-26 23:59:59: you have reported low or very low readiness to train on 3 reports running (Three very-low readiness reports in a row is a
+    worsening pattern since the alert two days ago, even though the current sleep balance is no longer below your usual.)
+  - 2019-12-29 23:59:59: you have reported low or very low readiness to train on 6 reports running (Your very-low readiness reports have doubled from
+    three to six in three days, so this is clearly worse than the alert you already received.)
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - Self-rated readiness to train: very low readiness to train 10, moderate readiness to train 1 (of 11 reports); latest: very low readiness to train.
+    Over the window it is falling.
+  - Reported and measured sleep disagree by over an hour on 65% of nights; you under-report by 1.3h at the median.
+  - Body weight is trending up at 0.62 kg/week (+2.0 kg over the window).
+  - Meals are irregular or alcohol is frequent.
+State at the window end:
+  as_of: 2020-01-01
+  capacity_today.ceiling: rest
+  capacity_today.reasons: ['low or very low readiness to train on 10 reports running']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied', 'alcohol on 43% of recorded
+    days; this does not establish an effect on your sleep', 'weight is trending up at 0.6 kg/week']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 31
+  habits.Walking.share: 0.534
+  habits.Walking.typical_gap_days: 2.0
+  habits.Walking.typical_minutes: 23
+  habits.Walking.last_done: 0
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  habits.Cycling.label: cycling
+  habits.Cycling.sessions: 23
+  habits.Cycling.share: 0.397
+  habits.Cycling.typical_gap_days: 3.0
+  habits.Cycling.typical_minutes: 19
+  habits.Cycling.last_done: 12
+  habits.Cycling.recovery_hours: 12
+  habits.Cycling.loads_joints: ['Knee']
+  habits.Cycling.spares_joints: ['Ankle']
+  habits.Running.label: running
+  habits.Running.sessions: 4
+  habits.Running.share: 0.069
+  habits.Running.typical_gap_days: 23.0
+  habits.Running.typical_minutes: 37
+  habits.Running.last_done: 9
+  habits.Running.recovery_hours: 24
+  habits.Running.loads_joints: ['Ankle', 'Hip', 'Knee']
+  habits.Running.spares_joints: []
+  weekday_rhythm.Mon: 5
+  weekday_rhythm.Tue: 5
+  weekday_rhythm.Wed: 14
+  weekday_rhythm.Thu: 12
+  weekday_rhythm.Fri: 10
+  weekday_rhythm.Sat: 7
+  weekday_rhythm.Sun: 5
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 146
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 130.0
+  training_load.acwr: None
+  training_load.sessions_7d: 3
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d.nights: 7
+  sleep_debt_7d.actual_hours: 45.3
+  sleep_debt_7d.expected_hours: 42.2
+  sleep_debt_7d.debt_hours: -3.1
+  resting_hr: None
+  readiness_trend.record_count: 11
+  readiness_trend.recorded_days: 10
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2019-12-19
+  readiness_trend.window.end: 2020-01-01
+  readiness_trend.answers: very low readiness to train 10, moderate readiness to train 1 (of 11 reports); latest: very low readiness to train
+  readiness_trend.latest: very low readiness to train
+  readiness_trend.direction: falling
+  activity_vs_who.weeks_scored: 4
+  activity_vs_who.median_mvpa_minutes: 688
+  activity_vs_who.weeks_meeting_floor: 4
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: exceeds
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2019-12-05
+  ambient_activity.window.end: 2020-01-01
+  ambient_activity.heart_days: 28
+  ambient_activity.median_heart_covered_minutes: 1218
+  ambient_activity.median_daily_steps: 11105
+  ambient_activity.total_distance_km: 230.92
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 2
+  recent_injuries.by_joint.Ankle: 1
+  recent_injuries.days_since_last: 55
+  recent_injuries.last_location: head neck
+  recent_injuries.days_since_by_joint.Ankle: 61
+Data quality:
+  summary: 100% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 1.0
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.

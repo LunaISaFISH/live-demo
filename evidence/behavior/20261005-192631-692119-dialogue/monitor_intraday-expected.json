@@ -1,0 +1,422 @@
+{
+  "snapshot": {
+    "person": "p16",
+    "as_of": "2019-12-02",
+    "recorded_from": "2019-11-01",
+    "top_findings": [
+      {
+        "topic": "training.adequacy",
+        "window": {
+          "start": "2019-11-04",
+          "end": "2019-12-02"
+        },
+        "status": "below_guideline",
+        "summary": "About 98 min/week of moderate-to-vigorous activity against the 150 the WHO recommends - below.",
+        "reference": "WHO aerobic floor 150 min/week",
+        "evidence": [
+          {
+            "name": "median_mvpa",
+            "value": 98,
+            "unit": "min/week",
+            "source": "derived"
+          },
+          {
+            "name": "floor",
+            "value": 150,
+            "unit": "min/week",
+            "source": "guideline"
+          },
+          {
+            "name": "weeks_scored",
+            "value": 4,
+            "unit": "weeks",
+            "source": "derived"
+          }
+        ],
+        "data_quality": {
+          "coverage": 1.0,
+          "sufficiency": "sufficient"
+        },
+        "limitations": [],
+        "salience": 3
+      },
+      {
+        "topic": "lifestyle.weight",
+        "window": {
+          "start": "2019-11-04",
+          "end": "2019-12-02"
+        },
+        "status": "notable",
+        "summary": "Body weight is trending up at 0.52 kg/week (+1.0 kg over the window).",
+        "reference": "your own weight over 28 days",
+        "evidence": [
+          {
+            "name": "kg_per_week",
+            "value": 0.521,
+            "unit": "kg/week",
+            "source": "derived"
+          },
+          {
+            "name": "latest_kg",
+            "value": 64.0,
+            "unit": "kg",
+            "source": "reported"
+          }
+        ],
+        "data_quality": {
+          "coverage": 0.62,
+          "sufficiency": "sufficient"
+        },
+        "limitations": [
+          "a lifestyle pattern is context, never a plan constraint"
+        ],
+        "salience": 2
+      },
+      {
+        "topic": "lifestyle.intake",
+        "window": {
+          "start": "2019-11-04",
+          "end": "2019-12-02"
+        },
+        "status": "notable",
+        "summary": "Meals are irregular or alcohol is frequent.",
+        "reference": "your own 28-day intake",
+        "evidence": [
+          {
+            "name": "median_meals_per_day",
+            "value": 2,
+            "unit": "count",
+            "source": "reported"
+          },
+          {
+            "name": "breakfast_share",
+            "value": 0.21,
+            "unit": "fraction",
+            "source": "reported"
+          },
+          {
+            "name": "median_glasses",
+            "value": 5,
+            "unit": "glasses",
+            "source": "reported"
+          },
+          {
+            "name": "alcohol_share",
+            "value": 0.0,
+            "unit": "fraction",
+            "source": "reported"
+          }
+        ],
+        "data_quality": {
+          "coverage": 0.62,
+          "sufficiency": "sufficient"
+        },
+        "limitations": [
+          "a lifestyle pattern is context, never a plan constraint"
+        ],
+        "salience": 2
+      }
+    ],
+    "domains": {
+      "training": {
+        "status": "below_guideline",
+        "headline": "About 98 min/week of moderate-to-vigorous activity against the 150 the WHO recommends - below.",
+        "salience": 3,
+        "observations": 2
+      },
+      "recovery": {
+        "status": "observed",
+        "headline": "Self-rated readiness to train: moderate readiness to train 12, low readiness to train 1 (of 13 reports); latest: moderate readiness to train. Over the window it is steady.",
+        "salience": 0,
+        "observations": 3
+      },
+      "physiology": {
+        "status": "observed",
+        "headline": "Typical wearable-day activity was 2061 steps, with heart rate sampled for about 1157 minutes/day across 29 days. Around 0 min/day in cardio or peak zones and 91 active minutes across 29 worn days.",
+        "salience": 0,
+        "observations": 1
+      },
+      "sleep": {
+        "status": "within_baseline",
+        "headline": "Recorded sleep total is 0.3 hours above the rolling baseline expectation across 7 sleep records.",
+        "salience": 0,
+        "observations": 1
+      },
+      "lifestyle": {
+        "status": "notable",
+        "headline": "Body weight is trending up at 0.52 kg/week (+1.0 kg over the window).",
+        "salience": 2,
+        "observations": 2
+      },
+      "injury": {
+        "status": "insufficient",
+        "headline": "No injuries reported.",
+        "salience": 1,
+        "observations": 1
+      }
+    },
+    "data_quality": {
+      "topic": "data_quality.coverage",
+      "window": {
+        "start": "2019-11-04",
+        "end": "2019-12-02"
+      },
+      "status": "within_baseline",
+      "summary": "100% of the last 28 days carry a record.",
+      "reference": "days with any record over 28 days",
+      "evidence": [
+        {
+          "name": "coverage",
+          "value": 1.0,
+          "unit": "fraction",
+          "source": "derived"
+        },
+        {
+          "name": "days_since_last_record",
+          "value": 0,
+          "unit": "days",
+          "source": "derived"
+        }
+      ],
+      "data_quality": {
+        "coverage": 1.0,
+        "sufficiency": "sufficient"
+      },
+      "limitations": [
+        "the study's participant sheet has values that were ignored: 5 km run time (minutes) out of range (47.0)"
+      ],
+      "salience": 0
+    }
+  },
+  "planning_context": {
+    "person": "p16",
+    "as_of": "2019-12-02",
+    "capacity_today": {
+      "ceiling": "hard",
+      "reasons": [
+        "no encoded recovery rule lowered the intensity ceiling; this does not establish that all recovery markers are normal"
+      ],
+      "cautions": [
+        "your recent training is too light for a load ratio to say anything, so it was not applied",
+        "you have had breakfast on only 21% of the last 14 recorded days",
+        "a median of 2 meals a day is low if you are training regularly",
+        "weight is trending up at 0.5 kg/week"
+      ],
+      "applies_to": "today and tomorrow; it does not cap later days, which depend on how the person recovers"
+    },
+    "intensity_levels": [
+      "rest",
+      "easy",
+      "moderate",
+      "hard"
+    ],
+    "habits": {},
+    "weekday_rhythm": {
+      "Mon": 1,
+      "Tue": 1,
+      "Wed": 0,
+      "Thu": 0,
+      "Fri": 0,
+      "Sat": 0,
+      "Sun": 0
+    },
+    "training_load": {
+      "units": {
+        "acute_7d": "sRPE",
+        "chronic_28d_per_week": "sRPE/week",
+        "acwr": "ratio",
+        "sessions_7d": "sessions",
+        "rated_sessions_7d": "sessions",
+        "unrated_device_minutes_7d": "minutes"
+      },
+      "load_is": "the person's own effort rating x minutes; device-detected sessions have no rating and carry no load",
+      "rated_sessions_7d": 0,
+      "unrated_device_minutes_7d": 15,
+      "acute_7d": 0,
+      "chronic_28d_per_week": 0.0,
+      "acwr": null,
+      "sessions_7d": 1
+    },
+    "sleep_debt_7d": {
+      "nights": 7,
+      "actual_hours": 48.4,
+      "expected_hours": 48.0,
+      "debt_hours": -0.3
+    },
+    "resting_hr": {
+      "value": 66.3691520690918,
+      "quantile": 0.429,
+      "baseline_median": 67.3,
+      "baseline_days": 28
+    },
+    "readiness_trend": {
+      "record_count": 13,
+      "recorded_days": 13,
+      "calendar_days": 14,
+      "window": {
+        "start": "2019-11-19",
+        "end": "2019-12-02"
+      },
+      "answers": "moderate readiness to train 12, low readiness to train 1 (of 13 reports); latest: moderate readiness to train",
+      "latest": "moderate readiness to train",
+      "direction": "flat"
+    },
+    "activity_vs_who": {
+      "weeks_scored": 4,
+      "median_mvpa_minutes": 98,
+      "weeks_meeting_floor": 0,
+      "floor": 150,
+      "upper": 300,
+      "verdict": "below",
+      "guideline": "Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity, or an equivalent combination.",
+      "source": "WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour"
+    },
+    "ambient_activity": {
+      "window": {
+        "start": "2019-11-05",
+        "end": "2019-12-02"
+      },
+      "heart_days": 28,
+      "median_heart_covered_minutes": 1160,
+      "median_daily_steps": 2030,
+      "total_distance_km": 52.95,
+      "limitations": [
+        "distance and calories are device estimates",
+        "missing samples are not treated as zero"
+      ]
+    },
+    "recent_injuries": {
+      "joints_from_log": [],
+      "count": 0,
+      "dates": [],
+      "reports": [],
+      "by_joint": {},
+      "days_since_last": null,
+      "last_location": null,
+      "days_since_by_joint": {}
+    },
+    "modality_catalogue": {
+      "Running": {
+        "label": "running",
+        "recovery_hours": 24,
+        "loads_joints": [
+          "Ankle",
+          "Hip",
+          "Knee"
+        ],
+        "spares_joints": []
+      },
+      "Walking": {
+        "label": "walking",
+        "recovery_hours": 0,
+        "loads_joints": [
+          "Ankle",
+          "Hip"
+        ],
+        "spares_joints": []
+      },
+      "Sport": {
+        "label": "field or court sport",
+        "recovery_hours": 48,
+        "loads_joints": [
+          "Ankle",
+          "Hip",
+          "Knee"
+        ],
+        "spares_joints": []
+      },
+      "Cycling": {
+        "label": "cycling",
+        "recovery_hours": 12,
+        "loads_joints": [
+          "Knee"
+        ],
+        "spares_joints": [
+          "Ankle"
+        ]
+      },
+      "Swimming": {
+        "label": "swimming",
+        "recovery_hours": 12,
+        "loads_joints": [
+          "Shoulder"
+        ],
+        "spares_joints": [
+          "Ankle",
+          "Hip",
+          "Knee"
+        ]
+      },
+      "CrossTraining": {
+        "label": "cross-training",
+        "recovery_hours": 24,
+        "loads_joints": [
+          "Hip",
+          "Knee"
+        ],
+        "spares_joints": []
+      },
+      "Strength": {
+        "label": "resistance training",
+        "recovery_hours": 48,
+        "loads_joints": [
+          "Hip",
+          "Knee",
+          "LumbarSpine",
+          "Shoulder"
+        ],
+        "spares_joints": []
+      },
+      "Mobility": {
+        "label": "mobility and flexibility",
+        "recovery_hours": 0,
+        "loads_joints": [],
+        "spares_joints": []
+      },
+      "Rest": {
+        "label": "rest",
+        "recovery_hours": 0,
+        "loads_joints": [],
+        "spares_joints": []
+      }
+    },
+    "data_quality": {
+      "topic": "data_quality.coverage",
+      "window": {
+        "start": "2019-11-04",
+        "end": "2019-12-02"
+      },
+      "status": "within_baseline",
+      "summary": "100% of the last 28 days carry a record.",
+      "reference": "days with any record over 28 days",
+      "evidence": [
+        {
+          "name": "coverage",
+          "value": 1.0,
+          "unit": "fraction",
+          "source": "derived"
+        },
+        {
+          "name": "days_since_last_record",
+          "value": 0,
+          "unit": "days",
+          "source": "derived"
+        }
+      ],
+      "data_quality": {
+        "coverage": 1.0,
+        "sufficiency": "sufficient"
+      },
+      "limitations": [
+        "the study's participant sheet has values that were ignored: 5 km run time (minutes) out of range (47.0)"
+      ],
+      "salience": 0
+    },
+    "only_the_person_knows": [
+      "current pain or niggles, today",
+      "their goal for this plan",
+      "which weekdays they can or cannot train",
+      "equipment access and activities they dislike"
+    ]
+  }
+}

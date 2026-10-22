@@ -1,0 +1,13 @@
+{"id": "p12-10", "should_alert": false, "confidence": "high", "reason": "Load fell from 2.68x to 2.09x since the Alert three days ago; readiness rising, no new injury."}
+{"id": "p12-11", "should_alert": true, "confidence": "low", "reason": "Load 1.72x with 17 sessions and a right-knee injury yesterday, a recurrent problem joint; last Alert was almost three weeks ago."}
+{"id": "p12-12", "should_alert": false, "confidence": "high", "reason": "Alerted yesterday for the same concern; load is lower at 1.57x with no newer injury."}
+{"id": "p12-13", "should_alert": false, "confidence": "high", "reason": "Load unchanged at 1.57x and already alerted two days ago; new shoulder entry is minor."}
+{"id": "p12-14", "should_alert": true, "confidence": "low", "reason": "Load rose to 1.88x (1430 to 1950 sRPE) with more soreness and new shoulder injury since last Alert four days ago."}
+{"id": "p12-15", "should_alert": false, "confidence": "low", "reason": "2.05x versus 1.88x alerted two days ago is a modest rise; readiness high and no new injury, so near-repeat."}
+{"id": "p12-16", "should_alert": true, "confidence": "high", "reason": "Load jumped to 2.63x (2190 to 2760 sRPE) with soreness and a new elbow injury; clearly worse than last Alert."}
+{"id": "p12-17", "should_alert": false, "confidence": "high", "reason": "Load fell from 2.63x to 1.82x since the last Alert; high readiness, no newer injury."}
+{"id": "p12-18", "should_alert": false, "confidence": "high", "reason": "Load 1.62x and lower than alerted levels; no new injury, high readiness reports."}
+{"id": "p12-19", "should_alert": true, "confidence": "high", "reason": "Three very-low readiness reports with tiredness, soreness and a recent head/neck injury; first Alert on this signal."}
+{"id": "p12-20", "should_alert": false, "confidence": "high", "reason": "Alerted yesterday; one more low readiness report is not a clear worsening."}
+{"id": "p12-21", "should_alert": false, "confidence": "high", "reason": "Same four low reports as the unalerted review of yesterday; no new information since the Alert."}
+{"id": "p12-22", "should_alert": true, "confidence": "low", "reason": "Five low reports running, consistent soreness and tiredness, worse sleep and a new shoulder injury today; worse than the 3-report Alert."}

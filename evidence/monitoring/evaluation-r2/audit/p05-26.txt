@@ -1,0 +1,392 @@
+AUDIT p05-26: coach against agreed label
+
+=== WHAT THE RATERS SAW ===
+CASE p05-26  participant p05  detector resting_hr  why reviewed: recheck  at 2020-03-07 23:59:59  SIGNAL   resting heart rate 70.6 bpm, +10.2 bpm from your
+    median of 60.4; higher than on any other day in your own last 20 days  MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+    - severity 1.0 on this detector's own 0-1 scale   - record coverage that day: sufficient   - a continuing condition, not a one-off event: it started on
+    2020-03-06 and has held for 2 day(s)   - when it started: resting heart rate 68.7 bpm, +8.3 bpm from your median of 60.4; higher than on any other day in
+    your own last 20 days   - now: resting heart rate 70.6 bpm, +10.2 bpm from your median of 60.4; higher than on any other day in your own last 20 days   -
+    your earlier reviews of it in this run:     - 2020-03-06: resting heart rate 68.7 bpm, +8.3 bpm from your median of 60.4; higher than on any other day in
+    your own last 20 days; Alert (Your     resting heart rate is newly the highest in your last 20 days, and the record does not establish an explanation for
+    the rise.)   - the person was last alerted about this kind of signal on 2020-03-06, when it was 68.7 bpm, +8.3 from the median; now it is 70.6 bpm, +10.2
+    from     the median   No other condition is holding.   Alerts already raised in this monitoring run:   - 2019-12-26 23:59:59: you have reported low or very
+    low readiness to train on 3 reports running (Three consecutive very-low readiness reports     warrant attention now because the record does not account for
+    them.)   - 2019-12-29 23:59:59: you have reported low or very low readiness to train on 6 reports running (This is a clear worsening since the alert three
+    days ago, from three to six consecutive very-low readiness reports, without an explanation in the record.)   - 2020-01-01 23:59:59: you have reported low or
+    very low readiness to train on 10 reports running (The already-alerted readiness concern has clearly     worsened again, from six to ten consecutive very-
+    low reports, and remains unexplained in the record.)   - 2020-01-09 16:40:00: heart rate averaged 95 bpm for 10 minutes from 16:30, with 0 recorded steps
+    and no overlapping logged exercise; daily resting     reference 64 bpm (A heart-rate rise without recorded movement or overlapping exercise is unexplained
+    at the event time and warrants attention     now.)   - 2020-03-06 23:59:59: resting heart rate 68.7 bpm, +8.3 bpm from your median of 60.4; higher than on
+    any other day in your own last 20 days (Your     resting heart rate is newly the highest in your last 20 days, and the record does not establish an
+    explanation for the rise.)  EVIDENCE: the record read by code over the 14 days before (sealed, no later data) Findings:   - Resting heart rate 71 bpm is
+    higher than on any other day in the last 20 days.   - Body weight is trending up at 0.59 kg/week (+2.0 kg over the window).   - Last injury 0 days ago (left
+    foot); in the last 14 days: Ankle 0 days ago; 8 reports in the whole record so far. State at the window end:   as_of: 2020-03-07   capacity_today.ceiling:
+    easy   capacity_today.reasons: ['resting heart rate is higher than on any other day in your own last 20 days']   capacity_today.cautions: ['your recent
+    training is too light for a load ratio to say anything, so it was not applied', 'you reported an injury (left     foot) 0 days ago', 'weight is trending up
+    at 0.6 kg/week']   capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+    habits.Walking.label: walking   habits.Walking.sessions: 64   habits.Walking.share: 0.478   habits.Walking.typical_gap_days: 2
+    habits.Walking.typical_minutes: 23   habits.Walking.last_done: 0   habits.Walking.recovery_hours: 0   habits.Walking.loads_joints: ['Ankle', 'Hip']
+    habits.Walking.spares_joints: []   habits.Cycling.label: cycling   habits.Cycling.sessions: 55   habits.Cycling.share: 0.41
+    habits.Cycling.typical_gap_days: 2.0   habits.Cycling.typical_minutes: 19   habits.Cycling.last_done: 16   habits.Cycling.recovery_hours: 12
+    habits.Cycling.loads_joints: ['Knee']   habits.Cycling.spares_joints: ['Ankle']   habits.Running.label: running   habits.Running.sessions: 9
+    habits.Running.share: 0.067   habits.Running.typical_gap_days: 10.5   habits.Running.typical_minutes: 40   habits.Running.last_done: 42
+    habits.Running.recovery_hours: 24   habits.Running.loads_joints: ['Ankle', 'Hip', 'Knee']   habits.Running.spares_joints: []   habits.CrossTraining.label:
+    cross-training   habits.CrossTraining.sessions: 3   habits.CrossTraining.share: 0.022   habits.CrossTraining.typical_gap_days: 13
+    habits.CrossTraining.typical_minutes: 30   habits.CrossTraining.last_done: 52   habits.CrossTraining.recovery_hours: 24   habits.CrossTraining.loads_joints:
+    ['Hip', 'Knee']   habits.CrossTraining.spares_joints: []   habits.Strength.label: resistance training   habits.Strength.sessions: 3   habits.Strength.share:
+    0.022   habits.Strength.typical_gap_days: 18   habits.Strength.typical_minutes: 30   habits.Strength.last_done: 23   habits.Strength.recovery_hours: 48
+    habits.Strength.loads_joints: ['Hip', 'Knee', 'LumbarSpine', 'Shoulder']   habits.Strength.spares_joints: []   weekday_rhythm.Mon: 17   weekday_rhythm.Tue:
+    16   weekday_rhythm.Wed: 25   weekday_rhythm.Thu: 27   weekday_rhythm.Fri: 20   weekday_rhythm.Sat: 17   weekday_rhythm.Sun: 12
+    training_load.units.acute_7d: sRPE   training_load.units.chronic_28d_per_week: sRPE/week   training_load.units.acwr: ratio
+    training_load.units.sessions_7d: sessions   training_load.units.rated_sessions_7d: sessions   training_load.units.unrated_device_minutes_7d: minutes
+    training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+    training_load.rated_sessions_7d: 0   training_load.unrated_device_minutes_7d: 44   training_load.acute_7d: 0   training_load.chronic_28d_per_week: 37.5
+    training_load.acwr: None   training_load.sessions_7d: 2   training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio
+    to mean anything   sleep_debt_7d: None   resting_hr.value: 70.60227394104004   resting_hr.quantile: 1.0   resting_hr.baseline_median: 60.4
+    resting_hr.baseline_days: 20   readiness_trend.record_count: 11   readiness_trend.recorded_days: 11   readiness_trend.calendar_days: 14
+    readiness_trend.window.start: 2020-02-23   readiness_trend.window.end: 2020-03-07   readiness_trend.answers: moderate readiness to train 11 (of 11 reports);
+    latest: moderate readiness to train   readiness_trend.latest: moderate readiness to train   readiness_trend.direction: flat   activity_vs_who.weeks_scored:
+    3   activity_vs_who.median_mvpa_minutes: 744   activity_vs_who.weeks_meeting_floor: 3   activity_vs_who.floor: 150   activity_vs_who.upper: 300
+    activity_vs_who.verdict: exceeds   activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150
+    minutes of vigorous-intensity     activity, or an equivalent combination.   activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and
+    Sedentary Behaviour   ambient_activity.window.start: 2020-02-09   ambient_activity.window.end: 2020-03-07   ambient_activity.heart_days: 22
+    ambient_activity.median_heart_covered_minutes: 1090   ambient_activity.median_daily_steps: 11138   ambient_activity.total_distance_km: 146.7
+    ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']   recent_injuries.joints_from_log:
+    ['Ankle']   recent_injuries.count: 8   recent_injuries.by_joint.Ankle: 7   recent_injuries.days_since_last: 0   recent_injuries.last_location: left foot
+    recent_injuries.days_since_by_joint.Ankle: 0 Data quality:   summary: 97% of the last 28 days carry a record.   status: within_baseline   coverage: 0.97
+    days_since_last_record: 0 Limitations:   - Values describe recorded data only: a day without a record is unknown, not zero or normal.   - Record counts are
+    not calendar days, and per-session values (training medians) are not daily totals.   - A difference between the two windows is a comparison, not a cause;
+    the previous window is not necessarily a representative baseline.   - Self-reported answers are words relative to the person's own normal.   - Device
+    distance and calories are estimates.
+=== RATER LABELS ===
+rater A: should_alert=False (low): Alerted yesterday about the same resting HR rise; +10.2 vs +8.3 is persistence, not a clearly new concern.
+rater B: should_alert=False (low): Alerted yesterday; resting HR up only 1.9 bpm further. Same condition continuing, not clearly worse.
+
+=== THE COACH'S REVIEW ===
+decision: ALERT; verdict: unclear; recheck_in_days: 1
+alert_reason: The already-alerted resting-heart-rate rise has increased again, from 68.7 to 70.6 bpm, and the record still does not establish an explanation.
+note: Resting heart rate rose by 1.9 bpm from the prior day's already-high reading and remains 10.2 bpm above the 20-day median. Recorded sleep remains
+    incomplete, and the available recovery reports are moderate readiness with normal energy, so the record cannot account for the rise.
+observations:
+  - Resting heart rate is 70.6 bpm, 10.2 bpm above the 20-day median of 60.4; the prior day was 68.7 bpm, 8.3 bpm above that median.
+  - Three sleep nights were recorded in the last seven days with a 5.57-hour median; four nights are unrecorded.
+  - The latest recovery report was moderate readiness with normal energy, normal soreness, normal stress, normal mood and normal sleep quality.
+limitations:
+  - No symptoms, illness, medication changes, or other circumstances are recorded.
+  - Four of seven nights have no sleep record, so sleep cannot be linked to this change.
+  - A personal baseline change does not establish a health cause.
+message to the person: Your resting heart rate rose again to 70.6 bpm—10.2 bpm above your 20-day median and higher than yesterday’s already-high value.  The
+    record still cannot account for the change: sleep is missing for four nights, while your latest recovery report was moderate readiness with normal energy.
+    Keep exercise easy today.  If you have chest pain or pressure, fainting, severe dizziness, breathlessness at rest or with mild effort, or palpitations, stop
+    exercise and seek urgent medical care.
+tools it called: ['read_record 7d as of 2020-03-07']
+
+=== OUTPUTS OF THE COACH'S TOOL CALLS (regenerated from the record) ===
+--- read_record 7d as of 2020-03-07: findings, state, data quality ---
+  - Resting heart rate 71 bpm is higher than on any other day in the last 20 days.
+  - Body weight is trending up at 0.59 kg/week (+2.0 kg over the window).
+  - Last injury 0 days ago (left foot); in the last 14 days: Ankle 0 days ago; 8 reports in the whole record so far.
+  as_of: 2020-03-07
+  capacity_today.ceiling: easy
+  capacity_today.reasons: ['resting heart rate is higher than on any other day in your own last 20 days']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied', 'you reported an injury (left foot) 0
+    days ago', 'weight is trending up at 0.6 kg/week']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 64
+  habits.Walking.share: 0.478
+  habits.Walking.typical_gap_days: 2
+  habits.Walking.typical_minutes: 23
+  habits.Walking.last_done: 0
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  habits.Cycling.label: cycling
+  habits.Cycling.sessions: 55
+  habits.Cycling.share: 0.41
+  habits.Cycling.typical_gap_days: 2.0
+  habits.Cycling.typical_minutes: 19
+  habits.Cycling.last_done: 16
+  habits.Cycling.recovery_hours: 12
+  habits.Cycling.loads_joints: ['Knee']
+  habits.Cycling.spares_joints: ['Ankle']
+  habits.Running.label: running
+  habits.Running.sessions: 9
+  habits.Running.share: 0.067
+  habits.Running.typical_gap_days: 10.5
+  habits.Running.typical_minutes: 40
+  habits.Running.last_done: 42
+  habits.Running.recovery_hours: 24
+  habits.Running.loads_joints: ['Ankle', 'Hip', 'Knee']
+  habits.Running.spares_joints: []
+  habits.CrossTraining.label: cross-training
+  habits.CrossTraining.sessions: 3
+  habits.CrossTraining.share: 0.022
+  habits.CrossTraining.typical_gap_days: 13
+  habits.CrossTraining.typical_minutes: 30
+  habits.CrossTraining.last_done: 52
+  habits.CrossTraining.recovery_hours: 24
+  habits.CrossTraining.loads_joints: ['Hip', 'Knee']
+  habits.CrossTraining.spares_joints: []
+  habits.Strength.label: resistance training
+  habits.Strength.sessions: 3
+  habits.Strength.share: 0.022
+  habits.Strength.typical_gap_days: 18
+  habits.Strength.typical_minutes: 30
+  habits.Strength.last_done: 23
+  habits.Strength.recovery_hours: 48
+  habits.Strength.loads_joints: ['Hip', 'Knee', 'LumbarSpine', 'Shoulder']
+  habits.Strength.spares_joints: []
+  weekday_rhythm.Mon: 17
+  weekday_rhythm.Tue: 16
+  weekday_rhythm.Wed: 25
+  weekday_rhythm.Thu: 27
+  weekday_rhythm.Fri: 20
+  weekday_rhythm.Sat: 17
+  weekday_rhythm.Sun: 12
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 44
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 37.5
+  training_load.acwr: None
+  training_load.sessions_7d: 2
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d: None
+  resting_hr.value: 70.60227394104004
+  resting_hr.quantile: 1.0
+  resting_hr.baseline_median: 60.4
+  resting_hr.baseline_days: 20
+  readiness_trend.record_count: 11
+  readiness_trend.recorded_days: 11
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2020-02-23
+  readiness_trend.window.end: 2020-03-07
+  readiness_trend.answers: moderate readiness to train 11 (of 11 reports); latest: moderate readiness to train
+  readiness_trend.latest: moderate readiness to train
+  readiness_trend.direction: flat
+  activity_vs_who.weeks_scored: 3
+  activity_vs_who.median_mvpa_minutes: 744
+  activity_vs_who.weeks_meeting_floor: 3
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: exceeds
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity,
+    or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2020-02-09
+  ambient_activity.window.end: 2020-03-07
+  ambient_activity.heart_days: 22
+  ambient_activity.median_heart_covered_minutes: 1090
+  ambient_activity.median_daily_steps: 11138
+  ambient_activity.total_distance_km: 146.7
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: ['Ankle']
+  recent_injuries.count: 8
+  recent_injuries.by_joint.Ankle: 7
+  recent_injuries.days_since_last: 0
+  recent_injuries.last_location: left foot
+  recent_injuries.days_since_by_joint.Ankle: 0
+  training.this_window.days_with_records: 1
+  training.this_window.calendar_days: 7
+  training.this_window.sessions: 2
+  training.this_window.per_week: 2.0
+  training.this_window.load: 0
+  training.this_window.unrated_device_minutes: 44
+  training.this_window.median_minutes: 22
+  training.this_window.self_reported: 0
+  training.this_window.device_only: 2
+  training.this_window.matched: 0
+  training.this_window.median_avg_hr: 101
+  training.this_window.median_steps: 1604
+  training.this_window.median_calories: 180
+  training.this_window.modalities.walking: 2
+  training.previous_window.days_with_records: 0
+  training.previous_window.calendar_days: 7
+  training.previous_window.sessions: 0
+  training.previous_window.per_week: 0.0
+  training.previous_window.load: 0
+  training.previous_window.unrated_device_minutes: 0
+  training.previous_window.self_reported: 0
+  training.previous_window.device_only: 0
+  training.previous_window.matched: 0
+  training.units.sessions: count
+  training.units.per_week: sessions/week
+  training.units.load: sRPE
+  training.units.median_minutes: minutes/session
+  training.units.self_reported: count
+  training.units.device_only: count
+  training.units.matched: count
+  training.units.median_avg_hr: bpm (session average)
+  training.units.median_steps: steps/session
+  training.units.median_calories: kcal/session
+  sleep.this_window.days_with_records: 3
+  sleep.this_window.calendar_days: 7
+  sleep.this_window.nights: 3
+  sleep.this_window.median_hours: 5.57
+  sleep.this_window.median_efficiency: 91
+  sleep.this_window.median_deep_min: 16
+  sleep.this_window.median_rem_min: 15
+  sleep.this_window.scored: 2
+  sleep.previous_window.days_with_records: 0
+  sleep.previous_window.calendar_days: 7
+  sleep.previous_window.nights: 0
+  sleep.units.nights: count
+  sleep.units.median_hours: hours
+  sleep.units.median_efficiency: percent
+  sleep.units.median_deep_min: minutes
+  sleep.units.median_rem_min: minutes
+  sleep.units.scored: count
+  recovery.this_window.days_with_records: 6
+  recovery.this_window.calendar_days: 7
+  recovery.this_window.days: 6
+  recovery.this_window.readiness: moderate readiness to train 6 (of 6 reports); latest: moderate readiness to train
+  recovery.this_window.fatigue: normal energy 6 (of 6 reports); latest: normal energy
+  recovery.this_window.soreness: normal soreness 6 (of 6 reports); latest: normal soreness
+  recovery.this_window.stress: normal stress 6 (of 6 reports); latest: normal stress
+  recovery.this_window.mood: normal mood 4, worse mood than normal 1, better mood than normal 1 (of 6 reports); latest: normal mood
+  recovery.this_window.sleep_quality: normal sleep quality 6 (of 6 reports); latest: normal sleep quality
+  recovery.this_window.low_readiness_reports: 0
+  recovery.this_window.soreness_area_days: 0
+  recovery.previous_window.days_with_records: 5
+  recovery.previous_window.calendar_days: 7
+  recovery.previous_window.days: 5
+  recovery.previous_window.readiness: moderate readiness to train 5 (of 5 reports); latest: moderate readiness to train
+  recovery.previous_window.fatigue: normal energy 3, fresher than normal 1, more tired than normal 1 (of 5 reports); latest: normal energy
+  recovery.previous_window.soreness: normal soreness 3, less sore than normal 2 (of 5 reports); latest: normal soreness
+  recovery.previous_window.stress: more relaxed than normal 2, more stressed than normal 2, normal stress 1 (of 5 reports); latest: more stressed than normal
+  recovery.previous_window.mood: better mood than normal 2, normal mood 2, worse mood than normal 1 (of 5 reports); latest: worse mood than normal
+  recovery.previous_window.sleep_quality: normal sleep quality 3, better sleep than normal 1, worse sleep than normal 1 (of 5 reports); latest: worse sleep than
+    normal
+  recovery.previous_window.low_readiness_reports: 0
+  recovery.previous_window.soreness_area_days: 0
+  recovery.units.days: count
+  recovery.units.readiness: answers, in words
+  recovery.units.fatigue: answers, in words
+  recovery.units.soreness: answers, in words
+  recovery.units.stress: answers, in words
+  recovery.units.mood: answers, in words
+  recovery.units.sleep_quality: answers, in words
+  recovery.units.low_readiness_reports: count
+  recovery.units.soreness_area_days: count
+  recovery.change.days: 1
+  recovery.change.low_readiness_reports: 0
+  recovery.change.soreness_area_days: 0
+  physiology.this_window.days_with_records: 7
+  physiology.this_window.calendar_days: 7
+  physiology.this_window.resting_hr_days: 7
+  physiology.this_window.median_resting_hr: 61.0
+  physiology.this_window.worn_days: 7
+  physiology.this_window.median_sedentary_min: 1007
+  physiology.this_window.median_active_min: 363
+  physiology.this_window.zone_days: 7
+  physiology.this_window.median_cardio_peak_min: 1
+  physiology.this_window.intraday_heart_days: 7
+  physiology.this_window.median_intraday_mean_hr: 73.0
+  physiology.this_window.median_intraday_p95_hr: 91
+  physiology.this_window.median_heart_covered_min: 845
+  physiology.this_window.intraday_step_days: 7
+  physiology.this_window.median_daily_steps: 11468
+  physiology.this_window.total_distance_km: 46.68
+  physiology.this_window.total_calories: 25662.7
+  physiology.previous_window.days_with_records: 2
+  physiology.previous_window.calendar_days: 7
+  physiology.previous_window.resting_hr_days: 2
+  physiology.previous_window.median_resting_hr: 62.7
+  physiology.previous_window.worn_days: 2
+  physiology.previous_window.median_sedentary_min: 1346
+  physiology.previous_window.median_active_min: 94
+  physiology.previous_window.zone_days: 2
+  physiology.previous_window.median_cardio_peak_min: 0
+  physiology.previous_window.intraday_heart_days: 2
+  physiology.previous_window.median_intraday_mean_hr: 66.5
+  physiology.previous_window.median_intraday_p95_hr: 79.0
+  physiology.previous_window.median_heart_covered_min: 414
+  physiology.previous_window.intraday_step_days: 2
+  physiology.previous_window.median_daily_steps: 4380
+  physiology.previous_window.total_distance_km: 6.33
+  physiology.previous_window.total_calories: 14470.9
+  physiology.units.resting_hr_days: count
+  physiology.units.median_resting_hr: bpm
+  physiology.units.worn_days: count
+  physiology.units.median_sedentary_min: minutes
+  physiology.units.median_active_min: minutes
+  physiology.units.zone_days: count
+  physiology.units.median_cardio_peak_min: minutes
+  physiology.units.intraday_heart_days: days
+  physiology.units.median_intraday_mean_hr: bpm
+  physiology.units.median_intraday_p95_hr: bpm
+  physiology.units.median_heart_covered_min: minutes/day
+  physiology.units.intraday_step_days: days
+  physiology.units.median_daily_steps: steps/day
+  physiology.units.total_distance_km: km
+  physiology.units.total_calories: kcal
+  physiology.change.resting_hr_days: 5
+  physiology.change.median_resting_hr: -1.7
+  physiology.change.worn_days: 5
+  physiology.change.median_sedentary_min: -339
+  physiology.change.median_active_min: 269
+  physiology.change.zone_days: 5
+  physiology.change.median_cardio_peak_min: 1
+  physiology.change.intraday_heart_days: 5
+  physiology.change.median_intraday_mean_hr: 6.5
+  physiology.change.median_intraday_p95_hr: 12.0
+  physiology.change.median_heart_covered_min: 431
+  physiology.change.intraday_step_days: 5
+  physiology.change.median_daily_steps: 7088
+  physiology.change.total_distance_km: 40.35
+  physiology.change.total_calories: 11191.8
+  lifestyle.this_window.days_with_records: 6
+  lifestyle.this_window.calendar_days: 7
+  lifestyle.this_window.days: 7
+  lifestyle.this_window.weight_days: 0
+  lifestyle.this_window.median_glasses: 15
+  lifestyle.this_window.alcohol_days: 0
+  lifestyle.this_window.median_meals: 3
+  lifestyle.previous_window.days_with_records: 5
+  lifestyle.previous_window.calendar_days: 7
+  lifestyle.previous_window.days: 5
+  lifestyle.previous_window.weight_days: 5
+  lifestyle.previous_window.weight_change_kg: 1.0
+  lifestyle.previous_window.latest_weight_kg: 103.0
+  lifestyle.previous_window.median_glasses: 9
+  lifestyle.previous_window.alcohol_days: 1
+  lifestyle.previous_window.median_meals: 3
+  lifestyle.units.days: count
+  lifestyle.units.weight_days: count
+  lifestyle.units.median_glasses: glasses
+  lifestyle.units.alcohol_days: count
+  lifestyle.units.median_meals: count
+  lifestyle.units.weight_change_kg: kg
+  lifestyle.units.latest_weight_kg: kg
+  lifestyle.change.days: 2
+  lifestyle.change.weight_days: -5
+  lifestyle.change.median_glasses: 6
+  lifestyle.change.alcohol_days: -1
+  lifestyle.change.median_meals: 0
+  injury.this_window.days_with_records: 1
+  injury.this_window.calendar_days: 7
+  injury.this_window.count: 1
+  injury.this_window.by_joint.Ankle: 1
+  injury.this_window.severities.minor: 1
+  injury.this_window.reports[0].date: 2020-03-07
+  injury.this_window.reports[0].location: left_foot
+  injury.this_window.reports[0].joint: Ankle
+  injury.this_window.reports[0].severity: minor
+  injury.previous_window.days_with_records: 1
+  injury.previous_window.calendar_days: 7
+  injury.previous_window.count: 1
+  injury.previous_window.by_joint.Ankle: 1
+  injury.previous_window.severities.minor: 1
+  injury.previous_window.reports[0].date: 2020-02-29
+  injury.previous_window.reports[0].location: left_foot
+  injury.previous_window.reports[0].joint: Ankle
+  injury.previous_window.reports[0].severity: minor
+  injury.units.count: count
+  injury.change.count: 0

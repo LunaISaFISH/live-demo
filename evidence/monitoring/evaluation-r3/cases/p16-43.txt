@@ -1,0 +1,169 @@
+CASE p16-43  participant p16  detector under_active  why reviewed: recheck  at 2020-03-06 23:59:59
+
+SIGNAL
+  over 4 weeks your middle week had 9 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.94 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a continuing condition, not a one-off event: it started on 2019-11-22 and has held for 106 day(s)
+  - when it started: over 3 weeks your middle week had 115 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends
+  - now: over 4 weeks your middle week had 9 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends
+  - your earlier reviews of it in this run:
+    - 2019-11-22: over 3 weeks your middle week had 115 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; no Alert (The activity total is below the published weekly guideline, but it is a non-urgent, one-day signal and there is no recorded
+    availability, goal, or constraint context to make an alert useful now.)
+    - 2019-12-06: over 4 weeks your middle week had 77 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; Alert (The below-guideline weekly activity pattern has continued for 15 days and the median has fallen from 115 to 77 minutes, so it
+    needs your attention now.)
+    - 2019-12-20: over 4 weeks your middle week had 56 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; Alert (The below-guideline activity pattern has continued for 29 days and the median has fallen from 77 to 56 minutes per week since
+    the prior alert, so it needs your attention now.)
+    - 2020-01-03: over 4 weeks your middle week had 56 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; no Alert (The weekly activity median remains below the WHO guideline but is unchanged from the prior alert, so another alert is not
+    needed now.)
+    - 2020-01-17: over 4 weeks your middle week had 29 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; Alert (The below-guideline activity pattern has continued for 57 days and the weekly median has fallen from 56 to 29 minutes since the
+    prior alert, so it needs your attention now.)
+    - 2020-01-31: over 4 weeks your middle week had 32 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; no Alert (The weekly activity median remains below the published guideline but is slightly higher than at the alert two weeks ago, so
+    another alert is not needed now.)
+    - 2020-02-07: over 4 weeks your middle week had 32 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; no Alert (The weekly activity median remains below the published guideline but is unchanged from the latest review and higher than at
+    the recent alert, so another alert is not needed now.)
+    - 2020-02-14: over 3 weeks your middle week had 36 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; no Alert (The weekly activity median remains below the published guideline but has risen from the recent alert and is higher than the
+    last two reviews, so another alert is not needed now.)
+    - 2020-02-21: over 4 weeks your middle week had 15 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; Alert (The below-guideline weekly activity pattern has continued and the median has fallen from 29 minutes at the prior alert to 15
+    minutes, so it needs your attention now.)
+    - 2020-02-28: over 4 weeks your middle week had 0 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends; Alert (The below-guideline weekly activity pattern has continued and the median has fallen from 15 minutes at the prior alert to 0
+    minutes, so it needs your attention now.)
+  - the person was last alerted about this kind of signal on 2020-02-28, when it was median week 0 min of moderate-to-vigorous activity; now it is
+    median week 9 min of moderate-to-vigorous activity
+  No other condition is holding.
+  Alerts already raised in this monitoring run:
+  - 2019-12-02 16:55:00: heart rate averaged 97 bpm for 10 minutes from 16:45, with 5 recorded steps and no overlapping logged exercise; daily resting
+    reference 66 bpm (A 10-minute elevated heart-rate period occurred with minimal recorded movement and no clear recorded explanation, so it needs
+    your attention now.)
+  - 2019-12-05 17:55:00: heart rate averaged 115 bpm for 10 minutes from 17:45, with 0 recorded steps and no overlapping logged exercise; daily
+    resting reference 67 bpm (This elevated heart-rate event occurred with no steps in the 10-minute period and is higher than the earlier alerted
+    event, so it needs your attention now.)
+  - 2019-12-06 23:59:59: over 4 weeks your middle week had 77 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (The below-guideline weekly activity pattern has continued for 15 days and the median has fallen from 115 to 77 minutes, so it needs
+    your attention now.)
+  - 2019-12-20 23:59:59: over 4 weeks your middle week had 56 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (The below-guideline activity pattern has continued for 29 days and the median has fallen from 77 to 56 minutes per week since the
+    prior alert, so it needs your attention now.)
+  - 2019-12-30 23:59:59: resting heart rate 70.4 bpm, +4.0 bpm from your median of 66.4; higher than on any other day in your own last 28 days (Your
+    resting heart rate was the highest in your 28-day record and no clear recorded context accounts for it, so it needs your attention now.)
+  - 2020-01-01 02:40:00: heart rate averaged 105 bpm for 10 minutes from 02:30, with 4 recorded steps and no overlapping logged exercise; daily
+    resting reference 73 bpm (Heart rate remained elevated for over two hours overnight with minimal recorded movement and no clear recorded
+    explanation, so it needs your attention now.)
+  - 2020-01-01 23:59:59: resting heart rate 73.0 bpm, +6.6 bpm from your median of 66.4; higher than on any other day in your own last 28 days (Your
+    resting heart rate has remained elevated for three days and is now higher than at the prior alert, with no clear recorded explanation, so it needs
+    your attention now.)
+  - 2020-01-03 23:59:59: you are 5.9h short of your own usual sleep over 7 nights (Your recorded sleep is 5.9 hours below your usual expected amount
+    across a full seven-night window, with low readiness and more tired-than-normal energy in the latest report, so it needs your attention now.)
+  - 2020-01-17 23:59:59: over 4 weeks your middle week had 29 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (The below-guideline activity pattern has continued for 57 days and the weekly median has fallen from 56 to 29 minutes since the prior
+    alert, so it needs your attention now.)
+  - 2020-02-21 23:59:59: over 4 weeks your middle week had 15 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (The below-guideline weekly activity pattern has continued and the median has fallen from 29 minutes at the prior alert to 15 minutes,
+    so it needs your attention now.)
+  - 2020-02-23 00:10:00: heart rate averaged 100 bpm for 10 minutes from 00:00, with 0 recorded steps and no overlapping logged exercise; daily
+    resting reference 68 bpm (Your heart rate remained around or above 100 bpm well after most recorded movement had stopped, with no logged exercise
+    explaining the full period, so it needs your attention now.)
+  - 2020-02-28 23:59:59: over 4 weeks your middle week had 0 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends (The below-guideline weekly activity pattern has continued and the median has fallen from 15 minutes at the prior alert to 0 minutes,
+    so it needs your attention now.)
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - About 9 min/week of moderate-to-vigorous activity against the 150 the WHO recommends - below.
+  - Meals are irregular or alcohol is frequent.
+State at the window end:
+  as_of: 2020-03-06
+  capacity_today.ceiling: hard
+  capacity_today.reasons: ['no encoded recovery rule lowered the intensity ceiling; this does not establish that all recovery markers are normal']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  habits.Walking.label: walking
+  habits.Walking.sessions: 12
+  habits.Walking.share: 0.8
+  habits.Walking.typical_gap_days: 7.5
+  habits.Walking.typical_minutes: 16
+  habits.Walking.last_done: 13
+  habits.Walking.recovery_hours: 0
+  habits.Walking.loads_joints: ['Ankle', 'Hip']
+  habits.Walking.spares_joints: []
+  weekday_rhythm.Mon: 3
+  weekday_rhythm.Tue: 2
+  weekday_rhythm.Wed: 1
+  weekday_rhythm.Thu: 0
+  weekday_rhythm.Fri: 5
+  weekday_rhythm.Sat: 4
+  weekday_rhythm.Sun: 0
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 0
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 0.0
+  training_load.acwr: None
+  training_load.sessions_7d: 0
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d.nights: 5
+  sleep_debt_7d.actual_hours: 37.1
+  sleep_debt_7d.expected_hours: 33.1
+  sleep_debt_7d.debt_hours: -4.0
+  resting_hr.value: 67.28505611419678
+  resting_hr.quantile: 0.857
+  resting_hr.baseline_median: 66.4
+  resting_hr.baseline_days: 28
+  readiness_trend.record_count: 5
+  readiness_trend.recorded_days: 5
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2020-02-22
+  readiness_trend.window.end: 2020-03-06
+  readiness_trend.answers: moderate readiness to train 4, low readiness to train 1 (of 5 reports); latest: moderate readiness to train
+  readiness_trend.latest: moderate readiness to train
+  readiness_trend.direction: not_assessed
+  activity_vs_who.weeks_scored: 4
+  activity_vs_who.median_mvpa_minutes: 9
+  activity_vs_who.weeks_meeting_floor: 1
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: below
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2020-02-08
+  ambient_activity.window.end: 2020-03-06
+  ambient_activity.heart_days: 28
+  ambient_activity.median_heart_covered_minutes: 912
+  ambient_activity.median_daily_steps: 892
+  ambient_activity.total_distance_km: 28.95
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 0
+  recent_injuries.days_since_last: None
+  recent_injuries.last_location: None
+Data quality:
+  summary: 100% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 1.0
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.

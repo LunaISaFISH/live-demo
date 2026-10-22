@@ -1,0 +1,7 @@
+[
+  {
+    "input": "plan my next month",
+    "tool": "final answer",
+    "caught": "These cited IDs are not evidence from this turn: 9039cffa-context. Cite only IDs returned by this turn's tools or the context card."
+  }
+]

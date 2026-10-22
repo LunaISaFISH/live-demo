@@ -1,0 +1,13 @@
+{"id": "p16-52", "should_alert": false, "confidence": "high", "reason": "Late-evening 101 bpm after a logged walk and earlier activity; near-repeat of a pattern already reviewed 8 times without alert."}
+{"id": "p16-53", "should_alert": false, "confidence": "high", "reason": "Single day, only +2.1 bpm above median, with a recorded 4.3h sleep shortfall as explanation; far below the earlier alerted elevation."}
+{"id": "p16-54", "should_alert": false, "confidence": "low", "reason": "First look at a 4.3h shortfall over 6 nights, under an hour per night, one day old; moderate and not yet persistent."}
+{"id": "p16-55", "should_alert": true, "confidence": "low", "reason": "Resting HR elevated three days running (+3.1 bpm) while sleep debt grows to 7.8h, with tiredness and stress reports; clearly worse than first review."}
+{"id": "p16-56", "should_alert": true, "confidence": "low", "reason": "Sleep shortfall more than doubled to 9.6h over 7 nights, first alert on sleep, coinciding with sustained elevated resting HR and poor sleep reports."}
+{"id": "p16-57", "should_alert": false, "confidence": "high", "reason": "Long-running activity shortfall already alerted repeatedly; median improved from 0 to 9 minutes, unchanged since, not worse."}
+{"id": "p16-58", "should_alert": false, "confidence": "high", "reason": "HR 101 right after a logged 17-minute walk with heavy steps just before; explained by recorded exercise."}
+{"id": "p16-59", "should_alert": false, "confidence": "low", "reason": "One-day resting HR +2.8 bpm, near-repeat of the 3/11 alert at +3.1; sleep debt has resolved, so not newly concerning."}
+{"id": "p16-60", "should_alert": false, "confidence": "high", "reason": "HR 108 follows about 1500 steps of walking in the preceding 40 minutes; explained by activity despite no logged session."}
+{"id": "p16-61", "should_alert": false, "confidence": "high", "reason": "HR 106 right after a logged 19-minute walk with about 1300 steps; explained by recorded exercise."}
+{"id": "p16-62", "should_alert": false, "confidence": "high", "reason": "Chronic activity shortfall unchanged at 9 minutes, above the last alerted 0; no worsening, repeat would be noise."}
+{"id": "p16-63", "should_alert": false, "confidence": "high", "reason": "HR 99 follows walking steps at 19:10-19:40; explained by preceding activity, resting HR normal and sleep fine."}
+{"id": "p16-64", "should_alert": false, "confidence": "high", "reason": "HR 99 follows several hundred steps of movement from 16:30-17:20; explained by activity, resting HR at baseline."}

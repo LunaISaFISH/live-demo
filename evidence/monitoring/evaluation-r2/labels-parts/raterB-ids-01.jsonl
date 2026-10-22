@@ -1,0 +1,13 @@
+{"id": "p05-01", "should_alert": true, "confidence": "low", "reason": "First review: 3.7h sleep debt over 7 nights with elevated fatigue and stress reports and poor sleep quality; no earlier alert."}
+{"id": "p05-02", "should_alert": false, "confidence": "low", "reason": "Modest 3.1h debt over 6 nights, fatigue mostly normal, good coverage; borderline first look, not yet worth the attention cost."}
+{"id": "p05-03", "should_alert": true, "confidence": "high", "reason": "Three consecutive very-low readiness reports, unexplained by recorded training or sleep; first alert for this condition."}
+{"id": "p05-04", "should_alert": true, "confidence": "high", "reason": "Readiness lows doubled from 3 to 6 running since the earlier alert, still unexplained and falling; clearly worse."}
+{"id": "p05-05", "should_alert": true, "confidence": "low", "reason": "Ten very-low reports running, up from six at the last alert, severity maxed; clearly worse though already alerted twice."}
+{"id": "p05-06", "should_alert": false, "confidence": "low", "reason": "Modest 3.1h sleep debt; person already alerted three times about the ongoing very-low readiness, so this adds little."}
+{"id": "p05-07", "should_alert": false, "confidence": "low", "reason": "HR rise built gradually alongside recorded steps from 16:10 and a walk earlier; plausibly daily movement, not clearly rest."}
+{"id": "p05-08", "should_alert": false, "confidence": "high", "reason": "Cycling logged at 07:14 with heavy steps just before; HR 103 is post-exercise recovery. Explained."}
+{"id": "p05-09", "should_alert": false, "confidence": "high", "reason": "Steps recorded right before the window and HR moves with them; near-repeat of an earlier alert, not worse."}
+{"id": "p05-10", "should_alert": false, "confidence": "high", "reason": "Logged 30 minute cycling session ended just before; HR 95 is post-exercise recovery. Explained."}
+{"id": "p05-11", "should_alert": false, "confidence": "high", "reason": "Heavy walking steps immediately before; HR elevation follows movement. Explained and near-repeat."}
+{"id": "p05-12", "should_alert": false, "confidence": "high", "reason": "Cycling logged at 07:04 with HR peak 128; 103 bpm is post-exercise recovery. Explained."}
+{"id": "p05-13", "should_alert": false, "confidence": "high", "reason": "Steady steps recorded until 06:50; HR rise follows walking. Explained, and not worse than earlier alert."}

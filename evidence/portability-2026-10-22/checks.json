@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-22",
+  "original_zip_sha256": "697f1063e69d23b6fb76d775ff0896e12063f4d186cfe5f977056f678148ed43",
+  "reproduced": {
+    "macos_missing_rdflib": true,
+    "linux_missing_rdflib": true,
+    "dataset_tls_incomplete_chain": true,
+    "windows_path_toml_parse_error": true,
+    "linux_missing_sandbox_runtime": true
+  },
+  "macos": {
+    "python": "3.13.5",
+    "fresh_venv": true,
+    "launcher_check": true,
+    "http_participants": 16,
+    "replay_http": 200,
+    "offline_suites": [
+      "agent",
+      "hardening",
+      "behavior",
+      "codex_request",
+      "calculations",
+      "evidence",
+      "asking",
+      "summary"
+    ],
+    "distribution_tests": 5,
+    "live_record_read": true,
+    "live_stop": "answered",
+    "live_errors": 0
+  },
+  "linux": {
+    "python": "3.12",
+    "container": "Debian, aarch64",
+    "fresh_venv": true,
+    "launcher_check": true,
+    "http_participants": 16,
+    "replay_http": 200,
+    "offline_suites": [
+      "agent",
+      "hardening",
+      "behavior",
+      "codex_request",
+      "calculations",
+      "evidence",
+      "asking",
+      "summary"
+    ],
+    "distribution_tests": 5,
+    "verified_https_range_download_bytes": 1048576,
+    "sandbox_read_write_network_checks": true,
+    "container_user_namespaces_enabled": true,
+    "openrouter_live_plan_and_save": true
+  },
+  "data": {
+    "raw_files_verified_against_original_zip_sha256": 268,
+    "sensor_indexes": 64,
+    "food_images_included": false
+  },
+  "relocation": {
+    "fresh_zip_extraction": true,
+    "directory_contains_spaces_and_cjk": true,
+    "fresh_venv": true,
+    "launcher_check": true,
+    "http_participants": 16,
+    "browser_coach_view": true,
+    "browser_replay": true
+  },
+  "openrouter": {
+    "real_codex_app_server_provider_config": true,
+    "offline_auth_routing_test": true,
+    "live_call": true,
+    "model": "openai/gpt-5.6-terra",
+    "macos_record_read": true,
+    "linux_plan_generated": true,
+    "linux_plan_saved_version": 1,
+    "live_errors": 0
+  },
+  "not_verified": [
+    "native Windows",
+    "WSL2 on a physical Windows machine"
+  ]
+}

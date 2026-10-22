@@ -1,0 +1,13 @@
+{"id": "p05-27", "should_alert": false, "confidence": "high", "reason": "Resting HR 69.3 is a lower near-repeat of Alerts sent on 3/6 and 3/7; no clear worsening."}
+{"id": "p05-28", "should_alert": false, "confidence": "low", "reason": "Walking steps in the preceding buckets partly explain the 99 bpm; similar unexplained rises were already alerted several times."}
+{"id": "p05-29", "should_alert": true, "confidence": "low", "reason": "Resting HR 70.0 is +7 bpm, top 5% with no recorded explanation, returning eight days after last Alert; ankle injury logged today."}
+{"id": "p05-30", "should_alert": false, "confidence": "high", "reason": "Resting HR only +1.5 over a raised median, just alerted on 3/15; not newly concerning."}
+{"id": "p12-01", "should_alert": false, "confidence": "high", "reason": "Load 1.57x just past tripwire, first look, record coverage insufficient at 48%; baseline unreliable."}
+{"id": "p12-02", "should_alert": true, "confidence": "high", "reason": "Load 2.0x of 28-day average with low readiness, soreness, tiredness and same-day knee injury; first Alert."}
+{"id": "p12-03", "should_alert": true, "confidence": "low", "reason": "Load rose from 2.0x to 2.29x with more soreness and same-day knee injury continuing; modest but real worsening."}
+{"id": "p12-04", "should_alert": false, "confidence": "high", "reason": "Load fell from 2.29x to 1.66x since last Alert; no newer concerning change."}
+{"id": "p12-05", "should_alert": false, "confidence": "high", "reason": "Load 1.53x is lower than previous Alerts and sits just above the tripwire; readiness rising."}
+{"id": "p12-06", "should_alert": false, "confidence": "high", "reason": "Load 1.69x below earlier alerted levels; same concern already flagged, no clear worsening."}
+{"id": "p12-07", "should_alert": false, "confidence": "low", "reason": "Load 1.7x after a quiet week, only 790 sRPE over 2 sessions, moderate readiness; recorded training context explains it."}
+{"id": "p12-08", "should_alert": true, "confidence": "low", "reason": "Load up to 2.06x over four days with same-day knee injury and soreness; last similar Alert was seven weeks ago."}
+{"id": "p12-09", "should_alert": true, "confidence": "high", "reason": "Load jumped from 2.06x to 2.68x (1140 to 1600 sRPE) since last Alert, with new hand injury entry."}

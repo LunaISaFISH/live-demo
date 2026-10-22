@@ -1,0 +1,13 @@
+{"id": "p16-13", "should_alert": false, "confidence": "high", "reason": "Modest 97 bpm after a walking burst, well below the 115 bpm event already alerted; near-repeat, three prior reviews declined."}
+{"id": "p16-14", "should_alert": true, "confidence": "low", "reason": "Weekly activity median fell from 77 to 56 min since the last Alert; clearly worse long-running shortfall, though a repeat topic."}
+{"id": "p16-15", "should_alert": false, "confidence": "high", "reason": "96 bpm slow rise after a logged cross-training session, milder than the 115 bpm alerted event; near-repeat noise."}
+{"id": "p16-16", "should_alert": false, "confidence": "low", "reason": "Unexplained rise to 96 bpm but short, milder than the already-alerted 115 bpm event, and resting HR normal; near-repeat."}
+{"id": "p16-17", "should_alert": false, "confidence": "high", "reason": "Walk logged 13:17 with steps and HR peaking at 105 just before; elevated HR is explained by exercise."}
+{"id": "p16-18", "should_alert": false, "confidence": "low", "reason": "HR 105 follows a logged 24-minute walk and sustained activity; mostly explained and lower than the 115 bpm event already alerted."}
+{"id": "p16-19", "should_alert": false, "confidence": "low", "reason": "Resting HR only 4 bpm above median, no other recovery markers off; a small first-day deviation, not worth an Alert yet."}
+{"id": "p16-20", "should_alert": true, "confidence": "low", "reason": "Overnight HR 100-108 for over an hour with no movement or exercise, on top of rising resting HR; newly concerning pattern."}
+{"id": "p16-21", "should_alert": true, "confidence": "high", "reason": "Resting HR 73, +6.6, up from 70.4 at the earlier Alert, elevated three days with no explanation; clearly worse."}
+{"id": "p16-22", "should_alert": false, "confidence": "high", "reason": "Resting HR 71.3 is lower than the 73.0 already alerted yesterday; improving, near-repeat."}
+{"id": "p16-23", "should_alert": true, "confidence": "high", "reason": "First look at a 5.9 h sleep deficit over 7 nights with low readiness; unalerted, meaningful and trustworthy data."}
+{"id": "p16-24", "should_alert": false, "confidence": "high", "reason": "Activity median unchanged at 56 min versus the Alert of 2019-12-20; no worsening, near-identical repeat."}
+{"id": "p16-25", "should_alert": false, "confidence": "high", "reason": "Sleep deficit 6.1 h vs 5.9 h alerted three days ago; barely changed, near-repeat."}

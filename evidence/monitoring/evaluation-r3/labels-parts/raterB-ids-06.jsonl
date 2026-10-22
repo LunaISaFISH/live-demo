@@ -1,0 +1,13 @@
+{"id": "p16-26", "should_alert": false, "confidence": "high", "reason": "HR 102 is the tail of a walk-related spike (125 bpm with steps at 17:00); logged walk that day; explained, near-repeat of earlier HR Alerts."}
+{"id": "p16-27", "should_alert": true, "confidence": "high", "reason": "Weekly activity median fell from 56 to 29 min since the last Alert; clearly worse long-running guideline shortfall."}
+{"id": "p16-28", "should_alert": false, "confidence": "high", "reason": "HR 100 follows heavy walking (hundreds of steps per bucket) for an hour before; explained recovery, not a rest anomaly."}
+{"id": "p16-29", "should_alert": false, "confidence": "low", "reason": "HR 112 came straight after about 1000 steps of walking at 16:00-16:20 and was falling; mostly explained, though no exercise was logged."}
+{"id": "p16-30", "should_alert": false, "confidence": "high", "reason": "Activity median 32 min versus 29 at the last Alert; unchanged or slightly better, near-repeat."}
+{"id": "p16-31", "should_alert": false, "confidence": "high", "reason": "Resting HR only 1.8 bpm above median; trivial deviation, well below the earlier alerted 73 bpm."}
+{"id": "p16-32", "should_alert": false, "confidence": "high", "reason": "Activity median 32 min, above the 29 min at the last Alert; no worsening, a repeat would be noise."}
+{"id": "p16-33", "should_alert": false, "confidence": "high", "reason": "HR 101 follows a bout of walking steps shortly before; resting HR normal; explained and a near-repeat."}
+{"id": "p16-34", "should_alert": false, "confidence": "high", "reason": "Activity median 36 min, improved from 29 at the last Alert; not worse, near-repeat."}
+{"id": "p16-35", "should_alert": false, "confidence": "high", "reason": "HR 99 right after about 1,000 steps of walking in the preceding 20 minutes; explained and a near-repeat."}
+{"id": "p16-36", "should_alert": true, "confidence": "high", "reason": "Activity median fell to 15 min from 29 at the last Alert, roughly halved over weeks; clearly worse."}
+{"id": "p16-37", "should_alert": false, "confidence": "high", "reason": "HR 100 after walking steps in the preceding hour; explained, and the activity Alert was sent yesterday."}
+{"id": "p16-38", "should_alert": false, "confidence": "low", "reason": "HR 100 is a gradual cool-down from 129 bpm after walking at 22:40-23:00; explained, resting HR normal, repeated HR Alerts earlier."}

@@ -1,0 +1,13 @@
+{"id": "p05-27", "should_alert": false, "confidence": "high", "reason": "Recheck of resting HR already alerted on two consecutive days; 69.3 bpm is lower than yesterday's alerted 70.6, not worse."}
+{"id": "p05-28", "should_alert": false, "confidence": "low", "reason": "Same +31 bpm magnitude as earlier alerted intraday rises; light pottering steps preceded it and resting HR elevation already alerted. Near-repeat."}
+{"id": "p05-29", "should_alert": false, "confidence": "low", "reason": "Recurrence of elevated resting HR at +7.1, smaller than the alerted +10.2 a week ago; not clearly worse than prior Alerts."}
+{"id": "p05-30", "should_alert": false, "confidence": "high", "reason": "Only +1.5 bpm above median, trivial rise, and resting HR was alerted six days ago at a larger deviation."}
+{"id": "p12-01", "should_alert": false, "confidence": "low", "reason": "Ratio barely past tripwire on a single day with insufficient coverage (48%); baseline too sparse to trust despite recent knee report."}
+{"id": "p12-02", "should_alert": true, "confidence": "high", "reason": "Load rose to 2.0x and is sustained, with low readiness, more soreness, stress, and repeated same-day knee and shoulder injury entries."}
+{"id": "p12-03", "should_alert": false, "confidence": "low", "reason": "Load 2.29x versus 2.0x alerted two days ago; modest rise, readiness improved to moderate. Close to a repeat."}
+{"id": "p12-04", "should_alert": false, "confidence": "high", "reason": "Load fell to 1.66x from the alerted 2.29x; condition easing, no new concern beyond already alerted soreness and knee entries."}
+{"id": "p12-05", "should_alert": false, "confidence": "high", "reason": "Load 1.53x, just over tripwire and well below the 2.29x already alerted five days ago; readiness rising."}
+{"id": "p12-06", "should_alert": false, "confidence": "high", "reason": "Load 1.69x remains below the 2.29x already alerted; low readiness and ongoing knee entries are not clearly worse."}
+{"id": "p12-07", "should_alert": false, "confidence": "low", "reason": "One-day ratio jump after a week without sessions, only two sessions; energy fresh, readiness moderate. Rebound, not overload yet."}
+{"id": "p12-08", "should_alert": true, "confidence": "low", "reason": "Load climbed to 2.06x over four days with a same-day knee injury entry; last load Alert was seven weeks ago."}
+{"id": "p12-09", "should_alert": true, "confidence": "high", "reason": "Load clearly worse at 2.68x versus alerted 2.06x three days ago, with a new same-day hand/wrist injury entry."}

@@ -1,0 +1,12 @@
+{"id": "p16-52", "should_alert": false, "confidence": "high", "reason": "Sleep shortfall 9.1h slightly below the 9.6h already alerted yesterday; near-repeat."}
+{"id": "p16-53", "should_alert": false, "confidence": "high", "reason": "Activity median 9 min unchanged and above the alerted low of 0; no new worsening."}
+{"id": "p16-54", "should_alert": false, "confidence": "high", "reason": "Sleep shortfall 4.7h is much smaller than the 9.6h already alerted and recovering."}
+{"id": "p16-55", "should_alert": false, "confidence": "high", "reason": "HR 101 right after a logged 17-minute walk with heavy steps; explained by exercise, tapering."}
+{"id": "p16-56", "should_alert": false, "confidence": "low", "reason": "Resting HR +2.8 bpm, below the earlier alerted 70.9 and sleep is in surplus; modest first-day rise."}
+{"id": "p16-57", "should_alert": false, "confidence": "high", "reason": "HR 108 follows 40 minutes of walking steps and is falling from 114; explained by recent movement."}
+{"id": "p16-58", "should_alert": false, "confidence": "high", "reason": "HR 106 follows a logged 19-minute walk; explained exercise recovery."}
+{"id": "p16-59", "should_alert": false, "confidence": "high", "reason": "Activity median 9 min unchanged for weeks and above the alerted low; repeat shortfall."}
+{"id": "p16-60", "should_alert": false, "confidence": "high", "reason": "HR 99 shortly after walking steps, mild elevation, near-repeat of earlier alert."}
+{"id": "p16-61", "should_alert": false, "confidence": "high", "reason": "HR 99 follows a walking period with HR 110 tapering; explained by movement."}
+{"id": "p16-62", "should_alert": false, "confidence": "high", "reason": "HR 111 follows about 30 minutes of walking steps (HR 116 falling to 105); explained by exertion."}
+{"id": "p16-63", "should_alert": false, "confidence": "high", "reason": "Activity median improved to 22 min from the alerted 0; ongoing shortfall already alerted, not worse."}

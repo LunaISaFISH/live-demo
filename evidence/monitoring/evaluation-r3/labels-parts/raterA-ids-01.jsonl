@@ -1,0 +1,13 @@
+{"id": "p05-01", "should_alert": true, "confidence": "low", "reason": "First sleep shortfall, modest per night, but backed by mostly tired, stressed, poor-sleep self-reports; worth a gentle heads-up."}
+{"id": "p05-02", "should_alert": false, "confidence": "low", "reason": "About 30 min/night short, first day; energy and soreness mostly normal; modest signal not yet worth an Alert."}
+{"id": "p05-03", "should_alert": false, "confidence": "low", "reason": "Only three low readiness reports, one day old; sleep and other wellbeing answers mostly normal; monitor first."}
+{"id": "p05-04", "should_alert": true, "confidence": "high", "reason": "Ten consecutive very low readiness reports, falling trend, never alerted; sustained and clearly worse than first review."}
+{"id": "p05-05", "should_alert": false, "confidence": "low", "reason": "Modest 3.1h weekly sleep shortfall; person was just alerted about low readiness two days ago; adds little."}
+{"id": "p05-06", "should_alert": true, "confidence": "low", "reason": "First HR event: about 95 bpm, +32, with only light steps over the hour; activity hardly explains it."}
+{"id": "p05-07", "should_alert": false, "confidence": "high", "reason": "Logged cycling ended minutes before; HR 118 during ride then recovering; explained post-exercise elevation."}
+{"id": "p05-08", "should_alert": false, "confidence": "high", "reason": "Walking steps immediately before; near-identical to the earlier alerted event; explained and a repeat."}
+{"id": "p05-09", "should_alert": false, "confidence": "high", "reason": "Logged cycling ended about 12 minutes before; HR falling from 108; explained post-exercise recovery."}
+{"id": "p05-10", "should_alert": false, "confidence": "high", "reason": "Active morning steps right before, HR declining afterward; near-repeat of earlier alert; explained."}
+{"id": "p05-11", "should_alert": false, "confidence": "high", "reason": "Logged cycling ended minutes before; HR 128 during ride then dropping; explained post-exercise."}
+{"id": "p05-12", "should_alert": false, "confidence": "high", "reason": "Heavy stepping through 06:50 right before event; likely unlogged commute; explained, near-repeat."}
+{"id": "p05-13", "should_alert": false, "confidence": "low", "reason": "Walking bouts within 20 minutes before; magnitude similar to earlier alert, not worse; near-repeat."}

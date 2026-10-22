@@ -1,0 +1,13 @@
+{"id": "p16-26", "should_alert": false, "confidence": "high", "reason": "102 bpm follows movement in the previous 40 minutes; same size as earlier alerts, a near-repeat."}
+{"id": "p16-27", "should_alert": true, "confidence": "high", "reason": "Weekly activity median nearly halved from 56 to 29 min since the last alert; clearly worsening long-running shortfall."}
+{"id": "p16-28", "should_alert": false, "confidence": "high", "reason": "An hour of walking-level steps immediately before; heart rate rise is explained by recent movement."}
+{"id": "p16-29", "should_alert": false, "confidence": "low", "reason": "Rise comes right after 30 minutes of brisk stepping; post-walk recovery likely, and below the alerted 115 bpm."}
+{"id": "p16-30", "should_alert": false, "confidence": "high", "reason": "Activity median 32 min, slightly better than the 29 min alerted two weeks ago; no new information."}
+{"id": "p16-31", "should_alert": false, "confidence": "high", "reason": "Resting HR only +1.8 bpm above median; trivial rise, well below earlier alerted levels."}
+{"id": "p16-32", "should_alert": false, "confidence": "high", "reason": "Activity median unchanged at 32 min, above the last alerted 29 min; repeat would be noise."}
+{"id": "p16-33", "should_alert": false, "confidence": "high", "reason": "101 bpm after stepping around 21:40-21:50; same size as earlier alerts, a near-repeat."}
+{"id": "p16-34", "should_alert": false, "confidence": "high", "reason": "Activity median improved to 36 min from the alerted 29 min; no reason to alert again."}
+{"id": "p16-35", "should_alert": false, "confidence": "high", "reason": "Over 1000 steps in the 20 minutes before; heart rate rise is explained by recent walking."}
+{"id": "p16-36", "should_alert": true, "confidence": "high", "reason": "Weekly activity median fell from 29 to 15 min since the last alert; clearly worse shortfall."}
+{"id": "p16-37", "should_alert": false, "confidence": "high", "reason": "Patchy sensor data after scattered movement; 100 bpm is a near-repeat of earlier alerted events."}
+{"id": "p16-38", "should_alert": false, "confidence": "high", "reason": "Heart rate declining after late-evening movement; 100 bpm is a near-repeat, not worse than earlier alerts."}

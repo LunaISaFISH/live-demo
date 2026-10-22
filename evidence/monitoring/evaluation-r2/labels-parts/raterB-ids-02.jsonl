@@ -1,0 +1,13 @@
+{"id": "p05-14", "should_alert": false, "confidence": "high", "reason": "Walking steps and HR peak at 06:10 to 06:40 precede the window; modest rise follows activity. Near-repeat."}
+{"id": "p05-15", "should_alert": false, "confidence": "high", "reason": "Cycling logged earlier and heavy steps at 11:10 to 11:20 just before; explained, not worse than earlier alert."}
+{"id": "p05-16", "should_alert": false, "confidence": "high", "reason": "HR peaked at 104 with steps at 16:00 to 16:10 and is easing; explained by movement."}
+{"id": "p05-17", "should_alert": false, "confidence": "low", "reason": "Heavy walking until 07:50, HR then stays 89 to 93 at rest; plausible slow recovery, same size as earlier alert."}
+{"id": "p05-18", "should_alert": false, "confidence": "high", "reason": "Strength and cycling logged 05:30 to 06:25 with steps after; HR 92 is explained by exercise."}
+{"id": "p05-19", "should_alert": false, "confidence": "high", "reason": "Walking steps recorded until 08:30; HR 90 follows movement. Explained."}
+{"id": "p05-20", "should_alert": false, "confidence": "high", "reason": "Cycling logged at 15:56 and steady steps until 17:00; HR 95 follows activity. Explained."}
+{"id": "p05-21", "should_alert": false, "confidence": "low", "reason": "Brief unexplained rise to 95 at rest, but same size as the earlier alert and many similar reviews; not clearly worse."}
+{"id": "p05-22", "should_alert": false, "confidence": "high", "reason": "Heavy steps 17:40 to 17:50 immediately before; HR 94 is post-walk. Explained."}
+{"id": "p05-23", "should_alert": false, "confidence": "high", "reason": "Walking steps until 08:50, HR peak 106 then easing; explained by movement."}
+{"id": "p05-24", "should_alert": true, "confidence": "low", "reason": "HR 93 to 98 sustained over 90 minutes late evening with no steps or exercise; longer than earlier events, unexplained."}
+{"id": "p05-25", "should_alert": true, "confidence": "high", "reason": "Resting HR 68.7, +8.3 over median and highest in 20 days, unexplained, first alert for this signal."}
+{"id": "p05-26", "should_alert": false, "confidence": "low", "reason": "Alerted yesterday; resting HR up only 1.9 bpm further. Same condition continuing, not clearly worse."}

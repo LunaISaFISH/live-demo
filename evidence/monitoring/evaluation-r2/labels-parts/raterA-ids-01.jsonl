@@ -1,0 +1,13 @@
+{"id": "p05-01", "should_alert": true, "confidence": "low", "reason": "First sleep shortfall of 3.7h over a week, corroborated by mostly tired, stressed and worse-sleep self-reports; worth a gentle first Alert."}
+{"id": "p05-02", "should_alert": false, "confidence": "low", "reason": "Modest 3.1h debt over 6 nights (~30 min/night); energy and sleep quality mostly normal; not substantial enough to alert."}
+{"id": "p05-03", "should_alert": true, "confidence": "low", "reason": "Three consecutive very-low readiness reports, first occurrence, not explained by load or sleep; reasonable first Alert."}
+{"id": "p05-04", "should_alert": false, "confidence": "low", "reason": "Same very-low readiness already alerted three days ago; longer streak but same level, so a near-repeat Alert."}
+{"id": "p05-05", "should_alert": false, "confidence": "low", "reason": "Readiness concern already alerted twice; still same very-low answer, persistence alone does not justify a third near-identical Alert."}
+{"id": "p05-06", "should_alert": false, "confidence": "low", "reason": "Modest 3.1h weekly sleep shortfall, no corroborating fatigue findings; readiness issue already covered by prior Alerts."}
+{"id": "p05-07", "should_alert": false, "confidence": "low", "reason": "HR 95 follows an afternoon of light movement (182 steps, 98 bpm just before); likely post-movement, not clearly unexplained."}
+{"id": "p05-08", "should_alert": false, "confidence": "high", "reason": "Logged cycling ended minutes before; 103 bpm is post-exercise recovery, fully explained."}
+{"id": "p05-09", "should_alert": false, "confidence": "high", "reason": "Walking-level steps in the preceding 20 minutes; HR rise is post-movement and a near-repeat of earlier Alert."}
+{"id": "p05-10", "should_alert": false, "confidence": "high", "reason": "30-minute cycling session ended about 15 minutes earlier; elevated HR is post-exercise recovery."}
+{"id": "p05-11", "should_alert": false, "confidence": "high", "reason": "Brisk morning movement (300+ steps) immediately before; HR elevation is post-activity and a near-repeat."}
+{"id": "p05-12", "should_alert": false, "confidence": "high", "reason": "Logged cycling ended just before the event, HR 128 then; 103 bpm is normal post-exercise recovery."}
+{"id": "p05-13", "should_alert": false, "confidence": "high", "reason": "Heavy stepping in the previous 30 minutes; 102 bpm at rest right after is post-activity recovery."}

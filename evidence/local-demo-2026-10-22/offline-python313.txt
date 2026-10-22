@@ -1,0 +1,367 @@
+
+[1] no semantic output may see the future
+  PASS  read_record, snapshot and inspect at day N equal a record ending at N
+  PASS  planning context at day N equals a record ending at N
+
+[2] one observation contract, with units, provenance and coverage
+  PASS  28 observations all carry the eight contract fields
+  PASS  every numeric evidence item has a non-empty unit and provenance
+  PASS  every observation window is JSON-serialisable and well-formed
+  PASS  status and sufficiency never disagree
+  PASS  a whole snapshot serialises without a custom encoder
+
+[3] missing data is insufficient, never normal
+  PASS  a six-day-old record returns insufficient somewhere, not all-normal
+  PASS  no domain of a thin record is called within_baseline off no data
+  PASS  a domain with no records in the window is insufficient, not summarised
+
+[4] period comparison uses exactly the requested windows
+  PASS  the main observation covers exactly the requested window
+  PASS  its counts are computed over that window, not cumulatively
+  PASS  the comparison names the requested reference window
+  PASS  and computes the reference over that window too
+  PASS  swapping the two windows swaps the comparison
+
+[5] the Agent plans; deterministic code supplies facts, never a verdict
+  PASS  planning context is decision-ready and contains no generated schedule
+  PASS  planning context includes raw-stream movement and wear coverage
+  PASS  planning context names what the record cannot know
+  PASS  a logged injury is said, not enforced
+  PASS  no plan validator remains: nothing in code judges the Agent's plan
+  PASS  a well-formed final answer with no workspace change is accepted as written
+  PASS  the final answer carries no plan: a plan lives in the workspace draft
+  PASS  a resting heart rate position reads correctly at the ends and below the middle
+  PASS  weeks meeting the WHO floor is a count of weeks, not a share
+  PASS  the last injury and a joint's last injury keep their own dates
+
+[6] the simulation clock seals the future
+  PASS  a semantic tool refuses data after the simulation date
+  PASS  the high-frequency tool also refuses the simulated future
+  PASS  read_record in a review clamps a later end to the signal date
+  PASS  the review event reports the effective bound as_of and the requested one
+  PASS  a normal turn still refuses a future date rather than clamping
+  PASS  an intraday review cannot read sensor samples after the event time
+  PASS  an active simulation cannot move backwards without a reset
+  PASS  monitor replay never advances beyond the simulation clock
+
+[7] enforced in code, not asked of the model
+  PASS  a tool in the catalogue is allowed
+  PASS  Bash is denied
+  PASS  Read is denied
+  PASS  WebFetch is denied
+  PASS  exec is denied
+  PASS  rm_rf is denied
+  PASS  get_coaching_snapshot is denied
+  PASS  mcp__coach__read_record is denied
+  PASS  the removed plan validator is not a tool the gate allows
+  PASS  any Codex request other than a coach tool call is declined
+  PASS  a tool call outside the catalogue returns a failed result, not a run
+  PASS  the model is offered exactly the coach tools
+  PASS  Codex's own context blocks, bundled skills, agents and extra tools are switched off
+  PASS  the shell reads the skills folder and writes only the workspace, with named denials
+  PASS  without a workspace the shell writes nothing
+  PASS  there is no conversation-level latch that could lock planning by mistake
+  PASS  memory survives a new session, staged for the agent to read
+  PASS  remembered prompt injection cannot expand tool permission
+  PASS  the system specification treats the memory file as untrusted data
+  PASS  the system specification treats retrieved text as data, not authority
+  PASS  an entry carries all six fields the brief names
+  PASS  the log round-trips
+  PASS  a non-mutating recommendation needs no pretend approval
+
+[8] the signal light: reproducible detection; the coach decides each Alert
+  PASS  layer one runs over every participant without raising
+  PASS  a sustained condition is passed on once, on the day it starts
+  PASS  no signal is phrased as a prediction
+  PASS  every signal reproduces from the record truncated to its day
+  PASS  time simulation stops on or after its start at a real signal day
+  PASS  what is due reproduces from history ending on that day
+  PASS  a condition already holding when the run starts is due at once, as new
+  PASS  and it carries when it began and how it looked then
+  PASS  a reviewed condition waits for the day the coach chose, then comes back
+  PASS  and with no day chosen it stays on the page without coming back
+  PASS  every one-off event is due when it happens, even the day after another
+  PASS  time simulation at the dataset end, with everything reviewed, reports nothing due
+  PASS  a daily aggregate is available only at the explicit end-of-day boundary
+  PASS  all seven detectors expose one chart contract with thresholds and units
+  PASS  monitor charts are sealed at their requested simulation date
+  PASS  every chart marker comes from the same detector that raises the signal
+  PASS  an intraday chart stops at the exact simulated event boundary
+  PASS  raw Fitbit streams are indexed and combined without a daily-only proxy
+  PASS  persistence counts consecutive prior days, bounded by the record
+  PASS  the facts the coach weighs are severity, days running and coverage, and no decision
+  PASS  no notification policy remains in code
+
+[9] absolute standards and threshold provenance
+  PASS  an under-active person is measured against WHO, not themselves
+  PASS  that shows up as below_guideline in the snapshot
+  PASS  under-activity reaches the Agent as decision context, not a code-made plan
+  PASS  every threshold declares a source and an evidence class
+  PASS  the registry holds every branching number, honestly classed
+  PASS  device wear and both ACWR windows are honestly labelled project heuristics
+  PASS  every intraday detector branch value is registered
+  PASS  monitor and realtime branch on the registry, not shadow constants
+  PASS  the low-step cutoff declares itself a proxy for rest, not proof
+  PASS  the remaining monitor branch values are registered honest heuristics
+  PASS  the whole monitor reads the registry
+
+[10] the reachable surface is small, and bound to one person
+  PASS  the agent exposes the record read, the sensor window, guideline search and the review
+  PASS  two read the record, one searches guidelines, one is control; memory and plans are files
+  PASS  no tool accepts a participant identifier
+  PASS  two agents for two people expose the same tools
+  PASS  but each answers only from the person it was built for
+  PASS  the read-only tools require no participant argument and no time is faked
+  PASS  skills are instruction files only: nothing in them runs, and the old ASKABLE path is gone
+
+[11] the HTTP surface serves the new views (offline)
+  PASS  the participant list covers all sixteen
+  PASS  profile state seals the future and reports WHO adequacy
+  PASS  the snapshot view carries top findings and a data-quality read
+  PASS  the inspect view returns a period and its comparison
+  PASS  the server no longer exposes a skills route
+  PASS  the retired deterministic plan generator is gone
+  PASS  ordinary planning has no approval endpoint or approval controls
+  PASS  the time bar owns the background simulator, and the page says an Alert is not a diagnosis
+  PASS  the Monitor tab exposes a real metric timeline rather than text cards only
+  PASS  the monitoring replay plays back every recorded review with what the coach was handed and read
+  PASS  the planning skill makes the Agent the planner, with no validator to satisfy
+  PASS  skills install as Codex-format folders with their shared references
+  PASS  the rules for asking the person are written into the skills that need them, not left to a read
+  PASS  the system prompt carries the rules of every turn, not each task's procedure
+  PASS  wide tables scroll inside their container, not the page
+  PASS  the overflow is not masked with body overflow-x hidden
+  PASS  each participant is offered by what it shows, not by an id and a count
+  PASS  the clock date input can shrink inside the narrow-viewport grid
+
+[12] richer data: reconciliation, device evidence, overview, codes
+  PASS  a self-report and its overlapping Fitbit entry merge to one session
+  PASS  the merged session carries the device evidence, not a second count
+  PASS  a distinct same-day session survives instead of being discarded
+  PASS  a device-only session keeps its own provenance
+  PASS  training inspection exposes device heart rate, steps and calories
+  PASS  physiology inspection exposes daily heart-rate-zone minutes
+  PASS  the physiology domain is in the snapshot with device evidence
+  PASS  recovery overview considers strain beyond readiness and resting HR
+  PASS  lifestyle overview considers intake beyond weight
+  PASS  the overview validates missing, text-placeholder and out-of-range values
+  PASS  a missing max heart rate is a warning, not a value
+  PASS  a valid max heart rate is stored as context
+  PASS  overview quality warnings surface in the data-quality observation
+  PASS  participant metadata never becomes a plan constraint
+  PASS  soreness-area SNOMED codes are preserved as raw codes, not a count
+  PASS  and inspection surfaces the codes with an unmapped-code limitation
+  PASS  coverage is domain-specific: training density is below any-record density
+  PASS  an inspect observation reports its own domain's coverage
+
+[13] one read returns the whole record, against the window before
+  PASS  one call returns every domain over the window and the one just before
+  PASS  coverage counts each domain's own recorded days
+  PASS  changes are this window minus the previous one, computed in code
+  PASS  the state at the window's end carries the planning facts, not the full injury list
+  PASS  a load ratio over too light a month is withheld everywhere the coach reads it, with the reason
+  PASS  where the record starts there is no previous window to compare, not an invented one
+
+[14] the transcript is public, and the workspace is checked
+  PASS  tool calls become public events
+  PASS  Codex reasoning is dropped at the boundary, never kept
+  PASS  an assistant draft is kept for the audit, not turned into a transcript event
+  PASS  a shell command is kept with its result for the stream and the audit
+  PASS  the trace shows a command as written, without the login shell or the per-turn directory
+  PASS  an apply_patch file change is kept with its paths for the stream and the audit
+  PASS  any other Codex item is flagged as outside the coach tools
+  PASS  Codex compacting a long conversation is its own bookkeeping, not a refused tool
+  PASS  a tool result becomes a summarised event tied to its tool
+  PASS  a record read is summarised by its windows and findings, not raw JSON
+  PASS  a shell command is shown as the agent wrote it, unescaped from Codex's wrapper
+  PASS  workflow states derive from which tool ran
+  PASS  opening the planning skill is reading a skill; only writing the draft is drafting the plan
+  PASS  reading or editing the workspace reads as using the workspace
+  PASS  semantic reads during a bound review read as investigating
+  PASS  a public assistant message reads as responding
+  PASS  audit source lists semantic reads; memory and draft changes stay in the action trace
+  PASS  the turn stages the workspace into the agent's working folder
+  PASS  a draft written in an answer is committed, reported and shown as a table
+  PASS  a draft commits nothing on its own: the turn records no human decision
+  PASS  a revision is committed and its table marks what changed
+  PASS  a draft written while still asking is undone and returned for correction
+  PASS  a draft the page cannot show is returned with what to fix
+  PASS  a memory entry that quotes the person is committed and logged
+  PASS  an entry quoting words the person never said fails the turn and is never committed
+  PASS  a new entry must carry today's simulation date
+  PASS  a monitoring turn cannot change memory: it is restored and the agent told
+  PASS  a file outside the workspace layout is removed, not committed
+  PASS  a failed turn commits nothing to the workspace
+  PASS  memory and plans become citable context cards
+  PASS  the prompt names the workspace cards by file rather than repeating their content
+  PASS  only saving makes a draft the plan: version 1, draft cleared
+  PASS  a saved version is read-only: a change is restored and reported
+  PASS  a draft whose first day has passed is stale and cannot be saved
+  PASS  saving a stale draft is refused
+  PASS  a draft is compared only with the saved days it would replace
+  PASS  a conversation at an earlier date sees only memory written by then
+  PASS  committing that conversation keeps the later entries on disk
+  PASS  the audit log with workspace entries still verifies
+  PASS  the retired approval vocabulary is no longer a legal decision
+
+[15] monitoring audit, structured review, the coach's Alert decision
+  PASS  a review without observations and limitations is rejected
+  PASS  an unknown verdict is rejected by the handler, not just the schema
+  PASS  an empty note is rejected by the handler
+  PASS  a string where a list of observations belongs is rejected
+  PASS  a review without a yes-or-no Alert decision and its reason is rejected
+  PASS  a grounded review records verdict, note, observations, limitations and the decision
+  PASS  the monitoring prompt gives facts to weigh, not cut-offs, and forbids causal claims
+  PASS  a monitoring audit row persists the verdict and the notification action
+  PASS  scanned days accumulate in the run
+  PASS  an exact retry of the same advance changes nothing
+  PASS  a contiguous advance adds only the new days to the same run
+  PASS  an Alert is kept in the run with what it was about, for the next review
+  PASS  a discontinuous start begins a new run with nothing raised
+  PASS  a start before the run also begins a new run
+  PASS  reset clears the run
+  PASS  each monitoring review appends exactly one audit row
+  PASS  the row carries the Agent verdict and the final notification action
+  PASS  the coach's decision is the Alert decision, recorded as given
+  PASS  the facts the coach weighed travel with its decision
+  PASS  the next review is told which Alerts the run has already raised
+  PASS  a repeat is weighed on the level at the last Alert of its kind beside the level now
+  PASS  the facts reach the coach in the prompt, a condition with when it began
+  PASS  a condition's second review carries the coach's first one
+  PASS  the day the coach chose to look again is kept, and a later 'not again' clears it
+  PASS  the review's observations and limitations reach the result
+  PASS  the JSONL row persists the full structured review
+  PASS  the JSONL row persists the decision with the run it belongs to
+  PASS  a missing review persists a truthful non-empty fallback
+  PASS  and the unreviewed signal is shown, not hidden, marked as code's fallback
+  PASS  a legacy row without the structured fields still verifies
+  PASS  the browser advance returns and persists the run
+  PASS  retrying the identical HTTP advance does not inflate the run
+  PASS  the signals view reports the same run
+  PASS  a contiguous advance accumulates scanned days in the same run
+  PASS  a discontinuous start over HTTP begins a new run
+  PASS  saving with no draft is refused
+  PASS  the plan view shows the draft, against no saved plan yet
+  PASS  saving makes the draft version 1 and clears it
+  PASS  the profile shows the saved plan as the active plan
+  PASS  discarding removes the draft; both decisions are their own audit entries
+  PASS  a draft whose days have started cannot be saved
+  PASS  only save and discard are decisions
+  PASS  the memory view reads the workspace memory up to the date
+  PASS  a new chat forgets the conversation but keeps memory, plans and the run
+  PASS  only the workspace can be kept
+  PASS  Reset clears the run over HTTP
+  PASS  Reset clears the workspace: memory, draft and saved plans
+
+[16] skipped - pass --live for one real conversation
+
+==============================================================
+224 passed, 0 failed
+PASS an edited earlier audit entry breaks the hash chain
+PASS reset archives the audit log instead of deleting it
+PASS the cached sensor window is never mutated by the tool
+PASS implausible calorie readings are flagged, not read as effort
+PASS a session still running at the event time exposes no future totals
+PASS a turn reports what it newly processed, not the resent cached history
+PASS a failed turn's usage never spills into the next turn
+PASS a turn that finishes by itself past the request cap keeps its answer
+PASS a runaway turn is interrupted at the request cap and says why
+PASS interrupting a turn that has just ended is not an error
+PASS a failed turn is marked failed in the audit log, not dressed as a reply
+PASS a failed turn commits no memory
+PASS guideline search returns cited passages as knowledge cards, tagged in place
+PASS with no personal records read, citing guidance alone is fine
+PASS once their records were read, guidance alone cannot answer about this person
+PASS retrieved guidance is displayed with its source and citation
+PASS no match says so instead of inviting an answer from memory
+PASS a reviewed signal is recorded once and cannot be reviewed again in the run
+PASS each finished turn is kept for a reload or athlete switch
+PASS a period comparison names the measure and carries its unit
+PASS a suite that stops on an assertion is reported as a failure
+PASS a turn over its time budget is stopped, audited as failed, and the conversation restarts
+PASS an invented citation goes back to the same session with the exact error
+PASS a final answer still wrong after two corrections fails the turn and shows nothing
+PASS the free arm sends no schema, no context card, no citation policy and no cards
+PASS the unchecked arm asks for citations but accepts an invented one without correction
+PASS the free arm keeps the workspace, so its plans are drafts like the product's
+PASS borrowed logins skip expired tokens and keep Pi before ~/.codex
+PASS only the access token is borrowed, never the refresh token
+PASS a Pi account store readable by others is ignored
+PASS each participant gets their own thread in their own directory
+PASS after a restart the conversation, its messages and its clock come back
+PASS the next message resumes that same Codex thread
+PASS only the last turn keeps its trail, with timed steps, for a reload
+PASS a restored conversation still refuses to move time backwards
+PASS a conversation the next message cannot resume does not hold the clock
+PASS a changed tool catalogue starts a new thread and clears the stale transcript
+PASS the page gets a participant's conversation back after a restart
+PASS a conversation the next turn cannot resume is not shown as remembered
+PASS Reset forgets only that participant's conversation
+PASS state directories are created with their parents on first write
+PASS the reply language follows the latest message, decided in code
+PASS path-like participant ids are refused before touching files
+PASS cross-site requests and form posts are refused
+PASS a same-origin page request still works
+PASS 15 calendar days are distinct from 7 report records
+PASS no baseline claim without a comparison
+PASS descriptive data does not certify explanatory sufficiency
+PASS device-only duration is attributed to device
+PASS event density is not wearable or self-report completeness
+PASS no recorded sessions does not establish no exercise
+PASS comparison preserves reference sample and calendar counts
+PASS numeric evaluator accepts label-first and number-first answers
+PASS numeric evaluator rejects swapped counts and contradictory coverage
+PASS tool failures carry the error flag
+PASS exact tool parameters and untruncated results survive audit
+PASS public call IDs, exact prompt and terminal metadata survive audit
+PASS model drafts stay in the audit; only the checked final answer is the reply
+PASS failed terminal state is audited and cleared
+PASS a truncated model stream cannot be recorded as success
+PASS a plan draft is held to the activity and intensity vocabulary the page shows
+PASS planning context retains load units and readiness sample window
+PASS uncomputed readiness trend is not called flat
+PASS planning context does not certify normal recovery by default
+PASS read_record takes only an optional window length and end, each described
+PASS the turn ends with a terminal event even when the provider refuses
+PASS Codex sends exactly one model request for the turn
+PASS the only messages are the coach instructions, Codex's skill list and the user's message
+PASS the skill list holds exactly the coach's skills, from this conversation's own copy
+PASS the request carries no top-level instructions or tools of its own
+PASS the final answer's shape is enforced by the model API, not asked for in prose
+PASS the only tool the model sees is exec, the gpt-5.6 tool host
+PASS exec declares the coach tools, Codex's shell and apply_patch, nothing else
+PASS the real date is absent: only the simulation clock tells the model what day it is
+PASS no environment, permissions, bundled or personal skills, multi-agent text or home path is added
+PASS the shell can read the skills and their references
+PASS it cannot read raw records, code, the project or login files
+PASS it can write its workspace: memory and the plan draft
+PASS it cannot write saved plans, the skills, the rest of its folder or the project
+PASS the network probe is installed and executable inside the sandbox
+PASS it has no network
+PASS HTTP parameter returns exact coverage, deltas, units and recorded-sleep balance
+PASS HTTP headline states the direction of sleep shortfall explicitly
+PASS missing evidence is not a zero-valued comparison; overlapping dates are explicit
+PASS statistics are always computed by the tool; there is no option to skip them
+PASS a low soreness score is a sorer day and a high fatigue score a fresher one, as the data show
+PASS an answer left at the end of its scale for weeks is not read as a rating; a single one is
+PASS recovery history reaches the coach in words, with no scale to interpret
+PASS a young record averages its load over the weeks it covers, not over four
+PASS a device-detected session carries no invented load
+PASS a night repeated in the export is counted once
+PASS activity against WHO reports the coverage of the activity minutes it uses
+PASS an invented citation returns to the same session and the corrected answer is shown
+PASS raw drafts stay audit-only; the page shows only the checked final answer
+PASS cited sources are listed in citation order, linkable by their full ID
+PASS invented, stale and guidance-only citations, unknown outcomes, missing reasons and extra fields are returned
+PASS an answer that reads no records needs no citation
+PASS removing records leaves no recovery answers to read, rather than normal recovery
+PASS no context tool or gate: the catalogue and the instructions ask the coach to find out, in its own words
+PASS HTTP/SSE: a turn that asks waits for the person and a draft written with the question is undone; the answer after it writes the draft the page shows
+PASS reading historical memory does not mutate the active conversation clock
+PASS a monitoring note cannot change the plan draft
+PASS a warning symptom ends the turn as a recorded safety stop, with no plan and no lock
+PASS reset is rejected while the same participant has a running turn
+PASS HTTP/SSE shows exact tool values in tables and the checked final answer as the reply
+PASS model drafts are audit-only, not streamed to the UI
+PASS the plan draft table comes from the workspace change and marks what changed; no change means no displayed schedule
+ALL EIGHT SUITES PASSED ON 3.13.17 (main, Oct 21 2026, 13:48:20) [Clang 21.0.0 (clang-2100.3.34.2)]

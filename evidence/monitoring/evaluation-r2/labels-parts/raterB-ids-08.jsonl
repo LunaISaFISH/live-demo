@@ -1,0 +1,13 @@
+{"id": "p16-42", "should_alert": true, "confidence": "low", "reason": "HR plateaued 100-102 bpm for 30+ min at midnight with zero steps, 70 min after a short walk, no logged exercise; no HR alert in 7 weeks, fatigue rising."}
+{"id": "p16-43", "should_alert": true, "confidence": "high", "reason": "Weekly activity median fell to 0 min from 15 at the last alert; clearly worse, maximum severity, long-running shortfall."}
+{"id": "p16-44", "should_alert": false, "confidence": "high", "reason": "Resting HR only 1.4-1.7 bpm above median, trivial; far below the previously alerted rise of 6.6 bpm."}
+{"id": "p16-45", "should_alert": false, "confidence": "high", "reason": "104 bpm begins right after sustained walking (steps until 18:30, HR up to 127); explained by recent activity, near-repeat of earlier alert."}
+{"id": "p16-46", "should_alert": false, "confidence": "high", "reason": "Resting HR 67.7, only 1.4 bpm above median; trivial and far smaller than the earlier alerted rise."}
+{"id": "p16-47", "should_alert": false, "confidence": "high", "reason": "Median activity 9 min is up from 0 at the last alert; shortfall already alerted, not worse."}
+{"id": "p16-48", "should_alert": false, "confidence": "high", "reason": "Resting HR 67.9 only 1.4 bpm above median; trivial, no concurrent concerns."}
+{"id": "p16-49", "should_alert": false, "confidence": "low", "reason": "101 bpm at night, 2 hours after a logged walk, modest and equal to the 100 bpm episode alerted two weeks ago; near-repeat."}
+{"id": "p16-50", "should_alert": false, "confidence": "high", "reason": "Resting HR +2.1 bpm is small, below the last resting-HR alert, and concurrent with a sleep shortfall that is better handled separately."}
+{"id": "p16-51", "should_alert": false, "confidence": "low", "reason": "First sighting of a 4.3 h shortfall over 6 nights is mild; better to wait one more look to see if it persists."}
+{"id": "p16-52", "should_alert": true, "confidence": "high", "reason": "Sleep shortfall more than doubled to 9.6 h over 7 nights with resting HR up and worse reported sleep and stress; never alerted."}
+{"id": "p16-53", "should_alert": false, "confidence": "low", "reason": "Resting HR +3.2 bpm is below the prior alerted rise and is explained by the sleep shortfall, which is alerted separately; redundant."}
+{"id": "p16-54", "should_alert": false, "confidence": "high", "reason": "Median activity 9 min is up from 0 at the last alert; not worse, near-repeat."}

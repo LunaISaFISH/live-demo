@@ -1,0 +1,13 @@
+{"id": "p12-10", "should_alert": false, "confidence": "low", "reason": "Absolute load unchanged at 1600 sRPE; ratio rose only from shrinking baseline, alerted two days ago; near-repeat."}
+{"id": "p12-11", "should_alert": false, "confidence": "high", "reason": "Load fell to 2.09x from alerted 2.68x; readiness high; improving."}
+{"id": "p12-12", "should_alert": false, "confidence": "low", "reason": "1.72x is below several earlier load alerts; readiness high; knee reports are chronic and already flagged repeatedly."}
+{"id": "p12-13", "should_alert": false, "confidence": "high", "reason": "Load decreased to 1.57x from 1.72x alerted two days ago."}
+{"id": "p12-14", "should_alert": true, "confidence": "high", "reason": "Load jumped from 1430 to 2430 sRPE (2.28x), highest absolute load recorded, with new shoulder injury report; clearly worse."}
+{"id": "p12-15", "should_alert": false, "confidence": "high", "reason": "Load decreased to 2.15x from 2.28x alerted two days ago; already known."}
+{"id": "p12-16", "should_alert": false, "confidence": "high", "reason": "Load decreasing to 1.82x; readiness high; already alerted at higher level."}
+{"id": "p12-17", "should_alert": false, "confidence": "high", "reason": "Load continues to decline to 1.62x; already alerted at higher level."}
+{"id": "p12-18", "should_alert": true, "confidence": "high", "reason": "Three very-low readiness reports with tiredness, soreness, recent head/neck injury and no training to explain it; first alert."}
+{"id": "p12-19", "should_alert": false, "confidence": "high", "reason": "Four versus three low reports alerted two days ago; same state, near-repeat."}
+{"id": "p12-20", "should_alert": false, "confidence": "low", "reason": "Five low reports but latest slightly improved to low; alerted four days ago; new shoulder report is minor change."}
+{"id": "p16-01", "should_alert": false, "confidence": "high", "reason": "935 steps in the preceding 10 minutes; HR rise explained by walking just before, and data coverage is thin."}
+{"id": "p16-02", "should_alert": false, "confidence": "low", "reason": "Resting HR only +2.9 bpm; WHO shortfall based on two weeks of patchy data, not yet long-running."}

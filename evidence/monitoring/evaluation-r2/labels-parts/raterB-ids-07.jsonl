@@ -1,0 +1,13 @@
+{"id": "p16-29", "should_alert": false, "confidence": "low", "reason": "102 bpm at rest follows a walking burst (steps to 17:20) and is no worse than several earlier alerted episodes; near-repeat."}
+{"id": "p16-30", "should_alert": true, "confidence": "high", "reason": "Weekly MVPE median fell from 51 to 29 min, far below the 61 min last alerted; clearly worse after several non-alerts."}
+{"id": "p16-31", "should_alert": false, "confidence": "low", "reason": "100 bpm follows steady walking up to 18:00 with heart rate drifting down; explained by recent activity and similar to earlier alerts."}
+{"id": "p16-32", "should_alert": false, "confidence": "high", "reason": "Median 34 min is slightly above the 29 min alerted a week ago; not worse, near-repeat."}
+{"id": "p16-33", "should_alert": false, "confidence": "low", "reason": "112 bpm began right after a 40-minute walking bout (steps until 16:20-16:25); post-exercise elevation explained, not a rest rise."}
+{"id": "p16-34", "should_alert": false, "confidence": "high", "reason": "Median 32 min is above the 29 min at last alert; unchanged shortfall already alerted."}
+{"id": "p16-35", "should_alert": false, "confidence": "high", "reason": "Resting HR only 1.8 bpm above median, well within normal variation; far smaller than the earlier alerted rise."}
+{"id": "p16-36", "should_alert": false, "confidence": "high", "reason": "Median 32 min remains above the 29 at last alert; stable, no clear worsening."}
+{"id": "p16-37", "should_alert": false, "confidence": "low", "reason": "101 bpm shortly after walking steps around 21:40-22:00 with little rest period; modest rise, explained by movement and similar to prior alerts."}
+{"id": "p16-38", "should_alert": false, "confidence": "high", "reason": "Median 36 min is higher than the 29 min at last alert; improving, not worse."}
+{"id": "p16-39", "should_alert": false, "confidence": "high", "reason": "99 bpm follows a 20-minute walk (about 1000 steps) ending at 21:00; heart rate recovering, explained by recent walking."}
+{"id": "p16-40", "should_alert": true, "confidence": "high", "reason": "Median activity dropped to 15 min/week from 29 at last alert, about half; clearly worse and severity high."}
+{"id": "p16-41", "should_alert": false, "confidence": "low", "reason": "100 bpm in the hour after walking steps ending 18:00, modest rise, not worse than prior alerted episodes; near-repeat."}

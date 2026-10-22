@@ -1,0 +1,13 @@
+{"id": "p05-27", "should_alert": false, "confidence": "high", "reason": "Resting HR 69.3 is below the 70.6 already alerted two days ago; same unexplained rise, already alerted twice. Near-repeat."}
+{"id": "p05-28", "should_alert": false, "confidence": "low", "reason": "99 bpm follows walking steps in the preceding 90 minutes and the HR ramp; moderate rise, similar event already alerted earlier."}
+{"id": "p05-29", "should_alert": false, "confidence": "high", "reason": "Resting HR 70.0 is slightly below the 70.6 already alerted; near-repeat of an alerted concern, nothing newly worse."}
+{"id": "p05-30", "should_alert": false, "confidence": "high", "reason": "Only +1.5 bpm over a risen baseline of 68; trivial, and the rise was already alerted earlier."}
+{"id": "p12-01", "should_alert": false, "confidence": "high", "reason": "Load 1.57x from one logged very hard session; coverage insufficient at 48%; readiness normal. Explained and data too thin."}
+{"id": "p12-02", "should_alert": true, "confidence": "high", "reason": "Load 2.0x, low readiness, more sore, tired, stress and fresh knee and shoulder reports. First alert, warranted."}
+{"id": "p12-03", "should_alert": false, "confidence": "low", "reason": "Load rose 2.0x to 2.29x only two days after an alert; readiness now moderate. Modest worsening, near-repeat."}
+{"id": "p12-04", "should_alert": false, "confidence": "high", "reason": "Load fell to 1.66x from 2.29x already alerted; already known to the person."}
+{"id": "p12-05", "should_alert": false, "confidence": "high", "reason": "1.53x is well below the 2.29x already alerted; readiness moderate or rising. No new concern."}
+{"id": "p12-06", "should_alert": false, "confidence": "high", "reason": "1.69x is below the earlier alert level of 2.29x and explained by logged hard sessions; already known."}
+{"id": "p12-07", "should_alert": false, "confidence": "high", "reason": "1.7x comes from two logged resistance sessions on a small base; readiness moderate. Explained by recorded context."}
+{"id": "p12-08", "should_alert": true, "confidence": "low", "reason": "Load 2.06x and rising from 790 to 1140 sRPE, with soreness and a current knee report; new episode weeks after last alert."}
+{"id": "p12-09", "should_alert": true, "confidence": "low", "reason": "Load rose from 1140 to 1600 sRPE, 2.06x to 2.38x, with a recent knee report; clearly worse since the alert."}

@@ -1,0 +1,13 @@
+{"id": "p16-16", "should_alert": false, "confidence": "high", "reason": "Activity median 61 to 56 a week after last Alert; not clearly worse, repeat would be noise."}
+{"id": "p16-17", "should_alert": false, "confidence": "low", "reason": "96 bpm at rest is below prior alerted 115 bpm event; recurring afternoon pattern already flagged."}
+{"id": "p16-18", "should_alert": false, "confidence": "low", "reason": "Abrupt rise to 96 bpm at rest, but magnitude matches earlier alerted events; not clearly worse or new."}
+{"id": "p16-19", "should_alert": false, "confidence": "high", "reason": "Activity median unchanged at 56 min/week; already alerted on this shortfall, nothing new."}
+{"id": "p16-20", "should_alert": false, "confidence": "high", "reason": "100 bpm immediately after a logged 16-minute walk and heavy stepping; explained by recent exercise."}
+{"id": "p16-21", "should_alert": false, "confidence": "low", "reason": "Follows logged walk and an hour of movement; 105 bpm below earlier alerted 115 bpm, known pattern."}
+{"id": "p16-22", "should_alert": true, "confidence": "low", "reason": "Resting HR +4.0 bpm, highest in 28 days, no explanatory context; first resting-HR Alert in this run."}
+{"id": "p16-23", "should_alert": false, "confidence": "low", "reason": "New Year's night with frequent alcohol noted; 105 bpm below prior alerted peak, resting HR alert just sent."}
+{"id": "p16-24", "should_alert": true, "confidence": "low", "reason": "Resting HR now +6.6 bpm, clearly higher than alerted +4.0, sustained three days, low readiness reported."}
+{"id": "p16-25", "should_alert": true, "confidence": "low", "reason": "New 5.9 h sleep shortfall over 7 nights, with recently elevated resting HR and low readiness; not alerted before."}
+{"id": "p16-26", "should_alert": false, "confidence": "high", "reason": "Activity median unchanged at 56 min/week across several reviews; repeat Alert would be noise."}
+{"id": "p16-27", "should_alert": true, "confidence": "low", "reason": "Sleep shortfall persisting and slightly worse at 6.1 h over 7 nights; person never alerted about sleep."}
+{"id": "p16-28", "should_alert": true, "confidence": "low", "reason": "Four weeks since last activity Alert; median dropped 61 to 51 min and steps falling, now a third of guideline."}

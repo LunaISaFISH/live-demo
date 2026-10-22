@@ -1,0 +1,13 @@
+{"id": "p12-12", "should_alert": true, "confidence": "low", "reason": "Four consecutive low readiness reports, very low latest, constant tiredness and soreness, head/neck injury five days ago; persistent and never alerted."}
+{"id": "p16-01", "should_alert": false, "confidence": "high", "reason": "Heart rate rise follows a walking burst (935 steps) just before; record coverage insufficient at 24%."}
+{"id": "p16-02", "should_alert": false, "confidence": "high", "reason": "Resting HR only 2.9 bpm above median; small, one day, thin coverage."}
+{"id": "p16-03", "should_alert": false, "confidence": "high", "reason": "Resting HR only 2.3 bpm above median; trivial for an alert."}
+{"id": "p16-04", "should_alert": true, "confidence": "low", "reason": "Three weeks below WHO guideline (115 of 150 min) and first time flagged; mild shortfall but worth telling once."}
+{"id": "p16-05", "should_alert": false, "confidence": "low", "reason": "Walk logged 15:58 and HR stays near 100 with light stepping after; largely explained by recent activity."}
+{"id": "p16-06", "should_alert": true, "confidence": "low", "reason": "HR 115-122 with zero steps and no exercise, clearly higher than the earlier 97 bpm alert; unexplained rise at rest."}
+{"id": "p16-07", "should_alert": true, "confidence": "high", "reason": "Activity shortfall persisted 15 days and fell from 115 to 77 min against 150; not yet alerted and clearly worse."}
+{"id": "p16-08", "should_alert": false, "confidence": "high", "reason": "Resting HR only 2.1 bpm above median; trivial despite being a 28-day high; recent HR alerts already sent."}
+{"id": "p16-09", "should_alert": false, "confidence": "low", "reason": "Sleep shortfall of 3.4 h over 7 nights is about 30 min a night; modest, with readiness steady."}
+{"id": "p16-10", "should_alert": false, "confidence": "low", "reason": "Near-identical to the 12-05 alerted event (114 vs 115 bpm), after ongoing light stepping; not clearly worse."}
+{"id": "p16-11", "should_alert": false, "confidence": "low", "reason": "Lower than the alerted 115 bpm event five days ago, same evening pattern, resting HR normal; near-repeat."}
+{"id": "p16-12", "should_alert": false, "confidence": "high", "reason": "A 46-minute walk was logged that day with heavy stepping before the rise; explained by recorded activity."}

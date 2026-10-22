@@ -1,0 +1,13 @@
+{"id": "p16-26", "should_alert": true, "confidence": "high", "reason": "Resting HR 73, +6.6, highest in 28 days, third day, rising, low readiness, unexplained; first alert on this condition and clearly worse."}
+{"id": "p16-27", "should_alert": false, "confidence": "high", "reason": "Resting HR 71.3 is lower than the 73.0 already alerted yesterday; easing, not worse. Near-repeat would be noise."}
+{"id": "p16-28", "should_alert": false, "confidence": "low", "reason": "New 5.9h shortfall over 7 nights, modest (about 50 min/night), no symptoms; wait to see if it persists before alerting."}
+{"id": "p16-29", "should_alert": false, "confidence": "high", "reason": "Activity median 56 min unchanged from last two reviews and only slightly below the 61 already alerted; not clearly worse."}
+{"id": "p16-30", "should_alert": true, "confidence": "low", "reason": "Sleep shortfall 6.1h now held 4 days, slightly larger, never alerted, with low readiness and zero sessions; worth a first notice."}
+{"id": "p16-31", "should_alert": false, "confidence": "low", "reason": "Activity median 51 vs 56 recent and 61 at last alert; small drift, already alerted repeatedly, not clearly worse."}
+{"id": "p16-32", "should_alert": false, "confidence": "high", "reason": "HR 102 follows walking steps at 17:00-17:20 and a logged walk earlier; plausibly recovery. Near-repeat of earlier alert."}
+{"id": "p16-33", "should_alert": true, "confidence": "high", "reason": "Activity median fell from 61 at last alert (51 last week) to 29 min/week; clearly worse long-running shortfall against WHO."}
+{"id": "p16-34", "should_alert": false, "confidence": "high", "reason": "HR 100 follows sustained walking (hundreds of steps per bucket) until 18:30; explained by activity and a near-repeat of an earlier alert."}
+{"id": "p16-35", "should_alert": false, "confidence": "high", "reason": "Activity median rose from 29 (alerted 01-17) to 34; not worse, near-repeat."}
+{"id": "p16-36", "should_alert": false, "confidence": "high", "reason": "HR 112 immediately follows walking with 333 and 728 steps in the prior two buckets; explained by activity, no alert needed."}
+{"id": "p16-37", "should_alert": false, "confidence": "high", "reason": "Activity median 32 vs 29 at last alert; essentially unchanged, not worse, repeat would be noise."}
+{"id": "p16-38", "should_alert": false, "confidence": "high", "reason": "Resting HR only +1.8 bpm over median, one day, no other signs; trivial elevation."}

@@ -1,0 +1,100 @@
+CASE p16-04  participant p16  detector under_active  why reviewed: new  at 2019-11-22 23:59:59
+
+SIGNAL
+  over 3 weeks your middle week had 115 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends
+
+MONITOR FACTS (what the monitor knew, incl. earlier reviews and Alerts already sent)
+  - severity 0.23 on this detector's own 0-1 scale
+  - record coverage that day: sufficient
+  - a continuing condition, not a one-off event: it started on 2019-11-22 and has held for 1 day(s)
+  - when it started: over 3 weeks your middle week had 115 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO
+    recommends
+  - now: over 3 weeks your middle week had 115 minutes of moderate-to-vigorous activity (the median), against the 150 a week the WHO recommends
+  - you have not reviewed it before in this run
+  - the person has not been alerted about this kind of signal in this run, so there is no earlier Alert to repeat; now it is median week 115 min of
+    moderate-to-vigorous activity
+  Other conditions holding as of 2019-11-22:
+  - resting heart rate 68.9 bpm, +2.3 bpm from your median of 66.6; in the top 5% of your own last 21 days (since 2019-11-22)
+  No Alert has been raised in this monitoring run yet.
+
+EVIDENCE: the record read by code over the 14 days before (sealed, no later data)
+Findings:
+  - About 115 min/week of moderate-to-vigorous activity against the 150 the WHO recommends - below.
+  - Resting heart rate 69 bpm is in the top 5% of the last 21 days.
+  - Body weight is trending up at 0.58 kg/week (+1.0 kg over the window).
+  - Meals are irregular or alcohol is frequent.
+State at the window end:
+  as_of: 2019-11-22
+  capacity_today.ceiling: easy
+  capacity_today.reasons: ['resting heart rate is in the top 5% of your own last 21 days']
+  capacity_today.cautions: ['your recent training is too light for a load ratio to say anything, so it was not applied', 'you have had breakfast on
+    only 25% of the last 8 recorded days', 'a median of 2 meals a day is low if you are training regularly', 'weight is trending up at 0.6 kg/week']
+  capacity_today.applies_to: today and tomorrow; it does not cap later days, which depend on how the person recovers
+  weekday_rhythm.Mon: 0
+  weekday_rhythm.Tue: 1
+  weekday_rhythm.Wed: 0
+  weekday_rhythm.Thu: 0
+  weekday_rhythm.Fri: 0
+  weekday_rhythm.Sat: 0
+  weekday_rhythm.Sun: 0
+  training_load.units.acute_7d: sRPE
+  training_load.units.chronic_28d_per_week: sRPE/week
+  training_load.units.acwr: ratio
+  training_load.units.sessions_7d: sessions
+  training_load.units.rated_sessions_7d: sessions
+  training_load.units.unrated_device_minutes_7d: minutes
+  training_load.load_is: the person's own effort rating x minutes; device-detected sessions have no rating and carry no load
+  training_load.rated_sessions_7d: 0
+  training_load.unrated_device_minutes_7d: 15
+  training_load.acute_7d: 0
+  training_load.chronic_28d_per_week: 0.0
+  training_load.acwr: None
+  training_load.sessions_7d: 1
+  training_load.acwr_withheld: 28-day load is below 300 sRPE/week, too light for a 7-to-28-day ratio to mean anything
+  sleep_debt_7d.nights: 7
+  sleep_debt_7d.actual_hours: 49.4
+  sleep_debt_7d.expected_hours: 46.7
+  sleep_debt_7d.debt_hours: -2.7
+  resting_hr.value: 68.89485454559326
+  resting_hr.quantile: 0.952
+  resting_hr.baseline_median: 66.6
+  resting_hr.baseline_days: 21
+  readiness_trend.record_count: 8
+  readiness_trend.recorded_days: 8
+  readiness_trend.calendar_days: 14
+  readiness_trend.window.start: 2019-11-09
+  readiness_trend.window.end: 2019-11-22
+  readiness_trend.answers: moderate readiness to train 7, low readiness to train 1 (of 8 reports); latest: moderate readiness to train
+  readiness_trend.latest: moderate readiness to train
+  readiness_trend.direction: flat
+  activity_vs_who.weeks_scored: 3
+  activity_vs_who.median_mvpa_minutes: 115
+  activity_vs_who.weeks_meeting_floor: 0
+  activity_vs_who.floor: 150
+  activity_vs_who.upper: 300
+  activity_vs_who.verdict: below
+  activity_vs_who.guideline: Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity
+    activity, or an equivalent combination.
+  activity_vs_who.source: WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour
+  ambient_activity.window.start: 2019-11-01
+  ambient_activity.window.end: 2019-11-22
+  ambient_activity.heart_days: 22
+  ambient_activity.median_heart_covered_minutes: 1156
+  ambient_activity.median_daily_steps: 1918
+  ambient_activity.total_distance_km: 41.88
+  ambient_activity.limitations: ['distance and calories are device estimates', 'missing samples are not treated as zero']
+  recent_injuries.joints_from_log: []
+  recent_injuries.count: 0
+  recent_injuries.days_since_last: None
+  recent_injuries.last_location: None
+Data quality:
+  summary: 76% of the last 28 days carry a record.
+  status: within_baseline
+  coverage: 0.76
+  days_since_last_record: 0
+Limitations:
+  - Values describe recorded data only: a day without a record is unknown, not zero or normal.
+  - Record counts are not calendar days, and per-session values (training medians) are not daily totals.
+  - A difference between the two windows is a comparison, not a cause; the previous window is not necessarily a representative baseline.
+  - Self-reported answers are words relative to the person's own normal.
+  - Device distance and calories are estimates.

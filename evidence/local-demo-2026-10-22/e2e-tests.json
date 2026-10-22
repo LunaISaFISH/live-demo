@@ -1,0 +1,2956 @@
+{
+  "suites": [
+    {
+      "file": "test_agent.py",
+      "title": "Core properties: time sealing, observation contract, workspace and plan saving, monitoring policy, audit, HTTP views",
+      "exit": 0,
+      "passed": 224,
+      "failed": 0,
+      "groups": [
+        {
+          "name": "[1] no semantic output may see the future",
+          "checks": [
+            {
+              "ok": true,
+              "name": "read_record, snapshot and inspect at day N equal a record ending at N"
+            },
+            {
+              "ok": true,
+              "name": "planning context at day N equals a record ending at N"
+            }
+          ]
+        },
+        {
+          "name": "[2] one observation contract, with units, provenance and coverage",
+          "checks": [
+            {
+              "ok": true,
+              "name": "28 observations all carry the eight contract fields"
+            },
+            {
+              "ok": true,
+              "name": "every numeric evidence item has a non-empty unit and provenance"
+            },
+            {
+              "ok": true,
+              "name": "every observation window is JSON-serialisable and well-formed"
+            },
+            {
+              "ok": true,
+              "name": "status and sufficiency never disagree"
+            },
+            {
+              "ok": true,
+              "name": "a whole snapshot serialises without a custom encoder"
+            }
+          ]
+        },
+        {
+          "name": "[3] missing data is insufficient, never normal",
+          "checks": [
+            {
+              "ok": true,
+              "name": "a six-day-old record returns insufficient somewhere, not all-normal"
+            },
+            {
+              "ok": true,
+              "name": "no domain of a thin record is called within_baseline off no data"
+            },
+            {
+              "ok": true,
+              "name": "a domain with no records in the window is insufficient, not summarised"
+            }
+          ]
+        },
+        {
+          "name": "[4] period comparison uses exactly the requested windows",
+          "checks": [
+            {
+              "ok": true,
+              "name": "the main observation covers exactly the requested window"
+            },
+            {
+              "ok": true,
+              "name": "its counts are computed over that window, not cumulatively"
+            },
+            {
+              "ok": true,
+              "name": "the comparison names the requested reference window"
+            },
+            {
+              "ok": true,
+              "name": "and computes the reference over that window too"
+            },
+            {
+              "ok": true,
+              "name": "swapping the two windows swaps the comparison"
+            }
+          ]
+        },
+        {
+          "name": "[5] the Agent plans; deterministic code supplies facts, never a verdict",
+          "checks": [
+            {
+              "ok": true,
+              "name": "planning context is decision-ready and contains no generated schedule"
+            },
+            {
+              "ok": true,
+              "name": "planning context includes raw-stream movement and wear coverage"
+            },
+            {
+              "ok": true,
+              "name": "planning context names what the record cannot know"
+            },
+            {
+              "ok": true,
+              "name": "a logged injury is said, not enforced"
+            },
+            {
+              "ok": true,
+              "name": "no plan validator remains: nothing in code judges the Agent's plan"
+            },
+            {
+              "ok": true,
+              "name": "a well-formed final answer with no workspace change is accepted as written"
+            },
+            {
+              "ok": true,
+              "name": "the final answer carries no plan: a plan lives in the workspace draft"
+            },
+            {
+              "ok": true,
+              "name": "a resting heart rate position reads correctly at the ends and below the middle"
+            },
+            {
+              "ok": true,
+              "name": "weeks meeting the WHO floor is a count of weeks, not a share"
+            },
+            {
+              "ok": true,
+              "name": "the last injury and a joint's last injury keep their own dates"
+            }
+          ]
+        },
+        {
+          "name": "[6] the simulation clock seals the future",
+          "checks": [
+            {
+              "ok": true,
+              "name": "a semantic tool refuses data after the simulation date"
+            },
+            {
+              "ok": true,
+              "name": "the high-frequency tool also refuses the simulated future"
+            },
+            {
+              "ok": true,
+              "name": "read_record in a review clamps a later end to the signal date"
+            },
+            {
+              "ok": true,
+              "name": "the review event reports the effective bound as_of and the requested one"
+            },
+            {
+              "ok": true,
+              "name": "a normal turn still refuses a future date rather than clamping"
+            },
+            {
+              "ok": true,
+              "name": "an intraday review cannot read sensor samples after the event time"
+            },
+            {
+              "ok": true,
+              "name": "an active simulation cannot move backwards without a reset"
+            },
+            {
+              "ok": true,
+              "name": "monitor replay never advances beyond the simulation clock"
+            }
+          ]
+        },
+        {
+          "name": "[7] enforced in code, not asked of the model",
+          "checks": [
+            {
+              "ok": true,
+              "name": "a tool in the catalogue is allowed"
+            },
+            {
+              "ok": true,
+              "name": "Bash is denied"
+            },
+            {
+              "ok": true,
+              "name": "Read is denied"
+            },
+            {
+              "ok": true,
+              "name": "WebFetch is denied"
+            },
+            {
+              "ok": true,
+              "name": "exec is denied"
+            },
+            {
+              "ok": true,
+              "name": "rm_rf is denied"
+            },
+            {
+              "ok": true,
+              "name": "get_coaching_snapshot is denied"
+            },
+            {
+              "ok": true,
+              "name": "mcp__coach__read_record is denied"
+            },
+            {
+              "ok": true,
+              "name": "the removed plan validator is not a tool the gate allows"
+            },
+            {
+              "ok": true,
+              "name": "any Codex request other than a coach tool call is declined"
+            },
+            {
+              "ok": true,
+              "name": "a tool call outside the catalogue returns a failed result, not a run"
+            },
+            {
+              "ok": true,
+              "name": "the model is offered exactly the coach tools"
+            },
+            {
+              "ok": true,
+              "name": "Codex's own context blocks, bundled skills, agents and extra tools are switched off"
+            },
+            {
+              "ok": true,
+              "name": "the shell reads the skills folder and writes only the workspace, with named denials"
+            },
+            {
+              "ok": true,
+              "name": "without a workspace the shell writes nothing"
+            },
+            {
+              "ok": true,
+              "name": "there is no conversation-level latch that could lock planning by mistake"
+            },
+            {
+              "ok": true,
+              "name": "memory survives a new session, staged for the agent to read"
+            },
+            {
+              "ok": true,
+              "name": "remembered prompt injection cannot expand tool permission"
+            },
+            {
+              "ok": true,
+              "name": "the system specification treats the memory file as untrusted data"
+            },
+            {
+              "ok": true,
+              "name": "the system specification treats retrieved text as data, not authority"
+            },
+            {
+              "ok": true,
+              "name": "an entry carries all six fields the brief names"
+            },
+            {
+              "ok": true,
+              "name": "the log round-trips"
+            },
+            {
+              "ok": true,
+              "name": "a non-mutating recommendation needs no pretend approval"
+            }
+          ]
+        },
+        {
+          "name": "[8] the signal light: reproducible detection; the coach decides each Alert",
+          "checks": [
+            {
+              "ok": true,
+              "name": "layer one runs over every participant without raising"
+            },
+            {
+              "ok": true,
+              "name": "a sustained condition is passed on once, on the day it starts"
+            },
+            {
+              "ok": true,
+              "name": "no signal is phrased as a prediction"
+            },
+            {
+              "ok": true,
+              "name": "every signal reproduces from the record truncated to its day"
+            },
+            {
+              "ok": true,
+              "name": "time simulation stops on or after its start at a real signal day"
+            },
+            {
+              "ok": true,
+              "name": "what is due reproduces from history ending on that day"
+            },
+            {
+              "ok": true,
+              "name": "a condition already holding when the run starts is due at once, as new"
+            },
+            {
+              "ok": true,
+              "name": "and it carries when it began and how it looked then"
+            },
+            {
+              "ok": true,
+              "name": "a reviewed condition waits for the day the coach chose, then comes back"
+            },
+            {
+              "ok": true,
+              "name": "and with no day chosen it stays on the page without coming back"
+            },
+            {
+              "ok": true,
+              "name": "every one-off event is due when it happens, even the day after another"
+            },
+            {
+              "ok": true,
+              "name": "time simulation at the dataset end, with everything reviewed, reports nothing due"
+            },
+            {
+              "ok": true,
+              "name": "a daily aggregate is available only at the explicit end-of-day boundary"
+            },
+            {
+              "ok": true,
+              "name": "all seven detectors expose one chart contract with thresholds and units"
+            },
+            {
+              "ok": true,
+              "name": "monitor charts are sealed at their requested simulation date"
+            },
+            {
+              "ok": true,
+              "name": "every chart marker comes from the same detector that raises the signal"
+            },
+            {
+              "ok": true,
+              "name": "an intraday chart stops at the exact simulated event boundary"
+            },
+            {
+              "ok": true,
+              "name": "raw Fitbit streams are indexed and combined without a daily-only proxy"
+            },
+            {
+              "ok": true,
+              "name": "persistence counts consecutive prior days, bounded by the record"
+            },
+            {
+              "ok": true,
+              "name": "the facts the coach weighs are severity, days running and coverage, and no decision"
+            },
+            {
+              "ok": true,
+              "name": "no notification policy remains in code"
+            }
+          ]
+        },
+        {
+          "name": "[9] absolute standards and threshold provenance",
+          "checks": [
+            {
+              "ok": true,
+              "name": "an under-active person is measured against WHO, not themselves"
+            },
+            {
+              "ok": true,
+              "name": "that shows up as below_guideline in the snapshot"
+            },
+            {
+              "ok": true,
+              "name": "under-activity reaches the Agent as decision context, not a code-made plan"
+            },
+            {
+              "ok": true,
+              "name": "every threshold declares a source and an evidence class"
+            },
+            {
+              "ok": true,
+              "name": "the registry holds every branching number, honestly classed"
+            },
+            {
+              "ok": true,
+              "name": "device wear and both ACWR windows are honestly labelled project heuristics"
+            },
+            {
+              "ok": true,
+              "name": "every intraday detector branch value is registered"
+            },
+            {
+              "ok": true,
+              "name": "monitor and realtime branch on the registry, not shadow constants"
+            },
+            {
+              "ok": true,
+              "name": "the low-step cutoff declares itself a proxy for rest, not proof"
+            },
+            {
+              "ok": true,
+              "name": "the remaining monitor branch values are registered honest heuristics"
+            },
+            {
+              "ok": true,
+              "name": "the whole monitor reads the registry"
+            }
+          ]
+        },
+        {
+          "name": "[10] the reachable surface is small, and bound to one person",
+          "checks": [
+            {
+              "ok": true,
+              "name": "the agent exposes the record read, the sensor window, guideline search and the review"
+            },
+            {
+              "ok": true,
+              "name": "two read the record, one searches guidelines, one is control; memory and plans are files"
+            },
+            {
+              "ok": true,
+              "name": "no tool accepts a participant identifier"
+            },
+            {
+              "ok": true,
+              "name": "two agents for two people expose the same tools"
+            },
+            {
+              "ok": true,
+              "name": "but each answers only from the person it was built for"
+            },
+            {
+              "ok": true,
+              "name": "the read-only tools require no participant argument and no time is faked"
+            },
+            {
+              "ok": true,
+              "name": "skills are instruction files only: nothing in them runs, and the old ASKABLE path is gone"
+            }
+          ]
+        },
+        {
+          "name": "[11] the HTTP surface serves the new views (offline)",
+          "checks": [
+            {
+              "ok": true,
+              "name": "the participant list covers all sixteen"
+            },
+            {
+              "ok": true,
+              "name": "profile state seals the future and reports WHO adequacy"
+            },
+            {
+              "ok": true,
+              "name": "the snapshot view carries top findings and a data-quality read"
+            },
+            {
+              "ok": true,
+              "name": "the inspect view returns a period and its comparison"
+            },
+            {
+              "ok": true,
+              "name": "the server no longer exposes a skills route"
+            },
+            {
+              "ok": true,
+              "name": "the retired deterministic plan generator is gone"
+            },
+            {
+              "ok": true,
+              "name": "ordinary planning has no approval endpoint or approval controls"
+            },
+            {
+              "ok": true,
+              "name": "the time bar owns the background simulator, and the page says an Alert is not a diagnosis"
+            },
+            {
+              "ok": true,
+              "name": "the Monitor tab exposes a real metric timeline rather than text cards only"
+            },
+            {
+              "ok": true,
+              "name": "the monitoring replay plays back every recorded review with what the coach was handed and read"
+            },
+            {
+              "ok": true,
+              "name": "the planning skill makes the Agent the planner, with no validator to satisfy"
+            },
+            {
+              "ok": true,
+              "name": "skills install as Codex-format folders with their shared references"
+            },
+            {
+              "ok": true,
+              "name": "the rules for asking the person are written into the skills that need them, not left to a read"
+            },
+            {
+              "ok": true,
+              "name": "the system prompt carries the rules of every turn, not each task's procedure"
+            },
+            {
+              "ok": true,
+              "name": "wide tables scroll inside their container, not the page"
+            },
+            {
+              "ok": true,
+              "name": "the overflow is not masked with body overflow-x hidden"
+            },
+            {
+              "ok": true,
+              "name": "each participant is offered by what it shows, not by an id and a count"
+            },
+            {
+              "ok": true,
+              "name": "the clock date input can shrink inside the narrow-viewport grid"
+            }
+          ]
+        },
+        {
+          "name": "[12] richer data: reconciliation, device evidence, overview, codes",
+          "checks": [
+            {
+              "ok": true,
+              "name": "a self-report and its overlapping Fitbit entry merge to one session"
+            },
+            {
+              "ok": true,
+              "name": "the merged session carries the device evidence, not a second count"
+            },
+            {
+              "ok": true,
+              "name": "a distinct same-day session survives instead of being discarded"
+            },
+            {
+              "ok": true,
+              "name": "a device-only session keeps its own provenance"
+            },
+            {
+              "ok": true,
+              "name": "training inspection exposes device heart rate, steps and calories"
+            },
+            {
+              "ok": true,
+              "name": "physiology inspection exposes daily heart-rate-zone minutes"
+            },
+            {
+              "ok": true,
+              "name": "the physiology domain is in the snapshot with device evidence"
+            },
+            {
+              "ok": true,
+              "name": "recovery overview considers strain beyond readiness and resting HR"
+            },
+            {
+              "ok": true,
+              "name": "lifestyle overview considers intake beyond weight"
+            },
+            {
+              "ok": true,
+              "name": "the overview validates missing, text-placeholder and out-of-range values"
+            },
+            {
+              "ok": true,
+              "name": "a missing max heart rate is a warning, not a value"
+            },
+            {
+              "ok": true,
+              "name": "a valid max heart rate is stored as context"
+            },
+            {
+              "ok": true,
+              "name": "overview quality warnings surface in the data-quality observation"
+            },
+            {
+              "ok": true,
+              "name": "participant metadata never becomes a plan constraint"
+            },
+            {
+              "ok": true,
+              "name": "soreness-area SNOMED codes are preserved as raw codes, not a count"
+            },
+            {
+              "ok": true,
+              "name": "and inspection surfaces the codes with an unmapped-code limitation"
+            },
+            {
+              "ok": true,
+              "name": "coverage is domain-specific: training density is below any-record density"
+            },
+            {
+              "ok": true,
+              "name": "an inspect observation reports its own domain's coverage"
+            }
+          ]
+        },
+        {
+          "name": "[13] one read returns the whole record, against the window before",
+          "checks": [
+            {
+              "ok": true,
+              "name": "one call returns every domain over the window and the one just before"
+            },
+            {
+              "ok": true,
+              "name": "coverage counts each domain's own recorded days"
+            },
+            {
+              "ok": true,
+              "name": "changes are this window minus the previous one, computed in code"
+            },
+            {
+              "ok": true,
+              "name": "the state at the window's end carries the planning facts, not the full injury list"
+            },
+            {
+              "ok": true,
+              "name": "a load ratio over too light a month is withheld everywhere the coach reads it, with the reason"
+            },
+            {
+              "ok": true,
+              "name": "where the record starts there is no previous window to compare, not an invented one"
+            }
+          ]
+        },
+        {
+          "name": "[14] the transcript is public, and the workspace is checked",
+          "checks": [
+            {
+              "ok": true,
+              "name": "tool calls become public events"
+            },
+            {
+              "ok": true,
+              "name": "Codex reasoning is dropped at the boundary, never kept"
+            },
+            {
+              "ok": true,
+              "name": "an assistant draft is kept for the audit, not turned into a transcript event"
+            },
+            {
+              "ok": true,
+              "name": "a shell command is kept with its result for the stream and the audit"
+            },
+            {
+              "ok": true,
+              "name": "the trace shows a command as written, without the login shell or the per-turn directory"
+            },
+            {
+              "ok": true,
+              "name": "an apply_patch file change is kept with its paths for the stream and the audit"
+            },
+            {
+              "ok": true,
+              "name": "any other Codex item is flagged as outside the coach tools"
+            },
+            {
+              "ok": true,
+              "name": "Codex compacting a long conversation is its own bookkeeping, not a refused tool"
+            },
+            {
+              "ok": true,
+              "name": "a tool result becomes a summarised event tied to its tool"
+            },
+            {
+              "ok": true,
+              "name": "a record read is summarised by its windows and findings, not raw JSON"
+            },
+            {
+              "ok": true,
+              "name": "a shell command is shown as the agent wrote it, unescaped from Codex's wrapper"
+            },
+            {
+              "ok": true,
+              "name": "workflow states derive from which tool ran"
+            },
+            {
+              "ok": true,
+              "name": "opening the planning skill is reading a skill; only writing the draft is drafting the plan"
+            },
+            {
+              "ok": true,
+              "name": "reading or editing the workspace reads as using the workspace"
+            },
+            {
+              "ok": true,
+              "name": "semantic reads during a bound review read as investigating"
+            },
+            {
+              "ok": true,
+              "name": "a public assistant message reads as responding"
+            },
+            {
+              "ok": true,
+              "name": "audit source lists semantic reads; memory and draft changes stay in the action trace"
+            },
+            {
+              "ok": true,
+              "name": "the turn stages the workspace into the agent's working folder"
+            },
+            {
+              "ok": true,
+              "name": "a draft written in an answer is committed, reported and shown as a table"
+            },
+            {
+              "ok": true,
+              "name": "a draft commits nothing on its own: the turn records no human decision"
+            },
+            {
+              "ok": true,
+              "name": "a revision is committed and its table marks what changed"
+            },
+            {
+              "ok": true,
+              "name": "a draft written while still asking is undone and returned for correction"
+            },
+            {
+              "ok": true,
+              "name": "a draft the page cannot show is returned with what to fix"
+            },
+            {
+              "ok": true,
+              "name": "a memory entry that quotes the person is committed and logged"
+            },
+            {
+              "ok": true,
+              "name": "an entry quoting words the person never said fails the turn and is never committed"
+            },
+            {
+              "ok": true,
+              "name": "a new entry must carry today's simulation date"
+            },
+            {
+              "ok": true,
+              "name": "a monitoring turn cannot change memory: it is restored and the agent told"
+            },
+            {
+              "ok": true,
+              "name": "a file outside the workspace layout is removed, not committed"
+            },
+            {
+              "ok": true,
+              "name": "a failed turn commits nothing to the workspace"
+            },
+            {
+              "ok": true,
+              "name": "memory and plans become citable context cards"
+            },
+            {
+              "ok": true,
+              "name": "the prompt names the workspace cards by file rather than repeating their content"
+            },
+            {
+              "ok": true,
+              "name": "only saving makes a draft the plan: version 1, draft cleared"
+            },
+            {
+              "ok": true,
+              "name": "a saved version is read-only: a change is restored and reported"
+            },
+            {
+              "ok": true,
+              "name": "a draft whose first day has passed is stale and cannot be saved"
+            },
+            {
+              "ok": true,
+              "name": "saving a stale draft is refused"
+            },
+            {
+              "ok": true,
+              "name": "a draft is compared only with the saved days it would replace"
+            },
+            {
+              "ok": true,
+              "name": "a conversation at an earlier date sees only memory written by then"
+            },
+            {
+              "ok": true,
+              "name": "committing that conversation keeps the later entries on disk"
+            },
+            {
+              "ok": true,
+              "name": "the audit log with workspace entries still verifies"
+            },
+            {
+              "ok": true,
+              "name": "the retired approval vocabulary is no longer a legal decision"
+            }
+          ]
+        },
+        {
+          "name": "[15] monitoring audit, structured review, the coach's Alert decision",
+          "checks": [
+            {
+              "ok": true,
+              "name": "a review without observations and limitations is rejected"
+            },
+            {
+              "ok": true,
+              "name": "an unknown verdict is rejected by the handler, not just the schema"
+            },
+            {
+              "ok": true,
+              "name": "an empty note is rejected by the handler"
+            },
+            {
+              "ok": true,
+              "name": "a string where a list of observations belongs is rejected"
+            },
+            {
+              "ok": true,
+              "name": "a review without a yes-or-no Alert decision and its reason is rejected"
+            },
+            {
+              "ok": true,
+              "name": "a grounded review records verdict, note, observations, limitations and the decision"
+            },
+            {
+              "ok": true,
+              "name": "the monitoring prompt gives facts to weigh, not cut-offs, and forbids causal claims"
+            },
+            {
+              "ok": true,
+              "name": "a monitoring audit row persists the verdict and the notification action"
+            },
+            {
+              "ok": true,
+              "name": "scanned days accumulate in the run"
+            },
+            {
+              "ok": true,
+              "name": "an exact retry of the same advance changes nothing"
+            },
+            {
+              "ok": true,
+              "name": "a contiguous advance adds only the new days to the same run"
+            },
+            {
+              "ok": true,
+              "name": "an Alert is kept in the run with what it was about, for the next review"
+            },
+            {
+              "ok": true,
+              "name": "a discontinuous start begins a new run with nothing raised"
+            },
+            {
+              "ok": true,
+              "name": "a start before the run also begins a new run"
+            },
+            {
+              "ok": true,
+              "name": "reset clears the run"
+            },
+            {
+              "ok": true,
+              "name": "each monitoring review appends exactly one audit row"
+            },
+            {
+              "ok": true,
+              "name": "the row carries the Agent verdict and the final notification action"
+            },
+            {
+              "ok": true,
+              "name": "the coach's decision is the Alert decision, recorded as given"
+            },
+            {
+              "ok": true,
+              "name": "the facts the coach weighed travel with its decision"
+            },
+            {
+              "ok": true,
+              "name": "the next review is told which Alerts the run has already raised"
+            },
+            {
+              "ok": true,
+              "name": "a repeat is weighed on the level at the last Alert of its kind beside the level now"
+            },
+            {
+              "ok": true,
+              "name": "the facts reach the coach in the prompt, a condition with when it began"
+            },
+            {
+              "ok": true,
+              "name": "a condition's second review carries the coach's first one"
+            },
+            {
+              "ok": true,
+              "name": "the day the coach chose to look again is kept, and a later 'not again' clears it"
+            },
+            {
+              "ok": true,
+              "name": "the review's observations and limitations reach the result"
+            },
+            {
+              "ok": true,
+              "name": "the JSONL row persists the full structured review"
+            },
+            {
+              "ok": true,
+              "name": "the JSONL row persists the decision with the run it belongs to"
+            },
+            {
+              "ok": true,
+              "name": "a missing review persists a truthful non-empty fallback"
+            },
+            {
+              "ok": true,
+              "name": "and the unreviewed signal is shown, not hidden, marked as code's fallback"
+            },
+            {
+              "ok": true,
+              "name": "a legacy row without the structured fields still verifies"
+            },
+            {
+              "ok": true,
+              "name": "the browser advance returns and persists the run"
+            },
+            {
+              "ok": true,
+              "name": "retrying the identical HTTP advance does not inflate the run"
+            },
+            {
+              "ok": true,
+              "name": "the signals view reports the same run"
+            },
+            {
+              "ok": true,
+              "name": "a contiguous advance accumulates scanned days in the same run"
+            },
+            {
+              "ok": true,
+              "name": "a discontinuous start over HTTP begins a new run"
+            },
+            {
+              "ok": true,
+              "name": "saving with no draft is refused"
+            },
+            {
+              "ok": true,
+              "name": "the plan view shows the draft, against no saved plan yet"
+            },
+            {
+              "ok": true,
+              "name": "saving makes the draft version 1 and clears it"
+            },
+            {
+              "ok": true,
+              "name": "the profile shows the saved plan as the active plan"
+            },
+            {
+              "ok": true,
+              "name": "discarding removes the draft; both decisions are their own audit entries"
+            },
+            {
+              "ok": true,
+              "name": "a draft whose days have started cannot be saved"
+            },
+            {
+              "ok": true,
+              "name": "only save and discard are decisions"
+            },
+            {
+              "ok": true,
+              "name": "the memory view reads the workspace memory up to the date"
+            },
+            {
+              "ok": true,
+              "name": "a new chat forgets the conversation but keeps memory, plans and the run"
+            },
+            {
+              "ok": true,
+              "name": "only the workspace can be kept"
+            },
+            {
+              "ok": true,
+              "name": "Reset clears the run over HTTP"
+            },
+            {
+              "ok": true,
+              "name": "Reset clears the workspace: memory, draft and saved plans"
+            }
+          ]
+        },
+        {
+          "name": "[16] skipped - pass --live for one real conversation",
+          "checks": []
+        }
+      ]
+    },
+    {
+      "file": "test_hardening.py",
+      "title": "Request guard, participant ids, memory, audit hash chain, sensor boundary, guideline retrieval",
+      "exit": 0,
+      "passed": 45,
+      "failed": 0,
+      "groups": [
+        {
+          "name": "checks",
+          "checks": [
+            {
+              "ok": true,
+              "name": "an edited earlier audit entry breaks the hash chain"
+            },
+            {
+              "ok": true,
+              "name": "reset archives the audit log instead of deleting it"
+            },
+            {
+              "ok": true,
+              "name": "the cached sensor window is never mutated by the tool"
+            },
+            {
+              "ok": true,
+              "name": "implausible calorie readings are flagged, not read as effort"
+            },
+            {
+              "ok": true,
+              "name": "a session still running at the event time exposes no future totals"
+            },
+            {
+              "ok": true,
+              "name": "a turn reports what it newly processed, not the resent cached history"
+            },
+            {
+              "ok": true,
+              "name": "a failed turn's usage never spills into the next turn"
+            },
+            {
+              "ok": true,
+              "name": "a turn that finishes by itself past the request cap keeps its answer"
+            },
+            {
+              "ok": true,
+              "name": "a runaway turn is interrupted at the request cap and says why"
+            },
+            {
+              "ok": true,
+              "name": "interrupting a turn that has just ended is not an error"
+            },
+            {
+              "ok": true,
+              "name": "a failed turn is marked failed in the audit log, not dressed as a reply"
+            },
+            {
+              "ok": true,
+              "name": "a failed turn commits no memory"
+            },
+            {
+              "ok": true,
+              "name": "guideline search returns cited passages as knowledge cards, tagged in place"
+            },
+            {
+              "ok": true,
+              "name": "with no personal records read, citing guidance alone is fine"
+            },
+            {
+              "ok": true,
+              "name": "once their records were read, guidance alone cannot answer about this person"
+            },
+            {
+              "ok": true,
+              "name": "retrieved guidance is displayed with its source and citation"
+            },
+            {
+              "ok": true,
+              "name": "no match says so instead of inviting an answer from memory"
+            },
+            {
+              "ok": true,
+              "name": "a reviewed signal is recorded once and cannot be reviewed again in the run"
+            },
+            {
+              "ok": true,
+              "name": "each finished turn is kept for a reload or athlete switch"
+            },
+            {
+              "ok": true,
+              "name": "a period comparison names the measure and carries its unit"
+            },
+            {
+              "ok": true,
+              "name": "a suite that stops on an assertion is reported as a failure"
+            },
+            {
+              "ok": true,
+              "name": "a turn over its time budget is stopped, audited as failed, and the conversation restarts"
+            },
+            {
+              "ok": true,
+              "name": "an invented citation goes back to the same session with the exact error"
+            },
+            {
+              "ok": true,
+              "name": "a final answer still wrong after two corrections fails the turn and shows nothing"
+            },
+            {
+              "ok": true,
+              "name": "the free arm sends no schema, no context card, no citation policy and no cards"
+            },
+            {
+              "ok": true,
+              "name": "the unchecked arm asks for citations but accepts an invented one without correction"
+            },
+            {
+              "ok": true,
+              "name": "the free arm keeps the workspace, so its plans are drafts like the product's"
+            },
+            {
+              "ok": true,
+              "name": "borrowed logins skip expired tokens and keep Pi before ~/.codex"
+            },
+            {
+              "ok": true,
+              "name": "only the access token is borrowed, never the refresh token"
+            },
+            {
+              "ok": true,
+              "name": "a Pi account store readable by others is ignored"
+            },
+            {
+              "ok": true,
+              "name": "each participant gets their own thread in their own directory"
+            },
+            {
+              "ok": true,
+              "name": "after a restart the conversation, its messages and its clock come back"
+            },
+            {
+              "ok": true,
+              "name": "the next message resumes that same Codex thread"
+            },
+            {
+              "ok": true,
+              "name": "only the last turn keeps its trail, with timed steps, for a reload"
+            },
+            {
+              "ok": true,
+              "name": "a restored conversation still refuses to move time backwards"
+            },
+            {
+              "ok": true,
+              "name": "a conversation the next message cannot resume does not hold the clock"
+            },
+            {
+              "ok": true,
+              "name": "a changed tool catalogue starts a new thread and clears the stale transcript"
+            },
+            {
+              "ok": true,
+              "name": "the page gets a participant's conversation back after a restart"
+            },
+            {
+              "ok": true,
+              "name": "a conversation the next turn cannot resume is not shown as remembered"
+            },
+            {
+              "ok": true,
+              "name": "Reset forgets only that participant's conversation"
+            },
+            {
+              "ok": true,
+              "name": "state directories are created with their parents on first write"
+            },
+            {
+              "ok": true,
+              "name": "the reply language follows the latest message, decided in code"
+            },
+            {
+              "ok": true,
+              "name": "path-like participant ids are refused before touching files"
+            },
+            {
+              "ok": true,
+              "name": "cross-site requests and form posts are refused"
+            },
+            {
+              "ok": true,
+              "name": "a same-origin page request still works"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "test_behavior.py",
+      "title": "Behaviour contracts: exact audit records, failed runs, statistics wording",
+      "exit": 0,
+      "passed": 20,
+      "failed": 0,
+      "groups": [
+        {
+          "name": "checks",
+          "checks": [
+            {
+              "ok": true,
+              "name": "15 calendar days are distinct from 7 report records"
+            },
+            {
+              "ok": true,
+              "name": "no baseline claim without a comparison"
+            },
+            {
+              "ok": true,
+              "name": "descriptive data does not certify explanatory sufficiency"
+            },
+            {
+              "ok": true,
+              "name": "device-only duration is attributed to device"
+            },
+            {
+              "ok": true,
+              "name": "event density is not wearable or self-report completeness"
+            },
+            {
+              "ok": true,
+              "name": "no recorded sessions does not establish no exercise"
+            },
+            {
+              "ok": true,
+              "name": "comparison preserves reference sample and calendar counts"
+            },
+            {
+              "ok": true,
+              "name": "numeric evaluator accepts label-first and number-first answers"
+            },
+            {
+              "ok": true,
+              "name": "numeric evaluator rejects swapped counts and contradictory coverage"
+            },
+            {
+              "ok": true,
+              "name": "tool failures carry the error flag"
+            },
+            {
+              "ok": true,
+              "name": "exact tool parameters and untruncated results survive audit"
+            },
+            {
+              "ok": true,
+              "name": "public call IDs, exact prompt and terminal metadata survive audit"
+            },
+            {
+              "ok": true,
+              "name": "model drafts stay in the audit; only the checked final answer is the reply"
+            },
+            {
+              "ok": true,
+              "name": "failed terminal state is audited and cleared"
+            },
+            {
+              "ok": true,
+              "name": "a truncated model stream cannot be recorded as success"
+            },
+            {
+              "ok": true,
+              "name": "a plan draft is held to the activity and intensity vocabulary the page shows"
+            },
+            {
+              "ok": true,
+              "name": "planning context retains load units and readiness sample window"
+            },
+            {
+              "ok": true,
+              "name": "uncomputed readiness trend is not called flat"
+            },
+            {
+              "ok": true,
+              "name": "planning context does not certify normal recovery by default"
+            },
+            {
+              "ok": true,
+              "name": "read_record takes only an optional window length and end, each described"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "test_calculations.py",
+      "title": "Computed statistics, self-report wording, and the data fixes: young-record load, device sessions, repeated nights, WHO coverage",
+      "exit": 0,
+      "passed": 11,
+      "failed": 0,
+      "groups": [
+        {
+          "name": "checks",
+          "checks": [
+            {
+              "ok": true,
+              "name": "HTTP parameter returns exact coverage, deltas, units and recorded-sleep balance"
+            },
+            {
+              "ok": true,
+              "name": "HTTP headline states the direction of sleep shortfall explicitly"
+            },
+            {
+              "ok": true,
+              "name": "missing evidence is not a zero-valued comparison; overlapping dates are explicit"
+            },
+            {
+              "ok": true,
+              "name": "statistics are always computed by the tool; there is no option to skip them"
+            },
+            {
+              "ok": true,
+              "name": "a low soreness score is a sorer day and a high fatigue score a fresher one, as the data show"
+            },
+            {
+              "ok": true,
+              "name": "an answer left at the end of its scale for weeks is not read as a rating; a single one is"
+            },
+            {
+              "ok": true,
+              "name": "recovery history reaches the coach in words, with no scale to interpret"
+            },
+            {
+              "ok": true,
+              "name": "a young record averages its load over the weeks it covers, not over four"
+            },
+            {
+              "ok": true,
+              "name": "a device-detected session carries no invented load"
+            },
+            {
+              "ok": true,
+              "name": "a night repeated in the export is counted once"
+            },
+            {
+              "ok": true,
+              "name": "activity against WHO reports the coverage of the activity minutes it uses"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "test_asking.py",
+      "title": "Asking before planning: a question waits for the person, no plan rides on it, warning symptoms stop",
+      "exit": 0,
+      "passed": 5,
+      "failed": 0,
+      "groups": [
+        {
+          "name": "checks",
+          "checks": [
+            {
+              "ok": true,
+              "name": "no context tool or gate: the catalogue and the instructions ask the coach to find out, in its own words"
+            },
+            {
+              "ok": true,
+              "name": "HTTP/SSE: a turn that asks waits for the person and a draft written with the question is undone; the answer after it writes the draft the page shows"
+            },
+            {
+              "ok": true,
+              "name": "reading historical memory does not mutate the active conversation clock"
+            },
+            {
+              "ok": true,
+              "name": "a monitoring note cannot change the plan draft"
+            },
+            {
+              "ok": true,
+              "name": "a warning symptom ends the turn as a recorded safety stop, with no plan and no lock"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "test_evidence.py",
+      "title": "Checked final answers: citations from this turn, corrections, missing records",
+      "exit": 0,
+      "passed": 6,
+      "failed": 0,
+      "groups": [
+        {
+          "name": "checks",
+          "checks": [
+            {
+              "ok": true,
+              "name": "an invented citation returns to the same session and the corrected answer is shown"
+            },
+            {
+              "ok": true,
+              "name": "raw drafts stay audit-only; the page shows only the checked final answer"
+            },
+            {
+              "ok": true,
+              "name": "cited sources are listed in citation order, linkable by their full ID"
+            },
+            {
+              "ok": true,
+              "name": "invented, stale and guidance-only citations, unknown outcomes, missing reasons and extra fields are returned"
+            },
+            {
+              "ok": true,
+              "name": "an answer that reads no records needs no citation"
+            },
+            {
+              "ok": true,
+              "name": "removing records leaves no recovery answers to read, rather than normal recovery"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "test_summary.py",
+      "title": "Delivery over HTTP/SSE: tables from tools, drafts kept in the audit, the plan draft table",
+      "exit": 0,
+      "passed": 4,
+      "failed": 0,
+      "groups": [
+        {
+          "name": "checks",
+          "checks": [
+            {
+              "ok": true,
+              "name": "reset is rejected while the same participant has a running turn"
+            },
+            {
+              "ok": true,
+              "name": "HTTP/SSE shows exact tool values in tables and the checked final answer as the reply"
+            },
+            {
+              "ok": true,
+              "name": "model drafts are audit-only, not streamed to the UI"
+            },
+            {
+              "ok": true,
+              "name": "the plan draft table comes from the workspace change and marks what changed; no change means no displayed schedule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "test_codex_request.py",
+      "title": "What the model receives through Codex: only the coach instructions, tools and messages",
+      "exit": 0,
+      "passed": 16,
+      "failed": 0,
+      "groups": [
+        {
+          "name": "checks",
+          "checks": [
+            {
+              "ok": true,
+              "name": "the turn ends with a terminal event even when the provider refuses"
+            },
+            {
+              "ok": true,
+              "name": "Codex sends exactly one model request for the turn"
+            },
+            {
+              "ok": true,
+              "name": "the only messages are the coach instructions, Codex's skill list and the user's message"
+            },
+            {
+              "ok": true,
+              "name": "the skill list holds exactly the coach's skills, from this conversation's own copy"
+            },
+            {
+              "ok": true,
+              "name": "the request carries no top-level instructions or tools of its own"
+            },
+            {
+              "ok": true,
+              "name": "the final answer's shape is enforced by the model API, not asked for in prose"
+            },
+            {
+              "ok": true,
+              "name": "the only tool the model sees is exec, the gpt-5.6 tool host"
+            },
+            {
+              "ok": true,
+              "name": "exec declares the coach tools, Codex's shell and apply_patch, nothing else"
+            },
+            {
+              "ok": true,
+              "name": "the real date is absent: only the simulation clock tells the model what day it is"
+            },
+            {
+              "ok": true,
+              "name": "no environment, permissions, bundled or personal skills, multi-agent text or home path is added"
+            },
+            {
+              "ok": true,
+              "name": "the shell can read the skills and their references"
+            },
+            {
+              "ok": true,
+              "name": "it cannot read raw records, code, the project or login files"
+            },
+            {
+              "ok": true,
+              "name": "it can write its workspace: memory and the plan draft"
+            },
+            {
+              "ok": true,
+              "name": "it cannot write saved plans, the skills, the rest of its folder or the project"
+            },
+            {
+              "ok": true,
+              "name": "the network probe is installed and executable inside the sandbox"
+            },
+            {
+              "ok": true,
+              "name": "it has no network"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "name": "[1] no semantic output may see the future",
+      "checks": [
+        {
+          "ok": true,
+          "name": "read_record, snapshot and inspect at day N equal a record ending at N"
+        },
+        {
+          "ok": true,
+          "name": "planning context at day N equals a record ending at N"
+        }
+      ]
+    },
+    {
+      "name": "[2] one observation contract, with units, provenance and coverage",
+      "checks": [
+        {
+          "ok": true,
+          "name": "28 observations all carry the eight contract fields"
+        },
+        {
+          "ok": true,
+          "name": "every numeric evidence item has a non-empty unit and provenance"
+        },
+        {
+          "ok": true,
+          "name": "every observation window is JSON-serialisable and well-formed"
+        },
+        {
+          "ok": true,
+          "name": "status and sufficiency never disagree"
+        },
+        {
+          "ok": true,
+          "name": "a whole snapshot serialises without a custom encoder"
+        }
+      ]
+    },
+    {
+      "name": "[3] missing data is insufficient, never normal",
+      "checks": [
+        {
+          "ok": true,
+          "name": "a six-day-old record returns insufficient somewhere, not all-normal"
+        },
+        {
+          "ok": true,
+          "name": "no domain of a thin record is called within_baseline off no data"
+        },
+        {
+          "ok": true,
+          "name": "a domain with no records in the window is insufficient, not summarised"
+        }
+      ]
+    },
+    {
+      "name": "[4] period comparison uses exactly the requested windows",
+      "checks": [
+        {
+          "ok": true,
+          "name": "the main observation covers exactly the requested window"
+        },
+        {
+          "ok": true,
+          "name": "its counts are computed over that window, not cumulatively"
+        },
+        {
+          "ok": true,
+          "name": "the comparison names the requested reference window"
+        },
+        {
+          "ok": true,
+          "name": "and computes the reference over that window too"
+        },
+        {
+          "ok": true,
+          "name": "swapping the two windows swaps the comparison"
+        }
+      ]
+    },
+    {
+      "name": "[5] the Agent plans; deterministic code supplies facts, never a verdict",
+      "checks": [
+        {
+          "ok": true,
+          "name": "planning context is decision-ready and contains no generated schedule"
+        },
+        {
+          "ok": true,
+          "name": "planning context includes raw-stream movement and wear coverage"
+        },
+        {
+          "ok": true,
+          "name": "planning context names what the record cannot know"
+        },
+        {
+          "ok": true,
+          "name": "a logged injury is said, not enforced"
+        },
+        {
+          "ok": true,
+          "name": "no plan validator remains: nothing in code judges the Agent's plan"
+        },
+        {
+          "ok": true,
+          "name": "a well-formed final answer with no workspace change is accepted as written"
+        },
+        {
+          "ok": true,
+          "name": "the final answer carries no plan: a plan lives in the workspace draft"
+        },
+        {
+          "ok": true,
+          "name": "a resting heart rate position reads correctly at the ends and below the middle"
+        },
+        {
+          "ok": true,
+          "name": "weeks meeting the WHO floor is a count of weeks, not a share"
+        },
+        {
+          "ok": true,
+          "name": "the last injury and a joint's last injury keep their own dates"
+        }
+      ]
+    },
+    {
+      "name": "[6] the simulation clock seals the future",
+      "checks": [
+        {
+          "ok": true,
+          "name": "a semantic tool refuses data after the simulation date"
+        },
+        {
+          "ok": true,
+          "name": "the high-frequency tool also refuses the simulated future"
+        },
+        {
+          "ok": true,
+          "name": "read_record in a review clamps a later end to the signal date"
+        },
+        {
+          "ok": true,
+          "name": "the review event reports the effective bound as_of and the requested one"
+        },
+        {
+          "ok": true,
+          "name": "a normal turn still refuses a future date rather than clamping"
+        },
+        {
+          "ok": true,
+          "name": "an intraday review cannot read sensor samples after the event time"
+        },
+        {
+          "ok": true,
+          "name": "an active simulation cannot move backwards without a reset"
+        },
+        {
+          "ok": true,
+          "name": "monitor replay never advances beyond the simulation clock"
+        }
+      ]
+    },
+    {
+      "name": "[7] enforced in code, not asked of the model",
+      "checks": [
+        {
+          "ok": true,
+          "name": "a tool in the catalogue is allowed"
+        },
+        {
+          "ok": true,
+          "name": "Bash is denied"
+        },
+        {
+          "ok": true,
+          "name": "Read is denied"
+        },
+        {
+          "ok": true,
+          "name": "WebFetch is denied"
+        },
+        {
+          "ok": true,
+          "name": "exec is denied"
+        },
+        {
+          "ok": true,
+          "name": "rm_rf is denied"
+        },
+        {
+          "ok": true,
+          "name": "get_coaching_snapshot is denied"
+        },
+        {
+          "ok": true,
+          "name": "mcp__coach__read_record is denied"
+        },
+        {
+          "ok": true,
+          "name": "the removed plan validator is not a tool the gate allows"
+        },
+        {
+          "ok": true,
+          "name": "any Codex request other than a coach tool call is declined"
+        },
+        {
+          "ok": true,
+          "name": "a tool call outside the catalogue returns a failed result, not a run"
+        },
+        {
+          "ok": true,
+          "name": "the model is offered exactly the coach tools"
+        },
+        {
+          "ok": true,
+          "name": "Codex's own context blocks, bundled skills, agents and extra tools are switched off"
+        },
+        {
+          "ok": true,
+          "name": "the shell reads the skills folder and writes only the workspace, with named denials"
+        },
+        {
+          "ok": true,
+          "name": "without a workspace the shell writes nothing"
+        },
+        {
+          "ok": true,
+          "name": "there is no conversation-level latch that could lock planning by mistake"
+        },
+        {
+          "ok": true,
+          "name": "memory survives a new session, staged for the agent to read"
+        },
+        {
+          "ok": true,
+          "name": "remembered prompt injection cannot expand tool permission"
+        },
+        {
+          "ok": true,
+          "name": "the system specification treats the memory file as untrusted data"
+        },
+        {
+          "ok": true,
+          "name": "the system specification treats retrieved text as data, not authority"
+        },
+        {
+          "ok": true,
+          "name": "an entry carries all six fields the brief names"
+        },
+        {
+          "ok": true,
+          "name": "the log round-trips"
+        },
+        {
+          "ok": true,
+          "name": "a non-mutating recommendation needs no pretend approval"
+        }
+      ]
+    },
+    {
+      "name": "[8] the signal light: reproducible detection; the coach decides each Alert",
+      "checks": [
+        {
+          "ok": true,
+          "name": "layer one runs over every participant without raising"
+        },
+        {
+          "ok": true,
+          "name": "a sustained condition is passed on once, on the day it starts"
+        },
+        {
+          "ok": true,
+          "name": "no signal is phrased as a prediction"
+        },
+        {
+          "ok": true,
+          "name": "every signal reproduces from the record truncated to its day"
+        },
+        {
+          "ok": true,
+          "name": "time simulation stops on or after its start at a real signal day"
+        },
+        {
+          "ok": true,
+          "name": "what is due reproduces from history ending on that day"
+        },
+        {
+          "ok": true,
+          "name": "a condition already holding when the run starts is due at once, as new"
+        },
+        {
+          "ok": true,
+          "name": "and it carries when it began and how it looked then"
+        },
+        {
+          "ok": true,
+          "name": "a reviewed condition waits for the day the coach chose, then comes back"
+        },
+        {
+          "ok": true,
+          "name": "and with no day chosen it stays on the page without coming back"
+        },
+        {
+          "ok": true,
+          "name": "every one-off event is due when it happens, even the day after another"
+        },
+        {
+          "ok": true,
+          "name": "time simulation at the dataset end, with everything reviewed, reports nothing due"
+        },
+        {
+          "ok": true,
+          "name": "a daily aggregate is available only at the explicit end-of-day boundary"
+        },
+        {
+          "ok": true,
+          "name": "all seven detectors expose one chart contract with thresholds and units"
+        },
+        {
+          "ok": true,
+          "name": "monitor charts are sealed at their requested simulation date"
+        },
+        {
+          "ok": true,
+          "name": "every chart marker comes from the same detector that raises the signal"
+        },
+        {
+          "ok": true,
+          "name": "an intraday chart stops at the exact simulated event boundary"
+        },
+        {
+          "ok": true,
+          "name": "raw Fitbit streams are indexed and combined without a daily-only proxy"
+        },
+        {
+          "ok": true,
+          "name": "persistence counts consecutive prior days, bounded by the record"
+        },
+        {
+          "ok": true,
+          "name": "the facts the coach weighs are severity, days running and coverage, and no decision"
+        },
+        {
+          "ok": true,
+          "name": "no notification policy remains in code"
+        }
+      ]
+    },
+    {
+      "name": "[9] absolute standards and threshold provenance",
+      "checks": [
+        {
+          "ok": true,
+          "name": "an under-active person is measured against WHO, not themselves"
+        },
+        {
+          "ok": true,
+          "name": "that shows up as below_guideline in the snapshot"
+        },
+        {
+          "ok": true,
+          "name": "under-activity reaches the Agent as decision context, not a code-made plan"
+        },
+        {
+          "ok": true,
+          "name": "every threshold declares a source and an evidence class"
+        },
+        {
+          "ok": true,
+          "name": "the registry holds every branching number, honestly classed"
+        },
+        {
+          "ok": true,
+          "name": "device wear and both ACWR windows are honestly labelled project heuristics"
+        },
+        {
+          "ok": true,
+          "name": "every intraday detector branch value is registered"
+        },
+        {
+          "ok": true,
+          "name": "monitor and realtime branch on the registry, not shadow constants"
+        },
+        {
+          "ok": true,
+          "name": "the low-step cutoff declares itself a proxy for rest, not proof"
+        },
+        {
+          "ok": true,
+          "name": "the remaining monitor branch values are registered honest heuristics"
+        },
+        {
+          "ok": true,
+          "name": "the whole monitor reads the registry"
+        }
+      ]
+    },
+    {
+      "name": "[10] the reachable surface is small, and bound to one person",
+      "checks": [
+        {
+          "ok": true,
+          "name": "the agent exposes the record read, the sensor window, guideline search and the review"
+        },
+        {
+          "ok": true,
+          "name": "two read the record, one searches guidelines, one is control; memory and plans are files"
+        },
+        {
+          "ok": true,
+          "name": "no tool accepts a participant identifier"
+        },
+        {
+          "ok": true,
+          "name": "two agents for two people expose the same tools"
+        },
+        {
+          "ok": true,
+          "name": "but each answers only from the person it was built for"
+        },
+        {
+          "ok": true,
+          "name": "the read-only tools require no participant argument and no time is faked"
+        },
+        {
+          "ok": true,
+          "name": "skills are instruction files only: nothing in them runs, and the old ASKABLE path is gone"
+        }
+      ]
+    },
+    {
+      "name": "[11] the HTTP surface serves the new views (offline)",
+      "checks": [
+        {
+          "ok": true,
+          "name": "the participant list covers all sixteen"
+        },
+        {
+          "ok": true,
+          "name": "profile state seals the future and reports WHO adequacy"
+        },
+        {
+          "ok": true,
+          "name": "the snapshot view carries top findings and a data-quality read"
+        },
+        {
+          "ok": true,
+          "name": "the inspect view returns a period and its comparison"
+        },
+        {
+          "ok": true,
+          "name": "the server no longer exposes a skills route"
+        },
+        {
+          "ok": true,
+          "name": "the retired deterministic plan generator is gone"
+        },
+        {
+          "ok": true,
+          "name": "ordinary planning has no approval endpoint or approval controls"
+        },
+        {
+          "ok": true,
+          "name": "the time bar owns the background simulator, and the page says an Alert is not a diagnosis"
+        },
+        {
+          "ok": true,
+          "name": "the Monitor tab exposes a real metric timeline rather than text cards only"
+        },
+        {
+          "ok": true,
+          "name": "the monitoring replay plays back every recorded review with what the coach was handed and read"
+        },
+        {
+          "ok": true,
+          "name": "the planning skill makes the Agent the planner, with no validator to satisfy"
+        },
+        {
+          "ok": true,
+          "name": "skills install as Codex-format folders with their shared references"
+        },
+        {
+          "ok": true,
+          "name": "the rules for asking the person are written into the skills that need them, not left to a read"
+        },
+        {
+          "ok": true,
+          "name": "the system prompt carries the rules of every turn, not each task's procedure"
+        },
+        {
+          "ok": true,
+          "name": "wide tables scroll inside their container, not the page"
+        },
+        {
+          "ok": true,
+          "name": "the overflow is not masked with body overflow-x hidden"
+        },
+        {
+          "ok": true,
+          "name": "each participant is offered by what it shows, not by an id and a count"
+        },
+        {
+          "ok": true,
+          "name": "the clock date input can shrink inside the narrow-viewport grid"
+        }
+      ]
+    },
+    {
+      "name": "[12] richer data: reconciliation, device evidence, overview, codes",
+      "checks": [
+        {
+          "ok": true,
+          "name": "a self-report and its overlapping Fitbit entry merge to one session"
+        },
+        {
+          "ok": true,
+          "name": "the merged session carries the device evidence, not a second count"
+        },
+        {
+          "ok": true,
+          "name": "a distinct same-day session survives instead of being discarded"
+        },
+        {
+          "ok": true,
+          "name": "a device-only session keeps its own provenance"
+        },
+        {
+          "ok": true,
+          "name": "training inspection exposes device heart rate, steps and calories"
+        },
+        {
+          "ok": true,
+          "name": "physiology inspection exposes daily heart-rate-zone minutes"
+        },
+        {
+          "ok": true,
+          "name": "the physiology domain is in the snapshot with device evidence"
+        },
+        {
+          "ok": true,
+          "name": "recovery overview considers strain beyond readiness and resting HR"
+        },
+        {
+          "ok": true,
+          "name": "lifestyle overview considers intake beyond weight"
+        },
+        {
+          "ok": true,
+          "name": "the overview validates missing, text-placeholder and out-of-range values"
+        },
+        {
+          "ok": true,
+          "name": "a missing max heart rate is a warning, not a value"
+        },
+        {
+          "ok": true,
+          "name": "a valid max heart rate is stored as context"
+        },
+        {
+          "ok": true,
+          "name": "overview quality warnings surface in the data-quality observation"
+        },
+        {
+          "ok": true,
+          "name": "participant metadata never becomes a plan constraint"
+        },
+        {
+          "ok": true,
+          "name": "soreness-area SNOMED codes are preserved as raw codes, not a count"
+        },
+        {
+          "ok": true,
+          "name": "and inspection surfaces the codes with an unmapped-code limitation"
+        },
+        {
+          "ok": true,
+          "name": "coverage is domain-specific: training density is below any-record density"
+        },
+        {
+          "ok": true,
+          "name": "an inspect observation reports its own domain's coverage"
+        }
+      ]
+    },
+    {
+      "name": "[13] one read returns the whole record, against the window before",
+      "checks": [
+        {
+          "ok": true,
+          "name": "one call returns every domain over the window and the one just before"
+        },
+        {
+          "ok": true,
+          "name": "coverage counts each domain's own recorded days"
+        },
+        {
+          "ok": true,
+          "name": "changes are this window minus the previous one, computed in code"
+        },
+        {
+          "ok": true,
+          "name": "the state at the window's end carries the planning facts, not the full injury list"
+        },
+        {
+          "ok": true,
+          "name": "a load ratio over too light a month is withheld everywhere the coach reads it, with the reason"
+        },
+        {
+          "ok": true,
+          "name": "where the record starts there is no previous window to compare, not an invented one"
+        }
+      ]
+    },
+    {
+      "name": "[14] the transcript is public, and the workspace is checked",
+      "checks": [
+        {
+          "ok": true,
+          "name": "tool calls become public events"
+        },
+        {
+          "ok": true,
+          "name": "Codex reasoning is dropped at the boundary, never kept"
+        },
+        {
+          "ok": true,
+          "name": "an assistant draft is kept for the audit, not turned into a transcript event"
+        },
+        {
+          "ok": true,
+          "name": "a shell command is kept with its result for the stream and the audit"
+        },
+        {
+          "ok": true,
+          "name": "the trace shows a command as written, without the login shell or the per-turn directory"
+        },
+        {
+          "ok": true,
+          "name": "an apply_patch file change is kept with its paths for the stream and the audit"
+        },
+        {
+          "ok": true,
+          "name": "any other Codex item is flagged as outside the coach tools"
+        },
+        {
+          "ok": true,
+          "name": "Codex compacting a long conversation is its own bookkeeping, not a refused tool"
+        },
+        {
+          "ok": true,
+          "name": "a tool result becomes a summarised event tied to its tool"
+        },
+        {
+          "ok": true,
+          "name": "a record read is summarised by its windows and findings, not raw JSON"
+        },
+        {
+          "ok": true,
+          "name": "a shell command is shown as the agent wrote it, unescaped from Codex's wrapper"
+        },
+        {
+          "ok": true,
+          "name": "workflow states derive from which tool ran"
+        },
+        {
+          "ok": true,
+          "name": "opening the planning skill is reading a skill; only writing the draft is drafting the plan"
+        },
+        {
+          "ok": true,
+          "name": "reading or editing the workspace reads as using the workspace"
+        },
+        {
+          "ok": true,
+          "name": "semantic reads during a bound review read as investigating"
+        },
+        {
+          "ok": true,
+          "name": "a public assistant message reads as responding"
+        },
+        {
+          "ok": true,
+          "name": "audit source lists semantic reads; memory and draft changes stay in the action trace"
+        },
+        {
+          "ok": true,
+          "name": "the turn stages the workspace into the agent's working folder"
+        },
+        {
+          "ok": true,
+          "name": "a draft written in an answer is committed, reported and shown as a table"
+        },
+        {
+          "ok": true,
+          "name": "a draft commits nothing on its own: the turn records no human decision"
+        },
+        {
+          "ok": true,
+          "name": "a revision is committed and its table marks what changed"
+        },
+        {
+          "ok": true,
+          "name": "a draft written while still asking is undone and returned for correction"
+        },
+        {
+          "ok": true,
+          "name": "a draft the page cannot show is returned with what to fix"
+        },
+        {
+          "ok": true,
+          "name": "a memory entry that quotes the person is committed and logged"
+        },
+        {
+          "ok": true,
+          "name": "an entry quoting words the person never said fails the turn and is never committed"
+        },
+        {
+          "ok": true,
+          "name": "a new entry must carry today's simulation date"
+        },
+        {
+          "ok": true,
+          "name": "a monitoring turn cannot change memory: it is restored and the agent told"
+        },
+        {
+          "ok": true,
+          "name": "a file outside the workspace layout is removed, not committed"
+        },
+        {
+          "ok": true,
+          "name": "a failed turn commits nothing to the workspace"
+        },
+        {
+          "ok": true,
+          "name": "memory and plans become citable context cards"
+        },
+        {
+          "ok": true,
+          "name": "the prompt names the workspace cards by file rather than repeating their content"
+        },
+        {
+          "ok": true,
+          "name": "only saving makes a draft the plan: version 1, draft cleared"
+        },
+        {
+          "ok": true,
+          "name": "a saved version is read-only: a change is restored and reported"
+        },
+        {
+          "ok": true,
+          "name": "a draft whose first day has passed is stale and cannot be saved"
+        },
+        {
+          "ok": true,
+          "name": "saving a stale draft is refused"
+        },
+        {
+          "ok": true,
+          "name": "a draft is compared only with the saved days it would replace"
+        },
+        {
+          "ok": true,
+          "name": "a conversation at an earlier date sees only memory written by then"
+        },
+        {
+          "ok": true,
+          "name": "committing that conversation keeps the later entries on disk"
+        },
+        {
+          "ok": true,
+          "name": "the audit log with workspace entries still verifies"
+        },
+        {
+          "ok": true,
+          "name": "the retired approval vocabulary is no longer a legal decision"
+        }
+      ]
+    },
+    {
+      "name": "[15] monitoring audit, structured review, the coach's Alert decision",
+      "checks": [
+        {
+          "ok": true,
+          "name": "a review without observations and limitations is rejected"
+        },
+        {
+          "ok": true,
+          "name": "an unknown verdict is rejected by the handler, not just the schema"
+        },
+        {
+          "ok": true,
+          "name": "an empty note is rejected by the handler"
+        },
+        {
+          "ok": true,
+          "name": "a string where a list of observations belongs is rejected"
+        },
+        {
+          "ok": true,
+          "name": "a review without a yes-or-no Alert decision and its reason is rejected"
+        },
+        {
+          "ok": true,
+          "name": "a grounded review records verdict, note, observations, limitations and the decision"
+        },
+        {
+          "ok": true,
+          "name": "the monitoring prompt gives facts to weigh, not cut-offs, and forbids causal claims"
+        },
+        {
+          "ok": true,
+          "name": "a monitoring audit row persists the verdict and the notification action"
+        },
+        {
+          "ok": true,
+          "name": "scanned days accumulate in the run"
+        },
+        {
+          "ok": true,
+          "name": "an exact retry of the same advance changes nothing"
+        },
+        {
+          "ok": true,
+          "name": "a contiguous advance adds only the new days to the same run"
+        },
+        {
+          "ok": true,
+          "name": "an Alert is kept in the run with what it was about, for the next review"
+        },
+        {
+          "ok": true,
+          "name": "a discontinuous start begins a new run with nothing raised"
+        },
+        {
+          "ok": true,
+          "name": "a start before the run also begins a new run"
+        },
+        {
+          "ok": true,
+          "name": "reset clears the run"
+        },
+        {
+          "ok": true,
+          "name": "each monitoring review appends exactly one audit row"
+        },
+        {
+          "ok": true,
+          "name": "the row carries the Agent verdict and the final notification action"
+        },
+        {
+          "ok": true,
+          "name": "the coach's decision is the Alert decision, recorded as given"
+        },
+        {
+          "ok": true,
+          "name": "the facts the coach weighed travel with its decision"
+        },
+        {
+          "ok": true,
+          "name": "the next review is told which Alerts the run has already raised"
+        },
+        {
+          "ok": true,
+          "name": "a repeat is weighed on the level at the last Alert of its kind beside the level now"
+        },
+        {
+          "ok": true,
+          "name": "the facts reach the coach in the prompt, a condition with when it began"
+        },
+        {
+          "ok": true,
+          "name": "a condition's second review carries the coach's first one"
+        },
+        {
+          "ok": true,
+          "name": "the day the coach chose to look again is kept, and a later 'not again' clears it"
+        },
+        {
+          "ok": true,
+          "name": "the review's observations and limitations reach the result"
+        },
+        {
+          "ok": true,
+          "name": "the JSONL row persists the full structured review"
+        },
+        {
+          "ok": true,
+          "name": "the JSONL row persists the decision with the run it belongs to"
+        },
+        {
+          "ok": true,
+          "name": "a missing review persists a truthful non-empty fallback"
+        },
+        {
+          "ok": true,
+          "name": "and the unreviewed signal is shown, not hidden, marked as code's fallback"
+        },
+        {
+          "ok": true,
+          "name": "a legacy row without the structured fields still verifies"
+        },
+        {
+          "ok": true,
+          "name": "the browser advance returns and persists the run"
+        },
+        {
+          "ok": true,
+          "name": "retrying the identical HTTP advance does not inflate the run"
+        },
+        {
+          "ok": true,
+          "name": "the signals view reports the same run"
+        },
+        {
+          "ok": true,
+          "name": "a contiguous advance accumulates scanned days in the same run"
+        },
+        {
+          "ok": true,
+          "name": "a discontinuous start over HTTP begins a new run"
+        },
+        {
+          "ok": true,
+          "name": "saving with no draft is refused"
+        },
+        {
+          "ok": true,
+          "name": "the plan view shows the draft, against no saved plan yet"
+        },
+        {
+          "ok": true,
+          "name": "saving makes the draft version 1 and clears it"
+        },
+        {
+          "ok": true,
+          "name": "the profile shows the saved plan as the active plan"
+        },
+        {
+          "ok": true,
+          "name": "discarding removes the draft; both decisions are their own audit entries"
+        },
+        {
+          "ok": true,
+          "name": "a draft whose days have started cannot be saved"
+        },
+        {
+          "ok": true,
+          "name": "only save and discard are decisions"
+        },
+        {
+          "ok": true,
+          "name": "the memory view reads the workspace memory up to the date"
+        },
+        {
+          "ok": true,
+          "name": "a new chat forgets the conversation but keeps memory, plans and the run"
+        },
+        {
+          "ok": true,
+          "name": "only the workspace can be kept"
+        },
+        {
+          "ok": true,
+          "name": "Reset clears the run over HTTP"
+        },
+        {
+          "ok": true,
+          "name": "Reset clears the workspace: memory, draft and saved plans"
+        }
+      ]
+    },
+    {
+      "name": "[16] skipped - pass --live for one real conversation",
+      "checks": []
+    },
+    {
+      "name": "checks",
+      "checks": [
+        {
+          "ok": true,
+          "name": "an edited earlier audit entry breaks the hash chain"
+        },
+        {
+          "ok": true,
+          "name": "reset archives the audit log instead of deleting it"
+        },
+        {
+          "ok": true,
+          "name": "the cached sensor window is never mutated by the tool"
+        },
+        {
+          "ok": true,
+          "name": "implausible calorie readings are flagged, not read as effort"
+        },
+        {
+          "ok": true,
+          "name": "a session still running at the event time exposes no future totals"
+        },
+        {
+          "ok": true,
+          "name": "a turn reports what it newly processed, not the resent cached history"
+        },
+        {
+          "ok": true,
+          "name": "a failed turn's usage never spills into the next turn"
+        },
+        {
+          "ok": true,
+          "name": "a turn that finishes by itself past the request cap keeps its answer"
+        },
+        {
+          "ok": true,
+          "name": "a runaway turn is interrupted at the request cap and says why"
+        },
+        {
+          "ok": true,
+          "name": "interrupting a turn that has just ended is not an error"
+        },
+        {
+          "ok": true,
+          "name": "a failed turn is marked failed in the audit log, not dressed as a reply"
+        },
+        {
+          "ok": true,
+          "name": "a failed turn commits no memory"
+        },
+        {
+          "ok": true,
+          "name": "guideline search returns cited passages as knowledge cards, tagged in place"
+        },
+        {
+          "ok": true,
+          "name": "with no personal records read, citing guidance alone is fine"
+        },
+        {
+          "ok": true,
+          "name": "once their records were read, guidance alone cannot answer about this person"
+        },
+        {
+          "ok": true,
+          "name": "retrieved guidance is displayed with its source and citation"
+        },
+        {
+          "ok": true,
+          "name": "no match says so instead of inviting an answer from memory"
+        },
+        {
+          "ok": true,
+          "name": "a reviewed signal is recorded once and cannot be reviewed again in the run"
+        },
+        {
+          "ok": true,
+          "name": "each finished turn is kept for a reload or athlete switch"
+        },
+        {
+          "ok": true,
+          "name": "a period comparison names the measure and carries its unit"
+        },
+        {
+          "ok": true,
+          "name": "a suite that stops on an assertion is reported as a failure"
+        },
+        {
+          "ok": true,
+          "name": "a turn over its time budget is stopped, audited as failed, and the conversation restarts"
+        },
+        {
+          "ok": true,
+          "name": "an invented citation goes back to the same session with the exact error"
+        },
+        {
+          "ok": true,
+          "name": "a final answer still wrong after two corrections fails the turn and shows nothing"
+        },
+        {
+          "ok": true,
+          "name": "the free arm sends no schema, no context card, no citation policy and no cards"
+        },
+        {
+          "ok": true,
+          "name": "the unchecked arm asks for citations but accepts an invented one without correction"
+        },
+        {
+          "ok": true,
+          "name": "the free arm keeps the workspace, so its plans are drafts like the product's"
+        },
+        {
+          "ok": true,
+          "name": "borrowed logins skip expired tokens and keep Pi before ~/.codex"
+        },
+        {
+          "ok": true,
+          "name": "only the access token is borrowed, never the refresh token"
+        },
+        {
+          "ok": true,
+          "name": "a Pi account store readable by others is ignored"
+        },
+        {
+          "ok": true,
+          "name": "each participant gets their own thread in their own directory"
+        },
+        {
+          "ok": true,
+          "name": "after a restart the conversation, its messages and its clock come back"
+        },
+        {
+          "ok": true,
+          "name": "the next message resumes that same Codex thread"
+        },
+        {
+          "ok": true,
+          "name": "only the last turn keeps its trail, with timed steps, for a reload"
+        },
+        {
+          "ok": true,
+          "name": "a restored conversation still refuses to move time backwards"
+        },
+        {
+          "ok": true,
+          "name": "a conversation the next message cannot resume does not hold the clock"
+        },
+        {
+          "ok": true,
+          "name": "a changed tool catalogue starts a new thread and clears the stale transcript"
+        },
+        {
+          "ok": true,
+          "name": "the page gets a participant's conversation back after a restart"
+        },
+        {
+          "ok": true,
+          "name": "a conversation the next turn cannot resume is not shown as remembered"
+        },
+        {
+          "ok": true,
+          "name": "Reset forgets only that participant's conversation"
+        },
+        {
+          "ok": true,
+          "name": "state directories are created with their parents on first write"
+        },
+        {
+          "ok": true,
+          "name": "the reply language follows the latest message, decided in code"
+        },
+        {
+          "ok": true,
+          "name": "path-like participant ids are refused before touching files"
+        },
+        {
+          "ok": true,
+          "name": "cross-site requests and form posts are refused"
+        },
+        {
+          "ok": true,
+          "name": "a same-origin page request still works"
+        }
+      ]
+    },
+    {
+      "name": "checks",
+      "checks": [
+        {
+          "ok": true,
+          "name": "15 calendar days are distinct from 7 report records"
+        },
+        {
+          "ok": true,
+          "name": "no baseline claim without a comparison"
+        },
+        {
+          "ok": true,
+          "name": "descriptive data does not certify explanatory sufficiency"
+        },
+        {
+          "ok": true,
+          "name": "device-only duration is attributed to device"
+        },
+        {
+          "ok": true,
+          "name": "event density is not wearable or self-report completeness"
+        },
+        {
+          "ok": true,
+          "name": "no recorded sessions does not establish no exercise"
+        },
+        {
+          "ok": true,
+          "name": "comparison preserves reference sample and calendar counts"
+        },
+        {
+          "ok": true,
+          "name": "numeric evaluator accepts label-first and number-first answers"
+        },
+        {
+          "ok": true,
+          "name": "numeric evaluator rejects swapped counts and contradictory coverage"
+        },
+        {
+          "ok": true,
+          "name": "tool failures carry the error flag"
+        },
+        {
+          "ok": true,
+          "name": "exact tool parameters and untruncated results survive audit"
+        },
+        {
+          "ok": true,
+          "name": "public call IDs, exact prompt and terminal metadata survive audit"
+        },
+        {
+          "ok": true,
+          "name": "model drafts stay in the audit; only the checked final answer is the reply"
+        },
+        {
+          "ok": true,
+          "name": "failed terminal state is audited and cleared"
+        },
+        {
+          "ok": true,
+          "name": "a truncated model stream cannot be recorded as success"
+        },
+        {
+          "ok": true,
+          "name": "a plan draft is held to the activity and intensity vocabulary the page shows"
+        },
+        {
+          "ok": true,
+          "name": "planning context retains load units and readiness sample window"
+        },
+        {
+          "ok": true,
+          "name": "uncomputed readiness trend is not called flat"
+        },
+        {
+          "ok": true,
+          "name": "planning context does not certify normal recovery by default"
+        },
+        {
+          "ok": true,
+          "name": "read_record takes only an optional window length and end, each described"
+        }
+      ]
+    },
+    {
+      "name": "checks",
+      "checks": [
+        {
+          "ok": true,
+          "name": "HTTP parameter returns exact coverage, deltas, units and recorded-sleep balance"
+        },
+        {
+          "ok": true,
+          "name": "HTTP headline states the direction of sleep shortfall explicitly"
+        },
+        {
+          "ok": true,
+          "name": "missing evidence is not a zero-valued comparison; overlapping dates are explicit"
+        },
+        {
+          "ok": true,
+          "name": "statistics are always computed by the tool; there is no option to skip them"
+        },
+        {
+          "ok": true,
+          "name": "a low soreness score is a sorer day and a high fatigue score a fresher one, as the data show"
+        },
+        {
+          "ok": true,
+          "name": "an answer left at the end of its scale for weeks is not read as a rating; a single one is"
+        },
+        {
+          "ok": true,
+          "name": "recovery history reaches the coach in words, with no scale to interpret"
+        },
+        {
+          "ok": true,
+          "name": "a young record averages its load over the weeks it covers, not over four"
+        },
+        {
+          "ok": true,
+          "name": "a device-detected session carries no invented load"
+        },
+        {
+          "ok": true,
+          "name": "a night repeated in the export is counted once"
+        },
+        {
+          "ok": true,
+          "name": "activity against WHO reports the coverage of the activity minutes it uses"
+        }
+      ]
+    },
+    {
+      "name": "checks",
+      "checks": [
+        {
+          "ok": true,
+          "name": "no context tool or gate: the catalogue and the instructions ask the coach to find out, in its own words"
+        },
+        {
+          "ok": true,
+          "name": "HTTP/SSE: a turn that asks waits for the person and a draft written with the question is undone; the answer after it writes the draft the page shows"
+        },
+        {
+          "ok": true,
+          "name": "reading historical memory does not mutate the active conversation clock"
+        },
+        {
+          "ok": true,
+          "name": "a monitoring note cannot change the plan draft"
+        },
+        {
+          "ok": true,
+          "name": "a warning symptom ends the turn as a recorded safety stop, with no plan and no lock"
+        }
+      ]
+    },
+    {
+      "name": "checks",
+      "checks": [
+        {
+          "ok": true,
+          "name": "an invented citation returns to the same session and the corrected answer is shown"
+        },
+        {
+          "ok": true,
+          "name": "raw drafts stay audit-only; the page shows only the checked final answer"
+        },
+        {
+          "ok": true,
+          "name": "cited sources are listed in citation order, linkable by their full ID"
+        },
+        {
+          "ok": true,
+          "name": "invented, stale and guidance-only citations, unknown outcomes, missing reasons and extra fields are returned"
+        },
+        {
+          "ok": true,
+          "name": "an answer that reads no records needs no citation"
+        },
+        {
+          "ok": true,
+          "name": "removing records leaves no recovery answers to read, rather than normal recovery"
+        }
+      ]
+    },
+    {
+      "name": "checks",
+      "checks": [
+        {
+          "ok": true,
+          "name": "reset is rejected while the same participant has a running turn"
+        },
+        {
+          "ok": true,
+          "name": "HTTP/SSE shows exact tool values in tables and the checked final answer as the reply"
+        },
+        {
+          "ok": true,
+          "name": "model drafts are audit-only, not streamed to the UI"
+        },
+        {
+          "ok": true,
+          "name": "the plan draft table comes from the workspace change and marks what changed; no change means no displayed schedule"
+        }
+      ]
+    },
+    {
+      "name": "checks",
+      "checks": [
+        {
+          "ok": true,
+          "name": "the turn ends with a terminal event even when the provider refuses"
+        },
+        {
+          "ok": true,
+          "name": "Codex sends exactly one model request for the turn"
+        },
+        {
+          "ok": true,
+          "name": "the only messages are the coach instructions, Codex's skill list and the user's message"
+        },
+        {
+          "ok": true,
+          "name": "the skill list holds exactly the coach's skills, from this conversation's own copy"
+        },
+        {
+          "ok": true,
+          "name": "the request carries no top-level instructions or tools of its own"
+        },
+        {
+          "ok": true,
+          "name": "the final answer's shape is enforced by the model API, not asked for in prose"
+        },
+        {
+          "ok": true,
+          "name": "the only tool the model sees is exec, the gpt-5.6 tool host"
+        },
+        {
+          "ok": true,
+          "name": "exec declares the coach tools, Codex's shell and apply_patch, nothing else"
+        },
+        {
+          "ok": true,
+          "name": "the real date is absent: only the simulation clock tells the model what day it is"
+        },
+        {
+          "ok": true,
+          "name": "no environment, permissions, bundled or personal skills, multi-agent text or home path is added"
+        },
+        {
+          "ok": true,
+          "name": "the shell can read the skills and their references"
+        },
+        {
+          "ok": true,
+          "name": "it cannot read raw records, code, the project or login files"
+        },
+        {
+          "ok": true,
+          "name": "it can write its workspace: memory and the plan draft"
+        },
+        {
+          "ok": true,
+          "name": "it cannot write saved plans, the skills, the rest of its folder or the project"
+        },
+        {
+          "ok": true,
+          "name": "the network probe is installed and executable inside the sandbox"
+        },
+        {
+          "ok": true,
+          "name": "it has no network"
+        }
+      ]
+    }
+  ],
+  "summary": "331 passed, 0 failed across 8 suites",
+  "exit": 0
+}

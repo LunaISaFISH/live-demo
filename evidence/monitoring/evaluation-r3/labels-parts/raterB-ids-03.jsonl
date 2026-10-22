@@ -1,0 +1,13 @@
+{"id": "p05-27", "should_alert": false, "confidence": "low", "reason": "Resting HR +7 but similar to the alert nine days ago and not clearly worse; near-repeat, one day only."}
+{"id": "p05-28", "should_alert": false, "confidence": "high", "reason": "Resting HR only 1.5 bpm above median; trivial, and an alert was already sent for the earlier larger rise."}
+{"id": "p12-01", "should_alert": false, "confidence": "high", "reason": "Marginal 1.57x load spike with insufficient record coverage (48%); one rated session explains it."}
+{"id": "p12-02", "should_alert": true, "confidence": "low", "reason": "Load 1.66x sustained over a week with fresh right-knee injury, soreness above normal and falling weight; no alert yet."}
+{"id": "p12-03", "should_alert": false, "confidence": "low", "reason": "Load only barely past the 1.5 tripwire, near-repeat of the recent spike; injury and soreness context is ongoing rather than new."}
+{"id": "p12-04", "should_alert": false, "confidence": "low", "reason": "1.7x ratio comes from two rated sessions on a low chronic base; readiness moderate, so modest absolute load."}
+{"id": "p12-05", "should_alert": true, "confidence": "high", "reason": "Load jumped to 2.68x with 11 sessions in a week, soreness and new hand injury; clearly worse than last review."}
+{"id": "p12-06", "should_alert": false, "confidence": "high", "reason": "Alerted three days ago at 2.68x; load now lower at 2.09x, so an alert would be a near-repeat."}
+{"id": "p12-07", "should_alert": true, "confidence": "low", "reason": "Last alert was 18 days ago; load 1.72x with a new right-knee injury reported yesterday on a chronic knee problem."}
+{"id": "p12-08", "should_alert": true, "confidence": "low", "reason": "Load rose from 1.72x to 1.88x since the alert, plus a new shoulder injury today; modestly worse and newly concerning."}
+{"id": "p12-09", "should_alert": false, "confidence": "low", "reason": "Alerted three days ago; load higher but no new injury or recovery decline, readiness high; near-repeat."}
+{"id": "p12-10", "should_alert": false, "confidence": "high", "reason": "Load falling from 1.88x to 1.62x since last alert; no clearly worse context, a repeat would be noise."}
+{"id": "p12-11", "should_alert": true, "confidence": "high", "reason": "Three low readiness reports, very low latest, fatigue and soreness, and a head/neck injury two days ago; no prior readiness alert."}

@@ -1,0 +1,9 @@
+{
+  "generated_at_epoch": 1791201315.508466,
+  "base_url": "http://localhost:8777",
+  "participant": "p16",
+  "simulation_date": "2020-03-01",
+  "passed": 72,
+  "failed": 0,
+  "exit": 0
+}

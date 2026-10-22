@@ -1,0 +1,13 @@
+{"id": "p05-01", "should_alert": true, "confidence": "low", "reason": "First sleep-debt look: 3.7h short over 7 nights with good data, poor sleep quality, high fatigue and stress reports. Worth one alert, but moderate."}
+{"id": "p05-02", "should_alert": true, "confidence": "low", "reason": "First sleep-debt alert: 3.1h short over 6 nights, with very low readiness reported today. Combined signals justify attention, though severity is moderate."}
+{"id": "p05-03", "should_alert": true, "confidence": "high", "reason": "Three consecutive low or very low readiness reports, first alert for this signal and distinct from the earlier sleep alert."}
+{"id": "p05-04", "should_alert": true, "confidence": "high", "reason": "Low readiness streak doubled from 3 to 6, trend falling. Clearly worse than the earlier alert, so a repeat is justified."}
+{"id": "p05-05", "should_alert": true, "confidence": "low", "reason": "Streak grew from 6 to 10, severity maximal, still falling. Clearly worse than last alert, though person has been told repeatedly."}
+{"id": "p05-06", "should_alert": false, "confidence": "high", "reason": "Same 3.1h sleep debt as the Dec 24 alert, no worse; readiness problem already alerted repeatedly. Near-repeat noise."}
+{"id": "p05-07", "should_alert": false, "confidence": "low", "reason": "Rise to 95 bpm follows 50 minutes of steps and a logged walk earlier; fading post-movement elevation, not clearly unexplained rest."}
+{"id": "p05-08", "should_alert": false, "confidence": "high", "reason": "Heart rate 103 right after a logged cycling session and heavy steps at 07:10-07:30; explained by exercise recovery."}
+{"id": "p05-09", "should_alert": false, "confidence": "high", "reason": "Rise follows step activity at 12:30-12:40; same magnitude as the January alert, no worse. Explained and near-repeat."}
+{"id": "p05-10", "should_alert": false, "confidence": "high", "reason": "Logged cycling 09:43 for 30 minutes with heavy steps just before; elevated rate is post-exercise recovery."}
+{"id": "p05-11", "should_alert": false, "confidence": "high", "reason": "Heavy walking at 06:50 and 07:30 immediately precedes the rise; explained by movement, near-repeat of earlier alert."}
+{"id": "p05-12", "should_alert": false, "confidence": "high", "reason": "Cycling logged 07:04 for 19 minutes, peak 128 bpm, then recovering to 103; explained by exercise."}
+{"id": "p05-13", "should_alert": false, "confidence": "high", "reason": "Rise follows about 40 minutes of heavy walking steps ending 07:00; explained by movement, no worse than prior alert."}

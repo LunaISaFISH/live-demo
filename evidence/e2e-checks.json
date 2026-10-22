@@ -1,0 +1,362 @@
+[
+  {
+    "section": "[1] server-side guards",
+    "name": "nothing can be saved as a plan before the agent has written a draft",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "every participant is offered",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "the record's span and size are shown",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "the simulation clock seals later observations",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "and it is measured against WHO, not itself",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "the agent reaches it through a small deep interface",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "memory and plans are files in the agent's workspace, not tools",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "the monitor exposes all seven chartable detector signals",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "the background simulator stops at the first thing due for the coach, saying why",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "the chart ends on the signal day and marks the detector result",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "the background simulator never goes past the dataset end",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "a coaching snapshot ranks findings and reports data quality",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "the inspector returns a real period-vs-period comparison",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "inspect with no start defaults to a recent window ending at the clock",
+    "passed": true
+  },
+  {
+    "section": "[1] server-side guards",
+    "name": "invalid inspection ranges are rejected cleanly with a 400",
+    "passed": true
+  },
+  {
+    "section": "[2] user input and a visible workflow",
+    "name": "a plain-language question is answered",
+    "passed": true
+  },
+  {
+    "section": "[2] user input and a visible workflow",
+    "name": "missing personal context triggers questions before interpretation",
+    "passed": true
+  },
+  {
+    "section": "[2] user input and a visible workflow",
+    "name": "actual personal answers lead to the answer itself",
+    "passed": true
+  },
+  {
+    "section": "[2] user input and a visible workflow",
+    "name": "the answer cites this turn's evidence and every citation is listed as a source",
+    "passed": true
+  },
+  {
+    "section": "[2] user input and a visible workflow",
+    "name": "the answer consulted relevant health evidence",
+    "passed": true
+  },
+  {
+    "section": "[2] user input and a visible workflow",
+    "name": "each record read was taken as of a date",
+    "passed": true
+  },
+  {
+    "section": "[2] user input and a visible workflow",
+    "name": "full evidence is retained for claim-level review",
+    "passed": true
+  },
+  {
+    "section": "[3] memory - what the record cannot hold",
+    "name": "the agent writes what it was told to its memory file",
+    "passed": true
+  },
+  {
+    "section": "[3] memory - what the record cannot hold",
+    "name": "and it is filed against this person, in their own words",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "missing critical context gets a clarification, not a generic plan",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "a clarification turn leaves nothing to save",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "the Agent read the record before proposing",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "the Agent wrote its plan draft, which the plan panel shows",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "the draft was written with the agent's own file tools",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "the explanation names the goal (goal sensitivity requires separate review)",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "the transcript opens by receiving and closes complete",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "it reports drafting the training plan and responding as explicit states",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "the agent's public messages appear as bounded previews",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "every tool call is followed by a summarised result",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "events arrive in a strictly increasing sequence",
+    "passed": true
+  },
+  {
+    "section": "[4] the Agent drafts the plan; the person decides; the transcript shows it",
+    "name": "no event exposes private reasoning",
+    "passed": true
+  },
+  {
+    "section": "[5] the human checkpoint - only the person saves a plan",
+    "name": "the turn itself commits nothing until the person saves",
+    "passed": true
+  },
+  {
+    "section": "[5] the human checkpoint - only the person saves a plan",
+    "name": "asking for changes in the chat revises the draft in place",
+    "passed": true
+  },
+  {
+    "section": "[5] the human checkpoint - only the person saves a plan",
+    "name": "saving makes the revised draft version 1 of the plan",
+    "passed": true
+  },
+  {
+    "section": "[5] the human checkpoint - only the person saves a plan",
+    "name": "and the saved plan is visible on the page state, with the draft cleared",
+    "passed": true
+  },
+  {
+    "section": "[6] a described warning symptom - advice now, nothing locked",
+    "name": "no plan was drafted in the symptom reply",
+    "passed": true
+  },
+  {
+    "section": "[6] a described warning symptom - advice now, nothing locked",
+    "name": "the turn ends as a recorded safety stop",
+    "passed": true
+  },
+  {
+    "section": "[6] a described warning symptom - advice now, nothing locked",
+    "name": "and the trail ends on that stop, as the status line does",
+    "passed": true
+  },
+  {
+    "section": "[6] a described warning symptom - advice now, nothing locked",
+    "name": "the reply advises medical care",
+    "passed": true
+  },
+  {
+    "section": "[6] a described warning symptom - advice now, nothing locked",
+    "name": "nothing is locked: the next question is answered normally",
+    "passed": true
+  },
+  {
+    "section": "[6] a described warning symptom - advice now, nothing locked",
+    "name": "a prompt-injection request is not stored in memory",
+    "passed": true
+  },
+  {
+    "section": "[6] a described warning symptom - advice now, nothing locked",
+    "name": "and is answered, not silently dropped",
+    "passed": true
+  },
+  {
+    "section": "[6] a described warning symptom - advice now, nothing locked",
+    "name": "the refusal is recorded as the reason the turn stopped",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "the page lists each condition holding today, with when it began and how it looked then",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "the agent reviewed it and reached a verdict",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "its verdict is explained, unexplained or unclear",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "the review consulted evidence",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "bounded by the day the signal fired",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "the coach's Alert decision follows the review, with its reason and facts",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "for a condition it carries the history it was shown and when the coach will look again",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "a monitoring turn changes nothing in the workspace",
+    "passed": true
+  },
+  {
+    "section": "[7] the background monitor, replayed and reviewed",
+    "name": "the monitoring review ends with an accepted summary, not the fallback",
+    "passed": true
+  },
+  {
+    "section": "[8] audit log - six fields, and it verifies",
+    "name": "every turn is logged (11 entries)",
+    "passed": true
+  },
+  {
+    "section": "[8] audit log - six fields, and it verifies",
+    "name": "with all six fields the brief names",
+    "passed": true
+  },
+  {
+    "section": "[8] audit log - six fields, and it verifies",
+    "name": "advice and drafts record no human decision; only saving does",
+    "passed": true
+  },
+  {
+    "section": "[8] audit log - six fields, and it verifies",
+    "name": "saving is its own auditable entry",
+    "passed": true
+  },
+  {
+    "section": "[8] audit log - six fields, and it verifies",
+    "name": "the save entry carries the exact plan, its version and cutoff",
+    "passed": true
+  },
+  {
+    "section": "[8] audit log - six fields, and it verifies",
+    "name": "drafting and revising the plan are auditable actions",
+    "passed": true
+  },
+  {
+    "section": "[8] audit log - six fields, and it verifies",
+    "name": "a monitoring event is marked as one, not as a user message",
+    "passed": true
+  },
+  {
+    "section": "[8] audit log - six fields, and it verifies",
+    "name": "and it passes its own structural check",
+    "passed": true
+  },
+  {
+    "section": "[9] evaluation artefacts, served by the page itself",
+    "name": "every reply is in the language of the message it answers",
+    "passed": true
+  },
+  {
+    "section": "[9] evaluation artefacts, served by the page itself",
+    "name": "the offline suite runs from the front end",
+    "passed": true
+  },
+  {
+    "section": "[9] evaluation artefacts, served by the page itself",
+    "name": "and reports every group",
+    "passed": true
+  },
+  {
+    "section": "[10] a new chat keeps memory and plans; reset clears them",
+    "name": "a new chat starts an empty conversation",
+    "passed": true
+  },
+  {
+    "section": "[10] a new chat keeps memory and plans; reset clears them",
+    "name": "but the coach keeps its memory and the saved plan",
+    "passed": true
+  },
+  {
+    "section": "[10] a new chat keeps memory and plans; reset clears them",
+    "name": "reset clears the saved plan and the memory",
+    "passed": true
+  },
+  {
+    "section": "[10] a new chat keeps memory and plans; reset clears them",
+    "name": "and the audit log",
+    "passed": true
+  }
+]

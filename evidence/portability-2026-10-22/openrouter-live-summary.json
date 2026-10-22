@@ -1,0 +1,20 @@
+{
+  "macos": {
+    "stop": "answered",
+    "answer": "From 24 February to 1 March, there were no recorded exercise sessions or training days (0 sessions; 0 device-detected or self-reported exercise minutes). [e95c356b-e1]\n\nWearable data were present on all 7 days: median daily steps were 848, total recorded distance was 5.66 km, and median active time was 66 minutes per day. No cardio-peak minutes were recorded. [e95c356b-e4]\n\nCompared with the preceding 7 days, median daily steps were 296 lower, total distance was 4.87 km lower, and median active time was 9 minutes lower. [e95c356b-e4]",
+    "tools": [
+      "read_record"
+    ],
+    "error_events": []
+  },
+  "linux": {
+    "stop": "answered",
+    "answer": "I’ve set three consecutive 10-minute easy walks starting tomorrow, matching your time, route, and goal of building a gentle regular habit. This is below your recorded typical walking session of 16 minutes, and you have had no recorded recent injuries. [ab223ee2-e8] Keep the pace comfortable. Stop if pain develops; stop exercising and seek medical care if you develop chest pain/pressure, fainting, severe dizziness, breathlessness at rest or with mild effort, or palpitations.",
+    "tools": [
+      "read_record",
+      "read_record"
+    ],
+    "error_events": [],
+    "saved_plan_version": 1
+  }
+}

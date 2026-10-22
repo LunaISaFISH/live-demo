@@ -1,0 +1,541 @@
+{
+  "snapshot": {
+    "person": "p05",
+    "as_of": "2020-03-01",
+    "recorded_from": "2019-11-01",
+    "top_findings": [
+      {
+        "topic": "lifestyle.weight",
+        "window": {
+          "start": "2020-02-02",
+          "end": "2020-03-01"
+        },
+        "status": "notable",
+        "summary": "Body weight is trending up at 0.54 kg/week (+2.5 kg over the window).",
+        "reference": "your own weight over 28 days",
+        "evidence": [
+          {
+            "name": "kg_per_week",
+            "value": 0.543,
+            "unit": "kg/week",
+            "source": "derived"
+          },
+          {
+            "name": "latest_kg",
+            "value": 103.0,
+            "unit": "kg",
+            "source": "reported"
+          }
+        ],
+        "data_quality": {
+          "coverage": 0.72,
+          "sufficiency": "sufficient"
+        },
+        "limitations": [
+          "a lifestyle pattern is context, never a plan constraint"
+        ],
+        "salience": 2
+      },
+      {
+        "topic": "lifestyle.intake",
+        "window": {
+          "start": "2020-02-02",
+          "end": "2020-03-01"
+        },
+        "status": "notable",
+        "summary": "Meals are irregular or alcohol is frequent.",
+        "reference": "your own 28-day intake",
+        "evidence": [
+          {
+            "name": "median_meals_per_day",
+            "value": 3,
+            "unit": "count",
+            "source": "reported"
+          },
+          {
+            "name": "breakfast_share",
+            "value": 0.78,
+            "unit": "fraction",
+            "source": "reported"
+          },
+          {
+            "name": "median_glasses",
+            "value": 9,
+            "unit": "glasses",
+            "source": "reported"
+          },
+          {
+            "name": "alcohol_share",
+            "value": 0.35,
+            "unit": "fraction",
+            "source": "reported"
+          }
+        ],
+        "data_quality": {
+          "coverage": 0.72,
+          "sufficiency": "sufficient"
+        },
+        "limitations": [
+          "a lifestyle pattern is context, never a plan constraint"
+        ],
+        "salience": 2
+      },
+      {
+        "topic": "injury.recent",
+        "window": {
+          "start": "2020-02-02",
+          "end": "2020-03-01"
+        },
+        "status": "notable",
+        "summary": "Last injury 1 days ago (left foot); in the last 14 days: Ankle 1 days ago; 7 reports in the whole record so far.",
+        "reference": "the injury log",
+        "evidence": [
+          {
+            "name": "days_since_last",
+            "value": 1,
+            "unit": "days",
+            "source": "self-report"
+          },
+          {
+            "name": "recent_joints",
+            "value": "Ankle",
+            "unit": "joint",
+            "source": "self-report"
+          }
+        ],
+        "data_quality": {
+          "coverage": null,
+          "sufficiency": "sufficient"
+        },
+        "limitations": [
+          "recent injury caps intensity in a plan"
+        ],
+        "salience": 2
+      }
+    ],
+    "domains": {
+      "training": {
+        "status": "insufficient",
+        "headline": "Not enough recent training load to judge a 7-day to 28-day ratio - the baseline is too light for it to mean anything.",
+        "salience": 1,
+        "observations": 2
+      },
+      "recovery": {
+        "status": "observed",
+        "headline": "Self-rated readiness to train: moderate readiness to train 10 (of 10 reports); latest: moderate readiness to train. Over the window it is steady.",
+        "salience": 0,
+        "observations": 3
+      },
+      "physiology": {
+        "status": "observed",
+        "headline": "Typical wearable-day activity was 11872 steps, with heart rate sampled for about 1196 minutes/day across 23 days. Around 0 min/day in cardio or peak zones and 350 active minutes across 22 worn days.",
+        "salience": 0,
+        "observations": 1
+      },
+      "sleep": {
+        "status": "insufficient",
+        "headline": "Not enough nights logged to compare this week's sleep with your own usual.",
+        "salience": 1,
+        "observations": 1
+      },
+      "lifestyle": {
+        "status": "notable",
+        "headline": "Body weight is trending up at 0.54 kg/week (+2.5 kg over the window).",
+        "salience": 2,
+        "observations": 2
+      },
+      "injury": {
+        "status": "notable",
+        "headline": "Last injury 1 days ago (left foot); in the last 14 days: Ankle 1 days ago; 7 reports in the whole record so far.",
+        "salience": 2,
+        "observations": 1
+      }
+    },
+    "data_quality": {
+      "topic": "data_quality.coverage",
+      "window": {
+        "start": "2020-02-02",
+        "end": "2020-03-01"
+      },
+      "status": "within_baseline",
+      "summary": "97% of the last 28 days carry a record.",
+      "reference": "days with any record over 28 days",
+      "evidence": [
+        {
+          "name": "coverage",
+          "value": 0.97,
+          "unit": "fraction",
+          "source": "derived"
+        },
+        {
+          "name": "days_since_last_record",
+          "value": 0,
+          "unit": "days",
+          "source": "derived"
+        }
+      ],
+      "data_quality": {
+        "coverage": 0.97,
+        "sufficiency": "sufficient"
+      },
+      "limitations": [],
+      "salience": 0
+    }
+  },
+  "planning_context": {
+    "person": "p05",
+    "as_of": "2020-03-01",
+    "capacity_today": {
+      "ceiling": "hard",
+      "reasons": [
+        "no encoded recovery rule lowered the intensity ceiling; this does not establish that all recovery markers are normal"
+      ],
+      "cautions": [
+        "your recent training is too light for a load ratio to say anything, so it was not applied",
+        "you reported an injury (left foot) 1 days ago",
+        "alcohol on 36% of recorded days; this does not establish an effect on your sleep",
+        "weight is trending up at 0.5 kg/week"
+      ],
+      "applies_to": "today and tomorrow; it does not cap later days, which depend on how the person recovers"
+    },
+    "intensity_levels": [
+      "rest",
+      "easy",
+      "moderate",
+      "hard"
+    ],
+    "habits": {
+      "Walking": {
+        "label": "walking",
+        "sessions": 62,
+        "share": 0.47,
+        "typical_gap_days": 2.0,
+        "typical_minutes": 23,
+        "last_done": 11,
+        "recovery_hours": 0,
+        "loads_joints": [
+          "Ankle",
+          "Hip"
+        ],
+        "spares_joints": []
+      },
+      "Cycling": {
+        "label": "cycling",
+        "sessions": 55,
+        "share": 0.417,
+        "typical_gap_days": 2.0,
+        "typical_minutes": 19,
+        "last_done": 10,
+        "recovery_hours": 12,
+        "loads_joints": [
+          "Knee"
+        ],
+        "spares_joints": [
+          "Ankle"
+        ]
+      },
+      "Running": {
+        "label": "running",
+        "sessions": 9,
+        "share": 0.068,
+        "typical_gap_days": 10.5,
+        "typical_minutes": 40,
+        "last_done": 36,
+        "recovery_hours": 24,
+        "loads_joints": [
+          "Ankle",
+          "Hip",
+          "Knee"
+        ],
+        "spares_joints": []
+      },
+      "CrossTraining": {
+        "label": "cross-training",
+        "sessions": 3,
+        "share": 0.023,
+        "typical_gap_days": 13,
+        "typical_minutes": 30,
+        "last_done": 46,
+        "recovery_hours": 24,
+        "loads_joints": [
+          "Hip",
+          "Knee"
+        ],
+        "spares_joints": []
+      },
+      "Strength": {
+        "label": "resistance training",
+        "sessions": 3,
+        "share": 0.023,
+        "typical_gap_days": 18,
+        "typical_minutes": 30,
+        "last_done": 17,
+        "recovery_hours": 48,
+        "loads_joints": [
+          "Hip",
+          "Knee",
+          "LumbarSpine",
+          "Shoulder"
+        ],
+        "spares_joints": []
+      }
+    },
+    "weekday_rhythm": {
+      "Mon": 17,
+      "Tue": 16,
+      "Wed": 25,
+      "Thu": 27,
+      "Fri": 20,
+      "Sat": 15,
+      "Sun": 12
+    },
+    "training_load": {
+      "units": {
+        "acute_7d": "sRPE",
+        "chronic_28d_per_week": "sRPE/week",
+        "acwr": "ratio",
+        "sessions_7d": "sessions",
+        "rated_sessions_7d": "sessions",
+        "unrated_device_minutes_7d": "minutes"
+      },
+      "load_is": "the person's own effort rating x minutes; device-detected sessions have no rating and carry no load",
+      "rated_sessions_7d": 0,
+      "unrated_device_minutes_7d": 0,
+      "acute_7d": 0,
+      "chronic_28d_per_week": 37.5,
+      "acwr": 0.0,
+      "sessions_7d": 0
+    },
+    "sleep_debt_7d": null,
+    "resting_hr": {
+      "value": 61.001254081726074,
+      "quantile": 0.45,
+      "baseline_median": 61.3,
+      "baseline_days": 20
+    },
+    "readiness_trend": {
+      "record_count": 10,
+      "recorded_days": 10,
+      "calendar_days": 14,
+      "window": {
+        "start": "2020-02-17",
+        "end": "2020-03-01"
+      },
+      "answers": "moderate readiness to train 10 (of 10 reports); latest: moderate readiness to train",
+      "latest": "moderate readiness to train",
+      "direction": "flat"
+    },
+    "activity_vs_who": {
+      "weeks_scored": 3,
+      "median_mvpa_minutes": 609,
+      "weeks_meeting_floor": 3,
+      "floor": 150,
+      "upper": 300,
+      "verdict": "exceeds",
+      "guideline": "Adults should do 150-300 minutes of moderate-intensity aerobic activity per week, or 75-150 minutes of vigorous-intensity activity, or an equivalent combination.",
+      "source": "WHO (2020), Guidelines on Physical Activity and Sedentary Behaviour"
+    },
+    "ambient_activity": {
+      "window": {
+        "start": "2020-02-03",
+        "end": "2020-03-01"
+      },
+      "heart_days": 22,
+      "median_heart_covered_minutes": 1184,
+      "median_daily_steps": 11657,
+      "total_distance_km": 153.79,
+      "limitations": [
+        "distance and calories are device estimates",
+        "missing samples are not treated as zero"
+      ]
+    },
+    "recent_injuries": {
+      "joints_from_log": [
+        "Ankle"
+      ],
+      "count": 7,
+      "dates": [
+        "2019-11-01",
+        "2019-11-07",
+        "2020-01-30",
+        "2020-01-31",
+        "2020-02-08",
+        "2020-02-14",
+        "2020-02-29"
+      ],
+      "reports": [
+        {
+          "date": "2019-11-01",
+          "location": "left_foot",
+          "joint": "Ankle",
+          "severity": "minor"
+        },
+        {
+          "date": "2019-11-07",
+          "location": "head_neck",
+          "joint": null,
+          "severity": "minor"
+        },
+        {
+          "date": "2020-01-30",
+          "location": "left_foot",
+          "joint": "Ankle",
+          "severity": "minor"
+        },
+        {
+          "date": "2020-01-31",
+          "location": "left_foot",
+          "joint": "Ankle",
+          "severity": "minor"
+        },
+        {
+          "date": "2020-02-08",
+          "location": "left_foot",
+          "joint": "Ankle",
+          "severity": "minor"
+        },
+        {
+          "date": "2020-02-14",
+          "location": "left_foot",
+          "joint": "Ankle",
+          "severity": "minor"
+        },
+        {
+          "date": "2020-02-29",
+          "location": "left_foot",
+          "joint": "Ankle",
+          "severity": "minor"
+        }
+      ],
+      "by_joint": {
+        "Ankle": 6
+      },
+      "days_since_last": 1,
+      "last_location": "left foot",
+      "days_since_by_joint": {
+        "Ankle": 1
+      }
+    },
+    "modality_catalogue": {
+      "Running": {
+        "label": "running",
+        "recovery_hours": 24,
+        "loads_joints": [
+          "Ankle",
+          "Hip",
+          "Knee"
+        ],
+        "spares_joints": []
+      },
+      "Walking": {
+        "label": "walking",
+        "recovery_hours": 0,
+        "loads_joints": [
+          "Ankle",
+          "Hip"
+        ],
+        "spares_joints": []
+      },
+      "Sport": {
+        "label": "field or court sport",
+        "recovery_hours": 48,
+        "loads_joints": [
+          "Ankle",
+          "Hip",
+          "Knee"
+        ],
+        "spares_joints": []
+      },
+      "Cycling": {
+        "label": "cycling",
+        "recovery_hours": 12,
+        "loads_joints": [
+          "Knee"
+        ],
+        "spares_joints": [
+          "Ankle"
+        ]
+      },
+      "Swimming": {
+        "label": "swimming",
+        "recovery_hours": 12,
+        "loads_joints": [
+          "Shoulder"
+        ],
+        "spares_joints": [
+          "Ankle",
+          "Hip",
+          "Knee"
+        ]
+      },
+      "CrossTraining": {
+        "label": "cross-training",
+        "recovery_hours": 24,
+        "loads_joints": [
+          "Hip",
+          "Knee"
+        ],
+        "spares_joints": []
+      },
+      "Strength": {
+        "label": "resistance training",
+        "recovery_hours": 48,
+        "loads_joints": [
+          "Hip",
+          "Knee",
+          "LumbarSpine",
+          "Shoulder"
+        ],
+        "spares_joints": []
+      },
+      "Mobility": {
+        "label": "mobility and flexibility",
+        "recovery_hours": 0,
+        "loads_joints": [],
+        "spares_joints": []
+      },
+      "Rest": {
+        "label": "rest",
+        "recovery_hours": 0,
+        "loads_joints": [],
+        "spares_joints": []
+      }
+    },
+    "data_quality": {
+      "topic": "data_quality.coverage",
+      "window": {
+        "start": "2020-02-02",
+        "end": "2020-03-01"
+      },
+      "status": "within_baseline",
+      "summary": "97% of the last 28 days carry a record.",
+      "reference": "days with any record over 28 days",
+      "evidence": [
+        {
+          "name": "coverage",
+          "value": 0.97,
+          "unit": "fraction",
+          "source": "derived"
+        },
+        {
+          "name": "days_since_last_record",
+          "value": 0,
+          "unit": "days",
+          "source": "derived"
+        }
+      ],
+      "data_quality": {
+        "coverage": 0.97,
+        "sufficiency": "sufficient"
+      },
+      "limitations": [],
+      "salience": 0
+    },
+    "only_the_person_knows": [
+      "current pain or niggles, today",
+      "their goal for this plan",
+      "which weekdays they can or cannot train",
+      "equipment access and activities they dislike"
+    ]
+  }
+}

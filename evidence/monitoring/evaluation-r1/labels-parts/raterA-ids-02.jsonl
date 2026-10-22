@@ -1,0 +1,13 @@
+{"id": "p05-14", "should_alert": false, "confidence": "high", "reason": "Walking bouts until 06:40 just before; mild +31 rise, same as earlier alert, explained by movement."}
+{"id": "p05-15", "should_alert": false, "confidence": "high", "reason": "796 steps at 11:20 just before; modest rise similar to earlier alert, explained by recent movement."}
+{"id": "p05-16", "should_alert": false, "confidence": "low", "reason": "Gradual rise with light steps beforehand; magnitude matches earlier alert, not clearly worse, near-repeat."}
+{"id": "p05-17", "should_alert": false, "confidence": "low", "reason": "Follows 50 minutes of heavy walking; mild rise near earlier alerted level, likely recovery; near-repeat."}
+{"id": "p05-18", "should_alert": false, "confidence": "high", "reason": "Logged strength and cycling sessions earlier that morning, with steps until 07:10; post-exercise elevation."}
+{"id": "p05-19", "should_alert": false, "confidence": "high", "reason": "Steady walking steps through 08:30 just before; mild rise, explained by movement, near-repeat."}
+{"id": "p05-20", "should_alert": false, "confidence": "high", "reason": "Logged cycling at 15:56 and steps until 17:00; rise explained by recent activity, same as earlier alert."}
+{"id": "p05-21", "should_alert": false, "confidence": "low", "reason": "Rise after quiet baseline is genuinely unexplained, but 20 min and same magnitude as the January alert; not clearly worse."}
+{"id": "p05-22", "should_alert": false, "confidence": "high", "reason": "About 880 steps in the 20 minutes before; post-walk elevation, similar to alert sent nine days ago."}
+{"id": "p05-23", "should_alert": false, "confidence": "high", "reason": "Walking steps up to 08:50 immediately before; rise explained by movement, near-repeat of recent alert."}
+{"id": "p05-24", "should_alert": true, "confidence": "low", "reason": "HR 93-102 for 90 minutes around midnight with almost no steps and no exercise; sustained far longer than earlier episodes."}
+{"id": "p05-25", "should_alert": true, "confidence": "high", "reason": "First resting HR signal: +8.3 bpm, highest in 20 days, following unexplained night-time elevation; no exercise explains it."}
+{"id": "p05-26", "should_alert": false, "confidence": "low", "reason": "Already alerted yesterday about raised resting HR; +1.9 bpm more is a near-repeat, not clearly worse."}

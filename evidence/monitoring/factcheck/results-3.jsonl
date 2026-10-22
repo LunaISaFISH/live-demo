@@ -1,0 +1,10 @@
+{"id": "r1-p05-04", "statements_checked": 16, "supported": 16, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": null}
+{"id": "r1-p12-02", "statements_checked": 22, "supported": 22, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": null}
+{"id": "r1-p12-19", "statements_checked": 15, "supported": 15, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": "Do not exercise for now and seek medical advice before returning to training."}
+{"id": "r1-p16-33", "statements_checked": 12, "supported": 12, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": null}
+{"id": "r2-p05-07", "statements_checked": 22, "supported": 20, "unsupported_here": ["A device-recorded walk ran from 13:43:51 for 56 minutes (logged_sessions_nearby gives only start 13:43:51, 56 min, avg_hr 107; no modality or source, so 'walk' is not shown)"], "contradicted": [{"quote": "there was no prior-week resting-heart-rate baseline because no such days were recorded", "evidence_says": "read_record 7d previous_window 2019-12-26 to 2020-01-01 has resting_hr_days 5 with median_resting_hr 66.5 bpm"}], "verdict_consistent": true, "overstates": null}
+{"id": "r2-p12-12", "statements_checked": 15, "supported": 15, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": null}
+{"id": "r2-p16-13", "statements_checked": 15, "supported": 15, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": null}
+{"id": "r2-p16-52", "statements_checked": 13, "supported": 13, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": null}
+{"id": "r3-p16-06", "statements_checked": 16, "supported": 16, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": null}
+{"id": "r3-p16-36", "statements_checked": 10, "supported": 10, "unsupported_here": [], "contradicted": [], "verdict_consistent": true, "overstates": null}

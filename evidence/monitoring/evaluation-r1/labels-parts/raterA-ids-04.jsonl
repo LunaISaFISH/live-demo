@@ -1,0 +1,13 @@
+{"id": "p12-10", "should_alert": false, "confidence": "high", "reason": "Load fell to 2.09x from the 2.68x alerted three days ago; readiness high and rising, no newer injury entry."}
+{"id": "p12-11", "should_alert": false, "confidence": "low", "reason": "New 1.72x episode, below earlier alerted peaks; high readiness and frequent routine knee entries. Moderate spike, borderline given recent knee report."}
+{"id": "p12-12", "should_alert": false, "confidence": "high", "reason": "Load dropped to 1.57x from 1.72x alerted yesterday; no new injury entry, same concern already flagged."}
+{"id": "p12-13", "should_alert": false, "confidence": "low", "reason": "Load unchanged at 1.57x, below the 1.72x alerted two days ago; new shoulder entry alone does not make the load concern clearly worse."}
+{"id": "p12-14", "should_alert": true, "confidence": "low", "reason": "Load rose to 1.88x, sRPE up from 1430 to 1950 since the Alert, with more soreness and a new shoulder entry."}
+{"id": "p12-15", "should_alert": false, "confidence": "low", "reason": "Load 2.05x versus 1.88x alerted two days ago, a modest rise; readiness high and no new injury. Near-repeat."}
+{"id": "p12-16", "should_alert": true, "confidence": "high", "reason": "Load clearly worse at 2.63x (2760 sRPE vs 2190 alerted), more soreness reported and a new elbow injury entry."}
+{"id": "p12-17", "should_alert": false, "confidence": "high", "reason": "Load decreased to 1.82x from 2.63x alerted two days ago; high readiness, no newer injury entry."}
+{"id": "p12-18", "should_alert": false, "confidence": "high", "reason": "Load eased to 1.62x, well below the 2.63x already alerted; no new injury entry. Repeating would be noise."}
+{"id": "p12-19", "should_alert": true, "confidence": "high", "reason": "Three consecutive very-low readiness reports with tiredness, soreness and head/neck injury, unexplained by training (no sessions this week). First such Alert."}
+{"id": "p12-20", "should_alert": false, "confidence": "high", "reason": "One more low readiness report since yesterday's Alert; same concern, no new injury or worsening beyond count. Near-repeat."}
+{"id": "p12-21", "should_alert": false, "confidence": "high", "reason": "Unchanged at four low reports, no new information since the Alert two days ago."}
+{"id": "p12-22", "should_alert": false, "confidence": "low", "reason": "Five low reports, latest slightly better (low not very low); new shoulder entry and worse sleep are not clearly worse."}

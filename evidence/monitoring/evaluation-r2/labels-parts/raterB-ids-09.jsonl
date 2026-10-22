@@ -1,0 +1,9 @@
+{"id": "p16-55", "should_alert": false, "confidence": "high", "reason": "101 bpm follows a logged 17-minute walk with steps until 11:30; heart rate falling from 106, explained by recent exercise."}
+{"id": "p16-56", "should_alert": false, "confidence": "low", "reason": "Resting HR +2.8 bpm in top 4% is a small first-day rise, well below the +6.6 bpm already alerted; sleep recovered."}
+{"id": "p16-57", "should_alert": false, "confidence": "high", "reason": "108 bpm comes straight after 40 minutes of walking (about 1500 steps ending 15:50), with HR falling from 114; explained."}
+{"id": "p16-58", "should_alert": false, "confidence": "high", "reason": "106 bpm follows a logged 19-minute walk ending at 11:40 with about 1300 steps; post-exercise heart rate, explained."}
+{"id": "p16-59", "should_alert": false, "confidence": "high", "reason": "Median activity 9 min is up from 0 at the last alert; unchanged shortfall already alerted, not worse."}
+{"id": "p16-60", "should_alert": false, "confidence": "high", "reason": "99 bpm follows walking from 19:10 to 19:30 with heart rate about 100 right after; recent activity explains it, near-repeat."}
+{"id": "p16-61", "should_alert": false, "confidence": "high", "reason": "99 bpm follows an hour of light walking with HR declining from 110 to 99; explained by activity, near-repeat of earlier alert."}
+{"id": "p16-62", "should_alert": false, "confidence": "high", "reason": "111 bpm begins right after a brisk walk (about 1450 steps to 12:50, HR 116); recovering from exercise, explained."}
+{"id": "p16-63", "should_alert": false, "confidence": "high", "reason": "Median activity 22 min is up from 0 at the last alert; improving, not clearly worse, repeat would be noise."}

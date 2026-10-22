@@ -1,0 +1,12 @@
+{"id": "p16-52", "should_alert": false, "confidence": "high", "reason": "Sleep shortfall 9.1h is slightly less than the 9.6h alerted yesterday; near-repeat."}
+{"id": "p16-53", "should_alert": false, "confidence": "high", "reason": "Activity median 9 min unchanged and above the 0 min alerted recently; nothing new."}
+{"id": "p16-54", "should_alert": false, "confidence": "high", "reason": "Sleep shortfall improved to 4.7h from 9.6h alerted two days ago."}
+{"id": "p16-55", "should_alert": false, "confidence": "high", "reason": "HR rise follows a logged 17-minute walk ending minutes before; post-walk recovery explains it."}
+{"id": "p16-56", "should_alert": false, "confidence": "high", "reason": "Resting HR +2.8 bpm, below the level alerted a week ago, and sleep has recovered."}
+{"id": "p16-57", "should_alert": false, "confidence": "high", "reason": "Thirty minutes of walking right before; HR falling from 114 to 105 is normal post-walk recovery."}
+{"id": "p16-58", "should_alert": false, "confidence": "high", "reason": "Logged 19-minute walk ended just before; single elevated reading is post-walk recovery."}
+{"id": "p16-59", "should_alert": false, "confidence": "high", "reason": "Activity median 9 min unchanged over several reviews and above the alerted low; repeat would be noise."}
+{"id": "p16-60", "should_alert": false, "confidence": "high", "reason": "Follows light walking; 99 bpm matches earlier alerted events, not worse; near-repeat."}
+{"id": "p16-61", "should_alert": false, "confidence": "low", "reason": "Light movement before, HR declining 110 to 99; same magnitude as previously alerted event, not newly concerning."}
+{"id": "p16-62", "should_alert": false, "confidence": "high", "reason": "Brisk walking (600+ steps per 10 min) just before; HR dropping 116 to 105 is post-walk recovery."}
+{"id": "p16-63", "should_alert": false, "confidence": "high", "reason": "Activity median improved to 22 min from the 0 min alerted; no worsening."}

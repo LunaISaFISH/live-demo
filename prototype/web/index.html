@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FitCoach - an agentic fitness coach, replayed day by day</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">FC</span>
+    <div><h1>FitCoach</h1><p>An agentic fitness coach, replayed day by day over real wearable records (PMData).</p></div>
+  </div>
+  <nav class="views" aria-label="Views">
+    <button id="view-coach-btn" data-view="coach" class="on" aria-pressed="true">Coach</button>
+    <button id="view-evidence-btn" data-view="evidence" aria-pressed="false">Evidence</button>
+    <a href="/replay" title="Play back a recorded monitoring run, day by day">Replay</a>
+    <a href="/full-replay" target="_blank" rel="noopener" title="Full verified workflow, recorded for offline presentation">Full replay</a>
+  </nav>
+  <div class="who">
+    <label for="pid">Athlete</label>
+    <select id="pid"></select>
+    <button id="new-chat" class="quiet" title="Start a new conversation; the coach keeps its memory and your plans">New chat</button>
+    <details class="more">
+      <summary aria-label="More actions">More</summary>
+      <div class="more-menu">
+        <button id="reset" type="button">Reset this athlete</button>
+        <p>Clears the conversation, the coach's memory and plans, and the monitoring run. The audit log is archived, not deleted.</p>
+      </div>
+    </details>
+  </div>
+</header>
+
+<div class="page-shell">
+<div id="view-coach">
+  <section class="timebar" aria-labelledby="clock-title">
+    <div class="timebar-head">
+      <h2 id="clock-title"></h2>
+      <p id="clock-summary"></p>
+    </div>
+    <div class="timeline" aria-hidden="true">
+      <div id="timeline-known" class="timeline-known"></div>
+      <div class="timeline-hidden"></div>
+    </div>
+    <div class="timeline-scale" aria-hidden="true"><span id="timeline-from"></span><span id="timeline-to"></span></div>
+    <div class="clock-controls">
+      <label for="clock" class="sr-only">Simulation date</label>
+      <button id="clock-back" class="icon-button" type="button" aria-label="Previous day">−</button>
+      <span class="date-control"><span id="clock-value" class="clock-value" aria-hidden="true"></span><input id="clock" type="date"></span>
+      <button id="clock-next" class="icon-button" type="button" aria-label="Next day">+</button>
+      <button id="clock-latest" class="quiet" type="button">Latest</button>
+      <button id="next-signal" class="primary" type="button">Advance to next review</button>
+      <button id="conditions-pill" class="conditions-pill hidden" type="button"></button>
+    </div>
+    <div id="monitor-run" class="monitor-run" aria-live="polite"></div>
+    <div id="clock-message" class="clock-message" role="status" aria-live="polite"></div>
+  </section>
+
+  <main class="coach-stage">
+    <section class="conversation surface" aria-labelledby="conversation-title">
+      <div class="conversation-head">
+        <h2 id="conversation-title">Coach</h2>
+        <div class="modes" role="radiogroup" aria-label="What you are doing">
+          <button data-mode="checkin" role="radio" aria-checked="true" class="on">Check in</button>
+          <button data-mode="plan" role="radio" aria-checked="false">Plan</button>
+          <button data-mode="monitor" role="radio" aria-checked="false">Monitor</button>
+        </div>
+      </div>
+      <p id="mode-hint" class="mode-hint"></p>
+      <div id="log" class="log"></div>
+      <div class="starters" id="starters"></div>
+      <form id="ask" autocomplete="off">
+        <label class="sr-only" for="msg">Message your coach</label>
+        <input id="msg" placeholder="Ask about training, recovery, or your history" required>
+        <button id="send" class="primary" type="submit">Ask coach</button>
+      </form>
+    </section>
+
+    <section class="workflow surface" aria-labelledby="trail-title">
+      <div class="trace-heading">
+        <h2 id="trail-title">How the answer is built</h2>
+        <span id="status" class="status" role="status"></span>
+      </div>
+      <ol id="steps" class="steps"></ol>
+      <p class="trace-note">Public steps only; private reasoning is never shown.</p>
+    </section>
+
+    <aside class="side" aria-label="Plan and record">
+      <section id="plan-panel" class="plan-panel hidden"></section>
+
+      <section id="record" class="context-shell" aria-labelledby="record-title">
+        <h2 id="record-title">What the coach can see</h2>
+        <div id="record-facts" class="facts"></div>
+        <div id="context-checkin">
+          <details class="context-details">
+            <summary>Readiness, evidence and data quality</summary>
+            <section id="overview">
+              <div class="section-heading compact"><h3>Readiness snapshot</h3><span class="note inline" id="overview-asof"></span></div>
+              <div id="overview-top"></div>
+              <div id="overview-domains" class="domain-chips"></div>
+              <div id="drill" class="drill hidden"></div>
+            </section>
+          </details>
+        </div>
+        <div id="context-monitor" class="hidden">
+          <div id="signals"></div>
+          <section class="signal-chart-shell" aria-labelledby="signal-chart-title">
+            <div class="signal-chart-head">
+              <h3 id="signal-chart-title">Monitoring history</h3>
+              <label>Metric<select id="signal-metric" aria-label="Monitoring metric"></select></label>
+            </div>
+            <div id="signal-chart-summary" class="signal-chart-summary"></div>
+            <div id="signal-chart" class="signal-chart"></div>
+          </section>
+        </div>
+      </section>
+    </aside>
+  </main>
+</div>
+
+<div id="view-evidence" class="hidden">
+  <section class="evidence-intro">
+    <h2>Evidence</h2>
+    <p>What the coach did, what it remembers, the checks behind it, and the raw tools and sources, for whoever is reviewing the prototype.</p>
+  </section>
+  <nav class="tabs" role="tablist" aria-label="Evidence">
+    <button data-tab="audit" class="on">Audit trail</button>
+    <button data-tab="memory">Memory</button>
+    <button data-tab="evaluation">Tests</button>
+    <button data-tab="tools">Raw tools</button>
+    <button data-tab="sources">Sources</button>
+  </nav>
+
+  <section id="tab-audit" class="tab mode-panel">
+    <h3 class="panel-title">Audit trail</h3>
+    <p class="panel-copy">Every turn and every human decision: input, sources, actions, output and who decided.</p>
+    <div id="verify" class="verify"></div><div id="audit"></div>
+  </section>
+
+  <section id="tab-memory" class="tab mode-panel hidden">
+    <h3 class="panel-title">Coach memory</h3>
+    <p class="panel-copy">What the person said that the sensors cannot know, kept by the coach with their own words beside it.</p>
+    <div id="memory"></div>
+  </section>
+
+  <section id="tab-evaluation" class="tab mode-panel hidden">
+    <h3 class="panel-title">Tests</h3>
+    <h4 class="sub">Live-model run</h4>
+    <div id="live-evidence"></div>
+    <h4 class="sub">Offline suites</h4>
+    <div class="run-tests"><button id="run-tests" class="secondary">Run all offline suites</button><span id="test-summary" class="note"></span></div>
+    <div id="test-results"></div><div id="evaluation"></div>
+  </section>
+
+  <section id="tab-tools" class="tab mode-panel hidden">
+    <h3 class="panel-title">Compare two periods</h3>
+    <p class="panel-copy">The record tool on its own, without the coach: one domain over two windows, computed in code.</p>
+    <form id="inspect-form" class="inspect-form">
+      <label>Domain<select id="in-domain"></select></label>
+      <label>From<input id="in-start" type="date"></label>
+      <label>To<input id="in-end" type="date"></label>
+      <label>Compare from<input id="in-cstart" type="date"></label>
+      <label>Compare to<input id="in-cend" type="date"></label>
+      <button class="secondary" type="submit">Compare</button>
+    </form>
+    <div id="inspect-out"></div>
+  </section>
+
+  <section id="tab-sources" class="tab mode-panel hidden">
+    <h3 class="panel-title">Sources</h3>
+    <p class="panel-copy">PMData (Simula), used locally: <span id="record-more"></span>. The coach reads it through <strong id="tool-count"></strong> record tools and writes every plan as a draft in its own workspace; only the person saves one.</p>
+    <div class="library">
+      <h4 class="sub">Guideline library</h4>
+      <p class="note">General guidance the coach can retrieve and cite. It never counts as evidence about this person on its own.</p>
+      <ul id="library"></ul>
+    </div>
+  </section>
+</div>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

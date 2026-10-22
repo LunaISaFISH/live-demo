@@ -1,0 +1,13 @@
+{"id": "p16-39", "should_alert": false, "confidence": "low", "reason": "Alerted one week ago at 15 min; drop to 0 is within the same far-below-guideline state, so another alert so soon adds little."}
+{"id": "p16-40", "should_alert": false, "confidence": "high", "reason": "Resting HR only +1.7 bpm above median, one day, far below earlier alerted elevation; trivial rise."}
+{"id": "p16-41", "should_alert": false, "confidence": "low", "reason": "Follows walking and movement; 104 bpm at 0 steps is a near-repeat of the 100 bpm event alerted nine days ago."}
+{"id": "p16-42", "should_alert": false, "confidence": "high", "reason": "Resting HR +1.4 bpm, one day; small and well below previously alerted levels."}
+{"id": "p16-43", "should_alert": false, "confidence": "high", "reason": "Activity median improved from alerted 0 to 9 minutes a week; no worsening since last alert."}
+{"id": "p16-44", "should_alert": false, "confidence": "high", "reason": "Resting HR +1.4 bpm for one day; minor and not concerning."}
+{"id": "p16-45", "should_alert": false, "confidence": "low", "reason": "Late-evening 101 bpm with little movement after a logged walk; same magnitude as the event alerted on 2020-02-23."}
+{"id": "p16-46", "should_alert": false, "confidence": "low", "reason": "Resting HR only +2.1 bpm, first day, with a concurrent sleep shortfall plausibly explaining it; wait for persistence."}
+{"id": "p16-47", "should_alert": false, "confidence": "low", "reason": "4.3h short over 6 nights is modest, smaller than the earlier alerted shortfall, and readiness reports are moderate."}
+{"id": "p16-48", "should_alert": true, "confidence": "low", "reason": "Resting HR rose to +4.2 bpm, highest in 28 days for two days, alongside a 7.3h sleep shortfall; worth a recovery alert."}
+{"id": "p16-49", "should_alert": false, "confidence": "high", "reason": "Resting HR slightly lower than the value alerted yesterday; near-repeat."}
+{"id": "p16-50", "should_alert": true, "confidence": "high", "reason": "Sleep shortfall 9.6h over 7 nights, worse than prior sleep alert, with worse sleep quality, stress and tiredness reported."}
+{"id": "p16-51", "should_alert": false, "confidence": "high", "reason": "Resting HR 70.0 is below the 70.9 alerted two days ago; no new concern."}

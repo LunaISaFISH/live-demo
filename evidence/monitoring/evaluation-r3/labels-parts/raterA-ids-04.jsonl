@@ -1,0 +1,13 @@
+{"id": "p12-12", "should_alert": true, "confidence": "high", "reason": "Very low readiness now four reports running, consistently tired and sore, no training or walking; never alerted."}
+{"id": "p16-01", "should_alert": false, "confidence": "high", "reason": "HR rise follows 935 steps in the prior bucket; recovery from walking, and record coverage is only 24%."}
+{"id": "p16-02", "should_alert": false, "confidence": "high", "reason": "Resting HR only +2.9 bpm above median; small one-day deviation."}
+{"id": "p16-03", "should_alert": false, "confidence": "high", "reason": "Resting HR only +2.3 bpm above median; within normal day-to-day variation."}
+{"id": "p16-04", "should_alert": true, "confidence": "low", "reason": "Below WHO floor in all three scored weeks with very low steps; first detection, worth telling once."}
+{"id": "p16-05", "should_alert": false, "confidence": "low", "reason": "Moderate +31 bpm after a logged walk and continued steps through 16:30; largely explained by recent movement."}
+{"id": "p16-06", "should_alert": true, "confidence": "low", "reason": "HR climbed to 122 with zero steps, 48 over resting; clearly higher than earlier alerted event."}
+{"id": "p16-07", "should_alert": true, "confidence": "high", "reason": "Activity shortfall held 15 days and worsened from 115 to 77 min/week; never alerted."}
+{"id": "p16-08", "should_alert": false, "confidence": "high", "reason": "Resting HR only +2.1 bpm above median despite being a 28-day high; small change."}
+{"id": "p16-09", "should_alert": false, "confidence": "low", "reason": "3.4h over 7 nights is about 30 min/night short; mild sleep shortfall."}
+{"id": "p16-10", "should_alert": false, "confidence": "high", "reason": "Near-identical to the 115 bpm event alerted five days ago, and preceded by walking."}
+{"id": "p16-11", "should_alert": false, "confidence": "low", "reason": "Lower than the alerted 115 bpm event; same recurring early-evening pattern already alerted."}
+{"id": "p16-12", "should_alert": false, "confidence": "high", "reason": "Follows a logged 46-minute walk and steady afternoon steps; lower than earlier alerted events."}

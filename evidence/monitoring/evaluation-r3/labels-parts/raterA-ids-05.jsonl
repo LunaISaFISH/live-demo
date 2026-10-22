@@ -1,0 +1,13 @@
+{"id": "p16-13", "should_alert": false, "confidence": "high", "reason": "96-97 bpm near-repeat of earlier 97 and 115 bpm alerts; not worse, follows some walking around 13:00."}
+{"id": "p16-14", "should_alert": false, "confidence": "low", "reason": "Shortfall alerted two weeks ago at 77 min; 56 min is lower but still the same far-below-guideline message."}
+{"id": "p16-15", "should_alert": false, "confidence": "high", "reason": "96 bpm, smaller than the alerted 115 bpm event; near-repeat of earlier alerts, nothing newly concerning."}
+{"id": "p16-16", "should_alert": false, "confidence": "high", "reason": "96 bpm with a few steps; same size as earlier alerted events, below the 115 bpm alert; near-repeat."}
+{"id": "p16-17", "should_alert": false, "confidence": "high", "reason": "Logged 16-min walk and hundreds of steps just before; post-walk heart rate explains the rise."}
+{"id": "p16-18", "should_alert": false, "confidence": "low", "reason": "105 bpm after an afternoon walk with ongoing light movement; below the alerted 115 bpm, so not clearly worse."}
+{"id": "p16-19", "should_alert": false, "confidence": "low", "reason": "Resting HR +4 bpm for a single day is a modest rise within normal variation; worth watching, not alerting yet."}
+{"id": "p16-20", "should_alert": false, "confidence": "low", "reason": "2am New Year's night, plausibly awake celebrating; 105 bpm is not above earlier alerts and resting HR alert just sent."}
+{"id": "p16-21", "should_alert": true, "confidence": "low", "reason": "Resting HR now +6.6 bpm, sustained three days and rising since the +4 alert, with low readiness; clearly worse."}
+{"id": "p16-22", "should_alert": false, "confidence": "high", "reason": "Resting HR 71.3, lower than the 73.0 just alerted yesterday; improving, a repeat would be noise."}
+{"id": "p16-23", "should_alert": true, "confidence": "low", "reason": "First sleep-debt signal: about 50 min/night short for a week alongside low readiness and recently raised resting HR."}
+{"id": "p16-24", "should_alert": false, "confidence": "high", "reason": "Activity median unchanged at 56 min since the last shortfall alert; repeating it would be noise."}
+{"id": "p16-25", "should_alert": false, "confidence": "high", "reason": "Sleep debt 6.1h versus 5.9h alerted three days ago; essentially unchanged near-repeat."}

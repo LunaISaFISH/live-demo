@@ -1,0 +1,2 @@
+{"id": "p16-65", "should_alert": false, "confidence": "high", "reason": "Rise to 111 bpm follows about 1500 steps of walking in preceding buckets; explained by activity just before, quickly settling."}
+{"id": "p16-66", "should_alert": false, "confidence": "high", "reason": "Activity shortfall already alerted many times; median improved from 9 to 22 minutes, so no worsening and a repeat would be noise."}

@@ -1,0 +1,13 @@
+{"id": "p16-52", "should_alert": false, "confidence": "low", "reason": "Late-evening rise not well explained by earlier walk, but near-identical to the alerted 2020-01-01 event (+32 bpm); not clearly worse."}
+{"id": "p16-53", "should_alert": false, "confidence": "high", "reason": "One-day resting HR rise of only 2.1 bpm, far below the earlier alerted +6.6; plausibly sleep-related; wait."}
+{"id": "p16-54", "should_alert": false, "confidence": "low", "reason": "New modest sleep shortfall (~43 min/night) on first day; worth watching but not yet substantial enough to alert."}
+{"id": "p16-55", "should_alert": false, "confidence": "low", "reason": "Resting HR +3.1 bpm is small, below prior alerted +6.6, and lines up with sleep shortfall and stress reports."}
+{"id": "p16-56", "should_alert": true, "confidence": "high", "reason": "Sleep shortfall more than doubled to 9.6 h over 7 nights, never alerted, with tiredness, stress and raised resting HR."}
+{"id": "p16-57", "should_alert": false, "confidence": "high", "reason": "Activity median 9 min unchanged and above the 0-minute level already alerted; no new worsening."}
+{"id": "p16-58", "should_alert": false, "confidence": "high", "reason": "HR rise immediately follows a logged 17-minute walk with ~1400 steps; explained by activity."}
+{"id": "p16-59", "should_alert": false, "confidence": "high", "reason": "Resting HR +2.8 bpm is a near-repeat of the +3.1 alert six days ago; sleep now recovered."}
+{"id": "p16-60", "should_alert": false, "confidence": "high", "reason": "About 1500 steps walked in the 40 minutes just before; HR elevation is post-walk recovery."}
+{"id": "p16-61", "should_alert": false, "confidence": "high", "reason": "Logged 19-minute walk with ~1300 steps ended just before the rise; explained by activity, HR data sparse."}
+{"id": "p16-62", "should_alert": false, "confidence": "high", "reason": "Activity median still 9 min, unchanged for weeks and above the 0-minute level already alerted."}
+{"id": "p16-63", "should_alert": false, "confidence": "low", "reason": "Light walking just before; HR ~100 lingers, but smaller than prior alerted events and not clearly new or worse."}
+{"id": "p16-64", "should_alert": false, "confidence": "low", "reason": "HR decaying from 110 after light walking with gaps in data; similar to earlier events, not clearly worse."}

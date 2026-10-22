@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FitCoach - monitoring replay</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="replay-page">
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">FC</span>
+    <div><h1>Monitoring replay</h1><p>A recorded run of the coach watching a whole record. Playback calls no model.</p></div>
+  </div>
+  <div class="who">
+    <label for="pid">Athlete</label>
+    <select id="pid">
+      <option value="p16">p16 · mostly inactive</option>
+      <option value="p05">p05 · very active, injured ankle</option>
+      <option value="p12">p12 · sleep barely recorded</option>
+    </select>
+    <a class="quiet button-link" href="/">Back to the coach</a>
+  </div>
+</header>
+
+<main class="replay">
+  <section class="replay-main" aria-labelledby="rp-date">
+    <div class="replay-head">
+      <div>
+        <h2 id="rp-date"></h2>
+        <p id="rp-tally" class="replay-tally"></p>
+      </div>
+      <div class="replay-controls">
+        <button id="rp-restart" class="quiet" type="button">Restart</button>
+        <button id="rp-next" class="quiet" type="button">Next review</button>
+        <div class="modes" role="radiogroup" aria-label="Speed">
+          <button data-speed="1" role="radio" aria-checked="true" class="on">1×</button>
+          <button data-speed="2" role="radio" aria-checked="false">2×</button>
+          <button data-speed="4" role="radio" aria-checked="false">4×</button>
+        </div>
+        <button id="rp-play" class="primary" type="button">Play</button>
+      </div>
+    </div>
+
+    <section class="lanes-shell" aria-label="What the detectors saw, and when the coach reviewed it">
+      <div id="rp-lanes" class="lanes"></div>
+      <p class="lane-legend">
+        <span><i class="key condition"></i>condition holding</span>
+        <span><i class="key event"></i>one-off heart-rate event</span>
+        <span><i class="key alert"></i>coach raised an Alert</span>
+        <span><i class="key quiet"></i>coach reviewed, no Alert</span>
+        <span class="lane-tip">Click a dot to open that review.</span>
+      </p>
+    </section>
+
+    <section class="rp-chart-shell" aria-labelledby="rp-chart-title">
+      <div class="rp-chart-head">
+        <h3 id="rp-chart-title">The record as the coach saw it</h3>
+        <span id="rp-chart-rule" class="note"></span>
+      </div>
+      <div id="rp-chart" class="rp-chart"><div class="chart-empty">Press Play: the detectors run day by day, and each signal is handed to the coach.</div></div>
+    </section>
+  </section>
+
+  <aside class="replay-side" aria-labelledby="rp-side-title">
+    <div class="trace-heading">
+      <h2 id="rp-side-title">How the coach decided</h2>
+      <span id="rp-status" class="status"></span>
+    </div>
+    <ol id="rp-steps" class="rp-steps"><li class="empty">Nothing has fired yet.</li></ol>
+    <p id="rp-recorded" class="trace-note"></p>
+  </aside>
+</main>
+<script src="/replay.js"></script>
+</body>
+</html>

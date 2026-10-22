@@ -1,0 +1,13 @@
+{"id": "p05-14", "should_alert": false, "confidence": "low", "reason": "Morning activity up to 20 minutes before; modest +31 rise similar to earlier Alert, so a near-repeat rather than new concern."}
+{"id": "p05-15", "should_alert": false, "confidence": "high", "reason": "Nearly 1,300 steps in the 20 minutes before; HR elevation is post-walking recovery."}
+{"id": "p05-16", "should_alert": false, "confidence": "low", "reason": "Light movement throughout preceding hour; same magnitude as earlier Alert, so near-repeat without clear worsening."}
+{"id": "p05-17", "should_alert": false, "confidence": "low", "reason": "Long brisk walk until 07:50; HR settling after, same size as earlier Alert, not clearly worse."}
+{"id": "p05-18", "should_alert": false, "confidence": "high", "reason": "Logged strength and cycling sessions this morning; moderate post-exercise HR elevation is explained."}
+{"id": "p05-19", "should_alert": false, "confidence": "high", "reason": "Walking-level steps in the 20 minutes before; HR 90 is post-movement and a near-repeat."}
+{"id": "p05-20", "should_alert": false, "confidence": "high", "reason": "Logged cycling this afternoon and steady stepping until 17:00; HR rise explained by recent activity."}
+{"id": "p05-21", "should_alert": false, "confidence": "low", "reason": "Rise at rest is unexplained, but 20 minutes at the same +32 magnitude as the earlier Alert; near-repeat."}
+{"id": "p05-22", "should_alert": false, "confidence": "high", "reason": "Around 900 steps in the preceding 20 minutes with HR over 100; post-activity recovery explains it."}
+{"id": "p05-23", "should_alert": false, "confidence": "high", "reason": "Sustained walking 08:20-08:50 just before; HR 94 at rest is post-movement recovery."}
+{"id": "p05-24", "should_alert": true, "confidence": "low", "reason": "HR around 95 for over 80 minutes near midnight with almost no steps; sustained, unexplained and clearly longer than earlier episodes."}
+{"id": "p05-25", "should_alert": true, "confidence": "high", "reason": "First resting HR spike, +8.3 bpm and highest in 20 days, no training to explain it; worth alerting today."}
+{"id": "p05-26", "should_alert": false, "confidence": "low", "reason": "Alerted yesterday about the same resting HR rise; +10.2 vs +8.3 is persistence, not a clearly new concern."}

@@ -1,0 +1,7 @@
+[
+  {
+    "input": "It started when I moved house last weekend and carried a lot of heavy things that weren't recorded. I sleep about as lon…",
+    "tool": "final answer",
+    "caught": "These cited IDs are not evidence from this turn: e383ef8f-e1. Cite only IDs returned by this turn's tools or the context card."
+  }
+]

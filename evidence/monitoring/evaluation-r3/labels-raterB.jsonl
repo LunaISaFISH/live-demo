@@ -1,0 +1,103 @@
+{"id": "p05-01", "should_alert": true, "confidence": "low", "reason": "First 3.7h sleep shortfall, backed by worse sleep quality, fatigue and stress reports on most days; no earlier alert."}
+{"id": "p05-02", "should_alert": false, "confidence": "low", "reason": "Moderate 3.1h shortfall, first day, self-reported fatigue and soreness mostly normal; sleep measure noisy. Worth watching, not yet an alert."}
+{"id": "p05-03", "should_alert": false, "confidence": "low", "reason": "Three low readiness reports, one day old, other self-reports and sleep normal. Borderline; wait to see whether it persists."}
+{"id": "p05-04", "should_alert": true, "confidence": "high", "reason": "Ten consecutive very low readiness reports, falling, severity 1.0, no reason in record, never alerted before."}
+{"id": "p05-05", "should_alert": false, "confidence": "low", "reason": "Mild 3.1h sleep shortfall, one day old; readiness alert already sent days ago covers the person's attention. Near-repeat concern."}
+{"id": "p05-06", "should_alert": false, "confidence": "low", "reason": "95 bpm follows steps up to 16:20 and a walk earlier; plausible residual activity, only modest rise."}
+{"id": "p05-07", "should_alert": false, "confidence": "high", "reason": "Cycling logged 07:14 and heavy steps just before; rise is recovery from exercise. Also near-repeat of recent alert."}
+{"id": "p05-08", "should_alert": false, "confidence": "high", "reason": "Walking steps up to 12:40 precede the rise; explained by activity and near-repeat of earlier alert."}
+{"id": "p05-09", "should_alert": false, "confidence": "high", "reason": "Cycling logged 09:43 for 30 minutes with heavy steps; HR 95 is post-exercise recovery. Explained."}
+{"id": "p05-10", "should_alert": false, "confidence": "high", "reason": "Walking steps at 06:50 and 07:20-07:30 immediately before; rise explained by activity."}
+{"id": "p05-11", "should_alert": false, "confidence": "high", "reason": "Cycling logged 07:04 for 19 minutes; HR 103 shortly after is recovery from exercise."}
+{"id": "p05-12", "should_alert": false, "confidence": "high", "reason": "Heavy walking from 05:40 to 06:50 just before; HR 102 is post-activity. Explained."}
+{"id": "p05-13", "should_alert": false, "confidence": "high", "reason": "Large step counts 06:10-06:50 before; HR 92 is residual from walking. Explained, near-repeat of earlier alert."}
+{"id": "p05-14", "should_alert": false, "confidence": "high", "reason": "Large step counts at 11:10-11:20 just before; rise explained by walking; earlier similar alert."}
+{"id": "p05-15", "should_alert": false, "confidence": "high", "reason": "Steps and HR 104 in the preceding 40 minutes; rise explained by walking. Near-repeat of earlier alert."}
+{"id": "p05-16", "should_alert": false, "confidence": "high", "reason": "Heavy walking 07:00-07:50 before event; HR decaying afterward. Explained by activity."}
+{"id": "p05-17", "should_alert": false, "confidence": "low", "reason": "Strength and cycling logged 05:30-06:30; HR still elevated an hour later but recovering and activity-explained."}
+{"id": "p05-18", "should_alert": false, "confidence": "high", "reason": "Steady walking in the preceding hour with HR 90; explained by activity and a near-repeat of an earlier alert."}
+{"id": "p05-19", "should_alert": false, "confidence": "high", "reason": "Cycling logged 15:56 and steps until 17:00; HR 95 is post-exercise. Explained."}
+{"id": "p05-20", "should_alert": false, "confidence": "low", "reason": "Unexplained sedentary rise to 95 but the same size as an earlier alert, resting HR normal; near-repeat, not clearly worse."}
+{"id": "p05-21", "should_alert": false, "confidence": "high", "reason": "Walking steps 17:20-17:50 just before; HR 94-97 afterward. Explained by activity."}
+{"id": "p05-22", "should_alert": false, "confidence": "high", "reason": "Heavy walking 08:20-08:30 before; HR 95 is recovery from steps. Explained."}
+{"id": "p05-23", "should_alert": false, "confidence": "low", "reason": "Late-evening HR about 95 for 90 minutes with little movement; unexplained but resting HR normal and same size as earlier alert."}
+{"id": "p05-24", "should_alert": true, "confidence": "high", "reason": "Resting HR 68.7, +8.3 over baseline, highest in 20 days, no explanation, first alert for this signal."}
+{"id": "p05-25", "should_alert": false, "confidence": "high", "reason": "Resting HR 69.3 versus 68.7 already alerted two days ago; essentially unchanged near-repeat."}
+{"id": "p05-26", "should_alert": false, "confidence": "high", "reason": "Light walking steps in the preceding hour explain the rise; resting HR elevated already alerted."}
+{"id": "p05-27", "should_alert": false, "confidence": "low", "reason": "Resting HR +7 but similar to the alert nine days ago and not clearly worse; near-repeat, one day only."}
+{"id": "p05-28", "should_alert": false, "confidence": "high", "reason": "Resting HR only 1.5 bpm above median; trivial, and an alert was already sent for the earlier larger rise."}
+{"id": "p12-01", "should_alert": false, "confidence": "high", "reason": "Marginal 1.57x load spike with insufficient record coverage (48%); one rated session explains it."}
+{"id": "p12-02", "should_alert": true, "confidence": "low", "reason": "Load 1.66x sustained over a week with fresh right-knee injury, soreness above normal and falling weight; no alert yet."}
+{"id": "p12-03", "should_alert": false, "confidence": "low", "reason": "Load only barely past the 1.5 tripwire, near-repeat of the recent spike; injury and soreness context is ongoing rather than new."}
+{"id": "p12-04", "should_alert": false, "confidence": "low", "reason": "1.7x ratio comes from two rated sessions on a low chronic base; readiness moderate, so modest absolute load."}
+{"id": "p12-05", "should_alert": true, "confidence": "high", "reason": "Load jumped to 2.68x with 11 sessions in a week, soreness and new hand injury; clearly worse than last review."}
+{"id": "p12-06", "should_alert": false, "confidence": "high", "reason": "Alerted three days ago at 2.68x; load now lower at 2.09x, so an alert would be a near-repeat."}
+{"id": "p12-07", "should_alert": true, "confidence": "low", "reason": "Last alert was 18 days ago; load 1.72x with a new right-knee injury reported yesterday on a chronic knee problem."}
+{"id": "p12-08", "should_alert": true, "confidence": "low", "reason": "Load rose from 1.72x to 1.88x since the alert, plus a new shoulder injury today; modestly worse and newly concerning."}
+{"id": "p12-09", "should_alert": false, "confidence": "low", "reason": "Alerted three days ago; load higher but no new injury or recovery decline, readiness high; near-repeat."}
+{"id": "p12-10", "should_alert": false, "confidence": "high", "reason": "Load falling from 1.88x to 1.62x since last alert; no clearly worse context, a repeat would be noise."}
+{"id": "p12-11", "should_alert": true, "confidence": "high", "reason": "Three low readiness reports, very low latest, fatigue and soreness, and a head/neck injury two days ago; no prior readiness alert."}
+{"id": "p12-12", "should_alert": true, "confidence": "low", "reason": "Four consecutive low readiness reports, very low latest, constant tiredness and soreness, head/neck injury five days ago; persistent and never alerted."}
+{"id": "p16-01", "should_alert": false, "confidence": "high", "reason": "Heart rate rise follows a walking burst (935 steps) just before; record coverage insufficient at 24%."}
+{"id": "p16-02", "should_alert": false, "confidence": "high", "reason": "Resting HR only 2.9 bpm above median; small, one day, thin coverage."}
+{"id": "p16-03", "should_alert": false, "confidence": "high", "reason": "Resting HR only 2.3 bpm above median; trivial for an alert."}
+{"id": "p16-04", "should_alert": true, "confidence": "low", "reason": "Three weeks below WHO guideline (115 of 150 min) and first time flagged; mild shortfall but worth telling once."}
+{"id": "p16-05", "should_alert": false, "confidence": "low", "reason": "Walk logged 15:58 and HR stays near 100 with light stepping after; largely explained by recent activity."}
+{"id": "p16-06", "should_alert": true, "confidence": "low", "reason": "HR 115-122 with zero steps and no exercise, clearly higher than the earlier 97 bpm alert; unexplained rise at rest."}
+{"id": "p16-07", "should_alert": true, "confidence": "high", "reason": "Activity shortfall persisted 15 days and fell from 115 to 77 min against 150; not yet alerted and clearly worse."}
+{"id": "p16-08", "should_alert": false, "confidence": "high", "reason": "Resting HR only 2.1 bpm above median; trivial despite being a 28-day high; recent HR alerts already sent."}
+{"id": "p16-09", "should_alert": false, "confidence": "low", "reason": "Sleep shortfall of 3.4 h over 7 nights is about 30 min a night; modest, with readiness steady."}
+{"id": "p16-10", "should_alert": false, "confidence": "low", "reason": "Near-identical to the 12-05 alerted event (114 vs 115 bpm), after ongoing light stepping; not clearly worse."}
+{"id": "p16-11", "should_alert": false, "confidence": "low", "reason": "Lower than the alerted 115 bpm event five days ago, same evening pattern, resting HR normal; near-repeat."}
+{"id": "p16-12", "should_alert": false, "confidence": "high", "reason": "A 46-minute walk was logged that day with heavy stepping before the rise; explained by recorded activity."}
+{"id": "p16-13", "should_alert": false, "confidence": "high", "reason": "Modest 97 bpm after a walking burst, well below the 115 bpm event already alerted; near-repeat, three prior reviews declined."}
+{"id": "p16-14", "should_alert": true, "confidence": "low", "reason": "Weekly activity median fell from 77 to 56 min since the last Alert; clearly worse long-running shortfall, though a repeat topic."}
+{"id": "p16-15", "should_alert": false, "confidence": "high", "reason": "96 bpm slow rise after a logged cross-training session, milder than the 115 bpm alerted event; near-repeat noise."}
+{"id": "p16-16", "should_alert": false, "confidence": "low", "reason": "Unexplained rise to 96 bpm but short, milder than the already-alerted 115 bpm event, and resting HR normal; near-repeat."}
+{"id": "p16-17", "should_alert": false, "confidence": "high", "reason": "Walk logged 13:17 with steps and HR peaking at 105 just before; elevated HR is explained by exercise."}
+{"id": "p16-18", "should_alert": false, "confidence": "low", "reason": "HR 105 follows a logged 24-minute walk and sustained activity; mostly explained and lower than the 115 bpm event already alerted."}
+{"id": "p16-19", "should_alert": false, "confidence": "low", "reason": "Resting HR only 4 bpm above median, no other recovery markers off; a small first-day deviation, not worth an Alert yet."}
+{"id": "p16-20", "should_alert": true, "confidence": "low", "reason": "Overnight HR 100-108 for over an hour with no movement or exercise, on top of rising resting HR; newly concerning pattern."}
+{"id": "p16-21", "should_alert": true, "confidence": "high", "reason": "Resting HR 73, +6.6, up from 70.4 at the earlier Alert, elevated three days with no explanation; clearly worse."}
+{"id": "p16-22", "should_alert": false, "confidence": "high", "reason": "Resting HR 71.3 is lower than the 73.0 already alerted yesterday; improving, near-repeat."}
+{"id": "p16-23", "should_alert": true, "confidence": "high", "reason": "First look at a 5.9 h sleep deficit over 7 nights with low readiness; unalerted, meaningful and trustworthy data."}
+{"id": "p16-24", "should_alert": false, "confidence": "high", "reason": "Activity median unchanged at 56 min versus the Alert of 2019-12-20; no worsening, near-identical repeat."}
+{"id": "p16-25", "should_alert": false, "confidence": "high", "reason": "Sleep deficit 6.1 h vs 5.9 h alerted three days ago; barely changed, near-repeat."}
+{"id": "p16-26", "should_alert": false, "confidence": "high", "reason": "HR 102 is the tail of a walk-related spike (125 bpm with steps at 17:00); logged walk that day; explained, near-repeat of earlier HR Alerts."}
+{"id": "p16-27", "should_alert": true, "confidence": "high", "reason": "Weekly activity median fell from 56 to 29 min since the last Alert; clearly worse long-running guideline shortfall."}
+{"id": "p16-28", "should_alert": false, "confidence": "high", "reason": "HR 100 follows heavy walking (hundreds of steps per bucket) for an hour before; explained recovery, not a rest anomaly."}
+{"id": "p16-29", "should_alert": false, "confidence": "low", "reason": "HR 112 came straight after about 1000 steps of walking at 16:00-16:20 and was falling; mostly explained, though no exercise was logged."}
+{"id": "p16-30", "should_alert": false, "confidence": "high", "reason": "Activity median 32 min versus 29 at the last Alert; unchanged or slightly better, near-repeat."}
+{"id": "p16-31", "should_alert": false, "confidence": "high", "reason": "Resting HR only 1.8 bpm above median; trivial deviation, well below the earlier alerted 73 bpm."}
+{"id": "p16-32", "should_alert": false, "confidence": "high", "reason": "Activity median 32 min, above the 29 min at the last Alert; no worsening, a repeat would be noise."}
+{"id": "p16-33", "should_alert": false, "confidence": "high", "reason": "HR 101 follows a bout of walking steps shortly before; resting HR normal; explained and a near-repeat."}
+{"id": "p16-34", "should_alert": false, "confidence": "high", "reason": "Activity median 36 min, improved from 29 at the last Alert; not worse, near-repeat."}
+{"id": "p16-35", "should_alert": false, "confidence": "high", "reason": "HR 99 right after about 1,000 steps of walking in the preceding 20 minutes; explained and a near-repeat."}
+{"id": "p16-36", "should_alert": true, "confidence": "high", "reason": "Activity median fell to 15 min from 29 at the last Alert, roughly halved over weeks; clearly worse."}
+{"id": "p16-37", "should_alert": false, "confidence": "high", "reason": "HR 100 after walking steps in the preceding hour; explained, and the activity Alert was sent yesterday."}
+{"id": "p16-38", "should_alert": false, "confidence": "low", "reason": "HR 100 is a gradual cool-down from 129 bpm after walking at 22:40-23:00; explained, resting HR normal, repeated HR Alerts earlier."}
+{"id": "p16-39", "should_alert": true, "confidence": "low", "reason": "Weekly MVPA median fell from 15 to 0 min since the last alert a week earlier; clearly worse, long-running shortfall."}
+{"id": "p16-40", "should_alert": false, "confidence": "high", "reason": "Resting HR only 1.7 bpm above median; small, first day, far below the earlier alerted 73 bpm."}
+{"id": "p16-41", "should_alert": false, "confidence": "low", "reason": "HR 104 follows an unlogged walk with HR 124-127; post-exertion recovery, near-repeat of earlier similar alert."}
+{"id": "p16-42", "should_alert": false, "confidence": "high", "reason": "Resting HR +1.4 bpm, trivial deviation, no sleep or symptom context."}
+{"id": "p16-43", "should_alert": false, "confidence": "high", "reason": "Activity median improved from 0 to 9 min; already alerted at 0, near-repeat shortfall."}
+{"id": "p16-44", "should_alert": false, "confidence": "high", "reason": "Resting HR +1.4 bpm only; small and unremarkable."}
+{"id": "p16-45", "should_alert": false, "confidence": "low", "reason": "HR 101 late evening, about 2 hours after logged walk, mild elevation with 4 steps; near-repeat of earlier alert."}
+{"id": "p16-46", "should_alert": false, "confidence": "low", "reason": "Resting HR 68.7 is highest in 28 days but only +2.1 bpm, first day; modest, sleep debt shown separately."}
+{"id": "p16-47", "should_alert": false, "confidence": "low", "reason": "4.3h sleep debt over 6 nights is smaller than the 5.9h previously alerted; not clearly worse."}
+{"id": "p16-48", "should_alert": true, "confidence": "high", "reason": "Resting HR 70.9, +4.2 bpm, second day rising with 7.3h sleep shortfall, no explanation; clearly worse than yesterday."}
+{"id": "p16-49", "should_alert": false, "confidence": "high", "reason": "Resting HR 69.8 is lower than yesterday's alerted 70.9; near-repeat, no new concern."}
+{"id": "p16-50", "should_alert": true, "confidence": "high", "reason": "Sleep shortfall 9.6h over 7 nights, much larger than the 5.9h earlier alert, with elevated resting HR."}
+{"id": "p16-51", "should_alert": false, "confidence": "high", "reason": "Resting HR 70.0 below the alerted 70.9; sleep alert for the same context is sent this day."}
+{"id": "p16-52", "should_alert": false, "confidence": "high", "reason": "Sleep shortfall 9.1h slightly below the 9.6h already alerted yesterday; near-repeat."}
+{"id": "p16-53", "should_alert": false, "confidence": "high", "reason": "Activity median 9 min unchanged and above the alerted low of 0; no new worsening."}
+{"id": "p16-54", "should_alert": false, "confidence": "high", "reason": "Sleep shortfall 4.7h is much smaller than the 9.6h already alerted and recovering."}
+{"id": "p16-55", "should_alert": false, "confidence": "high", "reason": "HR 101 right after a logged 17-minute walk with heavy steps; explained by exercise, tapering."}
+{"id": "p16-56", "should_alert": false, "confidence": "low", "reason": "Resting HR +2.8 bpm, below the earlier alerted 70.9 and sleep is in surplus; modest first-day rise."}
+{"id": "p16-57", "should_alert": false, "confidence": "high", "reason": "HR 108 follows 40 minutes of walking steps and is falling from 114; explained by recent movement."}
+{"id": "p16-58", "should_alert": false, "confidence": "high", "reason": "HR 106 follows a logged 19-minute walk; explained exercise recovery."}
+{"id": "p16-59", "should_alert": false, "confidence": "high", "reason": "Activity median 9 min unchanged for weeks and above the alerted low; repeat shortfall."}
+{"id": "p16-60", "should_alert": false, "confidence": "high", "reason": "HR 99 shortly after walking steps, mild elevation, near-repeat of earlier alert."}
+{"id": "p16-61", "should_alert": false, "confidence": "high", "reason": "HR 99 follows a walking period with HR 110 tapering; explained by movement."}
+{"id": "p16-62", "should_alert": false, "confidence": "high", "reason": "HR 111 follows about 30 minutes of walking steps (HR 116 falling to 105); explained by exertion."}
+{"id": "p16-63", "should_alert": false, "confidence": "high", "reason": "Activity median improved to 22 min from the alerted 0; ongoing shortfall already alerted, not worse."}

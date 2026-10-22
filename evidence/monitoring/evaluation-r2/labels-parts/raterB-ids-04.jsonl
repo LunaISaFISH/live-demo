@@ -1,0 +1,13 @@
+{"id": "p12-10", "should_alert": false, "confidence": "low", "reason": "Absolute load unchanged at 1600 sRPE; ratio rise is from a falling baseline. Two prior alerts this episode, readiness moderate, near-repeat."}
+{"id": "p12-11", "should_alert": false, "confidence": "high", "reason": "Load fell from 2.68x to 2.09x and readiness is high; already alerted, improving."}
+{"id": "p12-12", "should_alert": false, "confidence": "low", "reason": "1.72x over 17 sessions, readiness high and rising; load is explained by logged sessions. Knee injuries are chronic and already flagged."}
+{"id": "p12-13", "should_alert": false, "confidence": "high", "reason": "Load fell from 1.72x alerted two days ago to 1.57x; already known to the person."}
+{"id": "p12-14", "should_alert": true, "confidence": "high", "reason": "Load jumped from 1430 to 2430 sRPE (2.28x) with a recent shoulder injury; clearly worse than the last alert."}
+{"id": "p12-15", "should_alert": false, "confidence": "high", "reason": "Load decreased from 2430 to 2220 sRPE since the alert; readiness high; already known."}
+{"id": "p12-16", "should_alert": false, "confidence": "high", "reason": "Load decreased to 1.82x from 2.28x already alerted; readiness high. No new concern."}
+{"id": "p12-17", "should_alert": false, "confidence": "high", "reason": "Load keeps falling to 1.62x with high readiness; the elbow injury is 6 days old and already known."}
+{"id": "p12-18", "should_alert": true, "confidence": "high", "reason": "Three very low readiness reports running with tiredness, soreness and a recent head or neck injury; first alert, rest advised."}
+{"id": "p12-19", "should_alert": false, "confidence": "high", "reason": "Fourth low report, not clearly worse than the alert two days ago; no new injury. Near-repeat."}
+{"id": "p12-20", "should_alert": false, "confidence": "low", "reason": "Fifth low report but the latest is low, not very low; alerted four days ago. A new shoulder report is routine for this person."}
+{"id": "p16-01", "should_alert": false, "confidence": "high", "reason": "109 bpm follows 935 steps in the prior bucket; recent walking explains it. Coverage insufficient at 24%."}
+{"id": "p16-02", "should_alert": false, "confidence": "low", "reason": "Resting HR only +2.9 bpm over baseline; coverage thin at 52%. Mild activity shortfall of 118 versus 150 min is not urgent."}
